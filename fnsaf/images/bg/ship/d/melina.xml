@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="melina.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="melina onlook0000" x="0" y="0" width="536" height="730" frameX="0" frameY="-10" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0001" x="0" y="0" width="536" height="730" frameX="0" frameY="-10" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0002" x="536" y="0" width="538" height="720" frameX="0" frameY="-17" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0003" x="536" y="0" width="538" height="720" frameX="0" frameY="-17" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0004" x="1074" y="0" width="528" height="727" frameX="-3" frameY="-8" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0005" x="1074" y="0" width="528" height="727" frameX="-3" frameY="-8" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0006" x="0" y="730" width="525" height="731" frameX="-4" frameY="-2" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0007" x="0" y="730" width="525" height="731" frameX="-4" frameY="-2" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0008" x="525" y="730" width="524" height="731" frameX="-4" frameY="-1" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0009" x="525" y="730" width="524" height="731" frameX="-4" frameY="-1" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0010" x="1049" y="730" width="523" height="732" frameX="-5" frameY="0" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0011" x="1049" y="730" width="523" height="732" frameX="-5" frameY="0" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0012" x="1049" y="730" width="523" height="732" frameX="-5" frameY="0" frameWidth="538" frameHeight="740"/>
+	<SubTexture name="melina onlook0013" x="1049" y="730" width="523" height="732" frameX="-5" frameY="0" frameWidth="538" frameHeight="740"/>
+</TextureAtlas>

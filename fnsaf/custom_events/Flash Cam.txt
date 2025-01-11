@@ -1,0 +1,4 @@
+Flashes hud camera.
+
+Value 1 > Flash alpha (0.5 max)
+Value 2 > Flash duration in seconds (0.3 default)

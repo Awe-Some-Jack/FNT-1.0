@@ -393,7 +393,7 @@ class Paths
 
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
-		return 'assets/bp/' + key;
+		return 'assets/fnsaf/' + key;
 
 	inline static public function modsJson(key:String)
 		return modFolders('data/' + key + '.json');
@@ -431,7 +431,7 @@ class Paths
 			if(FileSystem.exists(fileToCheck))
 				return fileToCheck;
 		}
-		return 'assets/bp/' + key;
+		return 'assets/fnsaf/' + key;
 	}
 	#end
 

@@ -1,0 +1,36 @@
+{
+	"songs": [
+		[
+			"New Crewmate",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Reactor Alarm",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"bf",
+		"bf",
+		"gf"
+	],
+	"storyName": "Your New Week",
+	"weekName": "Custom Week",
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

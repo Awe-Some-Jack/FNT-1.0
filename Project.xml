@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Psych Engine" file="PsychEngine" packageName="com.bpforest.psychengine" package="com.bpforest.psychengine" main="Main" version="0.2.8" company="bpforest" />
+	<app title="Friday Night Space Among Friends" file="FNSAF" packageName="com.bpforest.fnsaf" package="com.bpforest.fnsaf" main="Main" version="1.0" company="bpforest" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -100,8 +100,8 @@
 
 	<section if="MODS_ALLOWED">
 		<!-- <assets path='example_mods' rename='mods' embed='false' type='template' unless="mac"/> -->
-		<assets path='bp' rename='assets/bp' embed='false' type='template' unless="mac"/>
-		<assets path='bp' rename='assets/bp' embed='false' if="mac"/>
+		<assets path='fnsaf' rename='assets/fnsaf' embed='false' type='template' unless="mac"/>
+		<assets path='fnsaf' rename='assets/fnsaf' embed='false' if="mac"/>
 	</section>
 	<assets path='art/readme.txt' rename='funkin_readme.txt' />
 	<assets path='list.txt' rename='modsList.txt' />

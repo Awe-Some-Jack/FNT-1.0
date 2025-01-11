@@ -1,0 +1,71 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [220, -35],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [-24, -55],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [1, 41],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [-50, -9],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [55, -47],
+			"loop": false,
+			"fps": 24,
+			"anim": "intro anim",
+			"indices": [],
+			"name": "intro anim"
+		},
+		{
+			"loop": false,
+			"offsets": [-14, -60],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "wally intro",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/wally",
+	"position": [-160, 250],
+	"healthicon": "wally",
+	"flip_x": false,
+	"healthbar_colors": [24, 209, 226],
+	"camera_position": [140, 140],
+	"sing_duration": 6.1,
+	"scale": 0.6,
+	"_editor_isPlayer": false
+}

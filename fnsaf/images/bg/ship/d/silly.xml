@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="silly.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="silly onlook0000" x="0" y="0" width="535" height="776" frameX="-3" frameY="-1" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0001" x="0" y="0" width="535" height="776" frameX="-3" frameY="-1" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0002" x="535" y="0" width="536" height="774" frameX="-3" frameY="-2" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0003" x="535" y="0" width="536" height="774" frameX="-3" frameY="-2" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0004" x="1071" y="0" width="530" height="767" frameX="-5" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0005" x="1071" y="0" width="530" height="767" frameX="-5" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0006" x="0" y="776" width="530" height="764" frameX="-2" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0007" x="0" y="776" width="530" height="764" frameX="-2" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0008" x="530" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0009" x="530" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0010" x="1061" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0011" x="1061" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0012" x="1061" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+	<SubTexture name="silly onlook0013" x="1061" y="776" width="531" height="764" frameX="0" frameY="0" frameWidth="539" frameHeight="777"/>
+</TextureAtlas>

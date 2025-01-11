@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="drbaby.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="drbaby0000" x="0" y="0" width="157" height="201" frameX="0" frameY="-1" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0001" x="0" y="0" width="157" height="201" frameX="0" frameY="-1" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0002" x="157" y="0" width="156" height="200" frameX="-1" frameY="-2" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0003" x="157" y="0" width="156" height="200" frameX="-1" frameY="-2" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0004" x="313" y="0" width="157" height="201" frameX="0" frameY="-1" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0005" x="313" y="0" width="157" height="201" frameX="0" frameY="-1" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0006" x="0" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0007" x="0" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0008" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0009" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0010" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0011" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0012" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+	<SubTexture name="drbaby0013" x="156" y="201" width="156" height="202" frameX="0" frameY="0" frameWidth="157" frameHeight="202"/>
+</TextureAtlas>

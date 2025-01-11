@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cream.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cream0000" x="0" y="0" width="424" height="924" frameX="0" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0001" x="0" y="0" width="424" height="924" frameX="0" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0002" x="424" y="0" width="423" height="919" frameX="-1" frameY="-6" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0003" x="424" y="0" width="423" height="919" frameX="-1" frameY="-6" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0004" x="847" y="0" width="421" height="925" frameX="-2" frameY="-1" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0005" x="847" y="0" width="421" height="925" frameX="-2" frameY="-1" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0006" x="1268" y="0" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0007" x="1268" y="0" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0008" x="0" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0009" x="0" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0010" x="421" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0011" x="421" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0012" x="421" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+	<SubTexture name="cream0013" x="421" y="926" width="421" height="926" frameX="-1" frameY="0" frameWidth="424" frameHeight="926"/>
+</TextureAtlas>
