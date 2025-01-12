@@ -27,11 +27,11 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		#if MODS_ALLOWED 'mods', #end
-		'credits'
+		'credits',
+		"options"
 	];
 
-	var leftOption:String = #if ACHIEVEMENTS_ALLOWED 'achievements' #else null #end;
+	var leftOption:String = #if ACHIEVEMENTS_ALLOWED 'sus' #else null #end;
 	var rightOption:String = null;
 
 	var camFollow:FlxObject;
@@ -50,43 +50,39 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		var yScroll:Float = 0.25;
-		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
-		bg.antialiasing = ClientPrefs.data.antialiasing;
-		bg.scrollFactor.set(0, yScroll);
-		bg.setGraphicSize(Std.int(bg.width * 1.175));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('mainMenu/bg'));
+		bg.scrollFactor.set(0);
+		bg.setGraphicSize(FlxG.width);
 		bg.updateHitbox();
-		bg.screenCenter();
 		add(bg);
 
-		camFollow = new FlxObject(0, 0, 1, 1);
+		camFollow = new FlxObject();
 		add(camFollow);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		for (num => option in optionShit)
-		{
-			var item:FlxSprite = createMenuItem(option, 0, (num * 140) + 90);
-			item.y += (4 - optionShit.length) * 70; // Offsets for when you have anything other than 4 items
-			item.screenCenter(X);
-		}
+		var fg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("mainMenu/fg"));
+		fg.scrollFactor.set();
+		fg.setGraphicSize(FlxG.width);
+		fg.updateHitbox();
+		add(fg);
+
+		for (option in optionShit)
+			createMenuItem(option);
 
 		if (leftOption != null)
-			leftItem = createMenuItem(leftOption, 60, 490);
+			leftItem = createMenuItem(leftOption);
 		if (rightOption != null)
-		{
-			rightItem = createMenuItem(rightOption, FlxG.width - 60, 490);
-			rightItem.x -= rightItem.width;
-		}
+			rightItem = createMenuItem(rightOption);
 
 		var psychVer:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		psychVer.scrollFactor.set();
-		psychVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		psychVer.setFormat(Paths.font("sg.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(psychVer);
-		var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' v" + Application.current.meta.get('version'), 12);
+		var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Space Among Friends v" + Application.current.meta.get('version'), 12);
 		fnfVer.scrollFactor.set();
-		fnfVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		fnfVer.setFormat(Paths.font("sg.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(fnfVer);
 		changeItem();
 
@@ -106,11 +102,12 @@ class MainMenuState extends MusicBeatState
 		FlxG.camera.follow(camFollow, null, 0.15);
 	}
 
-	function createMenuItem(name:String, x:Float, y:Float):FlxSprite
+	function createMenuItem(name:String, x:Float = 0, y:Float = 0):FlxSprite
 	{
 		var menuItem:FlxSprite = new FlxSprite(x, y).loadGraphic(Paths.image('mainMenu/$name'));
-		menuItem.antialiasing = ClientPrefs.data.antialiasing;
 		menuItem.scrollFactor.set();
+		menuItem.setGraphicSize(FlxG.width);
+		menuItem.updateHitbox();
 		menuItems.add(menuItem);
 		return menuItem;
 	}
@@ -149,8 +146,7 @@ class MainMenuState extends MusicBeatState
 						selectedItem = rightItem;
 				}
 
-				if(leftItem != null && FlxG.mouse.overlaps(leftItem))
-				{
+				if(leftItem != null && leftItem.pixelsOverlapPoint(FlxG.mouse.getPosition(), 0x05)) {
 					allowMouse = true;
 					if(selectedItem != leftItem)
 					{
@@ -174,7 +170,7 @@ class MainMenuState extends MusicBeatState
 					for (i in 0...optionShit.length)
 					{
 						var memb:FlxSprite = menuItems.members[i];
-						if(FlxG.mouse.overlaps(memb))
+						if (memb.pixelsOverlapPoint(FlxG.mouse.getPosition(), 0x05))
 						{
 							var distance:Float = Math.sqrt(Math.pow(memb.getGraphicMidpoint().x - FlxG.mouse.screenX, 2) + Math.pow(memb.getGraphicMidpoint().y - FlxG.mouse.screenY, 2));
 							if (dist < 0 || distance < dist)
@@ -325,10 +321,7 @@ class MainMenuState extends MusicBeatState
 		FlxG.sound.play(Paths.sound('scrollMenu'));
 
 		for (item in menuItems)
-		{
-			item.animation.play('idle');
-			item.centerOffsets();
-		}
+			item.alpha = .5;
 
 		var selectedItem:FlxSprite;
 		switch(curColumn)
@@ -340,8 +333,6 @@ class MainMenuState extends MusicBeatState
 			case RIGHT:
 				selectedItem = rightItem;
 		}
-		selectedItem.animation.play('selected');
-		selectedItem.centerOffsets();
-		camFollow.y = selectedItem.getGraphicMidpoint().y;
+		selectedItem.alpha = 1;
 	}
 }
