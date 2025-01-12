@@ -1,11 +1,19 @@
+import flixel.FlxCamera;
+import flixel.addons.transition.FlxTransitionableState;
+import backend.Song;
+
 function onCreate() {
     add(game.gfGroup);
     game.camGame.bgColor = FlxColor.BLACK;
 }
 
-function reset(hard = false) {
+function reset(hard = false, now = false) {
     PlayState.nextReloadAll = hard;
+    if (now) PlayState.startOnTime = Conductor.songPosition;
+    FlxTransitionableState.skipNextTransOut = true;
     FlxG.resetState();
+    if (!PlayState.chartingMode)
+        PlayState.chartingMode = true;
 }
 
 function onUpdate() {
@@ -21,9 +29,16 @@ function onUpdate() {
         if (game.playbackRate < 3)
             game.playbackRate = Math.min(game.playbackRate + 0.05 * shiftMult, 3);
 
-    if (keyboardJustPressed("THREE"))
+    if (keyboardJustPressed("THREE")) {
+        game.clearNotesBefore(game.songLength);
         game.setSongTime(game.songLength - 1000);
+    }
 
     if (keyboardJustPressed("T"))
-        reset(keyboardPressed("SHIFT"));
+        reset(keyboardPressed("CONTROL"), keyboardPressed("SHIFT"));
+}
+
+function onDestroy() {
+    if (FlxG.camera.bgColor != FlxColor.BLACK)
+        FlxG.camera.bgColor = FlxColor.BLACK;
 }

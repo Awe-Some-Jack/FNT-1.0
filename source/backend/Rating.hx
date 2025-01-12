@@ -7,6 +7,7 @@ class Rating
 	public var name:String = '';
 	public var image:String = '';
 	public var hitWindow:Null<Int> = 0; //ms
+	public var displayName:String = '';
 	public var ratingMod:Float = 1;
 	public var score:Int = 350;
 	public var noteSplash:Bool = true;
@@ -16,6 +17,7 @@ class Rating
 	{
 		this.name = name;
 		this.image = name;
+		displayName = name;
 		this.hitWindow = 0;
 
 		var window:String = name + 'Window';
@@ -28,21 +30,28 @@ class Rating
 
 	public static function loadDefault():Array<Rating>
 	{
-		var ratingsData:Array<Rating> = [new Rating('sick')]; //highest rating goes first
+		var ratingsData:Array<Rating> = []; //highest rating goes first
+
+		var rating:Rating = new Rating('sick');
+		rating.displayName = "PERFECT!";
+		ratingsData.push(rating);
 
 		var rating:Rating = new Rating('good');
+		rating.displayName = "GREAT!";
 		rating.ratingMod = 0.67;
 		rating.score = 200;
 		rating.noteSplash = false;
 		ratingsData.push(rating);
 
 		var rating:Rating = new Rating('bad');
+		rating.displayName = "BAD";
 		rating.ratingMod = 0.34;
 		rating.score = 100;
 		rating.noteSplash = false;
 		ratingsData.push(rating);
 
 		var rating:Rating = new Rating('shit');
+		rating.displayName = "SHIT";
 		rating.ratingMod = 0;
 		rating.score = 50;
 		rating.noteSplash = false;
