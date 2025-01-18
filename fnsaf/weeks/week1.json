@@ -1,7 +1,23 @@
 {
+	"storyName": "Your New Week",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"New Crewmate",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Two suspect",
 			"face",
 			[
 				146,
@@ -19,18 +35,11 @@
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"difficulties": "",
 	"weekCharacters": [
 		"bf",
 		"bf",
 		"gf"
 	],
-	"storyName": "Your New Week",
-	"weekName": "Custom Week",
-	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
 }
