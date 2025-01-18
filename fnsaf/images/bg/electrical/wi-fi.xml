@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="wi-fi.png">
+<SubTexture name="wi-fi idle0000" x="981" y="355" width="160" height="150" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0001" x="1141" y="355" width="160" height="150" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0002" x="0" y="0" width="981" height="368" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0003" x="0" y="368" width="976" height="362" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0004" x="981" y="0" width="968" height="355" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0005" x="1301" y="355" width="160" height="134" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+<SubTexture name="wi-fi idle0006" x="1301" y="355" width="160" height="134" frameX="-572" frameY="-486" frameWidth="3050" frameHeight="1280" />
+</TextureAtlas>

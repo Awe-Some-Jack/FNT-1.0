@@ -28,6 +28,7 @@ import states.editors.CharacterEditorState;
 
 import substates.PauseSubState;
 import substates.GameOverSubstate;
+import substates.StickerSubState;
 
 #if !flash
 import flixel.addons.display.FlxRuntimeShader;
@@ -379,16 +380,6 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'stage': new StageWeek1(); 			//Week 1
-			case 'spooky': new Spooky();				//Week 2
-			case 'philly': new Philly();				//Week 3
-			case 'limo': new Limo();					//Week 4
-			case 'mall': new Mall();					//Week 5 - Cocoa, Eggnog
-			case 'mallEvil': new MallEvil();			//Week 5 - Winter Horrorland
-			case 'school': new School();				//Week 6 - Senpai, Roses
-			case 'schoolEvil': new SchoolEvil();		//Week 6 - Thorns
-			case 'tank': new Tank();					//Week 7 - Ugh, Guns, Stress
-			case 'phillyStreets': new PhillyStreets(); 	//Weekend 1 - Darnell, Lit Up, 2Hot
-			case 'phillyBlazin': new PhillyBlazin();	//Weekend 1 - Blazin
 		}
 		if(isPixelStage) introSoundsSuffix = '-pixel';
 
@@ -471,7 +462,7 @@ class PlayState extends MusicBeatState
 		#end
 
 		uiGroup = new FlxSpriteGroup();
-		comboGroup = new FlxSpriteGroup();
+		comboGroup = new FlxTypedGroup<FlxText>();
 		noteGroup = new FlxTypedGroup<FlxBasic>();
 		add(uiGroup);
 		add(noteGroup);
@@ -2469,11 +2460,9 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					Mods.loadTopMod();
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 					canResync = false;
-					MusicBeatState.switchState(new StoryMenuState());
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
@@ -2483,6 +2472,7 @@ class PlayState extends MusicBeatState
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 						FlxG.save.flush();
 					}
+					byeScreen();
 					changedDifficulty = false;
 				}
 				else
@@ -2511,13 +2501,25 @@ class PlayState extends MusicBeatState
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 				canResync = false;
-				MusicBeatState.switchState(new FreeplayState());
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				byeScreen();
 				changedDifficulty = false;
 			}
 			transitioning = true;
 		}
 		return true;
+	}
+
+	function byeScreen()
+	{
+		if (!isStoryMode)
+		{
+			openSubState(new StickerSubState(null, (sticker) -> new FreeplayState(sticker)));
+		}
+		else 
+		{
+			openSubState(new StickerSubState(null, (sticker) -> new StoryMenuState(sticker)));
+		}
+		return;
 	}
 
 	public function KillNotes() {
@@ -2539,7 +2541,7 @@ class PlayState extends MusicBeatState
 	public var showRating:Bool = true;
 
 	// Stores Ratings and Combo Sprites in a group
-	public var comboGroup:FlxSpriteGroup;
+	public var comboGroup:FlxTypedGroup<FlxText>;
 	// Stores HUD Objects in a Group
 	public var uiGroup:FlxSpriteGroup;
 	// Stores Note Objects in a Group
@@ -2561,17 +2563,6 @@ class PlayState extends MusicBeatState
 	{
 		var noteDiff:Float = Math.abs(note.strumTime - Conductor.songPosition + ClientPrefs.data.ratingOffset);
 		vocals.volume = 1;
-
-		if (!ClientPrefs.data.comboStacking && comboGroup.members.length > 0)
-		{
-			for (spr in comboGroup)
-			{
-				if(spr == null) continue;
-
-				comboGroup.remove(spr);
-				spr.destroy();
-			}
-		}
 
 		var placement:Float = FlxG.width * 0.35;
 		var rating:FlxSprite = new FlxSprite();

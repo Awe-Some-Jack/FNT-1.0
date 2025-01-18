@@ -31,7 +31,7 @@ class MainMenuState extends MusicBeatState
 		"options"
 	];
 
-	var leftOption:String = #if ACHIEVEMENTS_ALLOWED 'sus' #else null #end;
+	var leftOption:String = 'sus';
 	var rightOption:String = null;
 
 	var camFollow:FlxObject;

@@ -1,0 +1,20 @@
+{
+  "name": "stickers-set-1",
+  "artist": "Snowmelt",
+  "stickers": {
+    "bf": ["bfSticker"],
+    "spacepuppy": ["spacepuppySticker"],
+    "wally": ["wallySticker"],
+    "agf": ["agfSticker"],
+    "melina": ["melinaSticker"],
+    "cream": ["creamSticker"],
+    "reddie": ["reddieSticker"],
+    "royalblue": ["royalblueSticker"],
+    "banana": ["bananaSticker"],
+    "dcpink": ["dcpinkSticker"],
+    "nightsmoke": ["nightsmokeSticker"]
+  },
+  "stickerPacks": {
+    "all": ["bf", "spacepuppy", "wally", "agf", "melina", "cream", "reddie", "royalblue", "banana", "dcpink", "nightsmoke"]
+  }
+}

@@ -12,6 +12,7 @@ import objects.MenuCharacter;
 
 import options.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
+import substates.StickerSubState;
 
 import backend.StageData;
 
@@ -43,10 +44,33 @@ class StoryMenuState extends MusicBeatState
 
 	var loadedWeeks:Array<WeekData> = [];
 
+	var stickerSubState:StickerSubState;
+	public function new(?stickers:StickerSubState = null)
+	{
+		super();
+	  
+		if (stickers != null)
+		{
+			stickerSubState = stickers;
+		}
+	}
+
 	override function create()
 	{
-		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+
+		if (stickerSubState != null)
+		{
+			//this.persistentUpdate = true;
+			//this.persistentDraw = true;
+			
+			openSubState(stickerSubState);
+			Paths.clearStoredWithoutStickers();
+			stickerSubState.degenStickers();
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+		}
+		else
+		Paths.clearStoredMemory();
 
 		persistentUpdate = persistentDraw = true;
 		PlayState.isStoryMode = true;

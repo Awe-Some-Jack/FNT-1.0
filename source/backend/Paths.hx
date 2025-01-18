@@ -53,6 +53,19 @@ class Paths
 		System.gc();
 	}
 
+	public static function clearStoredWithoutStickers() {
+		@:privateAccess
+		var cache = FlxG.bitmap._cache;
+		Paths.currentTrackedAssets.clear();
+		for (key => val in cache){
+		if(	key.toLowerCase().contains("stickers") || 
+			key.contains("bg_graphic_") ||
+			key == "images/justBf.png"
+		) Paths.currentTrackedAssets.set(key,val);
+		}
+		Paths.clearStoredMemory();
+	}
+
 	// define the locally tracked assets
 	public static var localTrackedAssets:Array<String> = [];
 

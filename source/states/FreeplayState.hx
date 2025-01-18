@@ -9,9 +9,11 @@ import objects.MusicPlayer;
 
 import options.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
+import substates.StickerSubState;
 
 import flixel.math.FlxMath;
 import flixel.util.FlxDestroyUtil;
+import flixel.addons.display.FlxBackdrop; 
 
 import openfl.utils.Assets;
 
@@ -28,6 +30,7 @@ class FreeplayState extends MusicBeatState
 	private static var lastDifficultyName:String = Difficulty.getDefault();
 
 	var scoreBG:FlxSprite;
+	var checker:FlxBackdrop; 
 	var scoreText:FlxText;
 	var diffText:FlxText;
 	var lerpScore:Int = 0;
@@ -49,6 +52,17 @@ class FreeplayState extends MusicBeatState
 	var bottomString:String;
 	var bottomText:FlxText;
 	var bottomBG:FlxSprite;
+
+	var stickerSubState:StickerSubState;
+	public function new(?stickers:StickerSubState = null)
+	{
+		super();
+	  
+		if (stickers != null)
+		{
+			stickerSubState = stickers;
+		}
+	}
 
 	var player:MusicPlayer;
 
@@ -108,8 +122,22 @@ class FreeplayState extends MusicBeatState
 		add(bg);
 		bg.screenCenter();
 
+		checker = new FlxBackdrop(Paths.image('Grid_lmao'));
+        //checker.velocity.set(112, 110);
+        checker.updateHitbox();
+        checker.scrollFactor.set(0, 0);
+        checker.alpha = 0.5;
+        checker.screenCenter(X);
+        add(checker);
+
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
+
+		if (stickerSubState != null)
+		{
+			openSubState(stickerSubState);
+			stickerSubState.degenStickers();
+		}
 
 		for (i in 0...songs.length)
 		{
@@ -175,7 +203,7 @@ class FreeplayState extends MusicBeatState
 		bottomBG.alpha = 0.6;
 		add(bottomBG);
 
-		var leText:String = Language.getPhrase("freeplay_tip", "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.");
+		var leText:String = Language.getPhrase("freeplay_tip", "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.");
 		bottomString = leText;
 		var size:Int = 16;
 		bottomText = new FlxText(bottomBG.x, bottomBG.y + 4, FlxG.width, leText, size);
@@ -222,6 +250,9 @@ class FreeplayState extends MusicBeatState
 
 		if (FlxG.sound.music.volume < 0.7)
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+
+		checker.x -= .5*(elapsed/(1/120));
+        checker.y -= 0.16 / (ClientPrefs.data.framerate / 60);
 
 		lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 24)));
 		lerpRating = FlxMath.lerp(intendedRating, lerpRating, Math.exp(-elapsed * 12));
@@ -328,80 +359,21 @@ class FreeplayState extends MusicBeatState
 			persistentUpdate = false;
 			openSubState(new GameplayChangersSubstate());
 		}
-		else if(FlxG.keys.justPressed.SPACE)
+		if (instPlaying != curSelected)
 		{
-			if(instPlaying != curSelected && !player.playingMusic)
-			{
 				destroyFreeplayVocals();
+	
 				FlxG.sound.music.volume = 0;
-
+	
 				Mods.currentModDirectory = songs[curSelected].folder;
+	
 				var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
-				Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
-				if (PlayState.SONG.needsVoices)
-				{
-					vocals = new FlxSound();
-					try
-					{
-						var playerVocals:String = getVocalFromCharacter(PlayState.SONG.player1);
-						var loadedVocals = Paths.voices(PlayState.SONG.song, (playerVocals != null && playerVocals.length > 0) ? playerVocals : 'Player');
-						if(loadedVocals == null) loadedVocals = Paths.voices(PlayState.SONG.song);
-						
-						if(loadedVocals != null && loadedVocals.length > 0)
-						{
-							vocals.loadEmbedded(loadedVocals);
-							FlxG.sound.list.add(vocals);
-							vocals.persist = vocals.looped = true;
-							vocals.volume = 0.8;
-							vocals.play();
-							vocals.pause();
-						}
-						else vocals = FlxDestroyUtil.destroy(vocals);
-					}
-					catch(e:Dynamic)
-					{
-						vocals = FlxDestroyUtil.destroy(vocals);
-					}
-					
-					opponentVocals = new FlxSound();
-					try
-					{
-						//trace('please work...');
-						var oppVocals:String = getVocalFromCharacter(PlayState.SONG.player2);
-						var loadedVocals = Paths.voices(PlayState.SONG.song, (oppVocals != null && oppVocals.length > 0) ? oppVocals : 'Opponent');
-						
-						if(loadedVocals != null && loadedVocals.length > 0)
-						{
-							opponentVocals.loadEmbedded(loadedVocals);
-							FlxG.sound.list.add(opponentVocals);
-							opponentVocals.persist = opponentVocals.looped = true;
-							opponentVocals.volume = 0.8;
-							opponentVocals.play();
-							opponentVocals.pause();
-							//trace('yaaay!!');
-						}
-						else opponentVocals = FlxDestroyUtil.destroy(opponentVocals);
-					}
-					catch(e:Dynamic)
-					{
-						//trace('FUUUCK');
-						opponentVocals = FlxDestroyUtil.destroy(opponentVocals);
-					}
-				}
-
-				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0.8);
-				FlxG.sound.music.pause();
+	
+				PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
+	
+				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0);
+	
 				instPlaying = curSelected;
-
-				player.playingMusic = true;
-				player.curTime = 0;
-				player.switchPlayMusic();
-				player.pauseOrResume(true);
-			}
-			else if (instPlaying == curSelected && player.playingMusic)
-			{
-				player.pauseOrResume(!player.playing);
-			}
 		}
 		else if (controls.ACCEPT && !player.playingMusic)
 		{
@@ -619,4 +591,5 @@ class SongMetadata
 		this.folder = Mods.currentModDirectory;
 		if(this.folder == null) this.folder = '';
 	}
+	
 }
