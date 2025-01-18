@@ -204,7 +204,7 @@ class FreeplayState extends MusicBeatState
 	{
 		var songPathName = Paths.formatToSongPath(songName);
         trace(songPathName);
-        if (FlxG.save.data.weekCompleted == null && (songPathName == 'gain-stage-mania' || songPathName == 'daw-wars-mania' || songPathName == 'daw-wars' || songPathName == 'means-of-destruction')) 
+        if (FlxG.save.data.weekCompleted == null && (songPathName == 'whatisthis')) 
         {
             return;       
         } else {
