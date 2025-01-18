@@ -5,6 +5,7 @@ import backend.Highscore;
 import backend.Song;
 
 import flixel.util.FlxStringUtil;
+import substates.StickerSubState;
 
 import states.StoryMenuState;
 import states.FreeplayState;
@@ -324,15 +325,15 @@ class PauseSubState extends MusicBeatSubstate
 
 					PlayState.instance.canResync = false;
 					Mods.loadTopMod();
-					if(PlayState.isStoryMode)
-						MusicBeatState.switchState(new StoryMenuState());
-					else 
-						MusicBeatState.switchState(new FreeplayState());
-
-					if(PlayState.isStoryMode)
+					if (PlayState.isStoryMode)
 					{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-				    }
+						PlayState.storyPlaylist = [];
+						openSubState(new StickerSubState(null, (sticker) -> new StoryMenuState(sticker)));
+					}
+					else
+					{
+						openSubState(new StickerSubState(null, (sticker) -> new FreeplayState(sticker)));
+					}
 					PlayState.changedDifficulty = false;
 					PlayState.chartingMode = false;
 					FlxG.camera.followLerp = 0;
