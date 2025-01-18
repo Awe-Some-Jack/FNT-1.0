@@ -123,11 +123,11 @@ class FreeplayState extends MusicBeatState
 		bg.screenCenter();
 
 		checker = new FlxBackdrop(Paths.image('Grid_lmao'));
-        //checker.velocity.set(112, 110);
-        checker.updateHitbox();
-        checker.scrollFactor.set(0, 0);
+        checker.velocity.set(-80, -15);
+        // checker.updateHitbox();
+        checker.scrollFactor.set();
         checker.alpha = 0.5;
-        checker.screenCenter(X);
+        // checker.screenCenter(X);
         add(checker);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
@@ -251,8 +251,8 @@ class FreeplayState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.7)
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 
-		checker.x -= .5*(elapsed/(1/120));
-        checker.y -= 0.16 / (ClientPrefs.data.framerate / 60);
+		// checker.x -= .5*(elapsed/(1/120));
+        // checker.y -= 0.16 / (ClientPrefs.data.framerate / 60);
 
 		lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 24)));
 		lerpRating = FlxMath.lerp(intendedRating, lerpRating, Math.exp(-elapsed * 12));

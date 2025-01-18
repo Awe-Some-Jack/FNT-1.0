@@ -163,7 +163,7 @@ class Main extends Sprite
 		watermark.selectable = false;
 		watermark.mouseEnabled = false;
 		watermark.autoSize = RIGHT;
-		watermark.text = "Dev Build " + BuildInfo.getBuildDate() + " KST - bpforest";
+		watermark.text = "Dev Build " + BuildInfo.getBuildDate() + " KST";
 		addChild(watermark);
 		#end
 
