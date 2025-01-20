@@ -3,9 +3,9 @@ function onCreate()
         import flixel.util.FlxSpriteUtil;
         function highlight(brightness) {
             for (spr in FlxG.state.members) {
-                if ([game.gfGroup, game.boyfriendGroup, game.dadGroup].contains(spr))
+                if ([gfGroup, boyfriendGroup, dadGroup, camGame, camHUD, camOther].contains(spr) || spr == null)
                     continue;
-                if (spr.camera != game.camGame)
+                if (spr.camera != camGame)
                     continue;
                 try {
                     FlxSpriteUtil.setBrightness(spr, brightness);
