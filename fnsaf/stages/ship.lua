@@ -19,8 +19,6 @@ function getBG(file)
 end
 
 function onCreate()
-    makeLuaSprite('coloramount')
-
     makeLuaSprite("1", getBG("1"), bg[1], bg[2])
     scaleObject("1", 1.2, 1.2)
 
