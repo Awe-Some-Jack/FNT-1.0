@@ -19,6 +19,8 @@ function getBG(file)
 end
 
 function onCreate()
+    makeLuaSprite('coloramount')
+
     makeLuaSprite("1", getBG("1"), bg[1], bg[2])
     scaleObject("1", 1.2, 1.2)
 
@@ -45,10 +47,47 @@ function onCreate()
     addLuaSprite("3", true)
 end
 
+function onStartCountdown()
+    if songName == "New Crewmate" then
+        for _, crew in ipairs(crewmates) do
+            local name = crew[1]
+    
+            setProperty(name..".alpha", 0)
+            setProperty(name..'.colorTransform.redOffset', 255)
+            setProperty(name..'.colorTransform.blueOffset',  255)
+            setProperty(name..'.colorTransform.greenOffset',  255)
+        end
+    end
+end
+
 function onBeatHit()
     if curBeat % 2 ~= 0 then return end
     for _, crew in ipairs(crewmates) do
         local name = crew[1]
         playAnim(name, "idle")
     end
+end
+
+function onStepHit()
+    if songName == "New Crewmate" then
+        if curStep == 68 then
+            Getin()
+        end
+    end
+end
+
+function Getin()	
+    for _, crew in ipairs(crewmates) do
+        local name = crew[1]
+        setProperty(name..".alpha", 1)
+        runHaxeCode([[ 
+        var objName = "]] .. name .. [["; 
+        if (game.getLuaObject(objName) != null) {
+        FlxTween.tween(game.getLuaObject(objName).colorTransform, { redOffset: 0, greenOffset: 0, blueOffset: 0, redMultiplier: 1, greenMultiplier: 1, blueMultiplier: 1 }, 1);
+        } else {
+            trace("Object not found: " + objName);
+        }
+    ]])
+    end
+
 end
