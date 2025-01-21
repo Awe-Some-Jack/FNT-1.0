@@ -1,0 +1,17 @@
+Korean (KO)
+
+// Gameplay
+score_text: "점수: {1} | 미스: {2} | 정확도: {3}"
+score_text_instakill: "점수: {1} | 정확도: {2}"
+botplay: "봇플레이"
+
+rating_you_suck: "너 존나 못해!"
+rating_shit: "젠장"
+rating_bad: "별로야"
+rating_bruh: "브뤄"
+rating_meh: "음"
+rating_nice: "나이스"
+rating_good: "나쁘지 않아"
+rating_great: "낫 배드"
+rating_sick: "좋아!"
+rating_perfect: "완벽해!!"
