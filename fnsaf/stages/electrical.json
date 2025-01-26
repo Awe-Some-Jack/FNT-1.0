@@ -10,12 +10,12 @@
 	},
 	"stageUI": "normal",
 	"boyfriend": [
-		800,
-		100
+		900,
+		0
 	],
 	"girlfriend": [
-		0,
-		0
+		1200,
+		-20
 	],
 	"defaultZoom": 0.8,
 	"objects": [
@@ -34,12 +34,12 @@
 		0
 	],
 	"opponent": [
-		0,
-		100
+		-150,
+		0
 	],
 	"directory": "",
 	"camera_speed": 1,
-	"hide_girlfriend": true,
+	"hide_girlfriend": false,
 	"camera_opponent": [
 		0,
 		0

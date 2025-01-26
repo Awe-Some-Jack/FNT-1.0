@@ -467,7 +467,7 @@ class FreeplayState extends MusicBeatState
             FlxTween.tween(item,{x:targetX},0.2, {ease: FlxEase.quadInOut});
 			if (bullShit == curSelected)  
             {
-                FlxTween.tween(item.scale,{x:1.0, y:1.0},0.2, {ease: FlxEase.quadInOut});
+                FlxTween.tween(item.scale,{x:1.1, y:1.1},0.2, {ease: FlxEase.quadInOut});
                 FlxTween.tween(item.skew,{x:0, y:0},0.2, {ease: FlxEase.quadInOut});
             } else {
                 if (bullShit < curSelected) {
