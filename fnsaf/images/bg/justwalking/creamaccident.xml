@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="creamaccident.png">
+	<!-- Created with Adobe Animate version 24.0.5.40 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="creamwalk0000" x="0" y="0" width="516" height="664" frameX="-9" frameY="-7" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0001" x="0" y="0" width="516" height="664" frameX="-9" frameY="-7" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0002" x="516" y="0" width="521" height="665" frameX="0" frameY="-5" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0003" x="516" y="0" width="521" height="665" frameX="0" frameY="-5" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0004" x="1037" y="0" width="519" height="665" frameX="-4" frameY="-3" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0005" x="1037" y="0" width="519" height="665" frameX="-4" frameY="-3" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0006" x="0" y="665" width="516" height="665" frameX="-8" frameY="-1" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0007" x="0" y="665" width="516" height="665" frameX="-8" frameY="-1" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0008" x="516" y="665" width="516" height="666" frameX="-9" frameY="0" frameWidth="525" frameHeight="671"/>
+	<SubTexture name="creamwalk0009" x="516" y="665" width="516" height="666" frameX="-9" frameY="0" frameWidth="525" frameHeight="671"/>
+</TextureAtlas>

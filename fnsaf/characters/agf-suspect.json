@@ -2,42 +2,42 @@
 	"animations": [
 		{
 			"offsets": [0, 0],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "idle"
 		},
 		{
-			"offsets": [124, -20],
-			"indices": [],
+			"offsets": [156, -23],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
-			"offsets": [10, -90],
-			"indices": [],
+			"offsets": [19, -102],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
-			"offsets": [9, 34],
-			"indices": [],
+			"offsets": [12, 43],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
 		},
 		{
-			"offsets": [-62, -3],
-			"indices": [],
+			"offsets": [-72, -3],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		}
 	],
@@ -48,8 +48,8 @@
 	"healthicon": "agf",
 	"flip_x": false,
 	"healthbar_colors": [215, 163, 60],
-	"camera_position": [40, 0],
+	"camera_position": [110, -80],
 	"sing_duration": 4,
-	"scale": 1.1,
+	"scale": 1.4,
 	"_editor_isPlayer": false
 }
