@@ -36,6 +36,10 @@ function onStepHit()
     if curStep == 1340 then
         doTweenAlpha("angel", "gf", 0.5, 1, "linear")
     end
+
+    if curStep == 1987 then
+        doTweenAlpha("angel", "gf", 0, 0.001, "linear")
+    end
 end
 
 function lightOffthe()
