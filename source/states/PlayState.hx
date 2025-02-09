@@ -240,7 +240,6 @@ class PlayState extends MusicBeatState
 
 	#if DISCORD_ALLOWED
 	// Discord RPC variables
-	var storyDifficultyText:String = "";
 	var detailsText:String = "";
 	var detailsPausedText:String = "";
 	#end
@@ -324,7 +323,6 @@ class PlayState extends MusicBeatState
 
 		#if DISCORD_ALLOWED
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
-		storyDifficultyText = Difficulty.getString();
 
 		if (isStoryMode)
 			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
@@ -1258,7 +1256,7 @@ class PlayState extends MusicBeatState
 
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence (with Time Left)
-		if(autoUpdateRPC) DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength);
+		if(autoUpdateRPC) DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter(), true, songLength);
 		#end
 		setOnScripts('songLength', songLength);
 		callOnScripts('onSongStart');
@@ -1603,7 +1601,7 @@ class PlayState extends MusicBeatState
 	override public function onFocusLost():Void
 	{
 		#if DISCORD_ALLOWED
-		if (health > 0 && !paused && autoUpdateRPC) DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+		if (health > 0 && !paused && autoUpdateRPC) DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
 		#end
 
 		super.onFocusLost();
@@ -1617,9 +1615,9 @@ class PlayState extends MusicBeatState
 		if(!autoUpdateRPC) return;
 
 		if (showTime)
-			DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.data.noteOffset);
+			DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter(), true, songLength - Conductor.songPosition - ClientPrefs.data.noteOffset);
 		else
-			DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+			DiscordClient.changePresence(detailsText, SONG.song, iconP2.getCharacter());
 		#end
 	}
 
@@ -1881,8 +1879,8 @@ class PlayState extends MusicBeatState
 		var newPercent:Null<Float> = FlxMath.remapToRange(FlxMath.bound(healthBar.valueFunction(), healthBar.bounds.min, healthBar.bounds.max), healthBar.bounds.min, healthBar.bounds.max, 0, 100);
 		healthBar.percent = (newPercent != null ? newPercent : 0);
 
-		iconP1.animation.curAnim.curFrame = (healthBar.percent < 20) ? 1 : 0; //If health is under 20%, change player icon to frame 1 (losing icon), otherwise, frame 0 (normal)
-		iconP2.animation.curAnim.curFrame = (healthBar.percent > 80) ? 1 : 0; //If health is over 80%, change opponent icon to frame 1 (losing icon), otherwise, frame 0 (normal)
+		iconP1.animation.curAnim.curFrame = (healthBar.percent > 80) ? 2 : (healthBar.percent < 20) ? 1 : 0; //If health is under 20%, change player icon to frame 1 (losing icon), otherwise, frame 0 (normal)
+		iconP2.animation.curAnim.curFrame = (healthBar.percent < 20) ? 2 : (healthBar.percent > 80) ? 1 : 0; //If health is over 80%, change opponent icon to frame 1 (losing icon), otherwise, frame 0 (normal)
 		return health;
 	}
 
@@ -1910,7 +1908,7 @@ class PlayState extends MusicBeatState
 		openSubState(new PauseSubState());
 
 		#if DISCORD_ALLOWED
-		if(autoUpdateRPC) DiscordClient.changePresence(detailsPausedText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+		if(autoUpdateRPC) DiscordClient.changePresence(detailsPausedText, SONG.song, iconP2.getCharacter());
 		#end
 	}
 
@@ -2000,7 +1998,7 @@ class PlayState extends MusicBeatState
 
 				#if DISCORD_ALLOWED
 				// Game Over doesn't get his its variable because it's only used here
-				if(autoUpdateRPC) DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+				if(autoUpdateRPC) DiscordClient.changePresence("Game Over - " + detailsText, SONG.song, iconP2.getCharacter());
 				#end
 				isDead = true;
 				return true;

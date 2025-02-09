@@ -9,3 +9,16 @@ function onCreate()
 		end
 	end
 end
+
+
+function goodNoteHit(membersIndex, noteData, noteType, isSustainNote)
+	if noteType == 'Dodge Note'  then
+		cameraShake("game", 0.05, 0.1)
+	end
+end
+
+function noteMiss(membersIndex, noteData, noteType, isSustainNote)
+	if noteType == 'Dodge Note'  then
+		cameraShake("game", 0.05, 0.1)
+	end
+end
