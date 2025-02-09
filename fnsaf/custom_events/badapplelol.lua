@@ -14,6 +14,12 @@ function onEvent(n, v1, v2)
 		doTweenColor('badapplexd2', 'gf', '000000', v2, 'linear')
 		doTweenColor('badapplexd100', 'iconP1', '000000', v2, 'linear')
 		doTweenColor('badapplexd10', 'iconP2', '000000', v2, 'linear')
+
+		if curStage == "electrical" then
+			doTweenAlpha('applebadobjectxd', '2', 0, v2, 'linear')
+			doTweenAlpha('applebadobject2xd', '3', 0, v2, 'linear')
+			doTweenAlpha('applebadobject3xd', 'shadow', 0, v2, 'linear')
+		end
 	end
 	if n == 'badapplelol' and string.lower(v1) == 'b' then
 		doTweenAlpha('applebadxd', 'whitebg', 0, v2, 'linear')
@@ -22,5 +28,11 @@ function onEvent(n, v1, v2)
 		doTweenColor('badapplexd2', 'gf', 'FFFFFF', v2, 'linear')
 		doTweenColor('badapplexd100', 'iconP1', 'FFFFFF', v2, 'linear')
 		doTweenColor('badapplexd10', 'iconP2', 'FFFFFF', v2, 'linear')
+
+		if curStage == "electrical" then
+			doTweenAlpha('applebadobjectxd', '2', 1, v2, 'linear')
+			doTweenAlpha('applebadobject2xd', '3', 1, v2, 'linear')
+			doTweenAlpha('applebadobject3xd', 'shadow', 1, v2, 'linear')
+		end
 	end
 end
