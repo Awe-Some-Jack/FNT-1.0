@@ -230,7 +230,7 @@ class FreeplayState extends MusicBeatState
 			return;
 
 		if (FlxG.sound.music.volume < 0.7)
-			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+			FlxG.sound.music.volume += 0.5 * elapsed;
 
 		// checker.x -= .5*(elapsed/(1/120));
         // checker.y -= 0.16 / (ClientPrefs.data.framerate / 60);
@@ -371,6 +371,12 @@ class FreeplayState extends MusicBeatState
 				return;
 			}
 
+			@:privateAccess
+			if(PlayState._lastLoadedModDirectory != Mods.currentModDirectory)
+			{
+				trace('CHANGED MOD DIRECTORY, RELOADING STUFF');
+				Paths.freeGraphicsFromMemory();
+			}
 			LoadingState.prepareToSong();
 			LoadingState.loadAndSwitchState(new PlayState());
 			#if !SHOW_LOADING_SCREEN FlxG.sound.music.stop(); #end
