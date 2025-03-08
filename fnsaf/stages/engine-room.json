@@ -34,14 +34,14 @@
 		-100
 	],
 	"opponent": [
-		-600,
+		-590,
 		450
 	],
 	"directory": "",
 	"camera_speed": 1,
 	"hide_girlfriend": false,
 	"camera_opponent": [
-		100,
+		150,
 		0
 	]
 }

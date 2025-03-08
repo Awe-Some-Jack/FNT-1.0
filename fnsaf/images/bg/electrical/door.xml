@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="door.png">
+	<!-- Created with Adobe Animate version 24.0.4.28 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="close0000" x="0" y="0" width="2617" height="712"/>
+	<SubTexture name="close0001" x="2617" y="0" width="2617" height="712"/>
+	<SubTexture name="close0002" x="5234" y="0" width="2617" height="712"/>
+	<SubTexture name="close0003" x="0" y="712" width="2617" height="712"/>
+	<SubTexture name="close0004" x="2617" y="712" width="2617" height="712"/>
+	<SubTexture name="open0000" x="2617" y="712" width="2617" height="712"/>
+	<SubTexture name="open0001" x="5234" y="712" width="2617" height="712"/>
+	<SubTexture name="open0002" x="5234" y="0" width="2617" height="712"/>
+	<SubTexture name="open0003" x="2617" y="0" width="2617" height="712"/>
+	<SubTexture name="open0004" x="0" y="0" width="2617" height="712"/>
+</TextureAtlas>

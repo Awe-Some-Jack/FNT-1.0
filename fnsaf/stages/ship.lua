@@ -31,14 +31,16 @@ function onCreate()
 
     addLuaSprite("1")
 
-    for _, crew in ipairs(crewmates) do
-        local name, pos, front, scale
-        = crew[1], crew[2], crew[3], crew[4]
+    if not lowQuality then
+        for _, crew in ipairs(crewmates) do
+            local name, pos, front, scale
+            = crew[1], crew[2], crew[3], crew[4]
 
-        makeAnimatedLuaSprite(name, getBG("crewmates"), bg[1] + pos[1], bg[2] + pos[2])
-        addAnimationByPrefix(name, "idle", name, 24, false)
-        scaleObject(name, scale, scale)
-        addLuaSprite(name, front)
+            makeAnimatedLuaSprite(name, getBG("crewmates"), bg[1] + pos[1], bg[2] + pos[2])
+            addAnimationByPrefix(name, "idle", name, 24, false)
+            scaleObject(name, scale, scale)
+            addLuaSprite(name, front)
+        end
     end
 
     addLuaSprite("2")

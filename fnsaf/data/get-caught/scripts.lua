@@ -1,6 +1,19 @@
+local dir = "bg/electrical/"
+
 function onCreate()
     setProperty("gf.alpha", 0)
     setProperty('skipCountdown',true)
+
+    makeAnimatedLuaSprite('Door',getBG("door"), -700, 5)
+	addAnimationByPrefix('Door','Close','close' ,24 ,false)
+    addAnimationByPrefix('Door','FBI','open' ,24 ,false)
+    setObjectCamera("Door", "hud")
+    setProperty("Door.alpha", 0)
+    addLuaSprite("Door", false)
+end
+
+function getBG(file)
+    return dir .. file
 end
 
 function onStepHit()
@@ -12,6 +25,16 @@ function onStepHit()
         cameraFlash("game", "ffffff", 0.2, false)
         setProperty("shadow.alpha", 0)
         setProperty("light.alpha", 1)
+        setProperty("Door.alpha", 1)
+        objectPlayAnimation('Door','Close' ,false)
+    end
+
+    if curStep == 928 then
+        objectPlayAnimation('Door','FBI' ,false)
+
+        if getProperty('Door.animation.curAnim.finished') then
+            removeLuaSprite("Door", true)
+        end
     end
     
     if curStep == 1040 then

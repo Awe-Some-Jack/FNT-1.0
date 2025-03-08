@@ -1,0 +1,7 @@
+Setting this event will display the song name.
+Value1 and Value2 can be set to custom text.
+
+If you don't write anything, it will be set automatically.
+
+Value1: Song Name
+Value2: Credits Name
