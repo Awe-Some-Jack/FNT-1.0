@@ -81,10 +81,3 @@ function onTimerCompleted(tag, loops, loopsLeft)
         doTweenAlpha("ShadowLOL", "shadow", 0, 0.1, "linear")
     end
 end
-
-
-function onTweenCompleted(tag)
-    if tag == "Black" then
-        
-    end
-end
