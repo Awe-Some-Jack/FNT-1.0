@@ -302,8 +302,12 @@ class StickerSubState extends MusicBeatSubstate
               dipshit.addChild(bitmap);
               // FlxG.addChildBelowMouse(dipshit);
              */
-            FlxG.switchState(targetState(this)
-            );
+             if(subState != null){
+              subStateClosed.addOnce(s -> {
+                FlxG.switchState(targetState(this));
+              });
+             }
+             else FlxG.switchState(targetState(this));
           }
         });
       });
