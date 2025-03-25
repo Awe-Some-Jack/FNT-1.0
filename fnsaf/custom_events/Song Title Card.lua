@@ -38,7 +38,7 @@ function onEvent(eventName, value1, value2, strumTime)
 				art = "Logan "
 				cover = "??? "
 
-				setTextString("Who", "Composer by:"..compo.. "Charter by:" ..chart.. "\nArtist by:"..art "Cover by:"..cover)
+				setTextString("Who", "Composer by:"..compo.. "Charter by:" ..chart.. "\nArtist by:"..art.. "Cover by:"..cover)
 			end
 			setTextString("Who", "Composer by:"..compo.. "Charter by:" ..chart.. "\nArtist by:"..art)
 		else
