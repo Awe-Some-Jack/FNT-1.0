@@ -1,5 +1,4 @@
 local showme = false
-local compo = ""
 
 function onCreate()
     makeLuaSprite('BoxTag', '', -1500, 300)
@@ -35,14 +34,13 @@ function onUpdate()
         doTweenX("Tween1", "SongName", 0, 1.0, "cubeOut")
         doTweenX("Tween2", "Who", 0, 1.0, "cubeOut")
 	    doTweenX('Tween3', 'BoxTag', 0, 1.0, 'CubeOut')
-
-	    runTimer('dh', 5)
 	end
 end
 
 function onEvent(eventName, value1, value2, strumTime)
 	if eventName == "Song Title Card" then
 		showme = true
+		runTimer('dh', 5)
 	end
 end
 
