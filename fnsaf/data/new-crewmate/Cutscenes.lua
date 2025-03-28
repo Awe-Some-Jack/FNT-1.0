@@ -1,11 +1,14 @@
 local allowCountdown = false
+function onCreatePost()
+        triggerEvent("Alt Idle Animation", "Dad", "-alt")
+end
+
 function onStartCountdown()
         if not allowCountdown and isStoryMode and not seenCutscene then --Block the first countdown
                 startVideo('wally');
                 allowCountdown = true;
                 return Function_Stop;
         end
-        triggerEvent("Alt Idle Animation", "Dad", "-alt")
         return Function_Continue;
 end
 
