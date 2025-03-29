@@ -16,6 +16,12 @@ function getBG(file)
     return dir .. file
 end
 
+function onUpdate(elapsed)
+    if getProperty('Door.animation.curAnim.name') == 'Close' and getProperty('Door.animation.curAnim.finished') then
+        objectPlayAnimation('Door','FBI' ,false)
+    end
+end
+
 function onStepHit()
     if curStep == 784 then
         playSound("AGFGUN", 0.8)
@@ -27,14 +33,11 @@ function onStepHit()
         setProperty("light.alpha", 1)
         setProperty("Door.alpha", 1)
         objectPlayAnimation('Door','Close' ,false)
+
     end
 
     if curStep == 928 then
-        objectPlayAnimation('Door','FBI' ,false)
-
-        if getProperty('Door.animation.curAnim.finished') then
-            removeLuaSprite("Door", true)
-        end
+        objectPlayAnimation('Door','Close' ,false)
     end
     
     if curStep == 1040 then

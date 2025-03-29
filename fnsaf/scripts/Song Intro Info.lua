@@ -40,6 +40,16 @@ end
 function onEvent(eventName, value1, value2, strumTime)
 	if eventName == "Song Title Card" then
 		showme = true
+		
+		if songName == "Get Caught" then
+			setProperty("SongName.x", 0)
+			setProperty("Who.x", 0)
+			setProperty("BoxTag.x", 0)
+
+			runTimer('Custom', 2)
+			cancelTimer("dh")
+		end
+
 		runTimer('dh', 5)
 	end
 end
@@ -54,6 +64,16 @@ end
 
 function onTimerCompleted(tag, loops, loopsLeft)
 	if tag == 'dh' then
+		doTweenAlpha('ohHolyShit2', 'SongName', 0, 1, 'quintOut')
+		doTweenAlpha('ohHolyShitn2', 'Who', 0, 1, 'quintOut')
+		doTweenAlpha('ohHolyShit!2', 'BoxTag', 0, 1, 'quintOut')
+
+		doTweenY('ohHolyShit22', 'SongName', getProperty('SongName.y') + 80, 2, 'quintOut')
+		doTweenY('ohHolyShitn22', 'Who', getProperty('Who.y') + 80, 2, 'quintOut')
+		doTweenY('ohHolyShit!22', 'BoxTag', getProperty('BoxTag.y') + 80, 2, 'quintOut')
+	end
+
+	if tag == 'Custom' then
 		doTweenAlpha('ohHolyShit2', 'SongName', 0, 1, 'quintOut')
 		doTweenAlpha('ohHolyShitn2', 'Who', 0, 1, 'quintOut')
 		doTweenAlpha('ohHolyShit!2', 'BoxTag', 0, 1, 'quintOut')
