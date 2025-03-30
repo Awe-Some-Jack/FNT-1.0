@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [694, 470],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "bleast-puppy idle"
+		},
+		{
+			"offsets": [694, 470],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bleast-puppy singLEFT0"
+		},
+		{
+			"offsets": [693, 470],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bleast-puppy singDOWN0"
+		},
+		{
+			"offsets": [694, 470],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bleast-puppy singUP0"
+		},
+		{
+			"offsets": [693, 470],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bleast-puppy singRIGHT0"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bleast-puppy",
+	"position": [20, 500],
+	"healthicon": "unknown",
+	"flip_x": false,
+	"healthbar_colors": [115, 0, 195],
+	"camera_position": [-670, -330],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

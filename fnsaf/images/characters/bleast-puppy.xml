@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bleast-puppy.png">
+<SubTexture name="bleast-puppy idle0000" x="1032" y="0" width="515" height="437" frameX="-588" frameY="-392" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0001" x="1032" y="437" width="515" height="436" frameX="-587" frameY="-394" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0002" x="517" y="540" width="512" height="441" frameX="-586" frameY="-393" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0003" x="0" y="1001" width="517" height="434" frameX="-579" frameY="-389" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0004" x="517" y="1001" width="517" height="428" frameX="-578" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0005" x="1547" y="0" width="518" height="427" frameX="-577" frameY="-381" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0006" x="1547" y="427" width="517" height="427" frameX="-577" frameY="-380" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy idle0007" x="1547" y="427" width="517" height="427" frameX="-577" frameY="-380" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00000" x="2065" y="352" width="698" height="351" frameX="-620" frameY="-389" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00001" x="2065" y="703" width="644" height="349" frameX="-628" frameY="-390" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00002" x="2065" y="1052" width="641" height="349" frameX="-627" frameY="-390" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00003" x="2065" y="1052" width="641" height="349" frameX="-627" frameY="-390" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00004" x="2065" y="1052" width="641" height="349" frameX="-627" frameY="-390" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singRIGHT00005" x="2065" y="1052" width="641" height="349" frameX="-627" frameY="-390" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00000" x="0" y="0" width="515" height="540" frameX="-580" frameY="-300" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00001" x="515" y="0" width="517" height="466" frameX="-577" frameY="-343" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00002" x="0" y="540" width="517" height="461" frameX="-577" frameY="-346" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00003" x="0" y="540" width="517" height="461" frameX="-577" frameY="-346" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00004" x="0" y="540" width="517" height="461" frameX="-577" frameY="-346" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singUP00005" x="0" y="540" width="517" height="461" frameX="-577" frameY="-346" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00000" x="749" y="1839" width="748" height="313" frameX="-505" frameY="-431" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00001" x="0" y="1839" width="749" height="347" frameX="-505" frameY="-419" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00002" x="2065" y="0" width="746" height="352" frameX="-507" frameY="-417" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00003" x="2065" y="0" width="746" height="352" frameX="-507" frameY="-417" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00004" x="2065" y="0" width="746" height="352" frameX="-507" frameY="-417" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singDOWN00005" x="2065" y="0" width="746" height="352" frameX="-507" frameY="-417" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00000" x="0" y="1435" width="623" height="404" frameX="-382" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00001" x="623" y="1435" width="569" height="388" frameX="-430" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00002" x="1192" y="1435" width="565" height="386" frameX="-437" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00003" x="1192" y="1435" width="565" height="386" frameX="-437" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00004" x="1192" y="1435" width="565" height="386" frameX="-437" frameY="-384" frameWidth="1700" frameHeight="850" />
+<SubTexture name="bleast-puppy singLEFT00005" x="1192" y="1435" width="565" height="386" frameX="-437" frameY="-384" frameWidth="1700" frameHeight="850" />
+</TextureAtlas>

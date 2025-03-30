@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="AGFhaha.png">
+<SubTexture name="AGFhaha singDOWN00000" x="1279" y="0" width="651" height="421" frameX="-565" frameY="-210" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN00001" x="1279" y="0" width="651" height="421" frameX="-565" frameY="-210" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN00002" x="0" y="923" width="658" height="417" frameX="-559" frameY="-208" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN00003" x="0" y="923" width="658" height="417" frameX="-559" frameY="-208" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN-alt0000" x="1279" y="0" width="651" height="421" frameX="-565" frameY="-210" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN-alt0001" x="1279" y="0" width="651" height="421" frameX="-565" frameY="-210" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN-alt0002" x="0" y="923" width="658" height="417" frameX="-559" frameY="-208" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singDOWN-alt0003" x="0" y="482" width="652" height="441" frameX="-565" frameY="-184" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singUP00000" x="0" y="0" width="638" height="482" frameX="-579" frameY="-143" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singUP00001" x="0" y="0" width="638" height="482" frameX="-579" frameY="-143" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singUP00002" x="638" y="0" width="641" height="471" frameX="-576" frameY="-154" frameWidth="1700" frameHeight="800" />
+<SubTexture name="AGFhaha singUP00003" x="638" y="0" width="641" height="471" frameX="-576" frameY="-154" frameWidth="1700" frameHeight="800" />
+</TextureAtlas>
