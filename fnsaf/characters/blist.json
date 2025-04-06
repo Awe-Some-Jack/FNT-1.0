@@ -1,83 +1,83 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [3, 0],
+			"loop": true,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [-63, 83],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up0",
-			"indices": []
+			"indices": [],
+			"name": "up0"
 		},
 		{
-			"loop": false,
 			"offsets": [-68, 88],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right0",
-			"indices": []
+			"indices": [],
+			"name": "right0"
 		},
 		{
-			"loop": false,
 			"offsets": [-40, 124],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left0",
-			"indices": []
-		},
-		{
 			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left0"
+		},
+		{
 			"offsets": [-122, 54],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down0",
-			"indices": []
+			"indices": [],
+			"name": "down0"
 		},
 		{
-			"loop": true,
 			"offsets": [-62, 57],
+			"loop": true,
+			"fps": 24,
 			"anim": "singUP-loop",
-			"fps": 24,
-			"name": "upLoop",
-			"indices": []
+			"indices": [],
+			"name": "upLoop"
 		},
 		{
-			"loop": true,
 			"offsets": [-68, 88],
+			"loop": true,
+			"fps": 24,
 			"anim": "singRIGHT-loop",
-			"fps": 24,
-			"name": "rightLoop",
-			"indices": []
+			"indices": [],
+			"name": "rightLoop"
 		},
 		{
-			"loop": true,
 			"offsets": [-129, 125],
-			"anim": "singLEFT-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "leftLoop",
-			"indices": []
+			"anim": "singLEFT-loop",
+			"indices": [],
+			"name": "leftLoop"
 		},
 		{
-			"loop": true,
 			"offsets": [-121, 55],
-			"anim": "singDOWN-loop",
+			"loop": true,
 			"fps": 24,
-			"name": "downLoop",
-			"indices": []
+			"anim": "singDOWN-loop",
+			"indices": [],
+			"name": "downLoop"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Blist",
 	"position": [-210, 380],
-	"healthicon": "face",
+	"healthicon": "blist",
 	"flip_x": false,
 	"healthbar_colors": [0, 100, 40],
 	"camera_position": [230, -10],

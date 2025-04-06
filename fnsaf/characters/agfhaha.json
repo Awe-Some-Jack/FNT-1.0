@@ -1,28 +1,28 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [690, 471],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "AGFhaha singDOWN0",
-			"indices": []
+			"indices": [],
+			"name": "AGFhaha singDOWN0"
 		},
 		{
-			"loop": false,
 			"offsets": [693, 471],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "AGFhaha singUP0",
-			"indices": []
+			"indices": [],
+			"name": "AGFhaha singUP0"
 		},
 		{
-			"loop": false,
 			"offsets": [693, 471],
-			"anim": "singDOWN-alt",
+			"loop": false,
 			"fps": 24,
-			"name": "AGFhaha singDOWN-alt",
-			"indices": []
+			"anim": "singDOWN-alt",
+			"indices": [],
+			"name": "AGFhaha singDOWN-alt"
 		}
 	],
 	"vocals_file": "",
@@ -31,7 +31,7 @@
 	"position": [20, 600],
 	"healthicon": "agf",
 	"flip_x": false,
-	"healthbar_colors": [255, 179, 61],
+	"healthbar_colors": [215, 163, 60],
 	"camera_position": [-640, -450],
 	"sing_duration": 4,
 	"scale": 1,

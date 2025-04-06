@@ -18,9 +18,11 @@ function onCreate()
     addAnimationByPrefix('Vent','are u','melina_vent 3' ,12 ,false)
 	objectPlayAnimation('Vent','idle' ,false)
 
-    makeLuaSprite("2", getBG("2"), bg[1], bg[2])
+    if not lowQuality then
+        makeLuaSprite("2", getBG("2"), bg[1], bg[2])
 
-    makeLuaSprite("3", getBG("3"), bg[1], bg[2])
+        makeLuaSprite("3", getBG("3"), bg[1], bg[2])
+    end
 
     makeLuaSprite("shadow", getBG("shadow"), bg[1], bg[2])
 

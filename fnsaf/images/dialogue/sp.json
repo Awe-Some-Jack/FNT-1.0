@@ -1,0 +1,76 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		-500,
+		-570
+	],
+	"scale": 0.6,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "neutral instance 1",
+			"idle_name": "neutral instance 10007"
+		},
+		{
+			"loop_name": "angry instance 1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "angry instance 10007",
+			"anim": "angry",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "happy instance 1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "happy instance 10007",
+			"anim": "happy",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "skeptical instance 1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "skeptical instance 10007",
+			"anim": "skeptical",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "strangeness instance 1",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "strangeness instance 10007",
+			"anim": "strangeness",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "spdialogue"
+}

@@ -1,6 +1,6 @@
 local allowCountdown = false
 function onCreatePost()
-        triggerEvent("Alt Idle Animation", "Dad", "-alt")
+        setProperty('dad.idleSuffix', '-alt')
 end
 
 function onStartCountdown()

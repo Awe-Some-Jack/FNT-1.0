@@ -1,52 +1,52 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [694, 470],
-			"loop": false,
-			"fps": 12,
 			"anim": "idle",
-			"indices": [],
-			"name": "AGF idle"
+			"fps": 12,
+			"name": "AGF idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [693, 469],
-			"loop": false,
-			"fps": 12,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "AGF singLEFT0"
+			"fps": 12,
+			"name": "AGF singLEFT0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [690, 471],
-			"loop": false,
-			"fps": 12,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "AGF singDOWN0"
-		},
-		{
-			"offsets": [693, 471],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "AGF singUP0"
-		},
-		{
-			"offsets": [694, 471],
-			"loop": false,
 			"fps": 12,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "AGF singRIGHT0"
+			"name": "AGF singDOWN0",
+			"indices": []
 		},
 		{
-			"offsets": [694, 471],
 			"loop": false,
+			"offsets": [693, 471],
+			"anim": "singUP",
 			"fps": 24,
+			"name": "AGF singUP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [694, 471],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "AGF singRIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [694, 471],
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "AGF singRIGHT-alt"
+			"fps": 24,
+			"name": "AGF singRIGHT-alt",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
@@ -55,7 +55,7 @@
 	"position": [20, 600],
 	"healthicon": "agf",
 	"flip_x": false,
-	"healthbar_colors": [255, 179, 61],
+	"healthbar_colors": [215, 163, 60],
 	"camera_position": [-640, -460],
 	"sing_duration": 4,
 	"scale": 1,

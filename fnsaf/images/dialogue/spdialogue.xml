@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="spdialogue.png">
+	<!-- Created with Adobe Animate version 22.0.5.191 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="angry instance 10000" x="0" y="0" width="1612" height="1621" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="angry instance 10001" x="0" y="0" width="1612" height="1621" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="angry instance 10002" x="1612" y="0" width="1663" height="1662"/>
+	<SubTexture name="angry instance 10003" x="1612" y="0" width="1663" height="1662"/>
+	<SubTexture name="angry instance 10004" x="3275" y="0" width="1612" height="1621" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="angry instance 10005" x="3275" y="0" width="1612" height="1621" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="angry instance 10006" x="4887" y="0" width="1505" height="1520" frameX="-111" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="angry instance 10007" x="4887" y="0" width="1505" height="1520" frameX="-111" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10000" x="6392" y="0" width="1612" height="1611" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10001" x="6392" y="0" width="1612" height="1611" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10002" x="0" y="1662" width="1663" height="1662"/>
+	<SubTexture name="happy instance 10003" x="0" y="1662" width="1663" height="1662"/>
+	<SubTexture name="happy instance 10004" x="1663" y="1662" width="1612" height="1620" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10005" x="1663" y="1662" width="1612" height="1620" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10006" x="3275" y="1662" width="1512" height="1499" frameX="-104" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="happy instance 10007" x="3275" y="1662" width="1512" height="1499" frameX="-104" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10000" x="4787" y="1662" width="1612" height="1611" frameX="-38" frameY="-32" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10001" x="4787" y="1662" width="1612" height="1611" frameX="-38" frameY="-32" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10002" x="6399" y="1662" width="1663" height="1662"/>
+	<SubTexture name="neutral instance 10003" x="6399" y="1662" width="1663" height="1662"/>
+	<SubTexture name="neutral instance 10004" x="0" y="3324" width="1612" height="1622" frameX="-38" frameY="-32" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10005" x="0" y="3324" width="1612" height="1622" frameX="-38" frameY="-32" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10006" x="1612" y="3324" width="1492" height="1515" frameX="-123" frameY="-109" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="neutral instance 10007" x="1612" y="3324" width="1492" height="1515" frameX="-123" frameY="-109" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10000" x="3104" y="3324" width="1612" height="1622" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10001" x="3104" y="3324" width="1612" height="1622" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10002" x="4716" y="3324" width="1663" height="1662"/>
+	<SubTexture name="skeptical instance 10003" x="4716" y="3324" width="1663" height="1662"/>
+	<SubTexture name="skeptical instance 10004" x="6379" y="3324" width="1612" height="1623" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10005" x="6379" y="3324" width="1612" height="1623" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10006" x="0" y="4986" width="1508" height="1538" frameX="-111" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="skeptical instance 10007" x="0" y="4986" width="1508" height="1538" frameX="-111" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10000" x="1508" y="4986" width="1612" height="1611" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10001" x="1508" y="4986" width="1612" height="1611" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10002" x="3120" y="4986" width="1663" height="1662"/>
+	<SubTexture name="strangeness instance 10003" x="3120" y="4986" width="1663" height="1662"/>
+	<SubTexture name="strangeness instance 10004" x="4783" y="4986" width="1612" height="1617" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10005" x="4783" y="4986" width="1612" height="1617" frameX="-38" frameY="-31" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10006" x="6395" y="4986" width="1521" height="1521" frameX="-95" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+	<SubTexture name="strangeness instance 10007" x="6395" y="4986" width="1521" height="1521" frameX="-95" frameY="-107" frameWidth="1663" frameHeight="1662"/>
+</TextureAtlas>

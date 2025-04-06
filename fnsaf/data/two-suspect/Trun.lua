@@ -1,8 +1,16 @@
 local Sencond = true
 
-function onUpdatePost(elapsed)
+function onUpdate(elapsed)
     if not mustHitSection and Sencond then
-        addCameraScroll(-30, 0)
+        if framerate == 60 then
+            addCameraScroll(-30, 0)
+        elseif framerate > 60 and framerate < 148 then
+            addCameraScroll(-18, 0)
+        elseif framerate > 149 and framerate < 199 then
+            addCameraScroll(-13, 0)
+        elseif framerate > 200 then
+            addCameraScroll(-10, 0)
+        end
     else
 
     end
@@ -30,19 +38,11 @@ function onStepHit()
         cameraFlash("hud", "000000", 0.8, false)
     end 
 
-    if curStep == 688 then
+    if curStep == 688 or curStep == 1047 then
         Sencond = false
     end 
 
-    if curStep == 992 then
-        Sencond = true
-    end 
-
-    if curStep == 1047 then
-        Sencond = false
-    end 
-
-    if curStep == 1091 then
+    if curStep == 992 or curStep == 1091 then
         Sencond = true
     end 
 end
