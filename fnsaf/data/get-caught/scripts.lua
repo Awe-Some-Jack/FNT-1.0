@@ -55,6 +55,7 @@ function onStepHit()
     if curStep == 1056 then
         cancelTimer("Black")
         removeLuaSprite("light", false)
+        cameraFlash("game", "ffffff", 0.2, false)
         doTweenAlpha("ShadowLOL", "shadow", 1, 0.001, "linear")
         cancelTimer("FadeLight")
     end
