@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Get Caught WTF Run.png">
+	<!-- Created with Adobe Animate version 24.0.8.70 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="OMG0000" x="0" y="0" width="460" height="507" frameX="-6" frameY="-66" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0001" x="0" y="0" width="460" height="507" frameX="-6" frameY="-66" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0002" x="460" y="0" width="469" height="436" frameX="-13" frameY="-40" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0003" x="929" y="0" width="480" height="429" frameX="-5" frameY="-17" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0004" x="1409" y="0" width="483" height="429" frameX="-5" frameY="-17" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0005" x="1892" y="0" width="488" height="439" frameX="0" frameY="0" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0006" x="2380" y="0" width="483" height="437" frameX="-1" frameY="0" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0007" x="2863" y="0" width="471" height="429" frameX="-5" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0008" x="2863" y="0" width="471" height="429" frameX="-5" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0009" x="3334" y="0" width="471" height="429" frameX="-5" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0010" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0011" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0012" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0013" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0014" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0015" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0016" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0017" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0018" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0019" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0020" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0021" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0022" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0023" x="0" y="507" width="472" height="435" frameX="-4" frameY="-15" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0024" x="472" y="507" width="472" height="419" frameX="-4" frameY="-31" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0025" x="944" y="507" width="472" height="393" frameX="-4" frameY="-57" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0026" x="1416" y="507" width="432" height="413" frameX="-43" frameY="-68" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0027" x="1848" y="507" width="423" height="432" frameX="-76" frameY="-68" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0028" x="2271" y="507" width="354" height="485" frameX="-134" frameY="-68" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0029" x="2625" y="507" width="430" height="396" frameX="-121" frameY="-72" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0030" x="3055" y="507" width="310" height="414" frameX="-173" frameY="-72" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0031" x="3365" y="507" width="360" height="427" frameX="-158" frameY="-78" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0032" x="3365" y="507" width="360" height="427" frameX="-158" frameY="-78" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0033" x="0" y="992" width="372" height="417" frameX="-165" frameY="-86" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0034" x="372" y="992" width="372" height="417" frameX="-172" frameY="-90" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0035" x="0" y="992" width="372" height="417" frameX="-203" frameY="-109" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0036" x="0" y="992" width="372" height="417" frameX="-216" frameY="-122" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0037" x="744" y="992" width="360" height="403" frameX="-245" frameY="-140" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0038" x="744" y="992" width="360" height="403" frameX="-271" frameY="-166" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0039" x="1104" y="992" width="366" height="401" frameX="-315" frameY="-172" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0040" x="1470" y="992" width="372" height="399" frameX="-407" frameY="-231" frameWidth="854" frameHeight="679"/>
+	<SubTexture name="OMG0041" x="1842" y="992" width="372" height="399" frameX="-482" frameY="-280" frameWidth="854" frameHeight="679"/>
+</TextureAtlas>

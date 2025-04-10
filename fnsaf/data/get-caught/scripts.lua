@@ -10,6 +10,14 @@ function onCreate()
     setObjectCamera("Door", "hud")
     setProperty("Door.alpha", 0)
     addLuaSprite("Door", false)
+
+    makeAnimatedLuaSprite('Whatareyou',getBG("Get Caught WTF Run"), 1100, 450)
+    scaleObject("Whatareyou", 1.2, 1.2)
+    setScrollFactor("Whatareyou", 0.9, 0.9)
+	addAnimationByPrefix('Whatareyou','anim','OMG' ,24 ,false)
+    setProperty("Whatareyou.alpha", 0)
+    setObjectOrder("Whatareyou", getObjectOrder("shadow") - 1)
+    addLuaSprite("Whatareyou", true)
 end
 
 function getBG(file)
@@ -46,9 +54,9 @@ function onStepHit()
 
     if curStep == 1056 then
         cancelTimer("Black")
-        doTweenAlpha("LightLOL", "light", 0, 0.1, "linear")
-        doTweenAlpha("ShadowLOL", "shadow", 1, 0.1, "linear")
-        cameraFlash("game", "ffffff", 0.2, false)
+        removeLuaSprite("light", false)
+        doTweenAlpha("ShadowLOL", "shadow", 1, 0.001, "linear")
+        cancelTimer("FadeLight")
     end
 
     if curStep == 1296 then
@@ -65,6 +73,11 @@ function onStepHit()
 
     if curStep == 1987 then
         doTweenAlpha("angel", "gf", 0, 0.001, "linear")
+    end
+
+    if curStep == 2064 then
+        setProperty("Whatareyou.alpha", 1)
+        playAnim("Whatareyou", "anim")
     end
 end
 
