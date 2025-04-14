@@ -1,51 +1,51 @@
 {
 	"animations": [
 		{
-			"offsets": [694, 470],
 			"loop": false,
-			"fps": 12,
+			"offsets": [694, 470],
 			"anim": "idle",
-			"indices": [],
-			"name": "bleast-puppy idle"
+			"fps": 12,
+			"name": "bleast-puppy idle",
+			"indices": []
 		},
 		{
-			"offsets": [694, 470],
 			"loop": false,
-			"fps": 12,
+			"offsets": [694, 470],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "bleast-puppy singLEFT0"
+			"fps": 12,
+			"name": "bleast-puppy singLEFT0",
+			"indices": []
 		},
 		{
-			"offsets": [693, 470],
 			"loop": false,
-			"fps": 12,
+			"offsets": [693, 470],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "bleast-puppy singDOWN0"
+			"fps": 12,
+			"name": "bleast-puppy singDOWN0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [694, 470],
-			"loop": false,
-			"fps": 12,
 			"anim": "singUP",
-			"indices": [],
-			"name": "bleast-puppy singUP0"
+			"fps": 12,
+			"name": "bleast-puppy singUP0",
+			"indices": []
 		},
 		{
-			"offsets": [693, 470],
 			"loop": false,
-			"fps": 12,
+			"offsets": [693, 470],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "bleast-puppy singRIGHT0"
+			"fps": 12,
+			"name": "bleast-puppy singRIGHT0",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/bleast-puppy",
 	"position": [20, 500],
-	"healthicon": "unknown",
+	"healthicon": "blist-puppy",
 	"flip_x": false,
 	"healthbar_colors": [115, 0, 195],
 	"camera_position": [-670, -330],
