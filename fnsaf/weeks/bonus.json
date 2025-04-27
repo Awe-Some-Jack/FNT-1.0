@@ -5,6 +5,11 @@
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"bf",
+		"bf",
+		"gf"
+	],
 	"hideStoryMode": true,
 	"songs": [
 		[
@@ -15,13 +20,17 @@
 				113,
 				253
 			]
+		],
+		[
+			"Zanta",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
 		]
 	],
-	"weekCharacters": [
-		"bf",
-		"bf",
-		"gf"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Custom Week"
+	"weekName": "Custom Week",
+	"hiddenUntilUnlocked": false
 }

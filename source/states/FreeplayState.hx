@@ -33,6 +33,7 @@ class FreeplayState extends MusicBeatState
 	var scoreBG:FlxSprite;
 	var checker:FlxBackdrop; 
 	var scoreText:FlxText;
+	var diffText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
@@ -152,6 +153,10 @@ class FreeplayState extends MusicBeatState
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
 		scoreBG.alpha = 0.6;
 		add(scoreBG);
+
+		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
+		diffText.font = scoreText.font;
+		add(diffText);
 
 		add(scoreText);
 
@@ -292,6 +297,17 @@ class FreeplayState extends MusicBeatState
 					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
 						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
 				}
+			}
+
+			if (controls.UI_UP_P)
+			{
+				changeDiff(1);
+				_updateSongLastDifficulty();
+			}
+			else if (controls.UI_DOWN_P)
+			{
+				changeDiff(-1);
+				_updateSongLastDifficulty();
 			}
 		}
 
@@ -434,6 +450,10 @@ class FreeplayState extends MusicBeatState
 
 		lastDifficultyName = Difficulty.getString(curDifficulty, false);
 		var displayDiff:String = Difficulty.getString(curDifficulty);
+		if (Difficulty.list.length > 1)
+			diffText.text = 'v ' + displayDiff.toUpperCase() + ' ^';
+		else
+			diffText.text = displayDiff.toUpperCase();
 
 		positionHighscore();
 		missingText.visible = false;
@@ -515,6 +535,8 @@ class FreeplayState extends MusicBeatState
 		scoreText.x = FlxG.width - scoreText.width - 6;
 		scoreBG.scale.x = FlxG.width - scoreText.x + 6;
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);
+		diffText.x = Std.int(scoreBG.x + (scoreBG.width / 2));
+		diffText.x -= diffText.width / 2;
 	}
 
 	var _drawDistance:Int = 4;
