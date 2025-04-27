@@ -1,60 +1,60 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
+			"offsets": [214, -30],
 			"loop": false,
-			"offsets": [220, -35],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [-24, -55],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [1, 41],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [-50, -9],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right",
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [-14, -60],
+			"anim": "idle-alt",
+			"fps": 24,
+			"name": "wally intro",
 			"indices": []
 		},
 		{
-			"offsets": [-14, -60],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle-alt",
-			"indices": [],
-			"name": "wally intro"
-		},
-		{
 			"offsets": [56, -47],
-			"indices": [],
-			"fps": 24,
 			"anim": "intro anim",
-			"loop": false,
-			"name": "alt idle"
+			"fps": 24,
+			"name": "alt idle",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
