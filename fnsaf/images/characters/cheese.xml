@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="cheese.png">
+<SubTexture name="cheese idle0000" x="640" y="0" width="315" height="464" frameX="-141" frameY="-150" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0000" x="738" y="640" width="359" height="342" frameX="-126" frameY="-294" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0001" x="955" y="0" width="367" height="355" frameX="-126" frameY="-282" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0002" x="372" y="640" width="366" height="353" frameX="-126" frameY="-285" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0003" x="0" y="640" width="372" height="353" frameX="-123" frameY="-287" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0004" x="955" y="355" width="316" height="268" frameX="-122" frameY="-372" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0005" x="0" y="993" width="317" height="216" frameX="-121" frameY="-424" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0006" x="317" y="993" width="321" height="191" frameX="-119" frameY="-449" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0007" x="638" y="993" width="321" height="135" frameX="-111" frameY="-505" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0008" x="640" y="464" width="279" height="73" frameX="-102" frameY="-567" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0009" x="1271" y="355" width="28" height="6" frameX="-325" frameY="-634" frameWidth="640" frameHeight="640" />
+<SubTexture name="cheese dead0010" x="0" y="0" width="640" height="640" frameX="0" frameY="0" frameWidth="640" frameHeight="640" />
+</TextureAtlas>

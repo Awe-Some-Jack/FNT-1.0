@@ -4,6 +4,7 @@ class HealthIcon extends FlxSprite
 {
 	public var sprTracker:FlxSprite;
 	private var isPlayer:Bool = false;
+	public var hasWinning:Bool = true;
 	private var char:String = '';
 
 	public function new(char:String = 'face', isPlayer:Bool = false, ?allowGPU:Bool = true)
@@ -25,20 +26,32 @@ class HealthIcon extends FlxSprite
 	private var iconOffsets:Array<Float> = [0, 0];
 	public function changeIcon(char:String, ?allowGPU:Bool = true) {
 		if(this.char != char) {
+			var curAnimation:Int = 0;
+			if (this.animation.curAnim != null) curAnimation = this.animation.curAnim.curFrame; // quick patch so icons doesn't return to their default animation after changing it
+			var hasWin:Bool = false;
+			var singleIcon:Bool = false;
+
 			var name:String = 'icons/' + char;
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-' + char; //Older versions of psych engine's support
 			if(!Paths.fileExists('images/' + name + '.png', IMAGE)) name = 'icons/icon-face'; //Prevents crash from missing icon
 			
 			var graphic = Paths.image(name, allowGPU);
+			if (graphic.width == 450) hasWin = true;
+			else if (graphic.width == 150) singleIcon = true;
 			var iSize:Float = Math.round(graphic.width / graphic.height);
-			loadGraphic(graphic, true, Math.floor(graphic.width / iSize), Math.floor(graphic.height));
-			iconOffsets[0] = (width - 150) / iSize;
+			var realSize:Float = (hasWin ? 3 : (singleIcon ? 1 : iSize));
+			loadGraphic(graphic, true, Math.floor(graphic.width / realSize), Math.floor(graphic.height));
+			iconOffsets[0] = (width - 150) / realSize;
 			iconOffsets[1] = (height - 150) / iSize;
 			updateHitbox();
 
-			animation.add(char, [for(i in 0...frames.frames.length) i], 0, false, isPlayer);
+			var animArray:Array<Int> = [];
+			for(i in 0...3) animArray.push((i <= frames.frames.length - 1 ? i : 0)); // 0: Default | 1: Losing | 2: Winning
+			animation.add(char, animArray, 0, false, isPlayer);
 			animation.play(char);
+			this.animation.curAnim.curFrame = curAnimation;
 			this.char = char;
+			this.hasWinning = hasWin;
 
 			if(char.endsWith('-pixel'))
 				antialiasing = false;
