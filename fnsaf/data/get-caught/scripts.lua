@@ -30,7 +30,16 @@ function onUpdate(elapsed)
     end
 end
 
+function onSongStart()
+    setProperty("camHUD.visible", false)
+    cameraFade("other", "000000", 6, false, true)
+end
+
 function onStepHit()
+    if curStep == 256 then
+        setProperty("camHUD.visible", true)
+    end
+
     if curStep == 784 then
         playSound("AGFGUN", 0.8)
     end
