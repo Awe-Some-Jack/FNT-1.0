@@ -1,13 +1,13 @@
 local waralpha = 0
 
 
-function onCreate()
-    if not difficulty == 0 then
+function onCreatePost()
+    if difficulty ~= 0 then
         makeLuaSprite("Warning", "RedWar")
         setObjectCamera("Warning", "hud")
         setProperty("Warning.alpha", waralpha)
-        addLuaSprite("Warning", true)
     end
+    addLuaSprite("Warning", true)
 end
 
 function opponentNoteHit()
