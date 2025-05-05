@@ -10,7 +10,7 @@ Xoffset = 70; --x and y offsets
 Yoffset = -30;
 Xscale = 1; --scaling for icons
 Yscale = 1;
-overIcon = false; -- if yes, icon will be in top of the player icon
+overIcon = true; -- if yes, icon will be in top of the player icon
 
 ---------------------------------------don't edit anything under this line unless you know what you're doing
 nofunc = false
@@ -27,7 +27,7 @@ function onCreatePost()
 	setProperty(iconTag .. '.flipX', (P == 1));
 	setObjectCamera(iconTag, 'hud');
 	addToGroup('uiGroup', iconTag, getObjectOrder('iconP1', 'uiGroup'))
-	setObjectOrder(iconTag, getObjectOrder(boundIconName) + (overIcon and 1 or 0));
+	setObjectOrder(iconTag, getObjectOrder(boundIconName) + (overIcon and 16));
 	scaleObject(iconTag, Xscale, Yscale);
 	addLuaSprite(iconTag, true);
 end
