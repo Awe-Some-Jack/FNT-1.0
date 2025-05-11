@@ -38,11 +38,11 @@ function onStepHit()
         cameraFlash("hud", "000000", 0.8, false)
     end 
 
-    if curStep == 688 or curStep == 1047 then
+    if curStep == 688 or curStep == 848 or curStep == 928 or curStep == 1047 then
         Sencond = false
     end 
 
-    if curStep == 992 or curStep == 1091 then
+    if curStep == 772 or curStep == 896 or curStep == 992 or  curStep == 1091 then
         Sencond = true
     end 
 end
