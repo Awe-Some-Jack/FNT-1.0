@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="who.png">
+<SubTexture name="dark orange alt0000" x="0" y="0" width="277" height="434" frameX="-190" frameY="-182" frameWidth="640" frameHeight="640" />
+<SubTexture name="dark orange bald0000" x="554" y="0" width="277" height="326" frameX="-370" frameY="-290" frameWidth="1000" frameHeight="640" />
+<SubTexture name="dark orange idle0000" x="277" y="0" width="277" height="334" frameX="-370" frameY="-282" frameWidth="1000" frameHeight="640" />
+<SubTexture name="died0000" x="0" y="701" width="498" height="260" frameX="-74" frameY="-359" frameWidth="640" frameHeight="640" />
+<SubTexture name="died0001" x="831" y="267" width="498" height="266" frameX="-76" frameY="-355" frameWidth="640" frameHeight="640" />
+<SubTexture name="died0002" x="831" y="0" width="502" height="267" frameX="-77" frameY="-353" frameWidth="640" frameHeight="640" />
+<SubTexture name="died0003" x="0" y="434" width="497" height="267" frameX="-109" frameY="-353" frameWidth="640" frameHeight="640" />
+<SubTexture name="died0004" x="498" y="701" width="369" height="251" frameX="-159" frameY="-368" frameWidth="640" frameHeight="640" />
+<SubTexture name="died0005" x="497" y="434" width="321" height="186" frameX="-207" frameY="-436" frameWidth="640" frameHeight="640" />
+</TextureAtlas>

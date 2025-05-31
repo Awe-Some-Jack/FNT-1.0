@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="agf-zanta.png">
+<SubTexture name="left0000" x="1101" y="0" width="653" height="486" frameX="-32" frameY="-154" frameWidth="1000" frameHeight="640" />
+<SubTexture name="up0000" x="337" y="490" width="592" height="488" frameX="-111" frameY="-155" frameWidth="1000" frameHeight="640" />
+<SubTexture name="down0000" x="1754" y="0" width="524" height="427" frameX="-319" frameY="-210" frameWidth="1000" frameHeight="640" />
+<SubTexture name="right0000" x="1083" y="980" width="643" height="467" frameX="-87" frameY="-169" frameWidth="1000" frameHeight="640" />
+<SubTexture name="idle0000" x="553" y="980" width="530" height="474" frameX="-183" frameY="-163" frameWidth="1000" frameHeight="640" />
+<SubTexture name="change hat0000" x="0" y="0" width="542" height="490" frameX="-41" frameY="-146" frameWidth="640" frameHeight="640" />
+<SubTexture name="change hat0001" x="542" y="0" width="559" height="490" frameX="-41" frameY="-146" frameWidth="640" frameHeight="640" />
+<SubTexture name="change hat0002" x="0" y="490" width="337" height="490" frameX="-41" frameY="-146" frameWidth="640" frameHeight="640" />
+<SubTexture name="change hat0003" x="0" y="980" width="553" height="477" frameX="-41" frameY="-159" frameWidth="640" frameHeight="640" />
+<SubTexture name="change hat0004" x="592" y="1457" width="542" height="400" frameX="-41" frameY="-236" frameWidth="640" frameHeight="640" />
+<SubTexture name="up-alt0000" x="0" y="1457" width="592" height="417" frameX="-111" frameY="-226" frameWidth="1000" frameHeight="640" />
+<SubTexture name="down-alt0000" x="1754" y="427" width="524" height="362" frameX="-319" frameY="-275" frameWidth="1000" frameHeight="640" />
+<SubTexture name="left-alt0000" x="1101" y="486" width="653" height="486" frameX="-32" frameY="-154" frameWidth="1000" frameHeight="640" />
+<SubTexture name="right-alt0000" x="1134" y="1457" width="643" height="377" frameX="-87" frameY="-259" frameWidth="1000" frameHeight="640" />
+<SubTexture name="idle-alt0000" x="0" y="1874" width="530" height="376" frameX="-183" frameY="-261" frameWidth="1000" frameHeight="640" />
+</TextureAtlas>
