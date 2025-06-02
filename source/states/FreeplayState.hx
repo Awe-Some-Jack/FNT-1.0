@@ -69,6 +69,15 @@ class FreeplayState extends MusicBeatState
 	{
 		//Paths.clearStoredMemory();
 		//Paths.clearUnusedMemory();
+
+		if (FlxG.sound.music.playing || MainMenuState.mainMusic)
+		{
+			MainMenuState.mainMusic = false;
+		}
+		if (!FlxG.sound.music.playing || MainMenuState.mainMusic == false)
+		{
+			MainMenuState.mainMusic = false;
+		}
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -545,6 +554,8 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("fpbg/get-caught"));
 				case "brothers in arms":
                     bg.loadGraphic(Paths.image("fpbg/brothers-in-arms"));
+				case "zanta":
+                    bg.loadGraphic(Paths.image("fpbg/zanta"));
                 default:
                     bg.loadGraphic(Paths.image("menuDesat"));
             }

@@ -17,6 +17,7 @@ class MainMenuState extends MusicBeatState
 	public static var psychEngineVersion:String = '1.0.4'; // This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 	public static var curColumn:MainMenuColumn = CENTER;
+	public static var mainMusic = true;
 	var allowMouse:Bool = false; //Turn this off to block mouse movement in menus
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -50,6 +51,12 @@ class MainMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+
+		if (!FlxG.sound.music.playing || !mainMusic)
+		{
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			mainMusic = true;
+		}
 
 		persistentUpdate = persistentDraw = true;
 
