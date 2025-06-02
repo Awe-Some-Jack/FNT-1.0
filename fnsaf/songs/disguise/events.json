@@ -1,0 +1,65 @@
+{
+	"events": [
+		[
+			59775,
+			[
+				["Change Character", "Dad", "blist-puppy"]
+			]
+		],
+		[
+			98175,
+			[
+				["Change Character", "Dad", "blist"]
+			]
+		],
+		[
+			117375,
+			[
+				["Change Character", "Dad", "agf"]
+			]
+		],
+		[
+			155775,
+			[
+				["Change Character", "Dad", "blist"]
+			]
+		],
+		[
+			175050,
+			[
+				["Change Character", "Dad", "wally"]
+			]
+		],
+		[
+			236133.333333333,
+			[
+				["Change Character", "Dad", "blist"]
+			]
+		],
+		[
+			255333.333333333,
+			[
+				["Change Character", "Dad", "blist-puppy"]
+			]
+		],
+		[
+			260133.333333333,
+			[
+				["Change Character", "Dad", "agf"]
+			]
+		],
+		[
+			264933.333333333,
+			[
+				["Change Character", "Dad", "wally"]
+			]
+		],
+		[
+			269733.333333333,
+			[
+				["Change Character", "Dad", "blist"]
+			]
+		]
+	],
+	"format": "psych_v1"
+}

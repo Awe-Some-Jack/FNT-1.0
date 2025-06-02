@@ -43,7 +43,7 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	var bg:FlxSprite;
-	var intendedColor:Int;
+	var bgTween:FlxTween = null;
 
 	var missingTextBG:FlxSprite;
 	var missingText:FlxText;
@@ -116,18 +116,18 @@ class FreeplayState extends MusicBeatState
 		}
 		Mods.loadTopMod();
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite(0, 0);
 		bg.antialiasing = ClientPrefs.data.antialiasing;
+		bg.alpha = 0;
 		add(bg);
-		bg.screenCenter();
 
-		checker = new FlxBackdrop(Paths.image('Grid_lmao'));
-        checker.velocity.set(-80, -15);
+		//*checker = new FlxBackdrop(Paths.image('Grid_lmao'));
+        //checker.velocity.set(-80, -15);
         // checker.updateHitbox();
-        checker.scrollFactor.set();
-        checker.alpha = 0.5;
+        //checker.scrollFactor.set();
+        //checker.alpha = 0.5;
         // checker.screenCenter(X);
-        add(checker);
+        //add(checker);
 
 		grpSongs = new FlxTypedGroup<FlxSkewedSprite>();
 		add(grpSongs);
@@ -173,8 +173,6 @@ class FreeplayState extends MusicBeatState
 		add(missingText);
 
 		if(curSelected >= songs.length) curSelected = 0;
-		bg.color = songs[curSelected].color;
-		intendedColor = bg.color;
 		lerpSelected = curSelected;
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
@@ -195,6 +193,7 @@ class FreeplayState extends MusicBeatState
 		add(player);
 		
 		changeSelection();
+		changeBG();
 		super.create();
 	}
 
@@ -237,6 +236,8 @@ class FreeplayState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.7)
 			FlxG.sound.music.volume += 0.5 * elapsed;
 
+		bg.screenCenter();
+
 		// checker.x -= .5*(elapsed/(1/120));
         // checker.y -= 0.16 / (ClientPrefs.data.framerate / 60);
 
@@ -269,22 +270,26 @@ class FreeplayState extends MusicBeatState
 				{
 					curSelected = 0;
 					changeSelection();
+					changeBG();
 					holdTime = 0;	
 				}
 				else if(FlxG.keys.justPressed.END)
 				{
 					curSelected = songs.length - 1;
 					changeSelection();
+					changeBG();
 					holdTime = 0;	
 				}
 				if (controls.UI_LEFT_P)
 				{
 					changeSelection(-shiftMult);
+					changeBG();
 					holdTime = 0;
 				}
 				if (controls.UI_RIGHT_P)
 				{
 					changeSelection(shiftMult);
+					changeBG();
 					holdTime = 0;
 				}
 
@@ -296,6 +301,7 @@ class FreeplayState extends MusicBeatState
 
 					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
 						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+					    changeBG();
 				}
 			}
 
@@ -468,15 +474,6 @@ class FreeplayState extends MusicBeatState
 		curSelected = FlxMath.wrap(curSelected + change, 0, songs.length-1);
 		_updateSongLastDifficulty();
 		if(playSound) FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
-
-		var newColor:Int = songs[curSelected].color;
-		if(newColor != intendedColor)
-		{
-			intendedColor = newColor;
-			FlxTween.cancelTweensOf(bg);
-			FlxTween.color(bg, 1, bg.color, intendedColor);
-		}
-
 		var bullShit:Int = 0;
 
         var jacketSpacing:Int = 50;
@@ -525,6 +522,36 @@ class FreeplayState extends MusicBeatState
 
 		changeDiff();
 		_updateSongLastDifficulty();
+	}
+
+	function changeBG()
+	{
+			if (bgTween != null) bgTween.cancel();
+            bgTween = FlxTween.tween(bg, {alpha: 0}, 0.3, {
+            ease: FlxEase.quadOut,
+            onComplete: function(_)
+            {
+            switch (songs[curSelected].songName.toLowerCase())
+            {
+                case "new crewmate":
+                    bg.loadGraphic(Paths.image("fpbg/new-crewmate"));
+                case "accident":
+                    bg.loadGraphic(Paths.image("fpbg/accident"));
+				case "two suspect":
+                    bg.loadGraphic(Paths.image("fpbg/two-suspect"));
+				case "reactor alarm":
+                    bg.loadGraphic(Paths.image("fpbg/reactor-alarm"));
+				case "get caught":
+                    bg.loadGraphic(Paths.image("fpbg/get-caught"));
+				case "brothers in arms":
+                    bg.loadGraphic(Paths.image("fpbg/brothers-in-arms"));
+                default:
+                    bg.loadGraphic(Paths.image("menuDesat"));
+            }
+            bgTween = FlxTween.tween(bg, {alpha: 0.5}, 0.3, {ease: FlxEase.quadIn});
+            }
+            });
+
 	}
 
 	inline private function _updateSongLastDifficulty()
