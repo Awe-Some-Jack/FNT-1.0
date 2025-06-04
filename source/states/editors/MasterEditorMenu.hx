@@ -51,16 +51,7 @@ class MasterEditorMenu extends MusicBeatState
 			leText.snapToPosition();
 		}
 		
-		#if MODS_ALLOWED
-		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 42).makeGraphic(FlxG.width, 42, 0xFF000000);
-		textBG.alpha = 0.6;
-		add(textBG);
-
-		directoryTxt = new FlxText(textBG.x, textBG.y + 4, FlxG.width, '', 32);
-		directoryTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
-		directoryTxt.scrollFactor.set();
-		add(directoryTxt);
-		
+		#if MODS_ALLOWED		
 		for (folder in Mods.getModDirectories())
 		{
 			directories.push(folder);
@@ -86,16 +77,6 @@ class MasterEditorMenu extends MusicBeatState
 		{
 			changeSelection(1);
 		}
-		#if MODS_ALLOWED
-		if(controls.UI_LEFT_P)
-		{
-			changeDirectory(-1);
-		}
-		if(controls.UI_RIGHT_P)
-		{
-			changeDirectory(1);
-		}
-		#end
 
 		if (controls.BACK)
 		{
@@ -155,14 +136,6 @@ class MasterEditorMenu extends MusicBeatState
 			curDirectory = 0;
 	
 		WeekData.setDirectoryFromWeek();
-		if(directories[curDirectory] == null || directories[curDirectory].length < 1)
-			directoryTxt.text = '< No Mod Directory Loaded >';
-		else
-		{
-			Mods.currentModDirectory = directories[curDirectory];
-			directoryTxt.text = '< Loaded Mod Directory: ' + Mods.currentModDirectory + ' >';
-		}
-		directoryTxt.text = directoryTxt.text.toUpperCase();
 	}
 	#end
 }
