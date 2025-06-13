@@ -1,76 +1,84 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle0",
-			"indices": []
+			"indices": [],
+			"name": "idle0"
 		},
 		{
-			"loop": false,
 			"offsets": [4, -3],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "gunleft",
-			"indices": []
+			"indices": [],
+			"name": "gunleft"
 		},
 		{
-			"loop": false,
 			"offsets": [4, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "gundown",
-			"indices": []
+			"indices": [],
+			"name": "gundown"
 		},
 		{
-			"loop": false,
 			"offsets": [-2, 2],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "gunup",
-			"indices": []
+			"indices": [],
+			"name": "gunup"
 		},
 		{
-			"loop": false,
 			"offsets": [2, -3],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "gunright",
-			"indices": []
+			"indices": [],
+			"name": "gunright"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle-alt",
-			"fps": 24,
-			"name": "gunidle",
-			"indices": []
+			"indices": [],
+			"name": "gunidle"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 12,
 			"anim": "shoot",
-			"fps": 12,
-			"name": "gunshoot",
-			"indices": [0, 1, 2, 2, 2, 2, 2, 2, 3]
+			"indices": [0, 1, 2, 2, 2, 2, 2, 2, 3],
+			"name": "gunshoot"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 12,
 			"anim": "dead",
-			"fps": 12,
-			"name": "die",
-			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15]
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15],
+			"name": "die"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
-			"anim": "ghost",
+			"loop": false,
 			"fps": 12,
-			"name": "die",
-			"indices": [16, 17, 18, 19]
+			"anim": "ghost",
+			"indices": [16, 17, 18, 19],
+			"name": "die"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [19],
+			"fps": 12,
+			"anim": "ghost-idle",
+			"loop": true,
+			"name": "die"
 		}
 	],
 	"vocals_file": "",

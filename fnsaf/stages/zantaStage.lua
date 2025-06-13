@@ -14,7 +14,7 @@ function onCreate()
 
 	addAnimationByPrefix('who','idle','dark orange idle0',24,false)
 	addAnimationByPrefix('who','alt','dark orange alt',24,false)
-	addAnimationByPrefix('who','hurt','santa hurt',24,false)
+	addAnimationByPrefix('who','hurt','died',12,false)
 	addAnimationByPrefix('who','bald','dark orange bald',24,false)
 	addLuaSprite('who',false)
 	scaleObject('who', 1.3, 1.3)
@@ -39,6 +39,14 @@ function onCreate()
 	setScrollFactor('barbot',0,0)
 	setObjectCamera('bartop','hud')
 	setObjectCamera('barbot','hud')
+end
+
+function onEvent(event, value1, value2, strumTime)
+	if event == "duet" then
+
+	    duet = value1 == "true"
+
+    end
 end
 
 function onCreatePost()
