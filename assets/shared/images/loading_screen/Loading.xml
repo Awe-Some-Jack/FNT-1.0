@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Loading.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="loading0000" x="0" y="130" width="229" height="117" frameX="-24" frameY="-26" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0001" x="0" y="130" width="229" height="117" frameX="-24" frameY="-26" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0002" x="226" y="0" width="225" height="130" frameX="-28" frameY="-25" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0003" x="226" y="0" width="225" height="130" frameX="-28" frameY="-25" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0004" x="0" y="247" width="229" height="116" frameX="-24" frameY="-26" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0005" x="0" y="247" width="229" height="116" frameX="-24" frameY="-26" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0006" x="0" y="0" width="226" height="130" frameX="-27" frameY="-25" frameWidth="256" frameHeight="192"/>
+	<SubTexture name="loading0007" x="0" y="0" width="226" height="130" frameX="-27" frameY="-25" frameWidth="256" frameHeight="192"/>
+</TextureAtlas>

@@ -22,11 +22,11 @@ function onCreate()
 
 	addLuaSprite('gate',false)
 
-	makeAnimatedLuaSprite('cheese','characters/cheese', -270, -50)
-	addAnimationByPrefix('cheese','idle','cheese idle', 24)
-	addAnimationByPrefix('cheese','dead','cheese dead', 24)
-	scaleObject('cheese', 1.2, 1.2)
-	addLuaSprite('cheese',true)
+	makeAnimatedLuaSprite('banana','characters/banana', -270, -50)
+	addAnimationByPrefix('banana','idle','banana idle', 24)
+	addAnimationByPrefix('banana','dead','banana dead', 24)
+	scaleObject('banana', 1.2, 1.2)
+	addLuaSprite('banana',true)
 
 	makeLuaSprite('bartop','',0,0)
 	makeGraphic('bartop',1280,100,'000000')

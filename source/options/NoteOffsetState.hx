@@ -94,12 +94,6 @@ class NoteOffsetState extends MusicBeatState
 		add(timeTxt);
 
 		///////////////////////
-
-		var blackBox:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 40, FlxColor.BLACK);
-		blackBox.scrollFactor.set();
-		blackBox.alpha = 0.6;
-		blackBox.cameras = [camHUD];
-		add(blackBox);
 		
 		controllerPointer = new FlxShapeCircle(0, 0, 20, {thickness: 0}, FlxColor.WHITE);
 		controllerPointer.offset.set(20, 20);

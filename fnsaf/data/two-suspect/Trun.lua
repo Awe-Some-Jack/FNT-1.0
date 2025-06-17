@@ -4,11 +4,11 @@ function onUpdate(elapsed)
     if not mustHitSection and Sencond then
         if framerate == 60 then
             addCameraScroll(-30, 0)
-        elseif framerate > 60 and framerate < 148 then
-            addCameraScroll(-18, 0)
-        elseif framerate > 149 and framerate < 199 then
+        elseif framerate > 60 and framerate < 150 then
+            addCameraScroll(-16, 0)
+        elseif framerate >= 150 and framerate < 200 then
             addCameraScroll(-13, 0)
-        elseif framerate > 200 then
+        elseif framerate >= 200 then
             addCameraScroll(-10, 0)
         end
     else
@@ -30,14 +30,6 @@ function onEvent(eventName, value1, value2, strumTime)
 end
 
 function onStepHit()
-    if curStep == 432 then
-        cameraFlash("hud", "000000", 1.8, false)
-    end 
-
-    if curStep == 560 then
-        cameraFlash("hud", "000000", 0.8, false)
-    end 
-
     if curStep == 688 or curStep == 848 or curStep == 928 or curStep == 1047 then
         Sencond = false
     end 
