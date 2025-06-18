@@ -185,6 +185,8 @@ class PlayState extends MusicBeatState
 	public var timeBar:Bar;
 	var songPercent:Float = 0;
 
+	var modWatermark:FlxText;
+
 	public var ratingsData:Array<Rating> = Rating.loadDefault();
 
 	private var generatedMusic:Bool = false;
@@ -568,6 +570,13 @@ class PlayState extends MusicBeatState
 		uiGroup.add(botplayTxt);
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = healthBar.y + 70;
+
+		modWatermark = new FlxText(0, 700, FlxG.width - 800, "FNSAF - DEV BUILD", 16);
+		modWatermark.setFormat(Paths.font("sg.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		modWatermark.scrollFactor.set();
+		modWatermark.borderSize = 1.25;
+		modWatermark.visible = ClientPrefs.data.watermark;
+		uiGroup.add(modWatermark);
 
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];

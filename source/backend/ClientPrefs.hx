@@ -44,6 +44,7 @@ import states.TitleState;
 	public var hitsoundVolume:Float = 0;
 	public var pauseMusic:String = 'FNSAF Pause';
 	public var checkForUpdates:Bool = true;
+	public var watermark:Bool = true;
 	public var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 

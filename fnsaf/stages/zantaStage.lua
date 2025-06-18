@@ -86,6 +86,6 @@ function onBeatHit()
 		end
 	end
 
-	setProperty('cheese.y', -50+40)
-	doTweenY('cheesebounce','cheese',-50,0.15,'circOut')
+	setProperty('banana.y', -50+40)
+	doTweenY('bananabounce','banana',-50,0.15,'circOut')
 end

@@ -154,6 +154,12 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		#end
 
+		var option:Option = new Option('WaterMark',
+			"If unchecked, the mod information watermark is hidden.",
+			'watermark',
+			BOOL);
+		addOption(option);
+
 		super();
 		add(notes);
 		add(splashes);
