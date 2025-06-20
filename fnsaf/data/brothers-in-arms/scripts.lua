@@ -1,6 +1,8 @@
 local forevent = false
 local isgf = false
 
+local Danger = false
+
 cameraevnet = {928, 992, 1280, 1632}
 nocameraevnet = {960, 1248, 1376}
 
@@ -15,11 +17,42 @@ function onCreate()
     addInstance('testIcon', true)
 end
 
+function onCreatePost()
+    makeLuaSprite("Dangerhealth", "", getProperty("healthBar.x") + 496, getProperty("healthBar.y") + 3)
+    makeGraphic("Dangerhealth", 100, 14, "462679")
+    setObjectCamera("Dangerhealth", "hud")
+    addToGroup('uiGroup', 'Dangerhealth', getObjectOrder('healthBar', 'uiGroup')+1)
+    setProperty("Dangerhealth.alpha", 0)
+    addLuaSprite("Dangerhealth")
+end
+
 function onUpdate(elapsed)
     if isgf and not forevent then
         changestrum()
     elseif not isgf and not forevent then
         changedefault()
+    end
+
+    health = getProperty('health')
+    if Danger then
+        if getProperty('healthBar.percent') < 25 then
+ 	   	    setProperty('health', health- 500);
+		end
+    end
+end
+
+function onUpdatePost()
+    if Danger then
+        if getProperty('healthBar.percent') < 50 then
+            setProperty('iconP1.animation.curAnim.curFrame',1)
+            setProperty('iconP2.animation.curAnim.curFrame',2)
+        elseif getProperty('healthBar.percent') > 80 then
+            setProperty('iconP1.animation.curAnim.curFrame',2)
+            setProperty('iconP2.animation.curAnim.curFrame',1)
+        else
+            setProperty('iconP1.animation.curAnim.curFrame',0)
+            setProperty('iconP2.animation.curAnim.curFrame',0)
+        end
     end
 
     setProperty('testIcon.animation.curAnim.curFrame', getProperty('iconP2.animation.curAnim.curFrame'));
@@ -31,8 +64,11 @@ function onStepHit()
     if curStep == 907 then
         doTweenX("BFX", "boyfriend", 260, 0.3, "cubeOut")
         doTweenAlpha("HI", "testIcon", 1, 0.2, "linear")
+        doTweenAlpha("HI2", "Dangerhealth", 1, 0.2, "linear")
         setProperty("gf.alpha", 1)
         triggerEvent("Play Animation", "anime", "gf")
+        
+        Danger = true
     end
 
     if curStep == 1312 then

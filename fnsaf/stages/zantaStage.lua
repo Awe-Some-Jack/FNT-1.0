@@ -24,7 +24,7 @@ function onCreate()
 
 	makeAnimatedLuaSprite('banana','characters/banana', -270, -50)
 	addAnimationByPrefix('banana','idle','banana idle', 24)
-	addAnimationByPrefix('banana','dead','banana dead', 24)
+	addAnimationByPrefix('banana','dead','banana dead', 24, false)
 	scaleObject('banana', 1.2, 1.2)
 	addLuaSprite('banana',true)
 
