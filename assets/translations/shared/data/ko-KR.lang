@@ -25,10 +25,6 @@ practice_mode: "연습 모드"
 charting_mode: "차팅 모드"
 blueballed: "퍼런불알: {1}"
 
-// Story Mode
-images/Menu_Tracks: "images/ko-KR/Menu_Tracks"
-week_score: "주간 점수: {1}"
-
 // Freeplay
 personal_best: "최고 기록: {1} ({2}%)"
 freeplay_tip: "컨트롤 누르면 모디피어 메뉴를 엽니다. / 리셋 버튼을 누르면 점수를 초기화 시킵니다."
