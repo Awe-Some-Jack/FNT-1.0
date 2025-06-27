@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dialogueBox.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="dialog frame0000" x="0" y="0" width="1000" height="467" frameX="2" frameY="1" frameWidth="996" frameHeight="471"/>
+	<SubTexture name="dialog frame0001" x="0" y="467" width="1000" height="467" frameX="2" frameY="1" frameWidth="996" frameHeight="471"/>
+</TextureAtlas>

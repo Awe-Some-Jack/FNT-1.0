@@ -1,0 +1,5 @@
+neutral,wally_normal,false,126,190
+happy,wally_happy,false,240,200
+angry,wally_angry,false,126,200
+upset,wally_upset,false,130,186
+pathetic,wally_Pathetic_talk,false,130,200

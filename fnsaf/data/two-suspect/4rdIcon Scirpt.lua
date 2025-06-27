@@ -1,6 +1,6 @@
 --original made by Cherif, rewritten by TheConcealedCow to utilize 0.6.0's addAnimation function. (btw thank to this guy for this script, he's the original creator
 folderName = 'icons'; --defaulted to mods/images/icons --btw u can chose if u select mods or assets just replace it
-iconName = 'AGF'; --name of png for icon
+iconName = 'icon-AGF'; --name of png for icon
 iconTag = 'P4'; --tag for the icon if you're doing multiples icons
 antialiasing = true; --whether the icon is smoothed out or not
 P = 2; --which icon the extra icon will attach to, if P1 will be in bf side, if its P2, will be in Opp Side

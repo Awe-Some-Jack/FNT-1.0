@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AGF DIALOGUE.png">
+	<!-- Created with Adobe Animate version 24.0.9.74 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="AGF angry0000" x="0" y="0" width="234" height="263" frameX="0" frameY="-3" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0001" x="234" y="0" width="234" height="262" frameX="0" frameY="-3" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0002" x="468" y="0" width="235" height="262" frameX="0" frameY="-1" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0003" x="703" y="0" width="235" height="262" frameX="0" frameY="0" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0004" x="938" y="0" width="235" height="262" frameX="0" frameY="0" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0005" x="1173" y="0" width="235" height="263" frameX="0" frameY="0" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF angry0006" x="1408" y="0" width="235" height="263" frameX="0" frameY="-1" frameWidth="235" frameHeight="266"/>
+	<SubTexture name="AGF nervous0000" x="1643" y="0" width="206" height="282" frameX="-1" frameY="-5" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0001" x="0" y="282" width="207" height="281" frameX="0" frameY="-5" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0002" x="207" y="282" width="207" height="282" frameX="0" frameY="-2" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0003" x="414" y="282" width="207" height="282" frameX="0" frameY="-2" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0004" x="621" y="282" width="207" height="284" frameX="0" frameY="0" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0005" x="828" y="282" width="207" height="285" frameX="0" frameY="0" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF nervous0006" x="1035" y="282" width="206" height="284" frameX="-1" frameY="-2" frameWidth="207" frameHeight="287"/>
+	<SubTexture name="AGF normal0000" x="1241" y="282" width="235" height="263" frameX="0" frameY="-2" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0001" x="1476" y="282" width="237" height="262" frameX="0" frameY="-2" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0002" x="1713" y="282" width="231" height="262" frameX="0" frameY="0" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0003" x="0" y="567" width="230" height="262" frameX="0" frameY="0" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0004" x="0" y="567" width="230" height="262" frameX="0" frameY="0" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0005" x="230" y="567" width="231" height="262" frameX="0" frameY="0" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF normal0006" x="461" y="567" width="231" height="262" frameX="0" frameY="-2" frameWidth="237" frameHeight="265"/>
+	<SubTexture name="AGF sad0000" x="692" y="567" width="254" height="266" frameX="-1" frameY="-5" frameWidth="255" frameHeight="271"/>
+	<SubTexture name="AGF sad0001" x="946" y="567" width="254" height="268" frameX="-1" frameY="-2" frameWidth="255" frameHeight="271"/>
+	<SubTexture name="AGF sad0002" x="1200" y="567" width="255" height="271"/>
+	<SubTexture name="AGF sad0003" x="1455" y="567" width="255" height="270" frameX="0" frameY="0" frameWidth="255" frameHeight="271"/>
+	<SubTexture name="AGF sad0004" x="1710" y="567" width="255" height="269" frameX="0" frameY="-1" frameWidth="255" frameHeight="271"/>
+	<SubTexture name="AGF sad0005" x="0" y="838" width="255" height="267" frameX="0" frameY="-3" frameWidth="255" frameHeight="271"/>
+	<SubTexture name="AGF sad0006" x="255" y="838" width="254" height="264" frameX="-1" frameY="-6" frameWidth="255" frameHeight="271"/>
+</TextureAtlas>

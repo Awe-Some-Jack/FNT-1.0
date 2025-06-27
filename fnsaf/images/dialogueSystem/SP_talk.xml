@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SP_talk.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="talk0000" x="0" y="0" width="788" height="822" frameX="-4" frameY="0" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk0001" x="0" y="0" width="788" height="822" frameX="-4" frameY="0" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk0002" x="835" y="0" width="797" height="813" frameX="0" frameY="-10" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk0003" x="835" y="0" width="797" height="813" frameX="0" frameY="-10" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk0004" x="1679" y="0" width="773" height="801" frameX="-12" frameY="-11" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk0005" x="1679" y="0" width="773" height="801" frameX="-12" frameY="-11" frameWidth="797" frameHeight="823"/>
+	<SubTexture name="talk_angry0000" x="2499" y="0" width="925" height="1026" frameX="-2" frameY="0" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_angry0001" x="2499" y="0" width="925" height="1026" frameX="-2" frameY="0" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_angry0002" x="0" y="1073" width="925" height="973" frameX="-2" frameY="-37" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_angry0003" x="0" y="1073" width="925" height="973" frameX="-2" frameY="-37" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_angry0004" x="972" y="1073" width="927" height="970" frameX="0" frameY="-39" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_angry0005" x="972" y="1073" width="927" height="970" frameX="0" frameY="-39" frameWidth="927" frameHeight="1026"/>
+	<SubTexture name="talk_happy0000" x="1946" y="1073" width="872" height="864" frameX="0" frameY="0" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_happy0001" x="1946" y="1073" width="872" height="864" frameX="0" frameY="0" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_happy0002" x="2865" y="1073" width="872" height="853" frameX="0" frameY="-14" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_happy0003" x="2865" y="1073" width="872" height="853" frameX="0" frameY="-14" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_happy0004" x="0" y="2093" width="872" height="853" frameX="0" frameY="-16" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_happy0005" x="0" y="2093" width="872" height="853" frameX="0" frameY="-16" frameWidth="872" frameHeight="869"/>
+	<SubTexture name="talk_sus0000" x="919" y="2093" width="907" height="873" frameX="-3" frameY="0" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_sus0001" x="919" y="2093" width="907" height="873" frameX="-3" frameY="0" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_sus0002" x="1873" y="2093" width="909" height="858" frameX="-1" frameY="-8" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_sus0003" x="1873" y="2093" width="909" height="858" frameX="-1" frameY="-8" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_sus0004" x="2829" y="2093" width="909" height="856" frameX="0" frameY="-9" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_sus0005" x="2829" y="2093" width="909" height="856" frameX="0" frameY="-9" frameWidth="910" frameHeight="873"/>
+	<SubTexture name="talk_what0000" x="0" y="3013" width="800" height="821" frameX="-3" frameY="-12" frameWidth="806" frameHeight="833"/>
+	<SubTexture name="talk_what0001" x="0" y="3013" width="800" height="821" frameX="-3" frameY="-12" frameWidth="806" frameHeight="833"/>
+	<SubTexture name="talk_what0002" x="847" y="3013" width="769" height="822" frameX="-19" frameY="-2" frameWidth="806" frameHeight="833"/>
+	<SubTexture name="talk_what0003" x="847" y="3013" width="769" height="822" frameX="-19" frameY="-2" frameWidth="806" frameHeight="833"/>
+	<SubTexture name="talk_what0004" x="1663" y="3013" width="806" height="825" frameX="0" frameY="0" frameWidth="806" frameHeight="833"/>
+	<SubTexture name="talk_what0005" x="1663" y="3013" width="806" height="825" frameX="0" frameY="0" frameWidth="806" frameHeight="833"/>
+</TextureAtlas>
