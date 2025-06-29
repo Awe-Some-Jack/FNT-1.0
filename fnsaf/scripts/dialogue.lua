@@ -102,10 +102,8 @@ function nextLine(skip, nosound)
         curDisplay = dialogue[lineIndex]['line']
         curChar = dialogue[lineIndex]['char']
         dispLength = string.len(curDisplay)
-        if curChar ~= 'bf' then
-            playSound("voiceline/"..diaSong..curVoice)
-            curVoice = curVoice + 1
-        end
+        playSound("voicelines/"..diaSong.."/"..curVoice, 1, "voice")
+        curVoice = curVoice + 1
         Dinnit()
     else
         dispIndex = dispLength - 1
@@ -139,7 +137,6 @@ function startInit()
             runTimer('byeBlock', 0.1)
         end
 
-        curVoice = curVoice + 1
         precacheImage('dialogueSystem/boyfriend')
         precacheImage('dialogueSystem/gf')
         precacheImage('dialogueSystem/bubble')
@@ -156,6 +153,8 @@ function initDialogue()
     setProperty('bgFade.alpha', 0)
     add('bgFade', false)
 
+    playSound("voicelines/"..diaSong.."/"..curVoice, 1, "voice")
+    curVoice = curVoice + 1
     doTweenAlpha('bgFadeIn', 'bgFade', 0.35, 0.8, 'circIn')
 
     dialogue = stringSplit(stringTrim(string.gsub(getTextFromFile('data/'..songPath..'/dialogue.txt'), '\r', '')), '\n')
@@ -403,7 +402,7 @@ function onUpdatePost(elapsed)
                 setTextString('swagDialogue', string.sub(curDisplay, 0, dispIndex))
                 stopSound('dialogScroll')
                 if dispIndex ~= dispLength then
-                    playSound('dialogue/'..curSound..'D', 0.6, 'dialogScroll')
+                    ---playSound('dialogue/'..curSound..'D', 0.6, 'dialogScroll')
                 end
                 playAnim(speaker, curEmote, false)
                 dispIndex = dispIndex + 1
@@ -427,6 +426,7 @@ function onUpdatePost(elapsed)
                 cancelTween('xTweenportraitRight')
                 cancelTween('xTweenportraitLeft')
                 cancelTween('yTweenGF')
+                stopSound("voice")
                 if getProperty('portraitRight.alpha') > 0 then setProperty('portraitRight.alpha', 1) end
                 if getProperty('portraitLeft.alpha') > 0 then setProperty('portraitLeft.alpha', 1) end
                 if getProperty('portraitMid.alpha') > 0 then setProperty('portraitMid.alpha', 1) end
@@ -469,17 +469,17 @@ function Dinnit()
     boxChar = 'Space Puppy'
     curIcon = curChar
     curSound = 'red'
-    charImg = 'spacepup'
+    charImg = 'SP_talk'
 
     if curChar == 'sp' then
         curIcon = 'puppy'
         scaleObject("portraitLeft", 0.76, 0.76)
         setProperty("portraitLeft.flipX", false)
-        charImg = 'spacepup'
+        charImg = 'SP_talk'
     elseif curChar == 'agf' then
         curIcon = 'agf'
         boxChar = 'AGF'
-        charImg = 'agf'
+        charImg = 'AGF_DIALOGUE'
         scaleObject("portraitLeft", 0.76, 0.76)
         setProperty("portraitLeft.flipX", false)
     elseif curChar == 'pu' then
