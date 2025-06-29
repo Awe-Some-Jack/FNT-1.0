@@ -66,7 +66,7 @@ class LoadingState extends MusicBeatState
 	var barWidth:Int = 0;
 	var intendedPercent:Float = 0;
 	var curPercent:Float = 0;
-	var stateChangeDelay:Float = 0;
+	var stateChangeDelay:Float = 3;
 
 	#if PSYCH_WATERMARKS
 	var logo:FlxSprite;
@@ -81,7 +81,7 @@ class LoadingState extends MusicBeatState
 	var spawnedPessy:Bool = false;
 	var pressedTimes:Int = 0;
 	#else
-	var funkay:FlxSprite;
+	var susload:FlxSprite;
 	#end
 
 	#if HSCRIPT_ALLOWED
@@ -164,18 +164,15 @@ class LoadingState extends MusicBeatState
 		logo.y -= 40;
 		addBehindBar(logo);
 
-		#else // BASE GAME LOADING SCREEN
-		var bg = new FlxSprite().makeGraphic(1, 1, 0xFFCAFF4D);
-		bg.scale.set(FlxG.width, FlxG.height);
-		bg.updateHitbox();
-		bg.screenCenter();
-		addBehindBar(bg);
-
-		funkay = new FlxSprite(0, 0).loadGraphic(Paths.image('funkay'));
-		funkay.antialiasing = ClientPrefs.data.antialiasing;
-		funkay.setGraphicSize(0, FlxG.height);
-		funkay.updateHitbox();
-		addBehindBar(funkay);
+		#else 
+		susload = new FlxSprite(700, 140);
+		susload.frames = Paths.getSparrowAtlas('loading_screen/Loading');
+		susload.animation.addByPrefix('loading', 'loading', 24, true);
+		susload.scale.set(1.4, 1.4);
+		susload.screenCenter();
+		susload.animation.play('loading', true);
+		susload.updateHitbox();
+		addBehindBar(susload);
 		#end
 		super.create();
 

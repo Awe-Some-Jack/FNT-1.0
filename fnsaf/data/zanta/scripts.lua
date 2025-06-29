@@ -16,7 +16,7 @@ function onCreate()
     addLuaText("Subtitle")
 
     makeLuaSprite("SubIcon", "")
-    loadGraphic("SubIcon", "icons/agf-zanta", 150, 150)
+    loadGraphic("SubIcon", "icons/icon-agf-zanta", 150, 150)
     setObjectCamera("SubIcon", "other")
     addLuaSprite("SubIcon")
 end
@@ -96,7 +96,7 @@ function onStepHit()
 
     if curStep == 1960 then
         setTextString("Subtitle", "Are You Dumb HEAD???\n너 진짜 빡대가리야???")
-        loadGraphic("SubIcon", "icons/cream", 150, 150)
+        loadGraphic("SubIcon", "icons/icon-cream", 150, 150)
         setProperty("Subtitle.alpha", 1)
     end
 

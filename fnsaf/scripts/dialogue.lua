@@ -60,6 +60,7 @@ local speaker = 'portraitLeft'
 local boxChar = ''
 local curIcon = ''
 local curSound = ''
+local curVoice = 0
 
 function nextLine(skip, nosound)
     if dispIndex >= dispLength - 1 or skip then
@@ -101,6 +102,10 @@ function nextLine(skip, nosound)
         curDisplay = dialogue[lineIndex]['line']
         curChar = dialogue[lineIndex]['char']
         dispLength = string.len(curDisplay)
+        if curChar ~= 'bf' then
+            playSound("voiceline/"..diaSong..curVoice)
+            curVoice = curVoice + 1
+        end
         Dinnit()
     else
         dispIndex = dispLength - 1
@@ -134,6 +139,7 @@ function startInit()
             runTimer('byeBlock', 0.1)
         end
 
+        curVoice = curVoice + 1
         precacheImage('dialogueSystem/boyfriend')
         precacheImage('dialogueSystem/gf')
         precacheImage('dialogueSystem/bubble')
@@ -197,7 +203,6 @@ function initDialogue()
         {'bf',      'dialog frame', '1'},
         {'gf',      'dialog frame', 'what'},
         {'sp',      'dialog frame', '0'},
-        {'or',     'dialog frame', '2'},
         {'agf',      'dialog frame', '4'},
         {'pu',      'dialog frame', '3'},
         {'cyan',      'dialog frame', '1'}
@@ -467,21 +472,10 @@ function Dinnit()
     charImg = 'spacepup'
 
     if curChar == 'sp' then
-        if diaSong == 'suspicion' then
-            curIcon = 'spacepuppy-p1'
-        else
-            curIcon = 'spacepuppy-p2'
-        end
+        curIcon = 'puppy'
         scaleObject("portraitLeft", 0.76, 0.76)
         setProperty("portraitLeft.flipX", false)
-
         charImg = 'spacepup'
-    elseif curChar == 'or' then
-        curIcon = 'face'
-        boxChar = 'Orange'
-        charImg = 'orange'
-        scaleObject("portraitLeft", 0.76, 0.76)
-        setProperty("portraitLeft.flipX", false)
     elseif curChar == 'agf' then
         curIcon = 'agf'
         boxChar = 'AGF'
