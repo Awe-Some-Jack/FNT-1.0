@@ -396,7 +396,7 @@ function onUpdatePost(elapsed)
         if dispIndex <= dispLength then
             -- some regulation system not present in the official mod.
             -- balances delay between short and long text... kinda. pretty subtle
-            local delay = 0.05 * ((dispLength - 0.6) / (dispLength * 1.45 - 3))
+            local delay = 0.03 * ((dispLength - 0.6) / (dispLength * 1.45 - 3))
             if textTimer > delay then
                 textTimer = 0
                 setTextString('swagDialogue', string.sub(curDisplay, 0, dispIndex))
