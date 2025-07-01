@@ -34,7 +34,7 @@ function onStepHit()
         Sencond = false
     end 
 
-    if curStep == 772 or curStep == 896 or curStep == 992 or  curStep == 1091 then
+    if curStep == 896 or curStep == 992 or  curStep == 1091 then
         Sencond = true
     end 
 end

@@ -1,79 +1,55 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "IDLE",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
+			"offsets": [32, -26],
 			"loop": false,
-			"offsets": [27, 37],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "LEFT",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
+			"offsets": [20, -61],
 			"loop": false,
-			"offsets": [61, 61],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "DOWN",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
+			"offsets": [-6, 50],
 			"loop": false,
-			"offsets": [79, 77],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "UP",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
+			"offsets": [-33, 15],
 			"loop": false,
-			"offsets": [-1, 12],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "RIGHT",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [303, 24],
-			"anim": "what",
-			"fps": 24,
-			"name": "DED",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [280, 134],
-			"anim": "report",
-			"fps": 24,
-			"name": "REPORT",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [38, 165],
-			"anim": "intro",
-			"fps": 24,
-			"name": "HITHERE",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/SPACE_DOG",
-	"position": [150, 460],
+	"image": "characters/Space_Puppy_Two_Suspect",
+	"position": [-60, 330],
 	"healthicon": "puppy",
 	"flip_x": false,
 	"healthbar_colors": [165, 76, 255],
-	"camera_position": [-1150, -550],
+	"camera_position": [130, -50],
 	"sing_duration": 4,
-	"scale": 2.5,
+	"scale": 1,
 	"_editor_isPlayer": false
 }
