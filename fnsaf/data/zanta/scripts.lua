@@ -2,6 +2,7 @@ Look = false
 showthis = false
 xx = 0
 yy = 0
+icons = "agf-zanta"
 
 function onCreate()
     setObjectOrder("gfGroup", getObjectOrder("boyfriendGroup") + 1)
@@ -16,12 +17,12 @@ function onCreate()
     addLuaText("Subtitle")
 
     makeLuaSprite("SubIcon", "")
-    loadGraphic("SubIcon", "icons/icon-agf-zanta", 150, 150)
     setObjectCamera("SubIcon", "other")
     addLuaSprite("SubIcon")
 end
 
 function onUpdate(elapsed)
+    loadGraphic("SubIcon", "icons/icon-"..icons, 150, 150)
     setProperty("SubIcon.x", getProperty("Subtitle.x"))
     setProperty("SubIcon.width", getProperty("Subtitle.width"))
     setProperty("SubIcon.y", getProperty("Subtitle.y") - 80)
@@ -79,6 +80,11 @@ function onStepHit()
         objectPlayAnimation("who", "bald")
     end
 
+    if curStep == 1633 then
+        objectPlayAnimation("who", "alt")
+        setProperty("who.x", 1465)
+    end
+
     if curStep == 1640 then
         setTextString("Subtitle", "Recognize\n못 알아볼텐데?")
         setProperty("Subtitle.alpha", 1)
@@ -86,29 +92,12 @@ function onStepHit()
 
     if curStep == 1666 then
         setTextString("Subtitle", "Ugh, Who is the Real AGF!?\n아잇 누가 진짜 어그야!?")
-        loadGraphic("SubIcon", "icons/icon-face", 150, 150)
+        icons = "face"
         setProperty("Subtitle.alpha", 1)
     end
 
     if curStep == 1696 then
         setProperty("Subtitle.alpha", 0)
-    end
-
-    if curStep == 1960 then
-        setTextString("Subtitle", "Are You Dumb HEAD???\n너 진짜 빡대가리야???")
-        loadGraphic("SubIcon", "icons/icon-cream", 150, 150)
-        setProperty("Subtitle.alpha", 1)
-    end
-
-    if curStep == 1980 then
-        setTextString("Subtitle", "AAAAAAAAAAAAAA!!!!!!\n아아아아아아아아아악!!!!!!!")
-        loadGraphic("SubIcon", "icons/icon-face", 150, 150)
-        playAnim("Subtitle", "dead")
-    end
-
-    if curStep == 1633 then
-        objectPlayAnimation("who", "alt")
-        setProperty("who.x", 1465)
     end
 
     if curStep == 1952 then
@@ -119,7 +108,15 @@ function onStepHit()
     end
 
     if curStep == 1960 then
+        setTextString("Subtitle", "Are You Dumb HEAD???\n너 진짜 빡대가리야???")
         xx = 700
+        icons = "cream"
+        setProperty("Subtitle.alpha", 1)
+    end
+
+    if curStep == 1980 then
+        setTextString("Subtitle", "AAAAAAAAAAAAAA!!!!!!\n아아아아아아아아아악!!!!!!!")
+        icons = "face"
     end
 
     if curStep == 1995 then

@@ -10,22 +10,22 @@ import flixel.system.FlxAssets;
  */
 class FlxSoundTray extends Sprite
 {
-	/**
-	 * Because reading any data from DisplayObject is insanely expensive in hxcpp, keep track of whether we need to update it or not.
-	 */
-	public var active:Bool;
-	var _defaultScale:Float = 0.6;
+    /**
+     * Because reading any data from DisplayObject is insanely expensive in hxcpp, keep track of whether we need to update it or not.
+     */
+    public var active:Bool;
+    var _defaultScale:Float = 0.6;
 
-	/**The sound used when increasing the volume.**/
-	public var volumeUpSound:String = "flixel/sounds/beep";
+    /**The sound used when increasing the volume.**/
+    public var volumeUpSound:String = "flixel/sounds/beep";
 
-	/**The sound used when decreasing the volume.**/
-	public var volumeDownSound:String = 'flixel/sounds/beep';
+    /**The sound used when decreasing the volume.**/
+    public var volumeDownSound:String = 'flixel/sounds/beep';
 
-	/**Whether or not changing the volume should make noise.**/
-	public var silent:Bool = false;
+    /**Whether or not changing the volume should make noise.**/
+    public var silent:Bool = false;
 
-	/**This is Were your images are, you can leave imagePath empty if it just in the images folder.**/
+    /**This is Were your images are, you can leave imagePath empty if it just in the images folder.**/
     var imagePath = 'soundTray/';
     var volumeImages = [
         'soundTray_0',
@@ -41,7 +41,7 @@ class FlxSoundTray extends Sprite
         'soundTray_10'
     ];
 
-	/**This is Were your sounds are, you can leave soundPath empty if it just in the sounds folder.**/
+    /**This is Were your sounds are, you can leave soundPath empty if it just in the sounds folder.**/
     var soundPath = '';
     var volumeSounds = [
         'Volup',
@@ -78,20 +78,25 @@ class FlxSoundTray extends Sprite
     var fill:Sprite;
     var fillImage = null;
 
+    var stayTime:Float = 0;
     private function createTray():Void
     {
-		fillImage = Paths.image('$imagePath${volumeImages[0]}', false);
+        fillImage = Paths.image('$imagePath${volumeImages[0]}', false);
 
-		fill = new Sprite();
-		addChild(fill);
+        fill = new Sprite();
+        addChild(fill);
 
         scaleX = _defaultScale;
         scaleY = _defaultScale;
 
-		visible = false;
-		active = false;
+        visible = false;
+        active = false;
         y = -fillImage.height - 10; // Hides the SoundTray | this.height doesnt fully hide the tray for some reason...
         updateFill(); // Update Fill to Current Volume
+
+        FlxG.signals.postStateSwitch.add(function() {
+            stayTime = 0;
+        });
     }
 
     var curVolume = 0;
@@ -109,18 +114,17 @@ class FlxSoundTray extends Sprite
         
         graphics.endFill();
 
-		#if FLX_SAVE
-		// Save sound preferences
-		if (FlxG.save.isBound)
-		{
-			FlxG.save.data.muted = silent;
-			FlxG.save.data.volume = curVolume / 10;
-			FlxG.save.flush();
-		}
-		#end
+        #if FLX_SAVE
+        // Save sound preferences
+        if (FlxG.save.isBound)
+        {
+            FlxG.save.data.muted = silent;
+            FlxG.save.data.volume = curVolume / 10;
+            FlxG.save.flush();
+        }
+        #end
     }
     
-    var stayTime:Float = 0;
     var lerpYPos:Float = 0;
     var alphaTarget:Float = 0;
     var lowerStayTime:Bool = false;
@@ -128,10 +132,10 @@ class FlxSoundTray extends Sprite
     {
         if(!makeTray) return;
 
-		x = FlxG.stage.window.width / 2 - width/2; // Center X that SoundTray, is in __enterFrame in case people scale the windows.
+        x = FlxG.stage.window.width / 2 - width/2; // Center X that SoundTray, is in __enterFrame in case people scale the windows.
         y = FlxMath.lerp(y, lerpYPos, 0.1); // Something y related that base game does
         alpha = FlxMath.lerp(alpha, alphaTarget, 0.25); // Something alpha related that base game does
-		active = visible = alpha > 0;
+        active = visible = alpha > 0;
         
         if (FlxG.keys.anyJustPressed(FlxG.sound.volumeUpKeys) || FlxG.keys.anyJustPressed(FlxG.sound.volumeDownKeys) || FlxG.keys.anyJustPressed(FlxG.sound.muteKeys)) {
             lowerStayTime = false;
@@ -178,8 +182,8 @@ class FlxSoundTray extends Sprite
         }
     }
 
-	// Useless ahh functions that need to be there to let me compile
-	public function update(MS:Float):Void {}
-	public function show(up:Bool = false):Void {}
-	public function screenCenter():Void {}
+    // Useless ahh functions that need to be there to let me compile
+    public function update(MS:Float):Void {}
+    public function show(up:Bool = false):Void {}
+    public function screenCenter():Void {}
 }

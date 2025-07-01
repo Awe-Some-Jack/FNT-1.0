@@ -63,8 +63,8 @@ function onCreatePost()
 	setProperty('camFollow.x',900)
 	setProperty('camPos.x',0)
 	setProperty('camPos.y',0)
-	setProperty('camGame.scroll.x',640)
-	setProperty('camGame.scroll.y',360)
+	setProperty('camGame.scroll.x',500)
+	setProperty('camGame.scroll.y',0)
 
 
 	
