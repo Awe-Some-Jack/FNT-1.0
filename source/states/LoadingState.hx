@@ -81,7 +81,7 @@ class LoadingState extends MusicBeatState
 	var spawnedPessy:Bool = false;
 	var pressedTimes:Int = 0;
 	#else
-	var susload:FlxSprite;
+	var funkay:FlxSprite;
 	#end
 
 	#if HSCRIPT_ALLOWED
@@ -164,15 +164,18 @@ class LoadingState extends MusicBeatState
 		logo.y -= 40;
 		addBehindBar(logo);
 
-		#else 
-		susload = new FlxSprite(700, 140);
-		susload.frames = Paths.getSparrowAtlas('loading_screen/Loading');
-		susload.animation.addByPrefix('loading', 'loading', 24, true);
-		susload.scale.set(1.4, 1.4);
-		susload.screenCenter();
-		susload.animation.play('loading', true);
-		susload.updateHitbox();
-		addBehindBar(susload);
+		#else // BASE GAME LOADING SCREEN
+		var bg = new FlxSprite().makeGraphic(1, 1, 0xFFD9C8FF);
+		bg.scale.set(FlxG.width, FlxG.height);
+		bg.updateHitbox();
+		bg.screenCenter();
+		addBehindBar(bg);
+
+		funkay = new FlxSprite(0, 0).loadGraphic(Paths.image('funkay'));
+		funkay.antialiasing = ClientPrefs.data.antialiasing;
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		addBehindBar(funkay);
 		#end
 		super.create();
 
@@ -319,10 +322,7 @@ class LoadingState extends MusicBeatState
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-		#if NO_RENDER_WHILE_LOADING
 		FlxG.camera.visible = false;
-		#end
-		FlxTransitionableState.skipNextTransIn = true;
 		MusicBeatState.switchState(target);
 		transitioning = true;
 		finishedLoading = true;
@@ -644,7 +644,7 @@ class LoadingState extends MusicBeatState
 
 			var member:String = arr[i];
 			var myKey = '$prefix/$member$ext';
-			if(parentFolder == 'data') myKey = '$member$ext';
+			if(parentFolder == 'songs') myKey = '$member$ext';
 
 			//trace('attempting on $prefix: $myKey');
 			var doTrace:Bool = false;
