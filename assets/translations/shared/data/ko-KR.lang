@@ -17,14 +17,6 @@ rating_great: "낫 배드"
 rating_sick: "좋아!"
 rating_perfect: "완벽해!!"
 
-// Dialogues
-dialogue_skip: "뒤로가기 눌러서 스킵"
-
-// Pause Menu
-practice_mode: "연습 모드"
-charting_mode: "차팅 모드"
-blueballed: "퍼런불알: {1}"
-
 // Freeplay
 personal_best: "최고 기록: {1} ({2}%)"
 freeplay_tip: "컨트롤 누르면 모디피어 메뉴를 엽니다. / 리셋 버튼을 누르면 점수를 초기화 시킵니다."

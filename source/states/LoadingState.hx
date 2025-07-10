@@ -322,7 +322,10 @@ class LoadingState extends MusicBeatState
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
+		#if NO_RENDER_WHILE_LOADING
 		FlxG.camera.visible = false;
+		#end
+		FlxTransitionableState.skipNextTransIn = true;
 		MusicBeatState.switchState(target);
 		transitioning = true;
 		finishedLoading = true;
@@ -644,7 +647,7 @@ class LoadingState extends MusicBeatState
 
 			var member:String = arr[i];
 			var myKey = '$prefix/$member$ext';
-			if(parentFolder == 'songs') myKey = '$member$ext';
+			if(parentFolder == 'data') myKey = '$member$ext';
 
 			//trace('attempting on $prefix: $myKey');
 			var doTrace:Bool = false;

@@ -32,7 +32,7 @@ end
 
 function onSongStart()
     setProperty("camHUD.visible", false)
-    cameraFade("other", "000000", 6, false, true)
+    cameraFade("game", "000000", 6, false, true)
 end
 
 function onStepHit()
