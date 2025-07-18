@@ -1,149 +1,73 @@
-// This is a simple credit roll created by Santiago [https://santiagocalebe.neocities.org/]
-
 package states;
 
-// Here you add the libaries, if you just wanna use this menu. Don't change anything.
-import flixel.FlxG;
 import flixel.FlxState;
 import flixel.text.FlxText;
-import flixel.addons.display.FlxBackdrop;
-import flixel.tweens.FlxTween;
+import flixel.FlxG;
 import flixel.util.FlxColor;
 
-class CreditsState extends MusicBeatState {
-
-    // Here is the velocity of the scroll, 120 is default.
-    private var scrollSpeed:Float = 120;
-
-    private var creditsText:FlxText;
-	private var instructionsText:FlxText;
-    private var instructionsText2:FlxText;
-
-	var checker:FlxBackdrop;
-
-    override public function create() {
+class CreditsState extends MusicBeatState
+{
+    override public function create():Void
+    {
         super.create();
 
-		checker = new FlxBackdrop(Paths.image('Grid_lmao'));
-		//checker.velocity.set(112, 110);
-		checker.updateHitbox();
-		checker.scrollFactor.set(0, 0);
-		checker.alpha = 0.2;
-		checker.screenCenter(X);
-		add(checker);
+        var xPositions = [20, 300, 580];
+        var yStart = 40;
+        var yGap = 20;
 
-        creditsText = new FlxText(0, FlxG.height, FlxG.width, 
-			"FNSAF DEV TEAM \n\n\n" +
-            "Sha_mi0921 \n Team leader, Charter.\n\n" +
-            "Snowmelt \n Co-Team leader, Artist, Charter.\n\n" +
-            "AweSomeJack \n Coder.\n\n" +
-            "Moon Shark \n Composer.\n\n" +
-            "CASH \n Artist.\n\n" +
-            "NeonDash \n Animator.\n\n" +
-            "yuseong0405 \n Animator.\n\n" +
-            "bpforest \n Coder.\n\n" +
-            "Logan \n Artist." 
+        var yTrack:Array<Int> = [yStart, yStart, yStart];
 
-            /*
+        var categories:Array<{title:String, names:Array<String>}> = [
+            { title: "Team Leader", names: ["sha_mi0921"] },
+            { title: "Team Co-Leader", names: ["snowmelt"] },
+            { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
+            { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)"] },
+            { title: "Artists", names: ["logan", "snowmelt", "cash", "neondash", "rage_87", "nyangko", "Lem0nA", "white", "Ahmed", "UNION"] },
+            { title: "Charters", names: ["dia"] }
+        ];
 
-            How does this part work?
+    var columnMap = [0, 0, 0, 0, 1, 2];
 
-            First of all, you should have your text ready, so,
-            you add here, it should look like this:
+    for (i in 0...categories.length)
+    {
+        var category = categories[i];
+        var col = columnMap[i];
+        var x = xPositions[col];
+        var y = yTrack[col];
 
-            __________________________________________________
+        var titleText = new FlxText(x, y, 0, category.title, 16);
+        titleText.setFormat(null, 16, FlxColor.YELLOW, LEFT);
+        add(titleText);
 
-            "Team Teamname \n" +
-            "People1 \n Artist." +
-            "People2 \n Composer." +
-            ...
-            "People71 \n Whatever this guy did."
+        y += yGap;
 
-            __________________________________________________
-
-            If you wanna add text, use:
-
-            "YourText"
-
-            If you wanna do a jump a line, use:
-
-            \n
-
-            If you wanna jump multiple lines, repeat the '\n', so, basically,
-            "I wanna jump 3 lines!"
-
-            \n\n\n
-
-            REMINDER: ALWAYS ADD A '+' in the end to it continue!!! (You only won't add if it is the last line of the text!)
-
-            __________________________________________________
-
-            Right:
-
-            "Team Peakness \n\n\n" + 
-            "PeakDick - Artist." +
-            "MassivePeak - Composer." +
-            ...
-            "Thank you for playing!"
-
-            __________________________________________________
-
-            Wrong:
-
-            "Team Peakness \n\n\n"
-            "PeakDick - Artist."
-            "MassivePeak - Composer."
-            ...
-            "Thank you for playing!"
-
-            */
-            
-        );
-
-                              // Font      // Size      // Color  // Pos.
-        creditsText.setFormat("VCR OSD Mono", 64, FlxColor.WHITE, "center");
-        add(creditsText);
-
-        instructionsText = new FlxText(10, 50, FlxG.width - 20, 
-            "Press ESC to skip"
-        );
-                                   // Font      // Size      // Color  // Pos.
-		instructionsText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, "bottom");
-		add(instructionsText);
-
-        instructionsText2 = new FlxText(10, 100, FlxG.width - 20, 
-            // Default if GB (Gamebanana), change this if you want to.
-            "Press 'G' to access GB Page."
-        );
-                                  // Font      // Size      // Color  // Pos.
-		instructionsText2.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, "bottom");
-		add(instructionsText2);
-
-        var duration:Float = (creditsText.height + FlxG.height) / scrollSpeed;
-        FlxTween.tween(creditsText, { y: -creditsText.height }, duration, {
-            type: FlxTween.ONESHOT,
-            onComplete: function(tween:FlxTween) {
-                // Change this if you want it to go to another state.
-                MusicBeatState.switchState(new MainMenuState());
-            }
-        });
+        for (name in category.names)
+        {
+            var nameText = new FlxText(x + 20, y, 0, name, 14);
+            nameText.setFormat(null, 14, FlxColor.WHITE, LEFT);
+            add(nameText);
+            y += yGap;
+        }
+            yTrack[col] = y + yGap;
+        }
     }
 
-    override public function update(elapsed:Float):Void {
-        super.update(elapsed);
+    var quitting:Bool = false;
+    override function update(elapsed:Float)
+    {
+		if (FlxG.sound.music.volume < 0.7)
+		{
+			FlxG.sound.music.volume += 0.5 * elapsed;
+		}
 
-		checker.x += .5*(elapsed/(1/120)); 
-		checker.y -= 0.16;
-
-        if (FlxG.keys.justPressed.ESCAPE) {
-             // Change this if you want it to go to another state.
-            MusicBeatState.switchState(new MainMenuState());
-        }
-
-        // Santiago, i want to use other Keybind!! Check https://api.haxeflixel.com/flixel/input/keyboard/FlxKeyList.html
-        if (FlxG.keys.justPressed.G) {
-            // Change 'https://example.com' with your Gamebanana page or something.
-            CoolUtil.browserLoad('https://gamebanana.com/mods/452623');
-        }
+		if(!quitting)
+		{
+			if (FlxG.keys.justPressed.ESCAPE)
+			{
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				MusicBeatState.switchState(new MainMenuState());
+				quitting = true;
+			}
+		}
     }
 }
