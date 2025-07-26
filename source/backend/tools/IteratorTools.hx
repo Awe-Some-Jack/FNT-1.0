@@ -1,4 +1,4 @@
-package;
+package backend.tools;
 
 /**
  * A static extension which provides utility functions for Iterators.
