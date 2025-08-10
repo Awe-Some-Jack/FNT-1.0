@@ -22,11 +22,12 @@ class CreditsState extends MusicBeatState
             { title: "Team Co-Leader", names: ["snowmelt"] },
             { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
             { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)"] },
-            { title: "Artists", names: ["logan", "snowmelt", "cash", "neondash", "rage_87", "nyangko", "Lem0nA", "white", "Ahmed", "UNION"] },
+            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "nyangko", "Lem0nA", "white", "Ahmed", "Duolc(EX)"] },
+            { title: "Animator", names: ["UNION", "neondash", "Retro(EX)"] },
             { title: "Charters", names: ["dia"] }
         ];
 
-    var columnMap = [0, 0, 0, 0, 1, 2];
+    var columnMap = [0, 0, 0, 0, 1, 1, 2];
 
     for (i in 0...categories.length)
     {
