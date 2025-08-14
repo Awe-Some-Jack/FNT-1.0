@@ -1,5 +1,3 @@
-local hud = {"healthBar", "iconP1", "iconP2", "scoreTxt", "timeBar", "TimeTxt"}
-
 function onCreate()
     makeLuaSprite("Redbg", "", -1000, 0)
     makeGraphic("Redbg", 650, screenHeight, "ff0000")
