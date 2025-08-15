@@ -10,7 +10,7 @@ end
 
 function onSectionHit()
     if curSection == 8 then
-        doTweenX("MovingBG", "back1", 5000, 70)
+        doTweenX("MovingBG", "back1", 8200, 105)
     end
 end
 
