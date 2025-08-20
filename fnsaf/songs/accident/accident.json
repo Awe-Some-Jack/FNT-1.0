@@ -1,5 +1,5 @@
 {
-	"player1": "bf",
+	"player1": "bf-accident",
 	"player2": "puppy-accident",
 	"events": [
 		[
@@ -78,6 +78,19 @@
 			111003.90625,
 			[
 				["Change Scroll Speed", "1.3", ""]
+			]
+		],
+		[
+			117000,
+			[
+				["Play Animation", "what", "Dad"],
+				["Alt Idle Animation", "Dad", "-alt"]
+			]
+		],
+		[
+			126000,
+			[
+				["Play Animation", "report", "Dad"]
 			]
 		]
 	],
@@ -304,11 +317,10 @@
 				[24093.75, 3, 0],
 				[24281.25, 2, 0],
 				[24375, 1, 0],
-				[24562.5, 0, 93.75],
-				[24656.25, 2, 187.5],
-				[24937.5, 3, 0],
+				[24656.25, 2, 0],
+				[24750, 3, 0],
 				[25031.25, 1, 281.25],
-				[25312.5, 0, 187.5]
+				[25406.25, 0, 0]
 			],
 			"sectionBeats": 4,
 			"gfSection": false,
@@ -1526,7 +1538,7 @@
 		},
 		{
 			"sectionNotes": [
-				[117000, 6, 1031.25],
+				[117000, 6, 1031.25, "No Animation"],
 				[117000, 0, 1500]
 			],
 			"sectionBeats": 4,
@@ -1586,7 +1598,7 @@
 			],
 			"sectionBeats": 4,
 			"gfSection": false,
-			"altAnim": false,
+			"altAnim": true,
 			"bpm": 160,
 			"changeBPM": false,
 			"mustHitSection": true
@@ -1610,7 +1622,7 @@
 			],
 			"sectionBeats": 4,
 			"gfSection": false,
-			"altAnim": false,
+			"altAnim": true,
 			"bpm": 160,
 			"changeBPM": false,
 			"mustHitSection": false
