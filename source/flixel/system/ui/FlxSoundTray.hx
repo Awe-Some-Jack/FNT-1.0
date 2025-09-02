@@ -11,9 +11,12 @@ import flixel.system.FlxAssets;
 class FlxSoundTray extends Sprite
 {
     /**
-     * Because reading any data from DisplayObject is insanely expensive in hxcpp, keep track of whether we need to update it or not.
+     * Because reading any data from DisplayObject is insanely expensive in hxcpp,
+     * keep track of whether we need to update it or not.
      */
     public var active:Bool;
+
+    /**Scale of the soundTray.**/
     var _defaultScale:Float = 0.6;
 
     /**The sound used when increasing the volume.**/
@@ -25,7 +28,10 @@ class FlxSoundTray extends Sprite
     /**Whether or not changing the volume should make noise.**/
     public var silent:Bool = false;
 
-    /**This is Were your images are, you can leave imagePath empty if it just in the images folder.**/
+    /**
+     * This is Were your images are,
+     * you can leave imagePath empty if it just in the images folder.
+     **/
     var imagePath = 'soundTray/';
     var volumeImages = [
         'soundTray_0',
@@ -41,7 +47,10 @@ class FlxSoundTray extends Sprite
         'soundTray_10'
     ];
 
-    /**This is Were your sounds are, you can leave soundPath empty if it just in the sounds folder.**/
+    /**
+     * This is Were your sounds are,
+     * you can leave soundPath empty if it just in the sounds folder.
+     **/
     var soundPath = '';
     var volumeSounds = [
         'Volup',
@@ -49,9 +58,13 @@ class FlxSoundTray extends Sprite
         'VolMAX'
     ];
 
-    var defaultStayTime = 1; // How Long you want the SoundTray to stay visible.
+    /**How Long you want the SoundTray to stay visible.**/
+    var defaultStayTime = 1;
 
-    ///// Don't Change any of this below unless you know what you are doing /////
+    /**Will it Start on the Top or the Right.**/
+    var topSoundTray = true;
+
+    /**Don't Change any of this below unless you know what you are doing.**/
     var makeTray = true;
     public function new()
     {
@@ -86,12 +99,13 @@ class FlxSoundTray extends Sprite
         fill = new Sprite();
         addChild(fill);
 
-        scaleX = _defaultScale;
-        scaleY = _defaultScale;
+        if(topSoundTray) // Hides the SoundTray | this.height/width doesnt fully hide the tray for some reason...
+            y = -fillImage.height - 10;
+        else
+            x = FlxG.stage.window.width + 10;
 
-        visible = false;
-        active = false;
-        y = -fillImage.height - 10; // Hides the SoundTray | this.height doesnt fully hide the tray for some reason...
+        scaleX = scaleY = _defaultScale;
+        active = visible = false;
         updateFill(); // Update Fill to Current Volume
 
         FlxG.signals.postStateSwitch.add(function() {
@@ -125,15 +139,20 @@ class FlxSoundTray extends Sprite
         #end
     }
     
-    var lerpYPos:Float = 0;
+    var lerpPos:Float = 0;
     var alphaTarget:Float = 0;
     var lowerStayTime:Bool = false;
     private override function __enterFrame(deltaTime:Float):Void
     {
         if(!makeTray) return;
 
-        x = FlxG.stage.window.width / 2 - width/2; // Center X that SoundTray, is in __enterFrame in case people scale the windows.
-        y = FlxMath.lerp(y, lerpYPos, 0.1); // Something y related that base game does
+        if(topSoundTray) {
+            x = FlxG.stage.window.width/2 - width/2; // Center X that SoundTray, is in __enterFrame in case people scale the windows.
+            y = FlxMath.lerp(y, lerpPos, 0.1); // Something Y related that base game does
+        } else {
+            x = FlxMath.lerp(x, FlxG.stage.window.width + lerpPos, 0.1); // Something X related that base game does
+            y = FlxG.stage.window.height/2 - height/2; // Center Y that SoundTray, is in __enterFrame in case people scale the windows.
+        }
         alpha = FlxMath.lerp(alpha, alphaTarget, 0.25); // Something alpha related that base game does
         active = visible = alpha > 0;
         
@@ -175,10 +194,14 @@ class FlxSoundTray extends Sprite
         if(stayTime > 0) { // When you Release Any Volume Key
             if(lowerStayTime) stayTime = Math.max(stayTime - elapsed, 0);
             alphaTarget = 1;
-            lerpYPos = 10;
-        } else if(y >= -height) {
+            lerpPos = topSoundTray ? 10 : (-width - 10);
+        } else {
             alphaTarget = 0;
-            lerpYPos = -height - 10;
+            if(topSoundTray) {
+                if(y >= -height) lerpPos = -height - 10;
+            } else {
+                if(x <= FlxG.stage.window.width) lerpPos = 10;
+            }
         }
     }
 
