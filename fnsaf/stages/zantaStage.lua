@@ -1,5 +1,11 @@
+local dir = "bg/zanta/"
+
+function getBG(file)
+    return dir .. file
+end
+
 function onCreate()
-	makeLuaSprite('bg','bg/zanta/bg',-52.6,86.65)
+	makeLuaSprite('bg',getBG("bg"),-52.6,86.65)
 	makeAnimatedLuaSprite('gate','bg/zanta/gate',1099.85,-3.7)
 	addAnimationByIndices('gate','close','gate','0',24)
 	addAnimationByIndices('gate','open','gate','1',24)
@@ -10,7 +16,7 @@ function onCreate()
 
 
 
-	makeAnimatedLuaSprite('who','characters/who',1230, -100)
+	makeAnimatedLuaSprite('who', getBG("who"),1230, -100)
 
 	addAnimationByPrefix('who','idle','dark orange idle0',24,false)
 	addAnimationByPrefix('who','alt','dark orange alt',24,false)
@@ -22,7 +28,7 @@ function onCreate()
 
 	addLuaSprite('gate',false)
 
-	makeAnimatedLuaSprite('banana','characters/banana', -270, -50)
+	makeAnimatedLuaSprite('banana',getBG("banana"), -270, -50)
 	addAnimationByPrefix('banana','idle','banana idle', 24)
 	addAnimationByPrefix('banana','dead','banana dead', 24, false)
 	scaleObject('banana', 1.2, 1.2)
