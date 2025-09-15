@@ -77,6 +77,6 @@ end
 
 function onUpdate(elapsed)
     if not inGameOver then
-        setCameraScroll(700, 500)
+        setCameraScroll(700, 465)
     end
 end

@@ -19,10 +19,10 @@ class CreditsState extends MusicBeatState
 
         var categories:Array<{title:String, names:Array<String>}> = [
             { title: "Team Leader", names: ["sha_mi0921"] },
-            { title: "Team Co-Leader", names: ["snowmelt"] },
+            { title: "Team Co-Leader", names: ["AweSomeJack"] },
             { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
             { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)"] },
-            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "sucheol", "nyangko", "Lem0nA", "white", "Ahmed Wael Hamdy", "Duolc(EX)"] },
+            { title: "Artists", names: ["logan", "snowmelt(EX)", "cash", "rage_87", "sucheol", "nyangko", "Lem0nA", "white", "Ahmed Wael Hamdy", "Duolc(EX)"] },
             { title: "Animator", names: ["yuseong0405", "UNION", "neondash", "Retro(EX)", "Nanda Pratama"] },
             { title: "Charters", names: ["dia"] }
         ];
