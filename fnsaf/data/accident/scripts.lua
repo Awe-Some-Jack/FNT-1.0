@@ -6,7 +6,11 @@ end
 
 function onCreate()
     setProperty("dad.visible", false)
-    setProperty("boyfriend.x", 1600)
+    setProperty("boyfriend.visible", false)
+
+    makeAnimatedLuaSprite('cutscene',getBG("BF-CS"), defaultBoyfriendX - 680, defaultBoyfriendY - 40)
+	addAnimationByPrefix('cutscene','anim','Animation' ,12 ,false)
+    addLuaSprite("cutscene", true)
 
     makeLuaText("Subtitle", "sample", 800, 0, 530)
     screenCenter("Subtitle", "x")
@@ -45,6 +49,10 @@ function onCreate()
 
 end
 
+function onSongStart()
+    playAnim("cutscene", "anim", true)
+end
+
 function onStartCountdown()
     cameraFade("game", "000000", 1.6, false, true)
     callMethod('iconP2.changeIcon', {'question'})
@@ -58,6 +66,8 @@ function onSectionHit()
 
     if curSection == 8 then
         doTweenX("MovingBG", "back1", 8200, 105)
+        removeLuaSprite("cutscene", true)
+        setProperty("boyfriend.visible", true)
     end
 
     if curSection == 24 then
