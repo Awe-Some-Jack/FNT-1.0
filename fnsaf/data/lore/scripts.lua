@@ -1,3 +1,9 @@
+local dir = "bg/hall/"
+
+function getBG(file)
+    return dir .. file
+end
+
 function onCreate()
     setProperty("boyfriend.flipX", false)
     setProperty('dad.color', getColorFromHex('000000'))
@@ -20,6 +26,26 @@ function onCreate()
     setProperty("itsyou.alpha", 0)
     setTextSize("itsyou", 70)
     addLuaText("itsyou")
+
+    if not lowQuality then
+        makeAnimatedLuaSprite('among1',getBG("wallyaccident"), 1600, 410)
+	    addAnimationByPrefix('among1','idle','wallywalk0' ,24 ,true)
+        addLuaSprite("among1", true)
+
+        makeAnimatedLuaSprite('among2',getBG("royalaccident"), -500, 510)
+	    addAnimationByPrefix('among2','idle','royalwalk0' ,24 ,true)
+        setProperty("among2.flipX", true)
+        addLuaSprite("among2", false)
+
+        makeAnimatedLuaSprite('among3',getBG("bananaaccident"), -500, 300)
+	    addAnimationByPrefix('among3','idle','bananawalk0' ,24 ,true)
+        setProperty("among3.flipX", true)
+        addLuaSprite("among3", true)
+
+        makeAnimatedLuaSprite('among4',getBG("creamaccident"), 1600, 300)
+	    addAnimationByPrefix('among4','idle','creamwalk0' ,24 ,true)
+        addLuaSprite("among4", false)
+    end
 end
 
 local function rgbToHex(t)
@@ -30,6 +56,28 @@ function onSongStart()
     doTweenAlpha("HI", "PlayerSide", 0.5, 1)
     doTweenAlpha("HI2", "itsyou", 1, 1)
     runTimer("Bye", 5)
+end
+
+function onSectionHit()
+    if curSection == 16 then
+       doTweenX("MovingAmong", "among3", 1500, 6)
+    end
+
+    if curSection == 36 then
+        doTweenX("MovingAmong2", "among4", -1000, 6)
+    end
+
+    if curSection == 48 then
+        doTweenX("MovingAmong3", "among1", -1000, 6)
+    end
+
+    if curSection == 64 then
+        doTweenX("MovingAmong4", "among2", 1500, 6)
+    end
+
+    if curSection == 85 then
+        cancelTween("MovingBG")
+    end
 end
 
 function onStepHit()
@@ -106,6 +154,24 @@ function onUpdatePost()
         setProperty("P3.alpha", 1)
         setProperty('iconP1.x', pX)
         setProperty('iconP2.x', oX)
+    end
+end
+
+function onTweenCompleted(tag)
+    if tag == "MovingAmong" then
+        removeLuaSprite("MovingAmong", true)
+    end
+
+    if tag == "MovingAmong2" then
+        removeLuaSprite("MovingAmong2", true)
+    end
+
+    if tag == "MovingAmong3" then
+        removeLuaSprite("MovingAmong3", true)
+    end
+
+    if tag == "MovingAmong4" then
+        removeLuaSprite("MovingAmong4", true)
     end
 end
 
