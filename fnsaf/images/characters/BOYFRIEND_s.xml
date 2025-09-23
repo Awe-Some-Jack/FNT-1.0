@@ -1,95 +1,94 @@
-<?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="BOYFRIEND_s.png">
-<SubTexture name="BOYFRIEND_s idle0000" x="4465" y="1401" width="704" height="689" frameX="-797" frameY="-413" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0001" x="4465" y="2090" width="704" height="689" frameX="-802" frameY="-414" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0002" x="4465" y="706" width="712" height="695" frameX="-798" frameY="-408" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0003" x="704" y="3124" width="707" height="709" frameX="-801" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0004" x="0" y="3124" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0005" x="0" y="3124" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0006" x="0" y="3124" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s idle0007" x="0" y="3124" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00000" x="1411" y="3124" width="701" height="709" frameX="-751" frameY="-395" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00001" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00002" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00003" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00004" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00005" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00006" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFT00007" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00000" x="2672" y="3834" width="661" height="619" frameX="-809" frameY="-482" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00001" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00002" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00003" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00004" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00005" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00006" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWN00007" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00000" x="843" y="809" width="679" height="779" frameX="-863" frameY="-325" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00001" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00002" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00003" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00004" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00005" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00006" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUP00007" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00000" x="4465" y="0" width="717" height="706" frameX="-873" frameY="-398" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00001" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00002" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00003" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00004" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00005" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00006" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHT00007" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0000" x="3765" y="1432" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0001" x="3054" y="1492" width="704" height="716" frameX="-748" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0002" x="2450" y="2384" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0003" x="3765" y="0" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0004" x="3765" y="716" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0005" x="3765" y="0" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0006" x="3765" y="716" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0007" x="3765" y="0" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singLEFTmiss0008" x="3765" y="716" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0000" x="2004" y="3834" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0001" x="4465" y="2779" width="662" height="657" frameX="-812" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0002" x="3765" y="2142" width="670" height="657" frameX="-806" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0003" x="1691" y="778" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0004" x="0" y="3834" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0005" x="1691" y="778" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0006" x="668" y="3834" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0007" x="1691" y="778" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singDOWNmiss0008" x="1336" y="3834" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0000" x="2371" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0001" x="1691" y="0" width="680" height="778" frameX="-864" frameY="-327" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0002" x="683" y="1611" width="684" height="772" frameX="-863" frameY="-332" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0003" x="2371" y="773" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0004" x="0" y="1611" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0005" x="2371" y="773" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0006" x="0" y="1611" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0007" x="2371" y="773" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singUPmiss0008" x="0" y="1611" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0000" x="3536" y="3124" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0001" x="1367" y="1611" width="718" height="746" frameX="-875" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0002" x="2085" y="1611" width="708" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0003" x="3054" y="0" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0004" x="3054" y="746" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0005" x="3054" y="0" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0006" x="3054" y="746" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0007" x="3054" y="0" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="BOYFRIEND_s singRIGHTmiss0008" x="3054" y="746" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10000" x="2112" y="3124" width="712" height="708" frameX="-798" frameY="-395" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10001" x="0" y="0" width="844" height="809" frameX="-767" frameY="-296" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10002" x="844" y="0" width="847" height="805" frameX="-763" frameY="-300" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10003" x="0" y="809" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10004" x="0" y="809" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10005" x="0" y="809" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10006" x="0" y="809" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge10007" x="0" y="809" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20000" x="2824" y="3124" width="712" height="708" frameX="-798" frameY="-395" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20001" x="0" y="2384" width="821" height="740" frameX="-799" frameY="-364" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20002" x="821" y="2384" width="817" height="737" frameX="-800" frameY="-366" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20003" x="1638" y="2384" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20004" x="1638" y="2384" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20005" x="1638" y="2384" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20006" x="1638" y="2384" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200" />
-<SubTexture name="dodge20007" x="1638" y="2384" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200" />
+<?xml version="1.0" encoding="utf-8"?><TextureAtlas imagePath="BOYFRIEND_s.png">
+<SubTexture name="BOYFRIEND_s idle0000" x="4265" y="2319" width="704" height="689" frameX="-797" frameY="-413" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0001" x="4969" y="2319" width="704" height="689" frameX="-802" frameY="-414" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0002" x="3553" y="2319" width="712" height="695" frameX="-798" frameY="-408" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0003" x="5020" y="1582" width="707" height="709" frameX="-801" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0004" x="3616" y="1582" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0005" x="3616" y="1582" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0006" x="3616" y="1582" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s idle0007" x="3616" y="1582" width="704" height="710" frameX="-803" frameY="-393" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00000" x="0" y="2319" width="701" height="709" frameX="-751" frameY="-395" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00001" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00002" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00003" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00004" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00005" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00006" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFT00007" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00000" x="4672" y="3028" width="661" height="619" frameX="-809" frameY="-482" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00001" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00002" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00003" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00004" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00005" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00006" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWN00007" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00000" x="2534" y="0" width="679" height="779" frameX="-863" frameY="-325" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00001" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00002" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00003" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00004" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00005" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00006" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUP00007" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00000" x="2836" y="2319" width="717" height="706" frameX="-873" frameY="-398" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00001" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00002" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00003" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00004" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00005" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00006" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHT00007" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0000" x="4320" y="1582" width="700" height="710" frameX="-758" frameY="-394" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0001" x="812" y="1582" width="704" height="716" frameX="-748" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0002" x="1516" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0003" x="2216" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0004" x="2916" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0005" x="2216" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0006" x="2916" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0007" x="2216" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singLEFTmiss0008" x="2916" y="1582" width="700" height="716" frameX="-758" frameY="-388" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0000" x="4004" y="3028" width="668" height="622" frameX="-807" frameY="-479" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0001" x="0" y="3028" width="662" height="657" frameX="-812" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0002" x="662" y="3028" width="670" height="657" frameX="-806" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0003" x="1332" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0004" x="2000" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0005" x="1332" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0006" x="2668" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0007" x="1332" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singDOWNmiss0008" x="3336" y="3028" width="668" height="657" frameX="-807" frameY="-444" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0000" x="3893" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0001" x="3213" y="0" width="680" height="778" frameX="-864" frameY="-327" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0002" x="683" y="809" width="684" height="772" frameX="-863" frameY="-332" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0003" x="4576" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0004" x="0" y="809" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0005" x="4576" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0006" x="0" y="809" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0007" x="4576" y="0" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singUPmiss0008" x="0" y="809" width="683" height="773" frameX="-863" frameY="-331" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0000" x="2125" y="2319" width="711" height="707" frameX="-872" frameY="-397" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0001" x="1367" y="809" width="718" height="746" frameX="-875" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0002" x="2085" y="809" width="708" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0003" x="2793" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0004" x="3504" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0005" x="2793" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0006" x="3504" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0007" x="2793" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="BOYFRIEND_s singRIGHTmiss0008" x="3504" y="809" width="711" height="746" frameX="-872" frameY="-358" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10000" x="701" y="2319" width="712" height="708" frameX="-798" frameY="-395" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10001" x="0" y="0" width="844" height="809" frameX="-767" frameY="-296" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10002" x="844" y="0" width="847" height="805" frameX="-763" frameY="-300" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10003" x="1691" y="0" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10004" x="1691" y="0" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10005" x="1691" y="0" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10006" x="1691" y="0" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge10007" x="1691" y="0" width="843" height="802" frameX="-765" frameY="-302" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20000" x="1413" y="2319" width="712" height="708" frameX="-798" frameY="-395" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20001" x="4215" y="809" width="821" height="740" frameX="-799" frameY="-364" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20002" x="5036" y="809" width="817" height="737" frameX="-800" frameY="-366" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20003" x="0" y="1582" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20004" x="0" y="1582" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20005" x="0" y="1582" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20006" x="0" y="1582" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200"/>
+<SubTexture name="dodge20007" x="0" y="1582" width="812" height="737" frameX="-803" frameY="-366" frameWidth="2300" frameHeight="1200"/>
 </TextureAtlas>
