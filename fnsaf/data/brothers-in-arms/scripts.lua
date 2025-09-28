@@ -3,6 +3,15 @@ local isgf = false
 
 local Danger = false
 
+local bfOffsets = {
+    idle   = {x = 0,   y = 0},
+    singLEFT  = {x = 148, y = 5},
+    singDOWN  = {x = -39,  y = -45},
+    singUP    = {x = 0, y = -3},
+    singRIGHT = {x = -55,  y = -33},
+    dodge     = {x = 71,   y = 56}
+}
+
 cameraevnet = {928, 992, 1280, 1632}
 nocameraevnet = {960, 1248, 1376}
 
@@ -35,15 +44,50 @@ function onUpdate(elapsed)
 
     health = getProperty('health')
     if Danger then
-        if getProperty('healthBar.percent') < 25 then
+        if getProperty('healthBar.percent') < 20 then
  	   	    setProperty('health', health- 500);
 		end
+    end
+
+    if isgf then
+        setProperty("boyfriend.flipX", true)
+    else
+        setProperty("boyfriend.flipX", false)
     end
 end
 
 function onUpdatePost()
+    local anim = getProperty("boyfriend.animation.curAnim.name")
+    if anim == nil then return end
+
+    local fixedAnim = anim
+    if getProperty("boyfriend.flipX") then
+        if string.find(anim, "singLEFT") then
+            fixedAnim = anim:gsub("LEFT", "RIGHT")
+        elseif string.find(anim, "singRIGHT") then
+            fixedAnim = anim:gsub("RIGHT", "LEFT")
+        end
+    end
+
+    if bfOffsets[fixedAnim] ~= nil then
+        setProperty("boyfriend.offset.x", bfOffsets[fixedAnim].x)
+        setProperty("boyfriend.offset.y", bfOffsets[fixedAnim].y)
+    end
+
+    if bfOffsets[anim] ~= nil then
+        local ox = bfOffsets[anim].x
+        local oy = bfOffsets[anim].y
+
+        if getProperty("boyfriend.flipX") then
+            ox = -ox
+        end
+
+        setProperty("boyfriend.offset.x", ox)
+        setProperty("boyfriend.offset.y", oy)
+    end
+
     if Danger then
-        if getProperty('healthBar.percent') < 50 then
+        if getProperty('healthBar.percent') < 40 then
             setProperty('iconP1.animation.curAnim.curFrame',1)
             setProperty('iconP2.animation.curAnim.curFrame',2)
         elseif getProperty('healthBar.percent') > 80 then
@@ -60,13 +104,32 @@ function onUpdatePost()
     setProperty("testIcon.y", getProperty("healthBar.y") - 84)
 end
 
+function goodNoteHit(id, direction, noteType, isSustainNote)
+    if getProperty("boyfriend.flipX") then
+        if direction == 0 then -- LEFT
+            characterPlayAnim("boyfriend", "singRIGHT", true)
+        elseif direction == 3 then -- RIGHT
+            characterPlayAnim("boyfriend", "singLEFT", true)
+        end
+    end
+end
+
+function goodNoteHitPre(i)
+     if getProperty('boyfriend.specialAnim') then
+        setProperty('notes.members['..i..'].noAnimation', true)
+    end
+end
+
 function onStepHit()
     if curStep == 907 then
         doTweenX("BFX", "boyfriend", 260, 0.3, "cubeOut")
         doTweenAlpha("HI", "testIcon", 1, 0.2, "linear")
         doTweenAlpha("HI2", "Dangerhealth", 1, 0.2, "linear")
         setProperty("gf.alpha", 1)
+        characterPlayAnim("boyfriend", "dodge", false)
+        setProperty('boyfriend.specialAnim', true);
         triggerEvent("Play Animation", "anime", "gf")
+        setProperty("boyfriend.cameraPosition", {-100, 0})
         
         Danger = true
     end
@@ -119,6 +182,12 @@ function onStepHit()
 
     if curStep == 2144 then
         cameraFade("hud", "000000", 0.001, false)
+    end
+end
+
+function onTweenCompleted(tag)
+    if tag == "BFX" then
+        setProperty('boyfriend.specialAnim', false);
     end
 end
 
