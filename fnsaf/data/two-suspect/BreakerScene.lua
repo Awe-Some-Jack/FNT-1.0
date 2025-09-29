@@ -38,6 +38,12 @@ function onBeatHit()
     end
 end
 
+function onUpdate(elapsed)
+    if getProperty('uiGroup.visible') and not botPlay then
+        setProperty("botplayTxt.visible", false)
+    end
+end
+
 function onSectionHit()
     if curSection == 74 then
         middle()
@@ -70,10 +76,6 @@ function onStepHit()
         setProperty("bfside.visible", false)
         cameraFlash("hud", "ffffff", 0.3, false)
         setProperty("camGame.alpha", 1)
-
-        if not botPlay then
-            setProperty("botplayTxt.visible", false)
-        end
 
         if not middlescroll then
             noteTweenAlpha("NoteFade1", 0, 1, 1, "cubeOut")
