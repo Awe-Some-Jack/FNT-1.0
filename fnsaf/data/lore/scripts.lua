@@ -14,18 +14,20 @@ function onCreate()
     setProperty("dad.x", -1500)
     setProperty("dad.y", -20)
 
-    makeLuaSprite("PlayerSide", nil, 80)
-    makeGraphic("PlayerSide", 500, screenHeight, "00ffff")
-    setObjectCamera("PlayerSide", "hud")
-    setProperty("PlayerSide.alpha", 0)
-    addLuaSprite("PlayerSide", true)
+    if not middlescroll then
+        makeLuaSprite("PlayerSide", nil, 80)
+        makeGraphic("PlayerSide", 500, screenHeight, "00ffff")
+        setObjectCamera("PlayerSide", "hud")
+        setProperty("PlayerSide.alpha", 0)
+        addLuaSprite("PlayerSide", true)
 
-    makeLuaText("itsyou", "It's Your NOTES", 500, 80, 300)
-    setObjectCamera("itsyou", "hud")
-    setTextAlignment("itsyou", "center")
-    setProperty("itsyou.alpha", 0)
-    setTextSize("itsyou", 70)
-    addLuaText("itsyou")
+        makeLuaText("itsyou", "It's Your NOTES", 500, 80, 300)
+        setObjectCamera("itsyou", "hud")
+        setTextAlignment("itsyou", "center")
+        setProperty("itsyou.alpha", 0)
+        setTextSize("itsyou", 70)
+        addLuaText("itsyou") 
+    end
 
     if not lowQuality then
         makeAnimatedLuaSprite('among1',getBG("wallyaccident"), 1600, 410)
@@ -112,9 +114,11 @@ function onCountdownStarted()
     setHealthBarColors(rgbToHex(getProperty('boyfriend.healthColorArray')), "3dc7fa")
     setProperty('healthBar.leftToRight', true)
     callMethod('iconP2.changeIcon', {'bf'})
-    for i = 0, 3 do
-        setProperty('playerStrums.members['..i..'].x', _G['defaultOpponentStrumX'..i])
-        setProperty('opponentStrums.members['..i..'].x', _G['defaultPlayerStrumX'..i])
+    if not middlescroll then
+        for i = 0, 3 do
+            setProperty('playerStrums.members['..i..'].x', _G['defaultOpponentStrumX'..i])
+            setProperty('opponentStrums.members['..i..'].x', _G['defaultPlayerStrumX'..i])
+        end
     end
     setProperty('iconP1.flipX', true)
     setProperty('iconP2.flipX', true)

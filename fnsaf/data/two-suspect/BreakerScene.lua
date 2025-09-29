@@ -71,6 +71,10 @@ function onStepHit()
         cameraFlash("hud", "ffffff", 0.3, false)
         setProperty("camGame.alpha", 1)
 
+        if not botPlay then
+            setProperty("botplayTxt.visible", false)
+        end
+
         if not middlescroll then
             noteTweenAlpha("NoteFade1", 0, 1, 1, "cubeOut")
             noteTweenAlpha("NoteFade2", 1, 1, 1, "cubeOut")
