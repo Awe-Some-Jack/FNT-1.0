@@ -92,7 +92,7 @@ function onStepHit()
 
     if curStep == 1666 then
         setTextString("Subtitle", "Ugh, Who is the Real AGF!?\n아잇 누가 진짜 어그야!?")
-        icons = "face"
+        icons = "royalblue"
         setProperty("Subtitle.alpha", 1)
     end
 
@@ -116,7 +116,7 @@ function onStepHit()
 
     if curStep == 1980 then
         setTextString("Subtitle", "AAAAAAAAAAAAAA!!!!!!\n아아아아아아아아아악!!!!!!!")
-        icons = "face"
+        icons = "royalblue"
     end
 
     if curStep == 1995 then
