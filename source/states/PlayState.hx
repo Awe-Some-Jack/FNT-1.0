@@ -571,7 +571,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = healthBar.y + 70;
 
-		modWatermark = new FlxText(0, 700, FlxG.width - 800, "FNSAF - DEV BUILD", 16);
+		modWatermark = new FlxText(0, 700, FlxG.width - 800, "Friends & Troubler - DEV BUILD", 16);
 		modWatermark.setFormat(Paths.font("sg.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		modWatermark.scrollFactor.set();
 		modWatermark.borderSize = 1.25;
