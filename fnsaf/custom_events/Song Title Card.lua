@@ -22,7 +22,7 @@ function onEvent(eventName, value1, value2, strumTime)
 				art = "Logan "
 			elseif songName == "Two Suspect" then
                 compo = "SDL "
-				chart = "Space_puppy1203 "
+				chart = "Sha_mi0921 "
 				art = "Logan "
 			elseif songName == "Reactor Alarm" then
                 compo = "DevinXD "
