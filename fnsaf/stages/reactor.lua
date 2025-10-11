@@ -24,6 +24,11 @@ function onCreate()
 
 	makeLuaSprite("8", getBG("8"), bg[1], bg[2])
 
+	makeLuaSprite("9", getBG("9"), bg[1], bg[2])
+
+	makeLuaSprite("vig", getBG("vignette"))
+	setObjectCamera("vig", "hud")
+
 	addLuaSprite("1")
     addLuaSprite("2")
     addLuaSprite("3")
@@ -33,4 +38,5 @@ function onCreate()
 	addLuaSprite("7")
 	addLuaSprite("8")
 	addLuaSprite("9", true)
+	addLuaSprite("vig", true)
 end

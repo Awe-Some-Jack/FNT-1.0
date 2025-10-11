@@ -1529,11 +1529,11 @@ class ChartingState extends MusicBeatState implements PsychUIEventHandler.PsychU
 					var data:Int = note.noteData;
 					if(note.strumTime >= Conductor.songPosition -100 && FlxG.sound.music.playing && note.noteData > -1) {
 						if(note.mustPress){
-							lilBf.animation.play("" + Std.string(data), false);
+							lilBf.animation.play("" + Std.string(data), true);
 							lilBf.color = 0xffffffff;
 						}
 						else if(!note.mustPress){
-							lilOpp.animation.play("" + Std.string(data), false);
+							lilOpp.animation.play("" + Std.string(data), true);
 							lilOpp.color = 0xffffffff;
 						}
 					}
