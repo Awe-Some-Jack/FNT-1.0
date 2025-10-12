@@ -543,11 +543,11 @@ class TitleState extends MusicBeatState
 				case 13:
 					deleteCoolText();
 				case 14:
-					addMoreText('Friday Night');
+					addMoreText('Friends');
 				case 15:
-					addMoreText('Space Among');
+					addMoreText('&');
 				case 16:
-					addMoreText('Friends'); // credTextShit.text += '\nFunkin';
+					addMoreText('Troubler'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();

@@ -1,30 +1,31 @@
 local dir = "bg/reactor/"
-local bg = { -1200, -400 }
 
 function getBG(file)
     return dir .. file
 end
 
 function onCreate()
-    makeLuaSprite("1", getBG("1"), bg[1], bg[2])
+    makeLuaSprite("1", getBG("1"), -1200, -400)
 
-    makeLuaSprite("2", getBG("2"), bg[1], bg[2])
+    makeLuaSprite("2", getBG("2"), -1200, 400)
 
-    makeLuaSprite("3", getBG("3"), bg[1], bg[2])
+    makeLuaSprite("3", getBG("3"), -1200, 500)
 
-	makeLuaSprite("4", getBG("4"), bg[1], bg[2])
+	makeLuaSprite("4", getBG("4"), 350, -500)
 
-	makeLuaSprite("5", getBG("5"), bg[1], bg[2])
+	makeLuaSprite("5", getBG("5"), -1200, -400)
+	setBlendMode("5", "add")
 
-	makeLuaSprite("6", getBG("6"), bg[1], bg[2])
+	makeLuaSprite("6", getBG("6"), getProperty("2.x") + 120, getProperty("2.y") + 480)
+	setBlendMode("6", "add")
 
-	makeLuaSprite("7", getBG("7"), bg[1], bg[2])
+	makeLuaSprite("7", getBG("7"), getProperty("3.x") + 150, getProperty("3.y") - 30)
+	setBlendMode("7", "add")
 
-	makeLuaSprite("8", getBG("8"), bg[1], bg[2])
+	makeLuaSprite("8", getBG("8"), getProperty("4.x") - 20, getProperty("4.y") + 310)
+	setBlendMode("8", "add")
 
-	makeLuaSprite("8", getBG("8"), bg[1], bg[2])
-
-	makeLuaSprite("9", getBG("9"), bg[1], bg[2])
+	makeLuaSprite("9", getBG("9"), -1200, -400)
 
 	makeLuaSprite("vig", getBG("vignette"))
 	setObjectCamera("vig", "hud")

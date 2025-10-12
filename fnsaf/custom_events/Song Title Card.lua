@@ -14,11 +14,11 @@ function onEvent(eventName, value1, value2, strumTime)
 		if value2 == "" then
 			if songName == "New Crewmate" then
 				compo = "DevinXD "
-				chart = "Sha_mi0921 "
+				chart = "Dia "
 				art = "Snowmelt, Logan "
 			elseif songName == "Accident" then
                 compo = "SDL "
-				chart = "Sha_mi0921 "
+				chart = "Dia "
 				art = "Logan "
 			elseif songName == "Two Suspect" then
                 compo = "SDL "
@@ -34,7 +34,7 @@ function onEvent(eventName, value1, value2, strumTime)
 				art = "Snowmelt "
 			elseif songName == "Brothers in Arms" then
                 compo = "Awe "
-				chart = "Snowmelt "
+				chart = "Dia "
 				art = "Logan "
 				cover = "??? "
 

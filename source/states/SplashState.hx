@@ -13,12 +13,15 @@ class SplashState extends MusicBeatState
 			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new FlashingState());
 		}
+
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
 		
         startVideo('F&T Splash');
         super.create();
     }
 
-       public function startVideo(name:String)
+    public function startVideo(name:String)
     {
         videoCutscene = new FlxVideoSprite(0, 0);
         add(videoCutscene);
