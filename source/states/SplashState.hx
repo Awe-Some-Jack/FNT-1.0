@@ -1,12 +1,15 @@
 package states;
 
 import hxvlc.flixel.FlxVideoSprite;
+import lime.app.Application;
 
 class SplashState extends MusicBeatState
 {
     public var videoCutscene:FlxVideoSprite;
     override public function create():Void
     {
+        ClientPrefs.loadPrefs();
+        
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
