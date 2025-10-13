@@ -1,82 +1,82 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "idle0",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle0"
 		},
 		{
-			"loop": false,
 			"offsets": [84, -33],
+			"loop": false,
+			"fps": 26,
 			"anim": "singDOWN",
-			"fps": 26,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [145, 148],
+			"loop": false,
+			"fps": 26,
 			"anim": "singUP",
-			"fps": 26,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [37, -1],
+			"loop": false,
+			"fps": 26,
 			"anim": "singRIGHT",
-			"fps": 26,
-			"name": "right",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
-			"loop": false,
 			"offsets": [161, 24],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 26,
-			"name": "left",
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"loop": false,
+			"offsets": [67, 214],
+			"anim": "singDOWN-alt",
+			"fps": 26,
+			"name": "alt1 down",
 			"indices": []
 		},
 		{
-			"offsets": [67, 214],
 			"loop": false,
-			"fps": 26,
-			"anim": "singDOWN-alt",
-			"indices": [],
-			"name": "alt1 down"
-		},
-		{
 			"offsets": [-1, -16],
-			"loop": false,
-			"fps": 26,
 			"anim": "singLEFT-alt",
-			"indices": [],
-			"name": "alt1 left"
+			"fps": 26,
+			"name": "alt1 left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [177, 145],
-			"loop": false,
-			"fps": 26,
 			"anim": "singUP-alt",
-			"indices": [],
-			"name": "alt1 up"
+			"fps": 26,
+			"name": "alt1 up",
+			"indices": []
 		},
 		{
-			"offsets": [5, -10],
 			"loop": false,
-			"fps": 26,
+			"offsets": [5, -10],
 			"anim": "singRIGHT-alt",
-			"indices": [],
-			"name": "alt1 right"
+			"fps": 26,
+			"name": "alt1 right",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/RA-sp1",
-	"position": [0, 480],
+	"position": [10, 510],
 	"healthicon": "puppy",
 	"flip_x": false,
 	"healthbar_colors": [165, 76, 255],

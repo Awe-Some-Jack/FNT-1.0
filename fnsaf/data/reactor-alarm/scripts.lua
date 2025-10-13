@@ -29,7 +29,7 @@ function onCreate()
 
     if not lowQuality then
         makeAnimatedLuaSprite("AGF", "bg/reactor/beans/AFG idle", -500, 500)
-        addAnimationByPrefix("AGF", "idle", "agf idle")
+        addAnimationByPrefix("AGF", "idle", "agf idle", 24, false)
         setProperty("AGF.visible", false)
         scaleObject("AGF", 1.6, 1.6)
         addLuaSprite("AGF")
@@ -57,6 +57,12 @@ function onCreate()
         setProperty("night.visible", false)
         scaleObject("night", 1.6, 1.6)
         addLuaSprite("night")
+
+        makeAnimatedLuaSprite("pink", "bg/reactor/beans/dr p", 1650, 580)
+        addAnimationByPrefix("pink", "idle", "boydydaz", 24, false)
+        setProperty("pink.visible", false)
+        scaleObject("pink", 1.6, 1.6)
+        addLuaSprite("pink")
     end
 end
 
@@ -129,6 +135,7 @@ function onBeatHit()
         playAnim("pudding", "idle", true)
         playAnim("wally", "idle", true)
         playAnim("night", "idle", true)
+        playAnim("pink", "idle", true)
     end
 end
 
@@ -158,6 +165,7 @@ function onStepHit()
     if curStep == 1712 then
         setProperty("wally.visible", true)
         setProperty("night.visible", true)
+        setProperty("pink.visible", true)
         setProperty("AGF.visible", true)
     end
 

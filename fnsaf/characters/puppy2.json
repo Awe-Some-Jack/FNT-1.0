@@ -1,58 +1,58 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "idle-alt"
+			"fps": 24,
+			"name": "idle-alt",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-68, -20],
-			"loop": false,
-			"fps": 26,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "alt2 down"
+			"fps": 26,
+			"name": "alt2 down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-102, 3],
-			"loop": false,
-			"fps": 26,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "alt2 right"
+			"fps": 26,
+			"name": "alt2 right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [108, -4],
-			"loop": false,
-			"fps": 26,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "alt2 left"
+			"fps": 26,
+			"name": "alt2 left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [24, 41],
-			"loop": false,
-			"fps": 26,
 			"anim": "singUP",
-			"indices": [],
-			"name": "alt2 up"
+			"fps": 26,
+			"name": "alt2 up",
+			"indices": []
 		},
 		{
-			"offsets": [27, 228],
 			"loop": false,
-			"fps": 26,
+			"offsets": [27, 228],
 			"anim": "shocked",
-			"indices": [],
-			"name": "ani"
+			"fps": 26,
+			"name": "ani",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/RA-sp2",
-	"position": [0, 480],
+	"position": [0, 470],
 	"healthicon": "puppy",
 	"flip_x": false,
 	"healthbar_colors": [165, 76, 255],
