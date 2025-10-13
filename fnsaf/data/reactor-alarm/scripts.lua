@@ -15,6 +15,12 @@ function onCreate()
     precacheImage("bg/reactor/red/8")
     precacheImage("bg/reactor/red/9")
 
+    makeLuaSprite("dark", "")
+    makeGraphic("dark", 2000, 2000, "000000")
+    setProperty("dark.visible", false)
+    setObjectOrder("dark", getObjectOrder("boyfriendGroup") - 1)
+    addLuaSprite("dark")
+
     makeLuaSprite("saboflash", "")
     makeGraphic("saboflash", screenWidth, screenHeight, "ff0000")
     setProperty("saboflash.alpha", 0)
@@ -29,25 +35,25 @@ function onCreate()
         addLuaSprite("AGF")
 
         makeAnimatedLuaSprite("loyalblue", "bg/reactor/beans/loyalblue idle", 1300, 1200)
-        addAnimationByPrefix("loyalblue", "idle", "idle")
+        addAnimationByPrefix("loyalblue", "idle", "idle", 24, false)
         setScrollFactor("loyalblue", 1.1, 1.1)
         scaleObject("loyalblue", 1.2, 1.2)
         addLuaSprite("loyalblue", true)
 
         makeAnimatedLuaSprite("pudding", "bg/reactor/beans/pd idle", -200, 1200)
-        addAnimationByPrefix("pudding", "idle", "IDLES")
+        addAnimationByPrefix("pudding", "idle", "IDLES", 24, false)
         setScrollFactor("pudding", 0.9, 0.9)
         scaleObject("pudding", 1.2, 1.2)
         addLuaSprite("pudding", true)
 
         makeAnimatedLuaSprite("wally", "bg/reactor/beans/wally idle", 1400, 600)
-        addAnimationByPrefix("wally", "idle", "wally idle")
+        addAnimationByPrefix("wally", "idle", "wally idle", 24, false)
         setProperty("wally.visible", false)
         scaleObject("wally", 1.6, 1.6)
         addLuaSprite("wally")
 
         makeAnimatedLuaSprite("night", "bg/reactor/beans/ns idle", 1900, 500)
-        addAnimationByPrefix("night", "idle", "idleleqa")
+        addAnimationByPrefix("night", "idle", "idleleqa", 24, false)
         setProperty("night.visible", false)
         scaleObject("night", 1.6, 1.6)
         addLuaSprite("night")
@@ -85,6 +91,16 @@ function onSectionHit()
         loadGraphic("9", "bg/reactor/red/9")
     end
 
+    if curSection == 94 then
+        cameraSetTarget("bf")
+    end
+
+    if curSection == 95 then
+        setProperty("dark.visible", true)
+        setProperty("dad.alpha", 0)
+        cameraFlash("game", "000000", 0.7, false)
+    end
+
     if curSection == 115 then
         lockon = true
         lockX = 850
@@ -108,6 +124,7 @@ function onBeatHit()
         playAnim("loyalblue", "idle", true)
         playAnim("pudding", "idle", true)
         playAnim("wally", "idle", true)
+        playAnim("night", "idle", true)
     end
 end
 
@@ -123,6 +140,9 @@ function onStepHit()
         loadGraphic("7", "bg/reactor/7")
         loadGraphic("8", "bg/reactor/8")
         loadGraphic("9", "bg/reactor/9")
+
+        setProperty("dad.alpha", 1)
+        removeLuaSprite("dark", true)
 
         cameraFlash("game", "ffffff", 0.4, false)
     end
