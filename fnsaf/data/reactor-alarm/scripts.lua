@@ -34,13 +34,13 @@ function onCreate()
         scaleObject("AGF", 1.6, 1.6)
         addLuaSprite("AGF")
 
-        makeAnimatedLuaSprite("loyalblue", "bg/reactor/beans/loyalblue idle", 1300, 1200)
+        makeAnimatedLuaSprite("loyalblue", "bg/reactor/beans/loyalblue idle", 1300, 1300)
         addAnimationByPrefix("loyalblue", "idle", "idle", 24, false)
         setScrollFactor("loyalblue", 1.1, 1.1)
         scaleObject("loyalblue", 1.2, 1.2)
         addLuaSprite("loyalblue", true)
 
-        makeAnimatedLuaSprite("pudding", "bg/reactor/beans/pd idle", -200, 1200)
+        makeAnimatedLuaSprite("pudding", "bg/reactor/beans/pd idle", -200, 1300)
         addAnimationByPrefix("pudding", "idle", "IDLES", 24, false)
         setScrollFactor("pudding", 0.9, 0.9)
         scaleObject("pudding", 1.2, 1.2)
@@ -92,13 +92,17 @@ function onSectionHit()
     end
 
     if curSection == 94 then
-        cameraSetTarget("bf")
+        triggerEvent("Camera Follow Pos", "1200", "810")
     end
 
     if curSection == 95 then
         setProperty("dark.visible", true)
         setProperty("dad.alpha", 0)
         cameraFlash("game", "000000", 0.7, false)
+    end
+
+    if curSection == 98 then
+        triggerEvent("Camera Follow Pos", "", "")
     end
 
     if curSection == 115 then

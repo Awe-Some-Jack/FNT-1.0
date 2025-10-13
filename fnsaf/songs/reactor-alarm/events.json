@@ -1,12 +1,6 @@
 {
 	"events": [
 		[
-			0,
-			[
-				["Song Title Card", "", ""]
-			]
-		],
-		[
 			119272.727272727,
 			[
 				["Cinematics", "1", ""]
@@ -15,7 +9,8 @@
 		[
 			120727.272727273,
 			[
-				["Highlight Character", "1", ""]
+				["Highlight Character", "1", ""],
+				["Change Character", "Dad", "puppy2"]
 			]
 		],
 		[
@@ -27,19 +22,21 @@
 		[
 			132363.636363636,
 			[
+				["Highlight Character", "0", ""],
+				["Cinematics", "0", ""],
+				["Play Animation", "singLEFTmiss", "BF"]
+			]
+		],
+		[
+			133090.909090909,
+			[
 				["Play Animation", "shocked", "Dad"]
 			]
 		],
 		[
-			132363.636363636,
+			143636.363636364,
 			[
-				["Highlight Character", "0", ""]
-			]
-		],
-		[
-			132363.636363636,
-			[
-				["Cinematics", "0", ""]
+				["Change Character", "Dad", "puppy"]
 			]
 		]
 	],
