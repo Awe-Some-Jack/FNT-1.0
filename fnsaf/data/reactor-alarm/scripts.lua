@@ -80,7 +80,7 @@ function onSongStart()
     setProperty("camGame.alpha", 1)
     cameraFade("game", "000000", 2, false, true)
 
-    runTimer("Shaking", 1.9)
+    runTimer("Shaking", 2)
 end
 
 function onUpdate(elapsed)

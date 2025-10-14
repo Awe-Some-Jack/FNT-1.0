@@ -26,8 +26,8 @@ function onEvent(eventName, value1, value2, strumTime)
 				art = "Logan "
 			elseif songName == "Reactor Alarm" then
                 compo = "DevinXD "
-				chart = "Snowmelt "
-				art = "ENT "
+				chart = "Dia, Reiad "
+				art = "sp_seupeu "
 			elseif songName == "Get Caught" then
                 compo = "DevinXD "
 				chart = "Snowmelt "
