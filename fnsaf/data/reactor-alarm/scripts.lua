@@ -66,6 +66,23 @@ function onCreate()
     end
 end
 
+function onStartCountdown()
+    setProperty("camGame.alpha", 0)
+    setProperty("camHUD.alpha", 0)
+
+    lockon = true
+    lockX = 850
+    lockY = 475
+    triggerEvent("Tween Cam Zoom", "0.5", "0.01")
+end
+
+function onSongStart()
+    setProperty("camGame.alpha", 1)
+    cameraFade("game", "000000", 2, false, true)
+
+    runTimer("Shaking", 1.9)
+end
+
 function onUpdate(elapsed)
     if lockon then
         setCameraScroll(lockX, lockY)
@@ -81,6 +98,14 @@ function onEvent(event, value1, value2, strumTime)
 end
 
 function onSectionHit()
+    if curSection == 2 then
+        lockon = false
+
+        triggerEvent("Tween Cam Zoom", "0.9", "")
+        setProperty("camHUD.alpha", 1)
+        cameraFlash("hud", "ffffff", 0.5, false)
+    end
+
     if curSection == 90 then
         sabo = true
     end
@@ -160,21 +185,21 @@ function onStepHit()
 
     if curStep == 1651 then
         doTweenY("hi", "pudding", 800, 1, "cubeOut")
-    end
-
-    if curStep == 1712 then
+        doTweenY("hi2", "loyalblue", 1000, 1, "cubeOut")
         setProperty("wally.visible", true)
         setProperty("night.visible", true)
         setProperty("pink.visible", true)
         setProperty("AGF.visible", true)
     end
 
-    if curStep == 1784 then
-        doTweenY("hi2", "loyalblue", 1000, 1, "cubeOut")
-    end
-
 
     if curStep == 1980 then
         cameraFade("hud", "000000", 1, false)
+    end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "Shaking" then
+        cameraShake("game", 0.025, 0.25)
     end
 end
