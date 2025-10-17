@@ -45,7 +45,7 @@ function onUpdate(elapsed)
 end
 
 function onSectionHit()
-    if curSection == 74 then
+    if curSection == 73 then
         middle()
         setProperty('uiGroup.visible', false)
         cameraFlash("hud", "ffffff", 0.5, false)
@@ -54,19 +54,19 @@ function onSectionHit()
         doTweenX("RBG", "Redbg", -20, 0.4, "cubeOut")
     end
 
-    if curSection == 78 then
+    if curSection == 75 then
         doTweenX("puppy", "spside", 330, 0.4, "cubeOut")
         doTweenX("CBG", "Cyanbg", 630, 0.4, "cubeOut")
-    end
-
-    if curSection == 83 then
-        doTweenX("bf", "bfside", 480, 0.4, "cubeOut")
-        doTweenX("puppy", "spside", 570, 0.2)
     end
 end
 
 function onStepHit()
-    if curStep == 1423 then
+    if curStep == 1224 then
+        doTweenX("bf", "bfside", 480, 0.4, "cubeOut")
+        doTweenX("puppy", "spside", 570, 0.2)
+    end
+
+    if curStep == 1296 then
         changedefault()
         setProperty('uiGroup.visible', true)
         removeLuaSprite("Redbg")

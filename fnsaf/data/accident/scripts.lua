@@ -47,6 +47,8 @@ function onCreate()
     makeLuaSprite("who", getBG("agfsilhouette"), -500, 350)
     addLuaSprite("who")
 
+    doTweenX("MovingBG", "back1", 8200, 105)
+
 end
 
 function onSongStart()
@@ -93,6 +95,7 @@ end
 
 function onStepHit()
     if curStep == 95 then
+        cancelTween("MovingBG")
         setProperty("dad.visible", true)
         callMethod('iconP2.changeIcon', {'puppy'})
         setHealthBarColors("A54CFF", "")
@@ -126,6 +129,7 @@ end
 function onUpdate(elapsed)
     if not inGameOver then
         setCameraScroll(700, 465)
+        cameraSetTarget("bf")
     end
 end
 

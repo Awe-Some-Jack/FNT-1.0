@@ -81,8 +81,6 @@ end
 function onSongStart()
     setProperty("camGame.alpha", 1)
     cameraFade("game", "000000", 2, false, true)
-
-    runTimer("Shaking", 2)
 end
 
 function onUpdate(elapsed)
@@ -167,6 +165,10 @@ function onBeatHit()
 end
 
 function onStepHit()
+    if curStep == 28 then
+        cameraShake("game", 0.025, 0.2)
+    end
+
     if curStep == 1576 then
         sabo = false
         loadGraphic("1", "bg/reactor/1")
@@ -199,11 +201,5 @@ function onStepHit()
 
     if curStep == 1980 then
         cameraFade("hud", "000000", 1, false)
-    end
-end
-
-function onTimerCompleted(tag, loops, loopsLeft)
-    if tag == "Shaking" then
-        cameraShake("game", 0.025, 0.25)
     end
 end

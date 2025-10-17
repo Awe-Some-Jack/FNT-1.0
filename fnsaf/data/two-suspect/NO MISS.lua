@@ -20,16 +20,16 @@ function noteMiss(index, noteData, noteType, isSustain)
 end
 
 function onStepHit()
-    if curStep == 1165 then
+    if curStep == 1156 then
         NO = true
         doTweenAlpha("HI", "nomiss", 1, 0.3)
     end
 
-    if curStep == 1214 then
+    if curStep == 1179 then
         doTweenAlpha("HI", "nomiss", 0, 0.5)
     end
 
-    if curStep == 1422 then
+    if curStep == 1296 then
         NO = false
     end
 end
