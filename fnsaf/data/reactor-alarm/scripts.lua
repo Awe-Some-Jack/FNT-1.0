@@ -16,7 +16,7 @@ function onCreate()
     precacheImage("bg/reactor/red/9")
 
     makeLuaSprite("dark", "")
-    makeGraphic("dark", 2000, 2000, "000000")
+    makeGraphic("dark", 2500, 2000, "000000")
     setProperty("dark.visible", false)
     setObjectOrder("dark", getObjectOrder("boyfriendGroup") - 1)
     addLuaSprite("dark")
@@ -134,15 +134,6 @@ function onSectionHit()
 
     if curSection == 98 then
         triggerEvent("Camera Follow Pos", "", "")
-    end
-
-    if curSection == 115 then
-        lockon = true
-        lockX = 850
-        lockY = 475
-
-        cameraFlash("game", "ffffff", 0.5, false)
-        triggerEvent("Tween Cam Zoom", "0.5", "0.01")
     end
 end
 

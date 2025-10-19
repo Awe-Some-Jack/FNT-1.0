@@ -1,10 +1,15 @@
 {
-	"storyName": "Your New Week",
+	"storyName": "Friends",
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
 	"hideStoryMode": false,
 	"songs": [
 		[
@@ -53,11 +58,6 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"bf",
-		"bf",
-		"gf"
-	],
-	"weekName": "Custom Week",
-	"hiddenUntilUnlocked": false
+	"hiddenUntilUnlocked": false,
+	"weekName": "F&T Week 1"
 }
