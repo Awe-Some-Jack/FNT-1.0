@@ -310,7 +310,6 @@ class PlayState extends MusicBeatState
 		// Gameplay settings
 		healthGain = ClientPrefs.getGameplaySetting('healthgain');
 		healthLoss = ClientPrefs.getGameplaySetting('healthloss');
-		instakillOnMiss = ClientPrefs.getGameplaySetting('instakill');
 		practiceMode = ClientPrefs.getGameplaySetting('practice');
 		cpuControlled = ClientPrefs.getGameplaySetting('botplay');
 		guitarHeroSustains = ClientPrefs.data.guitarHeroSustains;
@@ -1717,6 +1716,9 @@ class PlayState extends MusicBeatState
 		}
 		else if(storyDifficulty == 2){
 			missLimitCount = 5;
+		}
+		else if(storyDifficulty == 3){
+			instakillOnMiss = true;
 		}
 
 		setOnScripts('curDecStep', curDecStep);

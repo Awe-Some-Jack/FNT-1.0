@@ -6,7 +6,11 @@ function getBG(file)
 end
 
 function onCreate()
-    makeLuaSprite("1", getBG("1"), bg[1], bg[2])
+    createInstance('1', 'flixel.addons.display.FlxBackdrop', {nil,0x11})
+    loadGraphic('1', getBG("1"))
+    addInstance('1')
+    callMethod('1.setPosition', {0, 0})
+    setProperty('1.velocity.x', -25)
 
     makeLuaSprite("2", getBG("2"), bg[1], bg[2])
 
@@ -20,7 +24,6 @@ function onCreate()
     makeLuaSprite("5", getBG("5"), bg[1], bg[2])
     setObjectOrder('5', getObjectOrder('dadGroup') - 1)
 
-    addLuaSprite("1")
     addLuaSprite("2")
     addLuaSprite("3")
     addLuaSprite("4", true)
