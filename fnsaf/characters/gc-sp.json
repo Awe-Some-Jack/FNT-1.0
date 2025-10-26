@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [13, 102],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [4, 288],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-96, 250],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "dodge",
+			"indices": []
+		},
+		{
+			"offsets": [50, 74],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "left0"
+		},
+		{
+			"offsets": [25, 148],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "right0"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/GC-sp",
+	"position": [-170, 470],
+	"healthicon": "puppy",
+	"flip_x": true,
+	"healthbar_colors": [165, 76, 255],
+	"camera_position": [-360, -230],
+	"sing_duration": 6.1,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

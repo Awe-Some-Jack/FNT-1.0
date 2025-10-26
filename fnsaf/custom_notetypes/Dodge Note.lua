@@ -13,6 +13,11 @@ function goodNoteHit(membersIndex, noteData, noteType, isSustainNote)
 	if noteType == 'Dodge Note'  then
 		cameraShake("game", 0.05, 0.1)
 		playAnim("boyfriend", "dodge"..getRandomInt(1,2), true)
+
+		if songName == "Get Caught" then
+			playAnim("gf", "dodge", true)
+			setProperty('gf.specialAnim',true)
+		end
 		setProperty('boyfriend.specialAnim',true)
 	end
 end
