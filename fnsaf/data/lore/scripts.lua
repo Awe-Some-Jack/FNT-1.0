@@ -92,7 +92,7 @@ function onStepHit()
     if curStep == 1152 then
         setHealthBarColors(rgbToHex(getProperty('dad.healthColorArray')), "3dc7fa")
         callMethod('iconP1.changeIcon', {'bf'})
-        callMethod('iconP2.changeIcon', {'face'})
+        callMethod('iconP2.changeIcon', {'black'})
 
         setHealth(1)
         setProperty('healthBar.leftToRight', false)

@@ -31,5 +31,6 @@ function noteMiss(index, noteData, noteType, isSustain)
         waralpha = waralpha + 0.20
     end
     doTweenAlpha("AlphaWar", "Warning", waralpha, 0.2, "linear")
+    playSound("heartbeat")
     ----debugPrint(waralpha)
 end
