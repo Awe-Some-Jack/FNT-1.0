@@ -93,6 +93,8 @@ function onStepHit()
         setHealthBarColors(rgbToHex(getProperty('dad.healthColorArray')), "3dc7fa")
         callMethod('iconP1.changeIcon', {'bf'})
         callMethod('iconP2.changeIcon', {'face'})
+
+        setHealth(1)
         setProperty('healthBar.leftToRight', false)
         setProperty('iconP1.flipX', false)
         setProperty('iconP2.flipX', false)

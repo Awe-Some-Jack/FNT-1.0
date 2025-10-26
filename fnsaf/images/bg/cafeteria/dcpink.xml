@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dcpink.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dcpink0000" x="10" y="10" width="604" height="774" frameX="-3" frameY="0" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0001" x="10" y="10" width="604" height="774" frameX="-3" frameY="0" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0002" x="624" y="10" width="608" height="740" frameX="0" frameY="-34" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0003" x="624" y="10" width="608" height="740" frameX="0" frameY="-34" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0004" x="1242" y="10" width="605" height="754" frameX="-6" frameY="-24" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0005" x="1242" y="10" width="605" height="754" frameX="-6" frameY="-24" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0006" x="10" y="794" width="596" height="766" frameX="-12" frameY="-14" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0007" x="10" y="794" width="596" height="766" frameX="-12" frameY="-14" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0008" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0009" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0010" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0011" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0012" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0013" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0014" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0015" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0016" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0017" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+	<SubTexture name="dcpink0018" x="616" y="794" width="594" height="772" frameX="-14" frameY="-10" frameWidth="611" frameHeight="782"/>
+</TextureAtlas>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="melina.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="melina0000" x="10" y="10" width="591" height="713" frameX="-5" frameY="-14" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0001" x="10" y="10" width="591" height="713" frameX="-5" frameY="-14" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0002" x="611" y="10" width="595" height="697" frameX="-3" frameY="-27" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0003" x="611" y="10" width="595" height="697" frameX="-3" frameY="-27" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0004" x="1216" y="10" width="591" height="719" frameX="0" frameY="-7" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0005" x="1216" y="10" width="591" height="719" frameX="0" frameY="-7" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0006" x="10" y="739" width="585" height="728" frameX="0" frameY="-2" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0007" x="10" y="739" width="585" height="728" frameX="0" frameY="-2" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0008" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0009" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0010" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0011" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0012" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0013" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0014" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0015" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0016" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0017" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+	<SubTexture name="melina0018" x="605" y="739" width="585" height="734" frameX="0" frameY="0" frameWidth="598" frameHeight="734"/>
+</TextureAtlas>

@@ -149,7 +149,7 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:FlxSkewedSprite = new FlxSkewedSprite(0,0,Paths.image('freeplay/' + Paths.formatToSongPath(songs[i].songName)));
+			var songText:FlxSkewedSprite = new FlxSkewedSprite(0,0,Paths.image('UI/freeplay/' + Paths.formatToSongPath(songs[i].songName)));
 			grpSongs.add(songText);
 
 			Mods.currentModDirectory = songs[i].folder;
@@ -543,19 +543,19 @@ class FreeplayState extends MusicBeatState
             switch (songs[curSelected].songName.toLowerCase())
             {
                 case "new crewmate":
-                    bg.loadGraphic(Paths.image("fpbg/new-crewmate"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/new-crewmate"));
                 case "accident":
-                    bg.loadGraphic(Paths.image("fpbg/accident"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/accident"));
 				case "two suspect":
-                    bg.loadGraphic(Paths.image("fpbg/two-suspect"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/two-suspect"));
 				case "reactor alarm":
-                    bg.loadGraphic(Paths.image("fpbg/reactor-alarm"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/reactor-alarm"));
 				case "get caught":
-                    bg.loadGraphic(Paths.image("fpbg/get-caught"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/get-caught"));
 				case "brothers in arms":
-                    bg.loadGraphic(Paths.image("fpbg/brothers-in-arms"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/brothers-in-arms"));
 				case "zanta":
-                    bg.loadGraphic(Paths.image("fpbg/zanta"));
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/zanta"));
                 default:
                     bg.loadGraphic(Paths.image("menuDesat"));
             }

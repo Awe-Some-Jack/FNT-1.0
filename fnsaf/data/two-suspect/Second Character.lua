@@ -1,8 +1,8 @@
 luaDebugMode = true
 
 local tag = 'AGF' -- name tag of character
-local x = -160 -- x position
-local y = 420 -- y position
+local x = -180 -- x position
+local y = 400 -- y position
 local character = 'agf-suspect' -- name of json file
 local isPlayer = false -- flips the character and the notetypes will only work when the player hits the note
 local order = getObjectOrder('dadGroup') + 5 -- basically the layer that the character will be on, use this if you need it to appear above or below something (-1 is default and it will add it normally)
@@ -64,6 +64,8 @@ function onCreatePost()
             end
         end
     end
+
+    setObjectOrder(tag, getObjectOrder('melina') - 1)
 end
 
 function noteMiss(_, d, t)

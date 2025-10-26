@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [452, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "BOYFRIEND_s idle",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s idle"
 		},
 		{
-			"loop": false,
 			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "BOYFRIEND_s singLEFT0",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singLEFT0"
 		},
 		{
-			"loop": false,
 			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "BOYFRIEND_s singDOWN0",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singDOWN0"
 		},
 		{
-			"loop": false,
 			"offsets": [452, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "BOYFRIEND_s singUP0",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singUP0"
 		},
 		{
-			"loop": false,
 			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "BOYFRIEND_s singRIGHT0",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singRIGHT0"
 		},
 		{
-			"loop": false,
 			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singLEFTmiss",
-			"fps": 12,
-			"name": "BOYFRIEND_s singLEFTmiss",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singLEFTmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [449, 242],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWNmiss",
-			"fps": 12,
-			"name": "BOYFRIEND_s singDOWNmiss",
-			"indices": []
+			"indices": [],
+			"name": "BOYFRIEND_s singDOWNmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [452, 242],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 12,
-			"name": "BOYFRIEND_s singUPmiss",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BOYFRIEND_s singUPmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [450, 242],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 12,
-			"name": "BOYFRIEND_s singRIGHTmiss",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BOYFRIEND_s singRIGHTmiss"
 		},
 		{
 			"offsets": [451, 242],
 			"indices": [],
-			"fps": 12,
+			"fps": 24,
 			"anim": "dodge1",
 			"loop": false,
 			"name": "dodge1"
@@ -83,7 +83,7 @@
 		{
 			"offsets": [451, 242],
 			"indices": [],
-			"fps": 12,
+			"fps": 24,
 			"anim": "dodge2",
 			"loop": false,
 			"name": "dodge2"

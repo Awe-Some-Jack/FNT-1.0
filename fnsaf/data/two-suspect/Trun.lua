@@ -3,7 +3,7 @@ local Sencond = true
 function onUpdate(elapsed)
     if not mustHitSection and Sencond then
         if framerate == 60 then
-            addCameraScroll(-30, 0)
+            addCameraScroll(-35, 0)
         elseif framerate > 60 and framerate < 150 then
             addCameraScroll(-16, 0)
         elseif framerate >= 150 and framerate < 200 then
@@ -13,6 +13,30 @@ function onUpdate(elapsed)
         end
     else
 
+    end
+end
+
+local function rgbToHex(t)
+    return string.format('%02X%02X%02X', t[1], t[2], t[3])
+end
+
+function goodNoteHit(index, noteData, noteType, isSustain)
+    if noteType == "GF Sing" or gfSection then
+        callMethod('iconP1.changeIcon', {'puppy'})
+        setHealthBarColors("", "a54cff")
+    else
+        callMethod('iconP1.changeIcon', {'bf'})
+        setHealthBarColors("", rgbToHex(getProperty('boyfriend.healthColorArray')))
+    end
+end
+
+function opponentNoteHit(index, noteData, noteType, isSustain)
+    if noteType == "no Animation" or Sencond then
+        callMethod('iconP2.changeIcon', {'agf'})
+        setHealthBarColors("d7a33c", "")
+    else
+        callMethod('iconP2.changeIcon', {'wally'})
+        setHealthBarColors(rgbToHex(getProperty('dad.healthColorArray')), "")
     end
 end
 
