@@ -1,5 +1,10 @@
 local Sencond = true
 
+function onCreate()
+    callMethod('iconP2.changeIcon', {'agf'})
+    setHealthBarColors("d7a33c", "")
+end
+
 function onUpdate(elapsed)
     if not mustHitSection and Sencond then
         if framerate == 60 then
@@ -14,6 +19,14 @@ function onUpdate(elapsed)
     else
 
     end
+
+    if not mustHitSection then
+        doTweenAlpha("opponealpha", "dad", 1, 0.2)
+        doTweenAlpha("opponealpha2", "AGF", 1, 0.2)
+    else
+        doTweenAlpha("opponealpha", "dad", 0, 0.2)
+        doTweenAlpha("opponealpha2", "AGF", 0, 0.2)
+    end
 end
 
 local function rgbToHex(t)
@@ -27,16 +40,6 @@ function goodNoteHit(index, noteData, noteType, isSustain)
     else
         callMethod('iconP1.changeIcon', {'bf'})
         setHealthBarColors("", rgbToHex(getProperty('boyfriend.healthColorArray')))
-    end
-end
-
-function opponentNoteHit(index, noteData, noteType, isSustain)
-    if noteType == "no Animation" or Sencond then
-        callMethod('iconP2.changeIcon', {'agf'})
-        setHealthBarColors("d7a33c", "")
-    else
-        callMethod('iconP2.changeIcon', {'wally'})
-        setHealthBarColors(rgbToHex(getProperty('dad.healthColorArray')), "")
     end
 end
 

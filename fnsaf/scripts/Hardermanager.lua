@@ -16,6 +16,10 @@ function opponentNoteHit()
     if difficulty == 2 and getProperty('health') > 0.1 then
         setProperty('health', health- 0.01);
     end
+
+    if songName == "Get Caught" and gfSection then
+        setProperty('health', health- 0);
+    end
 end
 
 function onUpdate(elapsed)
@@ -31,6 +35,9 @@ function noteMiss(index, noteData, noteType, isSustain)
         waralpha = waralpha + 0.20
     end
     doTweenAlpha("AlphaWar", "Warning", waralpha, 0.2, "linear")
-    playSound("heartbeat")
+    
+    if difficulty >= 1 then
+        playSound("heartbeat")
+    end
     ----debugPrint(waralpha)
 end

@@ -3,6 +3,11 @@ local lol = false
 
 function onCreate()
     setProperty("skipCountdown", true)
+    
+    precacheImage("bg/cafeteria/sp")
+    precacheImage("bg/cafeteria/wally")
+    precacheImage("bg/cafeteria/bf")
+    precacheImage("bg/cafeteria/agf")
 
     setProperty("camGame.alpha", 0)
     setProperty("camHUD.alpha", 0)
@@ -119,5 +124,13 @@ function onStepHit()
         removeLuaSprite("BG1", true)
         removeLuaSprite("BG2", true)
         removeLuaSprite("BG3", true)
+    end
+end
+
+function onSectionHit()
+    if curSection == 92 then
+        setProperty("camGame.alpha", 0)
+        cameraFlash("hud", "ffffff", 1.5, false)
+        doTweenAlpha("ByeHUD", "camHUD", 0, 1)
     end
 end

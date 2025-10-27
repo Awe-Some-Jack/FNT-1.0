@@ -2,6 +2,7 @@ local dir = "bg/electrical/"
 
 function onCreate()
     setProperty("gf.alpha", 0)
+    setProperty("gf.color", getColorFromHex("000000"))
     setProperty('skipCountdown',true)
 
     makeAnimatedLuaSprite('Door',getBG("door"), -700, 5)
@@ -27,6 +28,12 @@ end
 function onUpdate(elapsed)
     if getProperty('Door.animation.curAnim.name') == 'Close' and getProperty('Door.animation.curAnim.finished') then
         objectPlayAnimation('Door','FBI' ,false)
+    end
+
+    if gfSection then
+        doTweenAlpha("BFAlpha", "boyfriend", 0.5, 0.3)
+    else
+        doTweenAlpha("BFAlpha", "boyfriend", 1, 0.3)
     end
 end
 
@@ -78,11 +85,11 @@ function onStepHit()
     end
 
     if curStep == 1340 then
-        doTweenAlpha("angel", "gf", 0.5, 1, "linear")
+        setProperty("gf.alpha", 1)
     end
 
-    if curStep == 1987 then
-        doTweenAlpha("angel", "gf", 0, 0.001, "linear")
+    if curStep == 1472 then
+        setProperty("gf.color", getColorFromHex("ffffff"))
     end
 
     if curStep == 2064 then
