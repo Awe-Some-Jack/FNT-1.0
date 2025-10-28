@@ -43,6 +43,10 @@ function goodNoteHit(index, noteData, noteType, isSustain)
     end
 end
 
+function onGameOverStart()
+    Sencond = false
+end
+
 function onEvent(eventName, value1, value2, strumTime)
     if eventName == "Highlight Character" and value1 == "1" then
         runHaxeCode([[ 

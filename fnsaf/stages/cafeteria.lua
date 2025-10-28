@@ -48,13 +48,13 @@ beanStuff = {'melina', 'loyalblue', 'pink'}
 function onUpdate(elapsed)
     if not mustHitSection then
         for i = 1,#beanStuff do
-			doTweenAlpha(beanStuff[i]..'tween', beanStuff[i], 0.5, 0.5)
+			doTweenAlpha(beanStuff[i]..'tween', beanStuff[i], 1, 0.2)
 		end
 
         triggerEvent("Tween Cam Zoom", "0.9", "")
     else
         for i = 1,#beanStuff do
-			doTweenAlpha(beanStuff[i]..'tween', beanStuff[i], 1, 0.5)
+			doTweenAlpha(beanStuff[i]..'tween', beanStuff[i], 0, 0.2)
 		end
 
         triggerEvent("Tween Cam Zoom", "1.1", "")

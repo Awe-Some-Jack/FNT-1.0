@@ -5,6 +5,7 @@ local maxValue = 520
 local maxValue2 = 520
 
 local useCustom = false
+local wtfDeath = false
 
 function onCreatePost()
     -- Left Bar
@@ -96,9 +97,21 @@ function onSectionHit()
             useCustom = true
 		end
     end
+
+    if curSection == 73 then
+        wtfDeath = true
+    end
+
+    if curSection == 82 then
+        wtfDeath = false
+    end
 end
 
 function onUpdate(elapsed)
+    if useCustom then
+        setHealth(1)
+    end
+    
     if LeftHealth >= 520 then
         setHealth(0)
     end
@@ -112,7 +125,7 @@ function onUpdatePost(elapsed)
 	setProperty("p1BarLeft._frame.frame.width", LeftHealth)
     setProperty("p2BarLeft._frame.frame.width", RightHealth)
 
-    LeftHealth = math.min(math.max(LeftHealth, 3), maxValue)
+    LeftHealth = math.min(math.max(LeftHealth, 4), maxValue)
     RightHealth = math.min(math.max(RightHealth, 0), maxValue)
 
     --LeftHealth Icons
@@ -150,10 +163,6 @@ function onUpdatePost(elapsed)
 
     setProperty("RightP2.x", getProperty("p2BarRight.x") + 420)
     setProperty("RightP2.y", getProperty("p2BarRight.y") - 35)
-
-    if useCustom then
-        setHealth(1)
-    end
 end
 
 function goodNoteHit(id, direction, noteType, isSustainNote)
@@ -191,6 +200,11 @@ function noteMiss(index, noteData, noteType, isSustain)
         LeftHealth = LeftHealth + 11
     else
         RightHealth = RightHealth - 11
+    end
+
+    if useCustom and wtfDeath then
+        setHealth(0)
+        useCustom = false
     end
 end
 
