@@ -8,8 +8,8 @@ local useCustom = false
 
 function onCreatePost()
     -- Left Bar
-    makeLuaSprite("p1BarLeft", 'UI/health1', 90, (downscroll and 35 or 590))
-    makeLuaSprite("p1BarRight", 'UI/health2', 90, (downscroll and 35 or 590))
+    makeLuaSprite("p1BarLeft", 'UI/health1', 90, (downscroll and 35 or 600))
+    makeLuaSprite("p1BarRight", 'UI/health2', 90, (downscroll and 35 or 600))
 
     setProperty("p1BarLeft.alpha", 0)
     setProperty("p1BarRight.alpha", 0)
@@ -141,6 +141,9 @@ function onUpdatePost(elapsed)
 
     setProperty("LeftP1.x", getProperty("p1BarLeft.x") + 420)
     setProperty("LeftP1.y", getProperty("p1BarLeft.y") - 35)
+
+    setProperty("LeftP2.x", getProperty("p1BarLeft.x") - 100)
+    setProperty("LeftP2.y", getProperty("p1BarLeft.y") - 35)
 
     setProperty("RightP1.x", getProperty("p2BarRight.x") - 85)
     setProperty("RightP1.y", getProperty("p2BarRight.y") - 35)
