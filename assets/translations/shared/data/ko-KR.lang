@@ -3,7 +3,6 @@ Korean (KR)
 // Gameplay
 score_text: "점수: {1} | 미스: {2} | 정확도: {3}"
 score_text_instakill: "점수: {1} | 정확도: {2}"
-score_text_limit: "점수: {1} | 미스: {2} / {3} | 정확도: {4}"
 botplay: "봇플레이"
 
 rating_you_suck: "너 존나 못해!"

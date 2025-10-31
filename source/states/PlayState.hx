@@ -289,8 +289,6 @@ class PlayState extends MusicBeatState
 		startCallback = startCountdown;
 		endCallback = endSong;
 
-		missLimited = false;
-
 		// for lua
 		instance = this;
 
@@ -1170,13 +1168,8 @@ class PlayState extends MusicBeatState
 		}
 
 		var tempScore:String;
-		if(!instakillOnMiss && missLimited){
-			tempScore = Language.getPhrase('score_text_limit', 'Score: {1} | Misses: {2} / {3} | Rating: {4}', [songScore, songMisses, missLimitCount, str]);
-		}
-		else{
-		    if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'Score: {1} | Misses: {2} | Rating: {3}', [songScore, songMisses, str]);
-		    else tempScore = Language.getPhrase('score_text_instakill', 'Score: {1} | Rating: {2}', [songScore, str]);
-		}
+		if(!instakillOnMiss) tempScore = Language.getPhrase('score_text', 'Score: {1} | Misses: {2} | Rating: {3}', [songScore, songMisses, str]);
+		else tempScore = Language.getPhrase('score_text_instakill', 'Score: {1} | Rating: {2}', [songScore, str]);
 		scoreTxt.text = tempScore;
 	}
 
@@ -1706,18 +1699,6 @@ class PlayState extends MusicBeatState
 		callOnScripts('onUpdate', [elapsed]);
 
 		super.update(elapsed);
-		missLimitManager();
-
-		if(storyDifficulty > 0){
-			missLimited = true;
-		}
-
-		if(storyDifficulty == 1){
-			missLimitCount = 20;
-		}
-		else if(storyDifficulty == 2){
-			missLimitCount = 5;
-		}
 
 		setOnScripts('curDecStep', curDecStep);
 		setOnScripts('curDecBeat', curDecBeat);
@@ -3192,18 +3173,6 @@ class PlayState extends MusicBeatState
 		lastStepHit = curStep;
 		setOnScripts('curStep', curStep);
 		callOnScripts('onStepHit');
-	}
-
-	public static var missLimited:Bool = false;
-	public static var missLimitCount:Int = 5;
-
-	public function missLimitManager()
-	{
-		if (missLimited)
-		{
-			if (songMisses > missLimitCount)
-				health = 0;
-		}
 	}
 
 	var lastBeatHit:Int = -1;
