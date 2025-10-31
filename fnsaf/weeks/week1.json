@@ -1,16 +1,10 @@
 {
 	"storyName": "Friends",
-	"difficulties": "",
+	"difficulties": "Normal",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"",
-		"bf",
-		""
-	],
-	"hideStoryMode": false,
 	"songs": [
 		[
 			"New Crewmate",
@@ -58,6 +52,12 @@
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "F&T Week 1"
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"hideStoryMode": false,
+	"weekName": "F&T Week 1",
+	"hiddenUntilUnlocked": false
 }
