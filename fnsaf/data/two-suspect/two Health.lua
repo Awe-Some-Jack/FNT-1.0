@@ -209,17 +209,5 @@ function noteMiss(index, noteData, noteType, isSustain)
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
-    if noteType == "No Animation" and difficulty >= 2 and useCustom then
-        if LeftHealth < 480 then
-            LeftHealth = LeftHealth + 2
-        else
-            LeftHealth = LeftHealth + 0
-        end
-    elseif useCustom and difficulty >= 2 then
-        if RightHealth > 70 then
-            RightHealth = RightHealth - 2
-        else
-            RightHealth = RightHealth - 0
-        end
-    end
+
 end

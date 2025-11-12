@@ -28,7 +28,7 @@ end
 
 function onCreatePost()
     makeLuaSprite("Dangerhealth", "", getProperty("healthBar.x") + 496, getProperty("healthBar.y") + 3)
-    makeGraphic("Dangerhealth", 100, 14, "462679")
+    makeGraphic("Dangerhealth", 100, 14, "3202b4")
     setObjectCamera("Dangerhealth", "hud")
     addToGroup('uiGroup', 'Dangerhealth', getObjectOrder('healthBar', 'uiGroup')+1)
     setProperty("Dangerhealth.alpha", 0)
@@ -90,26 +90,44 @@ function onUpdatePost()
         if getProperty('healthBar.percent') < 40 then
             setProperty('iconP1.animation.curAnim.curFrame',1)
             setProperty('iconP2.animation.curAnim.curFrame',2)
+            setProperty('testIcon.animation.curAnim.curFrame', 2);
         elseif getProperty('healthBar.percent') > 80 then
             setProperty('iconP1.animation.curAnim.curFrame',2)
             setProperty('iconP2.animation.curAnim.curFrame',1)
         else
             setProperty('iconP1.animation.curAnim.curFrame',0)
             setProperty('iconP2.animation.curAnim.curFrame',0)
+            setProperty('testIcon.animation.curAnim.curFrame', 0);
         end
     end
 
-    setProperty('testIcon.animation.curAnim.curFrame', getProperty('iconP2.animation.curAnim.curFrame'));
     setProperty("testIcon.x", getProperty("healthBar.x") + 550)
     setProperty("testIcon.y", getProperty("healthBar.y") - 84)
+
+    local pX, oX = getProperty('iconP1.x'), getProperty('iconP2.x')
+
+    if curStep >= 1632 then
+        setProperty('iconP1.x', oX)
+        setProperty('iconP2.x', pX)
+
+        setProperty('iconP1.flipX', true)
+        setProperty('iconP2.flipX', true)
+        setProperty('healthBar.leftToRight', true)
+    end
 end
 
 function goodNoteHit(id, direction, noteType, isSustainNote)
     if getProperty("boyfriend.flipX") then
         if direction == 0 then -- LEFT
-            characterPlayAnim("boyfriend", "singRIGHT", true)
+            setProperty("singAnimations[3]", "singLEFT")
         elseif direction == 3 then -- RIGHT
-            characterPlayAnim("boyfriend", "singLEFT", true)
+            setProperty("singAnimations[0]", "singRIGHT")
+        end
+    else
+        if direction == 0 then -- LEFT
+            setProperty("singAnimations[3]", "singRIGHT")
+        elseif direction == 3 then -- RIGHT
+            setProperty("singAnimations[0]", "singLEFT")
         end
     end
 end
@@ -118,6 +136,10 @@ function goodNoteHitPre(i)
      if getProperty('boyfriend.specialAnim') then
         setProperty('notes.members['..i..'].noAnimation', true)
     end
+end
+
+local function rgbToHex(t)
+    return string.format('%02X%02X%02X', t[1], t[2], t[3])
 end
 
 function onStepHit()
@@ -168,6 +190,15 @@ function onStepHit()
         end
     end
 
+    if curStep == 1632 then
+        cameraShake("hud", 0.025, 0.35)
+        callMethod('iconP2.changeIcon', {'killerpuppy'})
+        setHealthBarColors(rgbToHex(getProperty('boyfriend.healthColorArray')), rgbToHex(getProperty('gf.healthColorArray')))
+        setProperty("testIcon.alpha", 0)
+        removeLuaSprite("Dangerhealth", true)
+        Danger = false
+    end
+
     for i = 1,#cameraevnet do 
 		if curStep == cameraevnet[i] then
             isgf = true
@@ -213,4 +244,13 @@ function changedefault()
     noteTweenX("opponent2", 1, defaultOpponentStrumX1, 1, "cubeOut")
     noteTweenX("opponent3", 2, defaultOpponentStrumX2, 1, "cubeOut")
     noteTweenX("opponent4", 3, defaultOpponentStrumX3, 1, "cubeOut")
+end
+
+function opponentNoteHit(id, direction, noteType, isSustainNote)
+    if noteType == "GF Sing" or gfSection then
+        health = getProperty('health')
+        if getProperty('health') > 0.1 then
+            setProperty('health', health- 0.015);
+        end
+    end
 end
