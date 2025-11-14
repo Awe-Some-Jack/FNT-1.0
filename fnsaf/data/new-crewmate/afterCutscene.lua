@@ -1,7 +1,7 @@
 local allowEnd = false
 
 function onEndSong()
-    if not allowEnd then
+    if isStoryMode and not allowEnd then
         setProperty("camGame.alpha", 0)
         setProperty("camHUD.alpha", 0)
         startVideo('accident1')

@@ -5,9 +5,6 @@ function getBG(file)
 end
 
 function onCreate()
-    setProperty("dad.visible", false)
-    setProperty("boyfriend.visible", false)
-
     makeAnimatedLuaSprite('cutscene',getBG("BF-CS"), defaultBoyfriendX - 680, defaultBoyfriendY - 40)
 	addAnimationByPrefix('cutscene','anim','Animation' ,12 ,false)
     addLuaSprite("cutscene", true)
@@ -47,8 +44,6 @@ function onCreate()
     makeLuaSprite("who", getBG("agfsilhouette"), -500, 350)
     addLuaSprite("who")
 
-    doTweenX("MovingBG", "back1", 8200, 105)
-
 end
 
 function onSongStart()
@@ -56,6 +51,9 @@ function onSongStart()
 end
 
 function onStartCountdown()
+    doTweenX("MovingBG", "back1", 8200, 105)
+    setProperty("dad.visible", false)
+    setProperty("boyfriend.visible", false)
     cameraFade("game", "000000", 1.6, false, true)
     callMethod('iconP2.changeIcon', {'question'})
     setHealthBarColors("white", "")
