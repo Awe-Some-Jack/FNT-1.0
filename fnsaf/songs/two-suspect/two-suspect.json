@@ -2556,6 +2556,12 @@
 			]
 		],
 		[
+			55250,
+			[
+				["Video Player", "Towcur, camHUD, 2", "false, true"]
+			]
+		],
+		[
 			70000,
 			[
 				["Cinematics", "0", ""]
