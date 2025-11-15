@@ -6,6 +6,15 @@ function getBG(file)
 end
 
 function onCreate()
+    if not lowQuality then
+        createInstance('star', 'flixel.addons.display.FlxBackdrop', {nil,0x11})
+        loadGraphic('star', getBG("star"))
+        setScrollFactor("star", 0.3, 0.3)
+        addInstance('star')
+        callMethod('star.setPosition', {0, 0})
+        setProperty('star.velocity.x', -25)
+    end
+
     makeLuaSprite("1", getBG("1"), bg[1], bg[2])
     scaleObject("1", 0.7, 0.7)
 
