@@ -129,12 +129,9 @@ function startInit()
         dialogExists = true
         setProperty('camHUD.alpha', 0)
         runHaxeCode([[PlayState.seenCutscene = true;]])
-        makeLuaSprite('bgBlock', nil, -100, -100)
-        makeGraphic('bgBlock', screenWidth * 2, screenHeight * 2, '000000')
-        setObjectCamera('bgBlock', 'other')
-        add('bgBlock', false)
+        cameraFade("other", "000000", 0.7, false, true)
         if not hasVideo then
-            runTimer('byeBlock', 0.1)
+            runTimer('hidialog', 0.8)
         end
 
         precacheImage('dialogueSystem/boyfriend')
@@ -369,17 +366,8 @@ function onTweenCompleted(tag)
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
-    if tag == 'byeBlock' then
-        local blockAlpha = getProperty('bgBlock.alpha') - 0.15
-        setProperty('bgBlock.alpha', blockAlpha)
-        -- debugPrint(blockAlpha)
-        if blockAlpha > 0 then
-            runTimer('byeBlock', 0.1)
-        else
-            -- debugPrint('bro')
-            removeLuaSprite('bgBlock')
-            initDialogue()
-        end
+    if tag == 'hidialog' then
+        initDialogue()
     end
 end
 
