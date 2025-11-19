@@ -5,6 +5,11 @@
 	"weekBackground": "stage",
 	"weekBefore": "tutorial",
 	"startUnlocked": true,
+	"weekCharacters": [
+		"bf",
+		"bf",
+		"gf"
+	],
 	"hideStoryMode": true,
 	"songs": [
 		[
@@ -33,13 +38,17 @@
 				113,
 				253
 			]
+		],
+		[
+			"Triple kill",
+			"face",
+			[
+				146,
+				113,
+				253
+			]
 		]
 	],
-	"weekCharacters": [
-		"bf",
-		"bf",
-		"gf"
-	],
-	"weekName": "Custom Week",
-	"hiddenUntilUnlocked": false
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
 }
