@@ -108,6 +108,10 @@ class StoryMenuState extends MusicBeatState
 		add(txtTracklist);
 		add(scoreText);
 
+		#if !switch
+		intendedScore = Highscore.getWeekScore('week1', 0);
+		#end
+
 		super.create();
 	}
 
@@ -180,9 +184,8 @@ class StoryMenuState extends MusicBeatState
 
 	var movedBack:Bool = false;
 	var selectedWeek:Bool = false;
-	var stopspamming:Bool = false;
 
-	var lerpScore:Int = 49324858;
+	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;
 
 	function selectWeek()
@@ -201,35 +204,17 @@ class StoryMenuState extends MusicBeatState
         PlayState.storyDifficulty = 0;
         PlayState.storyWeek = WeekData.weeksList.indexOf('week1');
 
+		var directory = StageData.forceNextDirectory;
+		LoadingState.loadNextDirectory();
+		StageData.forceNextDirectory = directory;
+
+		LoadingState.prepareToSong();
+
 		new FlxTimer().start(3.5, function(tmr:FlxTimer)
 		{
 			FlxG.mouse.visible = false;
 			LoadingState.loadAndSwitchState(new PlayState(), true);
 			FreeplayState.destroyFreeplayVocals();
 		});
-	}
-
-	function updateText()
-	{
-		var leWeek:WeekData = loadedWeeks[curWeek];
-		var stringThing:Array<String> = [];
-		for (i in 0...leWeek.songs.length) {
-			stringThing.push(leWeek.songs[i][0]);
-		}
-
-		txtTracklist.text = '';
-		for (i in 0...stringThing.length)
-		{
-			txtTracklist.text += stringThing[i] + '\n';
-		}
-
-		txtTracklist.text = txtTracklist.text.toUpperCase();
-
-		txtTracklist.screenCenter(X);
-		txtTracklist.x -= FlxG.width * 0.35;
-
-		#if !switch
-		intendedScore = Highscore.getWeekScore(loadedWeeks[curWeek].fileName, curDifficulty);
-		#end
 	}
 }
