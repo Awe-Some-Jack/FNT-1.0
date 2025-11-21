@@ -126,11 +126,3 @@ function onStepHit()
         removeLuaSprite("BG3", true)
     end
 end
-
-function onSectionHit()
-    if curSection == 92 then
-        setProperty("camGame.alpha", 0)
-        cameraFlash("hud", "ffffff", 1.5, false)
-        doTweenAlpha("ByeHUD", "camHUD", 0, 1)
-    end
-end

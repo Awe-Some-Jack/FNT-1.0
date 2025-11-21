@@ -9,6 +9,8 @@ class SplashState extends MusicBeatState
     override public function create():Void
     {
         ClientPrefs.loadPrefs();
+
+        FlxG.mouse.visible = false;
         
 		if(FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{

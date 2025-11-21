@@ -21,8 +21,8 @@ class CreditsState extends MusicBeatState
             { title: "Team Leader", names: ["sha_mi0921"] },
             { title: "Team Co-Leader", names: ["AweSomeJack", "snowmelt"] },
             { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
-            { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)"] },
-            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "sucheol", "nyangko", "Lem0nA", "white", "Ahmed Wael Hamdy", "Duolc(EX)", "Amon_creck"] },
+            { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)", "hmm111", "Mr Takoyaky", "Askliskal"] },
+            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "sucheol", "nyangko", "Emerald(EX)", "Lem0nA", "white", "Ahmed Wael Hamdy", "Duolc(EX)", "Amon_creck"] },
             { title: "Animator", names: ["yuseong0405", "UNION", "neondash", "Retro(EX)", "Nanda Pratama"] },
             { title: "Charters", names: ["dia", "Reiad(EX)", "snowmelt"] }
         ];

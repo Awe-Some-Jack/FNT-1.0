@@ -28,7 +28,6 @@ end
 
 function onCustomSubstateCreate(name)
     if name == "why" then
-        runTimer("Exit", 10.5)
         runTimer("Bye", 0.6)
 
         cameraFlash("other", "ff0000", 0.3, false)
@@ -50,36 +49,58 @@ function onCustomSubstateCreate(name)
         setObjectCamera("coward", "other")
         insertToCustomSubstate("coward")
     end
+
+    if name == "restart" then
+        runTimer("rerun", 3)
+        setPropertyFromClass("flixel.FlxG", 'keys.enabled', true)
+
+        cameraFlash("other", "ffffff", 1, false)
+
+        playMusic("gameOverEnd")
+
+        removeLuaSprite("died")
+        removeLuaSprite("retry")
+        removeLuaSprite("run")
+    end
 end
 
 gameOverStuff = {'died', 'retry', 'run'}
 alphaStuff = {'um', 'coward'}
 
+function mouseOverlaps(tag)
+    addHaxeLibrary('Reflect')
+    return runHaxeCode([[
+        var obj = game.getLuaObject(']]..tag..[[');
+        if (obj == null) obj = Reflect.getProperty(game, ']]..tag..[[');
+        if (obj == null) return false;
+        return obj.getScreenBounds(null, obj.cameras[0]).containsPoint(FlxG.mouse.getScreenPosition(obj.cameras[0]));
+    ]])
+end
+
 function onUpdatePost(elapsed)
-    if inGameOver and keyJustPressed("back") then
-        openCustomSubstate("why")
+    if inGameOver then
+        if mouseClicked("left") and mouseOverlaps("retry") and getProperty("retry.alpha") == 1 then
+            openCustomSubstate("restart")
+            setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+        end
+
+        if mouseClicked("left") and mouseOverlaps("run") and getProperty("run.alpha") == 1 then
+            openCustomSubstate("why")
+            setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+        end
     end
 end
 
 function onGameOverStart()
+    setPropertyFromClass("flixel.FlxG", 'keys.enabled', false)
     setPropertyFromClass('substates.GameOverSubstate', 'instance.boyfriend.visible', false)
+    setPropertyFromClass("flixel.FlxG", "mouse.visible", true)
     cameraFlash("other", "ff0000", 1, false)
     addLuaSprite("died")
     addLuaSprite("retry")
     addLuaSprite("run")
 
     runTimer("Showme", 2.4)
-end
-
-function onGameOverConfirm(isAccept)
-    if isAccept then
-        cancelTimer("Showme")
-        cameraFlash("other", "ffffff", 1, false)
-
-        removeLuaSprite("died")
-        removeLuaSprite("retry")
-        removeLuaSprite("run")
-    end
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
@@ -94,10 +115,15 @@ function onTimerCompleted(tag, loops, loopsLeft)
             doTweenAlpha(alphaStuff[i]..'tween', alphaStuff[i], 0, 0.8)
 		end
     end
+
+    if tag == "rerun" then
+        restartSong()
+    end
 end
 
 function onSoundFinished(tag)
     if tag == "gameOverSound" then
+        setPropertyFromClass("flixel.FlxG", 'keys.enabled', true)
         exitSong()
     end
 end

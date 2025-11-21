@@ -32,7 +32,7 @@ class MainMenuState extends MusicBeatState
 		"options"
 	];
 
-	var leftOption:String = 'sus';
+	var leftOption:String = null;
 	var rightOption:String = null;
 
 	var camFollow:FlxObject;

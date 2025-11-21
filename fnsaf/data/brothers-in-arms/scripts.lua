@@ -107,6 +107,7 @@ function onUpdatePost()
     local pX, oX = getProperty('iconP1.x'), getProperty('iconP2.x')
 
     if curStep >= 1632 then
+        Danger = false
         setProperty('iconP1.x', oX)
         setProperty('iconP2.x', pX)
 

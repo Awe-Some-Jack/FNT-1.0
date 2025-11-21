@@ -9,6 +9,7 @@ local videoStart = {
 local hasVideo = false
 local doneInit = false
 local mouseVisible = false
+local autodialog = false
 
 function onCreate()
     if not seenCutscene and isStoryMode then
@@ -369,6 +370,10 @@ function onTimerCompleted(tag, loops, loopsLeft)
     if tag == 'hidialog' then
         initDialogue()
     end
+
+    if tag == 'auto' then
+        nextLine(false, false)
+    end
 end
 
 local curGroup = {}
@@ -443,6 +448,19 @@ function onUpdatePost(elapsed)
             _G[tag].oldx = curGroup.x
             _G[tag].oldy = curGroup.y
             ::continue::
+        end
+    end
+
+    if not autodialog then
+        if keyboardJustPressed("CONTROL") then
+            autodialog = true
+            debugPrint("Trun ON Auto Dialogue")
+        end
+    elseif autodialog then
+        if keyboardJustPressed("CONTROL") then
+            autodialog = false
+            cancelTimer("auto")
+            debugPrint("Trun OFF Auto Dialogue")
         end
     end
 end
@@ -572,4 +590,10 @@ function loadOffsets(man, char)
 
     -- debugPrint('n',curEmote)
     playAnim(man, curEmote, true)
+end
+
+function onSoundFinished(tag)
+    if autodialog and tag == "voice" then
+        runTimer("auto", 1)
+    end
 end

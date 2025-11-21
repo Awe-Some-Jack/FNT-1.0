@@ -18,6 +18,12 @@ function onCreate()
     setObjectCamera("Subtitle", "other")
     addLuaText("Subtitle")
 
+    makeLuaSprite("Deadbody", getBG("deadbody"), 0, 330)
+    scaleObject("Deadbody", 0.37, 0)
+    setProperty("Deadbody.visible", false)
+    setObjectCamera("Deadbody", "other")
+    addLuaSprite("Deadbody")
+
     if not lowQuality then
         makeAnimatedLuaSprite('among1',getBG("wallyaccident"), 1600, 410)
 	    addAnimationByPrefix('among1','idle','wallywalk0' ,24 ,true)
@@ -88,6 +94,15 @@ function onSectionHit()
 
     if curSection == 85 then
         cancelTween("MovingBG")
+    end
+
+    if curSection == 93 then
+        setProperty("Deadbody.visible", true)
+        doTweenY("objectY1", "Deadbody.scale", 0.25, 1, "elasticOut")
+    end
+
+    if curSection == 94 then
+        doTweenAlpha("objectAlpha", "Deadbody", 0, 1)
     end
 end
 

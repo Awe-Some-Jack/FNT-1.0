@@ -10,11 +10,11 @@ function onUpdate(elapsed)
         if framerate == 60 then
             addCameraScroll(-35, 0)
         elseif framerate > 60 and framerate < 150 then
-            addCameraScroll(-16, 0)
+            addCameraScroll(-14, 0)
         elseif framerate >= 150 and framerate < 200 then
-            addCameraScroll(-13, 0)
-        elseif framerate >= 200 then
             addCameraScroll(-10, 0)
+        elseif framerate >= 200 then
+            addCameraScroll(-8, 0)
         end
     else
 
@@ -36,7 +36,7 @@ end
 function goodNoteHit(index, noteData, noteType, isSustain)
     if noteType == "GF Sing" or gfSection then
         callMethod('iconP1.changeIcon', {'puppy'})
-        setHealthBarColors("", "a54cff")
+        setHealthBarColors("", rgbToHex(getProperty('gf.healthColorArray')))
     else
         callMethod('iconP1.changeIcon', {'bf'})
         setHealthBarColors("", rgbToHex(getProperty('boyfriend.healthColorArray')))
