@@ -100,10 +100,6 @@ function onSectionHit()
         setProperty("Deadbody.visible", true)
         doTweenY("objectY1", "Deadbody.scale", 0.25, 1, "elasticOut")
     end
-
-    if curSection == 94 then
-        doTweenAlpha("objectAlpha", "Deadbody", 0, 1)
-    end
 end
 
 function onStepHit()
@@ -133,8 +129,8 @@ function onStepHit()
         doTweenX("WTF2", "who", -350, 0.8)
     end
 
-    if curStep == 1369 then
-        cameraFade("hud", "000000", 0.5, false)
+    if curStep == 1344 then
+        setProperty("dad.skipDance", true)
     end
 end
 

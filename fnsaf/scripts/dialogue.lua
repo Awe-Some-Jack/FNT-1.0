@@ -451,12 +451,12 @@ function onUpdatePost(elapsed)
         end
     end
 
-    if not autodialog then
+    if doneInit and doneVideo and hasDialog and not autodialog then
         if keyboardJustPressed("CONTROL") then
             autodialog = true
             debugPrint("Trun ON Auto Dialogue")
         end
-    elseif autodialog then
+    elseif doneInit and doneVideo and hasDialog and autodialog then
         if keyboardJustPressed("CONTROL") then
             autodialog = false
             cancelTimer("auto")

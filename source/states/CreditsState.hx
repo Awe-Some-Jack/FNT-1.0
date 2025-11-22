@@ -22,12 +22,13 @@ class CreditsState extends MusicBeatState
             { title: "Team Co-Leader", names: ["AweSomeJack", "snowmelt"] },
             { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
             { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "SDL(EX)", "hmm111", "Mr Takoyaky", "Askliskal"] },
-            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "sucheol", "nyangko", "Emerald(EX)", "Lem0nA", "white", "Ahmed Wael Hamdy", "Duolc(EX)", "Amon_creck"] },
+            { title: "Artists", names: ["logan", "snowmelt", "cash", "rage_87", "sucheol", "nyangko", "Lem0nA", "emerald1628(EX)", "white", "Ahmed Wael Hamdy", "Duolc(EX)", "Amon_creck"] },
             { title: "Animator", names: ["yuseong0405", "UNION", "neondash", "Retro(EX)", "Nanda Pratama"] },
-            { title: "Charters", names: ["dia", "Reiad(EX)", "snowmelt"] }
+            { title: "Charters", names: ["dia", "Reiad(EX)", "snowmelt"] },
+            { title: "Special Thanks", names: ["raul - Brothers in arms Vocal Remaster FLP"] }
         ];
 
-    var columnMap = [0, 0, 0, 0, 1, 1, 2];
+    var columnMap = [0, 0, 0, 0, 1, 1, 2, 2];
 
     for (i in 0...categories.length)
     {
