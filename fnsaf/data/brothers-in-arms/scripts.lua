@@ -184,10 +184,10 @@ function onStepHit()
             noteTweenAlpha("NoteFade3", 2, 1, 1, "cubeOut")
             noteTweenAlpha("NoteFade4", 3, 1, 1, "cubeOut")
         else
-            noteTweenAlpha("NoteFade1", 0, 0.5, 1, "cubeOut")
-            noteTweenAlpha("NoteFade2", 1, 0.5, 1, "cubeOut")
-            noteTweenAlpha("NoteFade3", 2, 0.5, 1, "cubeOut")
-            noteTweenAlpha("NoteFade4", 3, 0.5, 1, "cubeOut")
+            noteTweenAlpha("NoteFade1", 0, 0, 1, "cubeOut")
+            noteTweenAlpha("NoteFade2", 1, 0, 1, "cubeOut")
+            noteTweenAlpha("NoteFade3", 2, 0, 1, "cubeOut")
+            noteTweenAlpha("NoteFade4", 3, 0, 1, "cubeOut")
         end
     end
 

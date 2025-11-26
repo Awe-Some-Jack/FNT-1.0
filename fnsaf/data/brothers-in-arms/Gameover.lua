@@ -58,6 +58,14 @@ function onCustomSubstateCreate(name)
 
         playMusic("gameOverEnd")
 
+        makeLuaSprite("repu", "UI/Gameover/pu-retry")
+        scaleObject("repu", 0.25, 0.25)
+        screenCenter("repu", "xy")
+        setObjectCamera("repu", "other")
+        insertToCustomSubstate("repu")
+
+        doTweenAlpha('imagetween', "repu", 0, 1)
+
         removeLuaSprite("died")
         removeLuaSprite("retry")
         removeLuaSprite("run")
