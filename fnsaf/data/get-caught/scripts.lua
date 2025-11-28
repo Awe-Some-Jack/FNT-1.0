@@ -42,7 +42,22 @@ function onSongStart()
     cameraFade("game", "000000", 6, false, true)
 end
 
+function onEvent(event, v1, v2, strumTime)
+    if event == 'badapplelol' and string.lower(v1) == 'a' then
+		doTweenColor('badapplexicon', 'P3', '000000', v2, 'linear')
+	end
+    
+	if event == 'badapplelol' and string.lower(v1) == 'b' then
+		doTweenColor('badapplexicon', 'P3', 'FFFFFF', v2, 'linear')
+	end
+end
+
 function onStepHit()
+    if curStep == 1 then
+        setProperty("P3.alpha", 0)
+        setProperty("P3.color", getColorFromHex("000000"))
+    end
+
     if curStep == 256 then
         setProperty("camHUD.visible", true)
     end
@@ -86,10 +101,12 @@ function onStepHit()
 
     if curStep == 1340 then
         setProperty("gf.alpha", 1)
+        doTweenAlpha("iconHI", "P3", 1, 1)
     end
 
     if curStep == 1472 then
         setProperty("gf.color", getColorFromHex("ffffff"))
+        setProperty("P3.color", getColorFromHex("ffffff"))
     end
 
     if curStep == 2064 then
