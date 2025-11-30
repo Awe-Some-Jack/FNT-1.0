@@ -1,0 +1,5 @@
+neutral,talk0,false,280,320
+happy,talk_happy,false,280,320
+angry,talk_angry,false,280,320
+think,talk_sus,false,280,320
+panic,talk_what,false,287,320

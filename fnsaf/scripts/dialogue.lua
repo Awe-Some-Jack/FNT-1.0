@@ -4,7 +4,8 @@ local sprGroups = {}
 local diaSong = ''
 local dialogExists = false
 local videoStart = {
-    ['new crewmate'] = 'Cutscene1'
+    ['new crewmate'] = 'Cutscene1',
+    ['reactor alarm'] = 'reactor-cut'
 }
 local hasVideo = false
 local doneInit = false
@@ -197,11 +198,11 @@ function initDialogue()
     add('boxGroup', 'portraitMid')
 
     makeSpr('box', 'dialogueSystem/dialogueBox', 0, 431.45, {
-        {'bf',      'dialog frame', '1'},
+        {'bf',      'dialog frame', '3'},
         {'gf',      'dialog frame', 'what'},
-        {'sp',      'dialog frame', '0'},
+        {'sp',      'dialog frame', '2'},
         {'agf',      'dialog frame', '4'},
-        {'pu',      'dialog frame', '3'},
+        {'pu',      'dialog frame', '0'},
         {'cyan',      'dialog frame', '1'}
     })
     setObjectCamera('box', 'other')
@@ -479,7 +480,7 @@ function Dinnit()
 
     if curChar == 'sp' then
         curIcon = 'puppy'
-        scaleObject("portraitLeft", 0.76, 0.76)
+        scaleObject("portraitLeft", 0.6, 0.6)
         setProperty("portraitLeft.flipX", false)
         charImg = 'SP_talk'
     elseif curChar == 'agf' then

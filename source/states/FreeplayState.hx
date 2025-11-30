@@ -309,7 +309,7 @@ class FreeplayState extends MusicBeatState
 					var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
 
 					if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
-						changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
+						changeSelection((checkNewHold - checkLastHold) * (controls.UI_LEFT ? -shiftMult : shiftMult));
 					    changeBG();
 				}
 			}
@@ -556,6 +556,8 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/brothers-in-arms"));
 				case "zanta":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/zanta"));
+				case "glitch friend":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/glitched"));
                 default:
                     bg.loadGraphic(Paths.image("menuDesat"));
             }

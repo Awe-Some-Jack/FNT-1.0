@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Symbol 17"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Symbol 17"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Symbol 17"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Symbol 17"
+		},
+		{
+			"offsets": [0, 0],
+			"indices": [50, 51, 52, 53, 54, 55, 56, 57, 58, 59],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Symbol 17"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/MaroonImpostor_Assets",
+	"position": [-350, 0],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [161, 161, 161],
+	"camera_position": [-60, 120],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}
