@@ -10,12 +10,14 @@ import flixel.graphics.FlxGraphic;
 import options.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
 import substates.StickerSubState;
+import substates.OnAntiSubState;
 
 import backend.StageData;
 
 class StoryMenuState extends MusicBeatState
 {
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
+	public static var checkanti:Bool = false;
 
 	var weekimage1:FlxSprite;
 	var playbutt:FlxSprite;
@@ -108,10 +110,6 @@ class StoryMenuState extends MusicBeatState
 		add(txtTracklist);
 		add(scoreText);
 
-		#if !switch
-		intendedScore = Highscore.getWeekScore('week1', 0);
-		#end
-
 		super.create();
 	}
 
@@ -143,7 +141,9 @@ class StoryMenuState extends MusicBeatState
 			scoreText.text = Language.getPhrase('week_score', 'WEEK SCORE: {1}', [lerpScore]);
 		}
 
-		// FlxG.watch.addQuick('font', scoreText.font);
+		#if !switch
+		intendedScore = Highscore.getWeekScore('week1', 0);
+		#end
 
 		if (!movedBack && !selectedWeek)
 		{
@@ -158,9 +158,16 @@ class StoryMenuState extends MusicBeatState
 		{
 			playbutt.alpha = 1;
 
-			if(FlxG.mouse.pressed && !movedBack && !selectedWeek)
+			if(FlxG.mouse.pressed && !movedBack && !selectedWeek && !checkanti)
 			{
-				selectWeek();
+				if(ClientPrefs.getGameplaySetting('practice') || ClientPrefs.getGameplaySetting('botplay')){
+					persistentUpdate = false;
+			        checkanti = true;
+					FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.RED : 0x4CFF0000, 0.4);
+			        openSubState(new OnAntiSubState());
+	            }else{
+				    selectWeek();
+				}
 			}
 		}
 		else playbutt.alpha = 0;
@@ -185,7 +192,7 @@ class StoryMenuState extends MusicBeatState
 	function selectWeek()
 	{
 		selectedWeek = true;
-		FlxG.camera.flash(FlxColor.WHITE, 0.6);
+		FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 0.6);
 		FlxG.camera.fade(FlxColor.BLACK, 0.7, false);
 
 		FlxG.sound.music.stop();

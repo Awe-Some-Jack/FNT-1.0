@@ -18,6 +18,8 @@ rating_perfect: "완벽해!!"
 
 // Story Mode
 week_score: "주간 점수: {1}"
+on_anti: "당신은 봇플레이 혹은 연습모드를 켠 상태입니다.\n이 상태로 플레이 하시면 점수는 저장되지 않으며 해당 조건이 풀리지 않습니다 그래도 계속 하시겠습니까?"
+seleted_anti: "진행 하시려면 "확인" 아니면 "뒤로" 버튼을 누르세요."
 
 // Freeplay
 personal_best: "최고 기록: {1} ({2}%)"
