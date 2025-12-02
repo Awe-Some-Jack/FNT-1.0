@@ -1,0 +1,3 @@
+ohmy,umm1,false,270,330
+mad,map,false,290,330
+panic,imimpostor,false,240,330

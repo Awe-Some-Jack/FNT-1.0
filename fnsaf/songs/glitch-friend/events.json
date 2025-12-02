@@ -1,0 +1,359 @@
+{
+	"events": [
+		[
+			82666.6666666667,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			86166.6666666666,
+			[
+				["Change Scroll Speed", "0.95", ""]
+			]
+		],
+		[
+			86333.3333333333,
+			[
+				["Change Scroll Speed", "0.4", ""]
+			]
+		],
+		[
+			86416.6666666666,
+			[
+				["Change Scroll Speed", "2", ""]
+			]
+		],
+		[
+			86500,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			86583.3333333333,
+			[
+				["Change Scroll Speed", "0.6", ""]
+			]
+		],
+		[
+			86666.6666666666,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			95333.3333333333,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			95499.9999999999,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			95666.6666666666,
+			[
+				["Change Scroll Speed", "-1", ""]
+			]
+		],
+		[
+			95833.3333333333,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			95916.6666666666,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			95999.9999999999,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			99833.3333333333,
+			[
+				["Change Scroll Speed", "0.6", ""]
+			]
+		],
+		[
+			99916.6666666666,
+			[
+				["Change Scroll Speed", "1.1", ""]
+			]
+		],
+		[
+			99999.9999999999,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			105666.666666667,
+			[
+				["Change Scroll Speed", "0.8", ""]
+			]
+		],
+		[
+			106000,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			106666.666666667,
+			[
+				["Change Scroll Speed", "1.1", ""]
+			]
+		],
+		[
+			109333.333333333,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			111000,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			111041.666666667,
+			[
+				["Change Scroll Speed", "-1", ""]
+			]
+		],
+		[
+			111083.333333333,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			111166.666666667,
+			[
+				["Change Scroll Speed", "1.05", ""]
+			]
+		],
+		[
+			114666.666666667,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			122000,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			122083.333333333,
+			[
+				["Change Scroll Speed", "1.2", ""]
+			]
+		],
+		[
+			122166.666666667,
+			[
+				["Change Scroll Speed", "0.8", ""]
+			]
+		],
+		[
+			122250,
+			[
+				["Change Scroll Speed", "0.7", ""]
+			]
+		],
+		[
+			122333.333333333,
+			[
+				["Change Scroll Speed", "0.9", ""]
+			]
+		],
+		[
+			122416.666666667,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			122500,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			122583.333333333,
+			[
+				["Change Scroll Speed", "1.5", ""]
+			]
+		],
+		[
+			122666.666666667,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			124791.666666667,
+			[
+				["Change Scroll Speed", "-1", ""]
+			]
+		],
+		[
+			124833.333333333,
+			[
+				["Change Scroll Speed", "0.6", ""]
+			]
+		],
+		[
+			124916.666666667,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			125000,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			125125,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			125333.333333333,
+			[
+				["Change Scroll Speed", "1.1", ""]
+			]
+		],
+		[
+			137333.333333333,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			138333.333333333,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			138416.666666667,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			138500,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			138583.333333333,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			138666.666666667,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			141000,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			141083.333333333,
+			[
+				["Change Scroll Speed", "-1", ""]
+			]
+		],
+		[
+			141166.666666667,
+			[
+				["Change Scroll Speed", "10", ""]
+			]
+		],
+		[
+			141250,
+			[
+				["Change Scroll Speed", "0.6", ""]
+			]
+		],
+		[
+			141333.333333333,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			143666.666666667,
+			[
+				["Change Scroll Speed", "0.8", ""]
+			]
+		],
+		[
+			143750,
+			[
+				["Change Scroll Speed", "0.7", ""]
+			]
+		],
+		[
+			143833.333333333,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			143916.666666667,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			146333.333333333,
+			[
+				["Change Scroll Speed", "0.8", ""]
+			]
+		],
+		[
+			146416.666666667,
+			[
+				["Change Scroll Speed", "0.7", ""]
+			]
+		],
+		[
+			146500,
+			[
+				["Change Scroll Speed", "0.1", ""]
+			]
+		],
+		[
+			146583.333333333,
+			[
+				["Change Scroll Speed", "1", ""]
+			]
+		]
+	],
+	"format": "psych_v1"
+}

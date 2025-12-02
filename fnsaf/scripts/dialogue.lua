@@ -464,6 +464,10 @@ function onUpdatePost(elapsed)
             debugPrint("Trun OFF Auto Dialogue")
         end
     end
+
+    if doneInit and doneVideo and not hasDialog and getProperty("skipCountdown") then
+        setPropertyFromClass('flixel.FlxG', 'sound.music.volume', 1)
+    end
 end
 
 local charImg = ''
@@ -486,8 +490,8 @@ function Dinnit()
     elseif curChar == 'agf' then
         curIcon = 'agf'
         boxChar = 'AGF'
-        charImg = 'AGF_DIALOGUE'
-        scaleObject("portraitLeft", 0.76, 0.76)
+        charImg = 'agf_dialogue'
+        scaleObject("portraitLeft", 0.4, 0.4)
         setProperty("portraitLeft.flipX", false)
     elseif curChar == 'pu' then
         curIcon = 'face'

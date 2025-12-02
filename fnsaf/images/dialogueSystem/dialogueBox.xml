@@ -2,8 +2,9 @@
 <TextureAtlas imagePath="dialogueBox.png">
 	<!-- Created using the Spritesheet and XML generator -->
 	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
-	<SubTexture name="dialog frame0000" x="1000" y="0" width="1000" height="467" frameX="2" frameY="1" frameWidth="996" frameHeight="471"/>
+	<SubTexture name="dialog frame0000" x="1000" y="467" width="1000" height="467" frameX="2" frameY="1" frameWidth="996" frameHeight="471"/>
 	<SubTexture name="dialog frame0001" x="0" y="0" width="1000" height="467" frameX="2" frameY="1" frameWidth="996" frameHeight="471"/>
-	<SubTexture name="dialog frame0002" x="1000" y="467" width="1000" height="467" frameX="2" frameY="2" frameWidth="996" frameHeight="463"/>
-	<SubTexture name="dialog frame0003" x="0" y="467" width="1000" height="467" frameX="2" frameY="2" frameWidth="996" frameHeight="463"/>
+	<SubTexture name="dialog frame0002" x="0" y="934" width="1000" height="467" frameX="2" frameY="2" frameWidth="996" frameHeight="463"/>
+	<SubTexture name="dialog frame0003" x="1000" y="0" width="1000" height="467" frameX="2" frameY="2" frameWidth="996" frameHeight="463"/>
+	<SubTexture name="dialog frame0004" x="0" y="467" width="1000" height="467" frameX="2" frameY="2" frameWidth="996" frameHeight="463"/>
 </TextureAtlas>

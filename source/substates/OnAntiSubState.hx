@@ -36,7 +36,7 @@ class OnAntiSubState extends MusicBeatSubstate
 		warning.font = Paths.font("neodgm.ttf");
 		add(warning);
 
-		selected = new FlxText(150, warning.y + 100, 1000, Language.getPhrase('seleted_anti', 'if Yes "ACCEPT" guess not NO "BACK" Button.'), 20);
+		selected = new FlxText(150, warning.y + 100, 1000, Language.getPhrase('seleted_anti', "is Yes ACCEPT or it's not BACK Button."), 20);
 		selected.alignment = CENTER;
 		selected.alpha = 0;
 		selected.font = Paths.font("neodgm.ttf");
