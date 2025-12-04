@@ -493,12 +493,6 @@ function Dinnit()
         charImg = 'agf_dialogue'
         scaleObject("portraitLeft", 0.4, 0.4)
         setProperty("portraitLeft.flipX", false)
-    elseif curChar == 'pu' then
-        curIcon = 'face'
-        boxChar = 'Pudding'
-        charImg = 'pudding'
-        scaleObject("portraitLeft", 0.53, 0.53)
-        setProperty("portraitLeft.flipX", true)
     elseif curChar == 'cyan' then
         curIcon = 'wally'
         boxChar = 'Wally'
