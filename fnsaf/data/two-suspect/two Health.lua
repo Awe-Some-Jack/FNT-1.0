@@ -198,7 +198,7 @@ end
 function noteMiss(index, noteData, noteType, isSustain)
     if noteType == 'GF Sing' or gfSection and useCustom then
         LeftHealth = LeftHealth + 11
-    else
+    elseif useCustom then
         RightHealth = RightHealth - 11
     end
 
