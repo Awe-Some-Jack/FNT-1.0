@@ -1,57 +1,73 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [694, 470],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "AGF idle",
-			"indices": []
+			"indices": [],
+			"name": "AGF idle"
 		},
 		{
-			"loop": false,
 			"offsets": [693, 469],
+			"loop": false,
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "AGF singLEFT0",
-			"indices": []
+			"indices": [],
+			"name": "AGF singLEFT0"
 		},
 		{
-			"loop": false,
 			"offsets": [690, 471],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "AGF singDOWN0",
-			"indices": []
+			"indices": [],
+			"name": "AGF singDOWN0"
 		},
 		{
-			"loop": false,
 			"offsets": [693, 471],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "AGF singUP0",
-			"indices": []
+			"indices": [],
+			"name": "AGF singUP0"
 		},
 		{
-			"loop": false,
 			"offsets": [694, 471],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 12,
-			"name": "AGF singRIGHT0",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "AGF singRIGHT0"
 		},
 		{
-			"loop": false,
 			"offsets": [694, 471],
-			"anim": "singRIGHT-alt",
+			"loop": false,
 			"fps": 24,
-			"name": "AGF singRIGHT-alt",
-			"indices": []
+			"anim": "singRIGHT-alt",
+			"indices": [],
+			"name": "AGF singRIGHT-alt"
+		},
+		{
+			"offsets": [696, 470],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN-alt",
+			"loop": false,
+			"name": "AGFhaha singDOWN0"
+		},
+		{
+			"offsets": [699, 470],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP-alt",
+			"loop": false,
+			"name": "AGFhaha singUP0"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/AGF",
+	"image": "characters/AGF, characters/AGFhaha",
 	"position": [20, 600],
 	"healthicon": "agf",
 	"flip_x": false,
