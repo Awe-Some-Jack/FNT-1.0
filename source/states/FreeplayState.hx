@@ -552,12 +552,16 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/reactor-alarm"));
 				case "get caught":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/get-caught"));
+				case "lore":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/accident"));
 				case "brothers in arms":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/brothers-in-arms"));
 				case "zanta":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/zanta"));
 				case "glitch friend":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/glitched"));
+				case "ballooned":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/ballooned"));
                 default:
                     bg.loadGraphic(Paths.image("menuDesat"));
             }
