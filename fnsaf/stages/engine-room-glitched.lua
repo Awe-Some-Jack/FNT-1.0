@@ -1,5 +1,5 @@
 local dir = "bg/collab/glitched/"
-local bg = { -400, 250 }
+local bg = { -390, 250 }
 
 function getBG(file)
     return dir .. file
