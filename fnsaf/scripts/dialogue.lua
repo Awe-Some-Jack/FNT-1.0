@@ -4,7 +4,7 @@ local sprGroups = {}
 local diaSong = ''
 local dialogExists = false
 local videoStart = {
-    ['new crewmate'] = 'Cutscene1',
+    ['new crewmate'] = 'new_2',
     ['reactor alarm'] = 'reactor-cut'
 }
 local hasVideo = false

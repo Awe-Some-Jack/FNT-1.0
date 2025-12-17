@@ -22,7 +22,7 @@ function onCreate()
     makeLuaSprite("1", getBG("1"), bg[1], bg[2])
     scaleObject("1", 1.2, 1.2)
 
-    makeLuaSprite("2", getBG("2"), bg[1], bg[2])
+    makeLuaSprite("2", getBG("2"), -140, 305)
     scaleObject("2", 1.2, 1.2)
 
     makeLuaSprite("3", getBG("3"), bg[1], bg[2])
