@@ -120,15 +120,15 @@ end
 function goodNoteHit(id, direction, noteType, isSustainNote)
     if getProperty("boyfriend.flipX") then
         if direction == 0 then -- LEFT
-            setProperty("singAnimations[3]", "singLEFT")
+            characterPlayAnim("boyfriend", "singRIGHT", true)
         elseif direction == 3 then -- RIGHT
-            setProperty("singAnimations[0]", "singRIGHT")
+            characterPlayAnim("boyfriend", "singLEFT", true)
         end
     else
         if direction == 0 then -- LEFT
-            setProperty("singAnimations[3]", "singRIGHT")
+            characterPlayAnim("boyfriend", "singLEFT", true)
         elseif direction == 3 then -- RIGHT
-            setProperty("singAnimations[0]", "singLEFT")
+            characterPlayAnim("boyfriend", "singRIGHT", true)
         end
     end
 end

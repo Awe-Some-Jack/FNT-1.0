@@ -485,20 +485,16 @@ function Dinnit()
     if curChar == 'sp' then
         curIcon = 'puppy'
         scaleObject("portraitLeft", 0.6, 0.6)
-        setProperty("portraitLeft.flipX", false)
         charImg = 'SP_talk'
     elseif curChar == 'agf' then
         curIcon = 'agf'
         boxChar = 'AGF'
         charImg = 'agf_dialogue'
         scaleObject("portraitLeft", 0.4, 0.4)
-        setProperty("portraitLeft.flipX", false)
     elseif curChar == 'cyan' then
         curIcon = 'wally'
         boxChar = 'Wally'
-        charImg = 'wally'
-        scaleObject("portraitLeft", 0.53, 0.53)
-        setProperty("portraitLeft.flipX", true)
+        charImg = 'willy_dialogue'
     elseif curChar == 'gf' then
         curSound = 'gf'
         speaker = 'portraitMid'

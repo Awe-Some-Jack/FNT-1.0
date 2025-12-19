@@ -23,7 +23,7 @@ seleted_anti: "진행 하시려면 "확인" 아니면 "뒤로" 버튼을 누르�
 
 // Freeplay
 personal_best: "최고 기록: {1} ({2}%)"
-freeplay_tip: "컨트롤 누르면 모디피어 메뉴를 엽니다. / 리셋 버튼을 누르면 점수를 초기화 시킵니다."
+freeplay_tip: "컨트롤 누르면 모디피어 메뉴를 엽니다."
 
 musicplayer_playing: "트랙: {1}"
 musicplayer_paused: "트랙: {1} (일시정지)"

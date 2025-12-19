@@ -1,4 +1,6 @@
 local dir = "bg/hall/"
+local playrate = 1
+local utoched = false
 
 function getBG(file)
     return dir .. file
@@ -17,6 +19,13 @@ function onCreate()
     setTextAlignment("Subtitle", "center")
     setObjectCamera("Subtitle", "other")
     addLuaText("Subtitle")
+
+    if isStoryMode then
+        makeLuaSprite("balloon", getBG("balloons/red"), -500, 100)
+        scaleObject("balloon", 0.7, 0.7)
+        updateHitbox("balloon")
+        addLuaSprite("balloon")
+    end
 
     makeLuaSprite("Deadbody", getBG("deadbody"), 0, 330)
     scaleObject("Deadbody", 0.37, 0)
@@ -54,6 +63,8 @@ end
 
 function onSongStart()
     playAnim("cutscene", "anim", true)
+
+    startTween('balloon_flying', "balloon", {y = 200}, 2.5, {ease = 'sineInOut', type = 'PINGPONG'})
 end
 
 function onStartCountdown()
@@ -63,6 +74,49 @@ function onStartCountdown()
     cameraFade("game", "000000", 1.6, false, true)
     callMethod('iconP2.changeIcon', {'question'})
     setHealthBarColors("white", "")
+end
+
+function onUpdatePost(elapsed)
+    if mouseClicked("left") and mouseOverlaps("balloon") then
+        utoched = true
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+    end
+
+    if utoched then
+        openCustomSubstate("Forevnet", true)
+    end
+end
+
+function onCustomSubstateCreate(name)
+    if name == "Forevnet" then
+        playSound("Flash3")
+        cameraShake("game", 0.03, 0.6)
+        cameraFade("other", "ffffff", 0.35, false)
+        runTimer("Fadeout", 1)
+        runTimer("letsgo", 3)
+    end
+end
+
+function mouseOverlaps(tag)
+    addHaxeLibrary('Reflect')
+    return runHaxeCode([[
+        var obj = game.getLuaObject(']]..tag..[[');
+        if (obj == null) obj = Reflect.getProperty(game, ']]..tag..[[');
+        if (obj == null) return false;
+        return obj.getScreenBounds(null, obj.cameras[0]).containsPoint(FlxG.mouse.getScreenPosition(obj.cameras[0]));
+    ]])
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "Fadeout" then
+        setProperty("camGame.visible", false)
+        setProperty("camHUD.visible", false)
+        cameraFade("other", "ffffff", 0.7, false, true)
+    end
+
+    if tag == "letsgo" then
+        loadSong("ballooned")
+    end
 end
 
 function onSectionHit()
@@ -86,6 +140,11 @@ function onSectionHit()
 
     if curSection == 53 then
         doTweenX("MovingAmong3", "among3", 1500, 6)
+    end
+
+    if curSection == 57 then
+        doTweenX("whatisthat", "balloon", 1500, 6)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", true)
     end
 
     if curSection == 65 then
@@ -161,5 +220,10 @@ function onTweenCompleted(tag)
 
     if tag == "MovingAmong4" then
         removeLuaSprite("MovingAmong4", true)
+    end
+
+    if tag == "whatisthat" then
+        removeLuaSprite("balloon", true)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
     end
 end

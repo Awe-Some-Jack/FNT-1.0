@@ -1,5 +1,5 @@
-neutral,wally_normal,false,126,190
-happy,wally_happy,false,240,200
-angry,wally_angry,false,126,200
-upset,wally_upset,false,130,186
-pathetic,wally_Pathetic_talk,false,130,200
+alright,accordingtomycalculations,false,50,80
+damn,givemesomepie,false,150,80
+think,hmm,false,50,100
+oh,uhh,false,50,80
+hey,you,false,50,100

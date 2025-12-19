@@ -43,6 +43,7 @@ class FreeplayState extends MusicBeatState
 	private var curPlaying:Bool = false;
 
 	var bg:FlxSprite;
+	var crtlKey:FlxSprite;
 	var bgTween:FlxTween = null;
 
 	var missingTextBG:FlxSprite;
@@ -186,15 +187,16 @@ class FreeplayState extends MusicBeatState
 
 		curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
 
-		bottomBG = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
-		bottomBG.alpha = 0.6;
-		add(bottomBG);
+		crtlKey = new FlxSprite(30, 690).loadGraphic(Paths.image('UI/freeplay/Ctrl'));
+		crtlKey.antialiasing = false;
+		crtlKey.setGraphicSize(Std.int(crtlKey.width * 2.8));
+		add(crtlKey);
 
-		var leText:String = Language.getPhrase("freeplay_tip", "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.");
+		var leText:String = Language.getPhrase("freeplay_tip", "Press CTRL to open the Gameplay Changers Menu");
 		bottomString = leText;
 		var size:Int = 16;
-		bottomText = new FlxText(bottomBG.x, bottomBG.y + 4, FlxG.width, leText, size);
-		bottomText.setFormat(Paths.font("neodgm.ttf"), size, FlxColor.WHITE, CENTER);
+		bottomText = new FlxText(crtlKey.x + 60 , crtlKey.y, FlxG.width, leText, size);
+		bottomText.setFormat(Paths.font("neodgm.ttf"), size, FlxColor.WHITE, LEFT);
 		bottomText.scrollFactor.set();
 		add(bottomText);
 		
@@ -417,12 +419,6 @@ class FreeplayState extends MusicBeatState
 			#if (MODS_ALLOWED && DISCORD_ALLOWED)
 			DiscordClient.loadModRPC();
 			#end
-		}
-		else if(controls.RESET && !player.playingMusic)
-		{
-			persistentUpdate = false;
-			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
-			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
 
 		super.update(elapsed);
