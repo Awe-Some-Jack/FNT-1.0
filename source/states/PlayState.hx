@@ -2506,6 +2506,7 @@ class PlayState extends MusicBeatState
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 					canResync = false;
+					MusicBeatState.switchState(new StoryMenuState());
 
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
@@ -2515,7 +2516,6 @@ class PlayState extends MusicBeatState
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 						FlxG.save.flush();
 					}
-					byeScreen();
 					changedDifficulty = false;
 				}
 				else
@@ -2544,25 +2544,19 @@ class PlayState extends MusicBeatState
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 
 				canResync = false;
-				byeScreen();
+				if (!isStoryMode)
+		        {
+			        openSubState(new StickerSubState(null, (sticker) -> new FreeplayState(sticker)));
+		        }
+		        else 
+		        {
+			        openSubState(new StickerSubState(null, (sticker) -> new StoryMenuState(sticker)));
+		        }
 				changedDifficulty = false;
 			}
 			transitioning = true;
 		}
 		return true;
-	}
-
-	function byeScreen()
-	{
-		if (!isStoryMode)
-		{
-			openSubState(new StickerSubState(null, (sticker) -> new FreeplayState(sticker)));
-		}
-		else 
-		{
-			openSubState(new StickerSubState(null, (sticker) -> new StoryMenuState(sticker)));
-		}
-		return;
 	}
 
 	public function KillNotes() {

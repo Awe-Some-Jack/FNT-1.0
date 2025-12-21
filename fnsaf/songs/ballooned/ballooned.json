@@ -1480,7 +1480,7 @@
 		[
 			30000,
 			[
-				["Tween Cam Zoom", "0.65", ""],
+				["Tween Cam Zoom", "0.71", ""],
 				["Cinematics", "0", ""],
 				["Camera Twist", "0.3", "0.3"]
 			]
@@ -1562,7 +1562,7 @@
 		[
 			45000,
 			[
-				["Tween Cam Zoom", "0.65", ""],
+				["Tween Cam Zoom", "0.71", ""],
 				["Camera Twist", "0.3", "0.5"]
 			]
 		],
@@ -1575,7 +1575,7 @@
 		[
 			52500,
 			[
-				["Tween Cam Zoom", "0.65", ""]
+				["Tween Cam Zoom", "0.71", ""]
 			]
 		],
 		[
@@ -1698,7 +1698,7 @@
 		[
 			90000,
 			[
-				["Tween Cam Zoom", "0.65", ""],
+				["Tween Cam Zoom", "0.71", ""],
 				["Cinematics", "0", ""],
 				["Camera Twist", "0.3", "0.4"]
 			]
@@ -1724,7 +1724,7 @@
 		[
 			93750,
 			[
-				["Tween Cam Zoom", "0.65", ""]
+				["Tween Cam Zoom", "0.71", ""]
 			]
 		],
 		[
@@ -1754,7 +1754,7 @@
 		[
 			99375,
 			[
-				["Tween Cam Zoom", "0.65", ""]
+				["Tween Cam Zoom", "0.71", ""]
 			]
 		],
 		[
@@ -1778,7 +1778,7 @@
 		[
 			102421.875,
 			[
-				["Tween Cam Zoom", "0.65", ""]
+				["Tween Cam Zoom", "0.71", ""]
 			]
 		],
 		[
@@ -1814,7 +1814,7 @@
 		[
 			105000,
 			[
-				["Tween Cam Zoom", "0.65", ""],
+				["Tween Cam Zoom", "0.71", ""],
 				["Camera Twist", "0.4", "0.6"]
 			]
 		],
@@ -1833,7 +1833,7 @@
 		[
 			112500,
 			[
-				["Tween Cam Zoom", "0.65", ""]
+				["Tween Cam Zoom", "0.71", ""]
 			]
 		],
 		[

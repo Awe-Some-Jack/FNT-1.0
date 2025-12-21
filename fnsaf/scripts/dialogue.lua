@@ -5,7 +5,8 @@ local diaSong = ''
 local dialogExists = false
 local videoStart = {
     ['new crewmate'] = 'new_2',
-    ['reactor alarm'] = 'reactor-cut'
+    ['reactor alarm'] = 'reactor-cut',
+    ['get caught'] = 'reac 2'
 }
 local hasVideo = false
 local doneInit = false
