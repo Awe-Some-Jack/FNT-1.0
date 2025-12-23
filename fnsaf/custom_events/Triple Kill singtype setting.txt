@@ -1,0 +1,6 @@
+it's For a "Triple Kill" Song Event
+
+value 1:
+sp exe = 1
+wally exe = 2
+agf exe = 3
