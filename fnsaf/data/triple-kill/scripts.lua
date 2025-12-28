@@ -1,12 +1,14 @@
 local singtype = 1
 
 function onCreate()
-    createInstance("agfexe-final", "objects.Character", {-175, -600, "agf-exe-final", false})
-    setObjectOrder("agfexe-final", getObjectOrder("dadGroup") + 1)
+    setProperty('skipCountdown', true)
+    
+    createInstance("agfexe-final", "objects.Character", {-175, 1600, "agf-exe-final", false})
+    setObjectOrder("agfexe-final", getObjectOrder("gfGroup") + 2)
     setProperty("agfexe-final.visible", false)
     addInstance("agfexe-final")
 
-    createInstance("spexe-final", "objects.Character", {-750, -450, "puppy-evil", false})
+    createInstance("spexe-final", "objects.Character", {-750, 1500, "puppy-evil", false})
     setObjectOrder("spexe-final", getObjectOrder("dadGroup") + 1)
     setProperty("spexe-final.visible", false)
     addInstance("spexe-final")
@@ -26,6 +28,19 @@ function onSectionHit()
     if curSection == 269 then
         setProperty("agfexe-final.visible", true)
         setProperty("spexe-final.visible", true)
+    end
+
+    if curSection == 301 then
+        doTweenY("HI", "spexe-final", -450, 1, "cubeOut")
+    end
+
+    if curSection == 309 then
+        doTweenY("HI2", "top3_alt", -300, 1, "cubeOut")
+    end
+
+
+    if curSection == 317 then
+        doTweenY("HI3", "agfexe-final", -600, 1, "cubeOut")
     end
 end
 

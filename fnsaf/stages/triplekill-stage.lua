@@ -29,7 +29,8 @@ imageArray = {'bg/triple/reactor/wall',
             'bg/triple/Finale/topdown_object',
             'bg/triple/Finale/topdown_object2',
             'bg/triple/Finale/top_alt',
-            'bg/triple/Finale/top_alt_center',}
+            'bg/triple/Finale/top_alt_center',
+            'bg/triple/Finale/final_star',}
 characterArray = {'bf',
 				'puppy-evil',
 				'agf-exe',
@@ -69,17 +70,6 @@ end
 function stageLoader(stageName, tags)
     currentStage = stageName
 	if stageName == 'crash-reactor' then
-        ----laboratory stuff
-        removeLuaSprite('bg')
-        removeLuaSprite('desk')
-        removeLuaSprite('light')
-
-         ----ship stuff
-        removeLuaSprite('shipbg')
-        removeLuaSprite('object')
-        removeLuaSprite('wire')
-        removeLuaSprite('dedbean')
-        removeLuaSprite('shiplight')
 
         replaceStageParts('wall', imageArray[1], -1200, -400, 1, 1, 1, 1, false)
         replaceStageParts('floor', imageArray[2], -1200, 400, 1, 1, 1, 1, false)
@@ -114,13 +104,6 @@ function stageLoader(stageName, tags)
         replaceStageParts('dedbean', imageArray[17], -800, 500, 0.9, 0.9, 1.2, 1.2, true)
         replaceStageParts('shiplight', imageArray[15], -880, -300, 1, 1, 1.2, 1.2, true)
 
-        makeLuaSprite("overlay")
-        makeGraphic("overlay", screenWidth, screenHeight, "0B0B33")
-        setProperty("overlay.alpha", 0.2)
-        setBlendMode("overlay", "multiply")
-        setObjectCamera("overlay", "hud")
-        addLuaSprite("overlay")
-
     elseif stageName == 'crash-elect' then 
         ----another2 stuff
         removeLuaSprite('darkbg', true)
@@ -144,16 +127,19 @@ function stageLoader(stageName, tags)
         moveTheCharacter(150, 0, 160, -1500)
 
         replaceStageParts('darkbg3', imageArray[23], -2100, -1900, 1, 1, 1, 1, false)
+        replaceStageParts('finalstar', imageArray[33], -1500, -1900, 1, 1, 1, 1, false)
         replaceStageParts('top3', imageArray[24], -380, -1000, 1, 1, 1, 1, false)
         replaceStageParts('top3_alt',imageArray[31], 680, -300, 1, 1, 1, 1, false)
-        replaceStageParts('top3_alt2',imageArray[31], -1000, -300, 1, 1, 1, 1, false, "flipped")
-        replaceStageParts('top3_center',imageArray[32], -100, 0, 1, 1, 1, 1, false)
+        replaceStageParts('top3_alt2',imageArray[31], 0, 0, 1, 1, 1, 1, false, "flipped")
+        replaceStageParts('top3_center',imageArray[32], 0, 0, 1, 1, 1, 1, false)
         replaceStageParts('topdownob',imageArray[29], -1000, 580, 1, 1, 1, 1, false)
         replaceStageParts('topdown3',imageArray[25], -100, 620, 1, 1, 1, 1, false)
         replaceStageParts('topdownob2',imageArray[30], -1330, 250, 1, 1, 1, 1, false)
-        replaceStageParts('finalob',imageArray[26], -2100, -1900, 1, 1, 1, 1, true)
-        replaceStageParts('finalob2',imageArray[27], -2100, -700, 1, 1, 1, 1, true)
-        replaceStageParts('finalob3',imageArray[28], 1700, -1000, 1, 1, 1, 1, true)
+        if not lowQuality then
+            replaceStageParts('finalob',imageArray[26], -2100, -1900, 1, 1, 1, 1, true)
+            replaceStageParts('finalob2',imageArray[27], -2100, -700, 1, 1, 1, 1, true)
+            replaceStageParts('finalob3',imageArray[28], 1700, -1000, 1, 1, 1, 1, true)
+        end
 
     elseif stageName == 'another2' then 
         ----ship stuff
@@ -194,6 +180,14 @@ function stageLoader(stageName, tags)
 	else -- called if the stage cant be found
 		debugPrint(stageName .. ' couldnt be found')
 	end
+end
+
+function onUpdate(elapsed)
+    setProperty("top3_alt2.x", getProperty("spexe-final.x") - 220)
+    setProperty("top3_alt2.y", getProperty("spexe-final.y") + 160)
+
+    setProperty("top3_center.x", getProperty("agfexe-final.x") + 80)
+    setProperty("top3_center.y", getProperty("agfexe-final.y") + 580)
 end
 
 function replaceStageParts(key, file, posX, posY, scrollX, scrollY, scaleX, scaleY, isOnTop, tags, tags2, frameRate, doesLoop) --loads and replaces individual parts of a stage

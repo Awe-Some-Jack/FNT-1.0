@@ -1,3 +1,3 @@
 function onCreate()
-    setProperty("gf.alpha", 0)
-end
+    setProperty('skipCountdown', true)
+end 
