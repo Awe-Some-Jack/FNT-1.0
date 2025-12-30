@@ -1,5 +1,6 @@
 local forevent = false
 local isgf = false
+local udodged = false
 
 local Danger = false
 
@@ -24,7 +25,23 @@ function onCreate()
     setObjectOrder("testIcon", getObjectOrder("iconP1") + 16);
     setObjectCamera("testIcon", "hud")
     addInstance('testIcon', true)
+
+    makeLuaText("dodge", "DODGE!!", 500, 0, 300)
+    screenCenter("dodge", "x")
+    setTextSize("dodge", 100)
+    setProperty("dodge.alpha", 0)
+    setObjectCamera("dodge", "hud")
+    addLuaText("dodge")
+
+    makeLuaSprite("Spacebar", "UI/Spacebar", 380, 420)
+    setProperty('Spacebar.antialiasing', false)
+    scaleObject("Spacebar", 5.0, 5.0)
+    setProperty("Spacebar.alpha", 0)
+    setObjectCamera("Spacebar", "hud")
+    addLuaSprite("Spacebar", true)
 end
+
+dodgeStuff = {'dodge', 'Spacebar'}
 
 function onCreatePost()
     makeLuaSprite("Dangerhealth", "", getProperty("healthBar.x") + 496, getProperty("healthBar.y") + 3)
@@ -53,6 +70,16 @@ function onUpdate(elapsed)
         setProperty("boyfriend.flipX", true)
     else
         setProperty("boyfriend.flipX", false)
+    end
+
+    if getProperty('gf.animation.curAnim.name') == 'anime' and getProperty('gf.animation.curAnim.curFrame') == 1 then
+        if not udodged then
+            setHealth(0)
+        end
+    end
+
+    if getProperty('Spacebar.alpha') == 1 and keyboardJustPressed("SPACE") then
+        udodged = true
     end
 end
 
@@ -143,14 +170,30 @@ local function rgbToHex(t)
     return string.format('%02X%02X%02X', t[1], t[2], t[3])
 end
 
+function onSectionHit()
+    if curSection == 56 then
+        for i = 1,#dodgeStuff do
+            doTweenAlpha(dodgeStuff[i]..'tween', dodgeStuff[i], 1, 0.5)
+		end
+    end
+
+    if curSection == 57 then
+        for i = 1,#dodgeStuff do
+            doTweenAlpha(dodgeStuff[i]..'tween', dodgeStuff[i], 0, 0.5)
+		end
+    end
+end
+
 function onStepHit()
     if curStep == 907 then
-        doTweenX("BFX", "boyfriend", 260, 0.3, "cubeOut")
         doTweenAlpha("HI", "testIcon", 1, 0.2, "linear")
         doTweenAlpha("HI2", "Dangerhealth", 1, 0.2, "linear")
         setProperty("gf.alpha", 1)
-        characterPlayAnim("boyfriend", "dodge", false)
-        setProperty('boyfriend.specialAnim', true);
+        if udodged then
+            characterPlayAnim("boyfriend", "dodge", false)
+            setProperty('boyfriend.specialAnim', true)
+            doTweenX("BFX", "boyfriend", 260, 0.3, "cubeOut")
+        end
         triggerEvent("Play Animation", "anime", "gf")
         setProperty("boyfriend.cameraPosition", {-100, 0})
         
