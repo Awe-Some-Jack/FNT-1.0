@@ -33,6 +33,7 @@ imageArray = {'bg/triple/reactor/wall',
             'bg/triple/Finale/final_star',}
 characterArray = {'bf',
 				'puppy-evil',
+                'wally-exe',
 				'agf-exe',
                 'blist'}
 currentStage = ""
@@ -75,11 +76,13 @@ function stageLoader(stageName, tags)
         replaceStageParts('floor', imageArray[2], -1200, 400, 1, 1, 1, 1, false)
         replaceStageParts('parts', imageArray[3], -1200, 500, 1, 1, 1, 1, false)
         replaceStageParts('reactor', imageArray[4], 350, -500, 1, 1, 1, 1, false)
-        replaceStageParts('wallydied', imageArray[5], 1660, 660, 1, 1, 1, 1, false)
-        replaceStageParts('drdied', imageArray[6], 1950, 580, 1, 1, 1, 1, false)
-        replaceStageParts('blood1', imageArray[7], 2300, 930, 1, 1, 1, 1, false)
-        replaceStageParts('blood2', imageArray[8], 1300, 1100, 1, 1, 1, 1, false)
-        replaceStageParts('blood3', imageArray[9], -50, 1100, 1, 1, 1, 1, false)
+        if not lowQuality then
+            replaceStageParts('wallydied', imageArray[5], 1660, 660, 1, 1, 1, 1, false)
+            replaceStageParts('drdied', imageArray[6], 1950, 580, 1, 1, 1, 1, false)
+            replaceStageParts('blood1', imageArray[7], 2300, 930, 1, 1, 1, 1, false)
+            replaceStageParts('blood2', imageArray[8], 1300, 1100, 1, 1, 1, 1, false)
+            replaceStageParts('blood3', imageArray[9], -50, 1100, 1, 1, 1, 1, false)
+        end
         replaceStageParts('effects', imageArray[10], -1200, -400, 1, 1, 1, 1, false)
 
         makeLuaSprite("overlay")
@@ -127,7 +130,7 @@ function stageLoader(stageName, tags)
         moveTheCharacter(150, 0, 160, -1500)
 
         replaceStageParts('darkbg3', imageArray[23], -2100, -1900, 1, 1, 1, 1, false)
-        replaceStageParts('finalstar', imageArray[33], -1500, -1900, 1, 1, 1, 1, false)
+        replaceStageParts('finalstar', imageArray[33], -1100, -1900, 1, 1, 1, 1, false)
         replaceStageParts('top3', imageArray[24], -380, -1000, 1, 1, 1, 1, false)
         replaceStageParts('top3_alt',imageArray[31], 680, -300, 1, 1, 1, 1, false)
         replaceStageParts('top3_alt2',imageArray[31], 0, 0, 1, 1, 1, 1, false, "flipped")
@@ -185,6 +188,9 @@ end
 function onUpdate(elapsed)
     setProperty("top3_alt2.x", getProperty("spexe-final.x") - 220)
     setProperty("top3_alt2.y", getProperty("spexe-final.y") + 160)
+
+    setProperty("top3_alt.x", getProperty("wallyexe-final.x") + 70)
+    setProperty("top3_alt.y", getProperty("wallyexe-final.y") + 440)
 
     setProperty("top3_center.x", getProperty("agfexe-final.x") + 80)
     setProperty("top3_center.y", getProperty("agfexe-final.y") + 580)

@@ -1,5 +1,5 @@
 {
-	"player1": "bf",
+	"player1": "cream",
 	"player2": "red",
 	"notes": [
 		{
@@ -1300,7 +1300,13 @@
 			"bpm": 126
 		}
 	],
-	"gfVersion": "gf",
+	"player3": "gfr",
+	"song": "ballooned",
+	"allowGFskin": true,
+	"validScore": true,
+	"format": "psych_v1_convert",
+	"speed": 3.2,
+	"gameOverSound": "balloon pop",
 	"events": [
 		[
 			0,
@@ -1895,14 +1901,10 @@
 			]
 		]
 	],
-	"player3": "gfr",
+	"gfVersion": "gf",
 	"allowBFskin": true,
-	"song": "ballooned",
-	"allowGFskin": true,
-	"validScore": true,
-	"needsVoices": true,
+	"gameOverChar": "cream-death",
 	"stage": "airship-night",
-	"format": "psych_v1_convert",
-	"speed": 3.2,
+	"needsVoices": true,
 	"bpm": 128
 }

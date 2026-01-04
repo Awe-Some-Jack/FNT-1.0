@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gliched.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gliched0000" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0001" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0002" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0003" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0004" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0005" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0006" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0007" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0008" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0009" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0010" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0011" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0012" x="10" y="1984" width="1973" height="1129" frameX="0" frameY="0" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0013" x="10" y="1984" width="1973" height="1129" frameX="0" frameY="0" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0014" x="10" y="1984" width="1973" height="1129" frameX="0" frameY="0" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0015" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0016" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0017" x="1993" y="1106" width="1801" height="401" frameX="0" frameY="-529" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0018" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0019" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0020" x="10" y="10" width="2119" height="1086" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0021" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0022" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0023" x="10" y="1106" width="1973" height="868" frameX="0" frameY="-217" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0024" x="1993" y="1984" width="1801" height="1129" frameX="0" frameY="-43" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0025" x="1993" y="1984" width="1801" height="1129" frameX="0" frameY="-43" frameWidth="2119" frameHeight="1303"/>
+	<SubTexture name="gliched0026" x="1993" y="1984" width="1801" height="1129" frameX="0" frameY="-43" frameWidth="2119" frameHeight="1303"/>
+</TextureAtlas>

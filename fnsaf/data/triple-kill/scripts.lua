@@ -8,6 +8,11 @@ function onCreate()
     setProperty("agfexe-final.visible", false)
     addInstance("agfexe-final")
 
+    createInstance("wallyexe-final", "objects.Character", {450, 1300, "wallyexe-final", false})
+    setObjectOrder("wallyexe-final", getObjectOrder("dadGroup") + 2)
+    setProperty("wallyexe-final.visible", true)
+    addInstance("wallyexe-final")
+
     createInstance("spexe-final", "objects.Character", {-750, 1500, "puppy-evil", false})
     setObjectOrder("spexe-final", getObjectOrder("dadGroup") + 1)
     setProperty("spexe-final.visible", false)
@@ -17,6 +22,10 @@ end
 function onBeatHit()
     if curBeat % 2 == 0 and not stringStartsWith(getProperty("agfexe-final.animation.name"), "sing") and not getProperty("agfexe-final.stunned") then
         playAnim("agfexe-final", "idle", true)
+    end
+
+    if curBeat % 2 == 0 and not stringStartsWith(getProperty("wallyexe-final.animation.name"), "sing") and not getProperty("wallyexe-final.stunned") then
+        playAnim("wallyexe-final", "idle", true)
     end
 
     if curBeat % 2 == 0 and not stringStartsWith(getProperty("spexe-final.animation.name"), "sing") and not getProperty("spexe-final.stunned") then
@@ -35,7 +44,7 @@ function onSectionHit()
     end
 
     if curSection == 309 then
-        doTweenY("HI2", "top3_alt", -300, 1, "cubeOut")
+        doTweenY("HI2", "wallyexe-final", -710, 1, "cubeOut")
     end
 
 
@@ -62,7 +71,8 @@ function opponentNoteHit(index, noteData, noteType, isSustain)
             playAnim("spexe-final", getProperty("singAnimations["..noteData.."]"), true)
             setProperty("spexe-final.holdTimer", 0)
         elseif singtype == 2 then
-
+            playAnim("wallyexe-final", getProperty("singAnimations["..noteData.."]"), true)
+            setProperty("wallyexe-final.holdTimer", 0)
         elseif singtype == 3 then
             playAnim("agfexe-final", getProperty("singAnimations["..noteData.."]"), true)
             setProperty("agfexe-final.holdTimer", 0)

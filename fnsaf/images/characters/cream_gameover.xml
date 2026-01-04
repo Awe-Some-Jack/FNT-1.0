@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cream_gameover.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cream alive0000" x="10" y="10" width="870" height="1003" frameX="-28" frameY="-8" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0001" x="10" y="10" width="870" height="1003" frameX="-28" frameY="-8" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0002" x="890" y="10" width="936" height="1013" frameX="-4" frameY="0" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0003" x="890" y="10" width="936" height="1013" frameX="-4" frameY="0" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0004" x="1836" y="10" width="922" height="1002" frameX="0" frameY="-10" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0005" x="1836" y="10" width="922" height="1002" frameX="0" frameY="-10" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0006" x="2768" y="10" width="886" height="990" frameX="-17" frameY="-21" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0007" x="2768" y="10" width="886" height="990" frameX="-17" frameY="-21" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0008" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0009" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0010" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0011" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0012" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0013" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0014" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0015" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0016" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0017" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0018" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0019" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0020" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0021" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0022" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0023" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0024" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0025" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0026" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0027" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0028" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0029" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0030" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0031" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0032" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0033" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0034" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0035" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0036" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0037" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0038" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0039" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0040" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0041" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0042" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0043" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0044" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0045" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0046" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0047" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0048" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0049" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0050" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0051" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0052" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0053" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0054" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0055" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0056" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0057" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0058" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0059" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0060" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0061" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0062" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0063" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0064" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0065" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0066" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0067" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0068" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0069" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0070" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0071" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0072" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0073" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0074" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0075" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0076" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0077" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0078" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0079" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0080" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0081" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0082" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0083" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream alive0084" x="10" y="1033" width="861" height="995" frameX="-34" frameY="-17" frameWidth="940" frameHeight="1013"/>
+	<SubTexture name="cream sad0000" x="881" y="1033" width="901" height="749" frameX="-119" frameY="-51" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0001" x="881" y="1033" width="901" height="749" frameX="-119" frameY="-51" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0002" x="1792" y="1033" width="1029" height="800" frameX="-50" frameY="0" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0003" x="1792" y="1033" width="1029" height="800" frameX="-50" frameY="0" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0004" x="2831" y="1033" width="1010" height="802" frameX="0" frameY="-1" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0005" x="2831" y="1033" width="1010" height="802" frameX="0" frameY="-1" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0006" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0007" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0008" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0009" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0010" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0011" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0012" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0013" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0014" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0015" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0016" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0017" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0018" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0019" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0020" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0021" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0022" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0023" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0024" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0025" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0026" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0027" x="900" y="2038" width="895" height="407" frameX="-119" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad0028" x="10" y="2038" width="880" height="410" frameX="-121" frameY="-393" frameWidth="1079" frameHeight="803"/>
+	<SubTexture name="cream sad loop0000" x="1805" y="2038" width="774" height="485" frameX="-1" frameY="-29" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0001" x="1805" y="2038" width="774" height="485" frameX="-1" frameY="-29" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0002" x="2589" y="2038" width="774" height="498" frameX="-1" frameY="-16" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0003" x="2589" y="2038" width="774" height="498" frameX="-1" frameY="-16" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0004" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0005" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0006" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0007" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0008" x="796" y="2546" width="774" height="507" frameX="-1" frameY="-7" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0009" x="796" y="2546" width="774" height="507" frameX="-1" frameY="-7" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0010" x="796" y="2546" width="774" height="507" frameX="-1" frameY="-7" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0011" x="796" y="2546" width="774" height="507" frameX="-1" frameY="-7" frameWidth="776" frameHeight="514"/>
+	<SubTexture name="cream sad loop0012" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0013" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0014" x="10" y="2546" width="776" height="514"/>
+	<SubTexture name="cream sad loop0015" x="10" y="2546" width="776" height="514"/>
+</TextureAtlas>
