@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="throw.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="throw0000" x="0" y="0" width="1080" height="1047"/>
+	<SubTexture name="throw0001" x="1080" y="0" width="1080" height="1047"/>
+	<SubTexture name="throw0002" x="2160" y="0" width="1080" height="1047"/>
+</TextureAtlas>

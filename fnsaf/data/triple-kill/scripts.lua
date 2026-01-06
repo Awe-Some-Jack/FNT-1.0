@@ -10,7 +10,7 @@ function onCreate()
 
     createInstance("wallyexe-final", "objects.Character", {450, 1300, "wallyexe-final", false})
     setObjectOrder("wallyexe-final", getObjectOrder("dadGroup") + 2)
-    setProperty("wallyexe-final.visible", true)
+    setProperty("wallyexe-final.visible", false)
     addInstance("wallyexe-final")
 
     createInstance("spexe-final", "objects.Character", {-750, 1500, "puppy-evil", false})
@@ -36,7 +36,11 @@ end
 function onSectionHit()
     if curSection == 269 then
         setProperty("agfexe-final.visible", true)
+        setProperty("wallyexe-final.visible", true)
         setProperty("spexe-final.visible", true)
+
+        removeSpriteShader("boyfriend")
+        removeSpriteShader("dad")
     end
 
     if curSection == 301 then
@@ -64,6 +68,8 @@ function onEvent(event, value1, value2, strumTime)
         end
     end
 end
+
+
 
 function opponentNoteHit(index, noteData, noteType, isSustain)
     if noteType == "Triple kill final for 3 play Note" then

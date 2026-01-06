@@ -32,6 +32,7 @@ imageArray = {'bg/triple/reactor/wall',
             'bg/triple/Finale/top_alt_center',
             'bg/triple/Finale/final_star',}
 characterArray = {'bf',
+                'bf-triplekill-center',
 				'puppy-evil',
                 'wally-exe',
 				'agf-exe',

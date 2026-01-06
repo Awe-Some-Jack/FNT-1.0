@@ -587,7 +587,8 @@
 				["Change Character", "Dad", "blist"],
 				["Flash Camera 2", "3", ""],
 				["Tween Cam Zoom", "0.3", "5"],
-				["CenterCameraEvent", "on", "300,50"]
+				["CenterCameraEvent", "on", "300,50"],
+				["Change Character", "BF", "bf-triplekill-center"]
 			]
 		],
 		[
@@ -660,7 +661,9 @@
 				["Flash Camera", "3", ""],
 				["CenterCameraEvent", "off", ""],
 				["Tween Cam Zoom", "0.7", ""],
-				["Cinematics", "1", ""]
+				["Cinematics", "1", ""],
+				["Change Character", "Dad", "wally-exe"],
+				["Change Character", "BF", "bf"]
 			]
 		],
 		[
@@ -1091,7 +1094,8 @@
 				["Change Character", "Dad", "blist"],
 				["Flash Camera 2", "5", ""],
 				["Tween Cam Zoom", "0.3", "10"],
-				["CenterCameraEvent", "on", "300,50"]
+				["CenterCameraEvent", "on", "300,50"],
+				["Change Character", "BF", "bf-triplekill-center"]
 			]
 		],
 		[
@@ -1223,7 +1227,8 @@
 				["CenterCameraEvent", "off", ""],
 				["Cinematics", "1", ""],
 				["Flash Camera 2", "5", ""],
-				["Tween Cam Zoom", "0.75", ""]
+				["Tween Cam Zoom", "0.75", ""],
+				["Change Character", "BF", "bf"]
 			]
 		],
 		[
@@ -1698,7 +1703,8 @@
 				["Change Character", "Dad", "blist"],
 				["Flash Camera", "1", ""],
 				["CenterCameraEvent", "on", "300,-500"],
-				["Tween Cam Zoom", "0.35", ""]
+				["Tween Cam Zoom", "0.35", ""],
+				["Change Character", "BF", "bf-triplekill-center"]
 			]
 		],
 		[

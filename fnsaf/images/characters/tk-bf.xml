@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><TextureAtlas imagePath="tk-bf.png">
+<SubTexture name="tk-bf idle0000" x="2570" y="1941" width="597" height="567" frameX="-329" frameY="-365" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0001" x="716" y="2520" width="588" height="564" frameX="-333" frameY="-368" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0002" x="1304" y="2520" width="589" height="563" frameX="-332" frameY="-369" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0003" x="563" y="1941" width="583" height="573" frameX="-332" frameY="-359" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0004" x="2016" y="1339" width="584" height="581" frameX="-332" frameY="-351" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0005" x="1433" y="1339" width="583" height="582" frameX="-332" frameY="-350" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf idle0006" x="1433" y="1339" width="583" height="582" frameX="-332" frameY="-350" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFT00000" x="1064" y="698" width="558" height="630" frameX="-302" frameY="-303" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFT00001" x="2178" y="698" width="556" height="628" frameX="-309" frameY="-305" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFT00002" x="1622" y="698" width="556" height="629" frameX="-309" frameY="-304" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUP00000" x="1103" y="0" width="536" height="669" frameX="-339" frameY="-264" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUP00001" x="0" y="698" width="532" height="641" frameX="-335" frameY="-292" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUP00002" x="532" y="698" width="532" height="641" frameX="-335" frameY="-292" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWN00000" x="2945" y="2520" width="527" height="529" frameX="-324" frameY="-403" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWN00001" x="1893" y="2520" width="526" height="551" frameX="-328" frameY="-381" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWN00002" x="2419" y="2520" width="526" height="550" frameX="-328" frameY="-382" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHT00000" x="0" y="2520" width="716" height="567" frameX="-342" frameY="-365" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHT00001" x="1146" y="1941" width="712" height="571" frameX="-335" frameY="-361" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHT00002" x="1858" y="1941" width="712" height="571" frameX="-335" frameY="-361" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFTmiss0000" x="1622" y="698" width="556" height="629" frameX="-309" frameY="-304" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFTmiss0001" x="543" y="0" width="560" height="670" frameX="-299" frameY="-264" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFTmiss0002" x="3286" y="0" width="568" height="658" frameX="-307" frameY="-276" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singLEFTmiss0003" x="2715" y="0" width="571" height="660" frameX="-305" frameY="-274" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUPmiss0000" x="532" y="698" width="532" height="641" frameX="-335" frameY="-292" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUPmiss0001" x="0" y="0" width="543" height="698" frameX="-330" frameY="-236" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUPmiss0002" x="1639" y="0" width="538" height="669" frameX="-323" frameY="-265" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singUPmiss0003" x="2177" y="0" width="538" height="668" frameX="-325" frameY="-266" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWNmiss0000" x="2419" y="2520" width="526" height="550" frameX="-328" frameY="-382" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWNmiss0001" x="2600" y="1339" width="571" height="579" frameX="-318" frameY="-355" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWNmiss0002" x="3171" y="1339" width="559" height="579" frameX="-320" frameY="-355" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singDOWNmiss0003" x="0" y="1941" width="563" height="579" frameX="-318" frameY="-355" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHTmiss0000" x="1858" y="1941" width="712" height="571" frameX="-335" frameY="-361" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHTmiss0001" x="2734" y="698" width="726" height="602" frameX="-329" frameY="-332" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHTmiss0002" x="0" y="1339" width="717" height="602" frameX="-324" frameY="-332" frameWidth="1200" frameHeight="1200"/>
+<SubTexture name="tk-bf singRIGHTmiss0003" x="717" y="1339" width="716" height="602" frameX="-325" frameY="-332" frameWidth="1200" frameHeight="1200"/>
+</TextureAtlas>

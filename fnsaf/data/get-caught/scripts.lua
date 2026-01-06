@@ -12,6 +12,11 @@ function onCreate()
     setProperty("Door.alpha", 0)
     addLuaSprite("Door", false)
 
+    makeAnimatedLuaSprite('memo',getBG("throw"), 1900, 300)
+    scaleObject("memo", 0.25, 0.25)
+	addAnimationByPrefix('memo','anim','throw' ,24 ,true)
+    addLuaSprite("memo", false)
+
     makeAnimatedLuaSprite('Whatareyou',getBG("Get Caught WTF Run"), 1100, 450)
     scaleObject("Whatareyou", 1.2, 1.2)
     setScrollFactor("Whatareyou", 0.9, 0.9)
@@ -97,6 +102,11 @@ function onStepHit()
 
     if curStep == 1305 then
         objectPlayAnimation('Vent','are u' ,false)
+        triggerEvent("Camera Follow Pos", "600", "450")
+    end
+
+    if curStep == 1308 then
+        doTweenX("MomoComing", "memo", 500, 0.3)
     end
 
     if curStep == 1340 then
@@ -129,5 +139,11 @@ function onTimerCompleted(tag, loops, loopsLeft)
     if tag == "FadeLight" then
         doTweenAlpha("LightLOL", "light", 1, 0.1, "linear")
         doTweenAlpha("ShadowLOL", "shadow", 0, 0.1, "linear")
+    end
+end
+
+function onTweenCompleted(tag)
+    if tag == "MomoComing" then
+        removeLuaSprite("memo", true)
     end
 end
