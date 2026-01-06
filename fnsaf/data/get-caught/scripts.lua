@@ -108,6 +108,9 @@ function onStepHit()
     if curStep == 1308 then
         doTweenX("MomoComing", "memo", 500, 0.3)
     end
+    if curStep == 1315 then
+        triggerEvent("Camera Follow Pos", "", "")
+    end
 
     if curStep == 1340 then
         setProperty("gf.alpha", 1)
