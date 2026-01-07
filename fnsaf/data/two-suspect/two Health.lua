@@ -119,6 +119,18 @@ function onUpdate(elapsed)
     if RightHealth <= 0 then
         setHealth(0)
     end
+
+    setProperty("LeftP1.scale.x", getProperty("iconP1.scale.x"))
+    setProperty("LeftP1.scale.y", getProperty("iconP1.scale.y"))
+
+    setProperty("RightP1.scale.x", getProperty("iconP1.scale.x"))
+    setProperty("RightP1.scale.y", getProperty("iconP1.scale.y"))
+
+    setProperty("LeftP2.scale.x", getProperty("iconP2.scale.x"))
+    setProperty("LeftP2.scale.y", getProperty("iconP2.scale.y"))
+
+    setProperty("RightP2.scale.x", getProperty("iconP2.scale.x"))
+    setProperty("RightP2.scale.y", getProperty("iconP2.scale.y"))
 end
 
 function onUpdatePost(elapsed)

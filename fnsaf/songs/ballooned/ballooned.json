@@ -1312,7 +1312,8 @@
 			0,
 			[
 				["Set Camera Speed", "0.7", ""],
-				["Cinematics", "1", ""]
+				["Cinematics", "1", ""],
+				["badapplelol", "a", "0.0001"]
 			]
 		],
 		[
@@ -1488,7 +1489,8 @@
 			[
 				["Tween Cam Zoom", "0.71", ""],
 				["Cinematics", "0", ""],
-				["Camera Twist", "0.3", "0.3"]
+				["Camera Twist", "0.3", "0.3"],
+				["badapplelol", "b", "1"]
 			]
 		],
 		[

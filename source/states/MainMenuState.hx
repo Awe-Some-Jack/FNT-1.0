@@ -32,7 +32,7 @@ class MainMenuState extends MusicBeatState
 		"options"
 	];
 
-	var leftOption:String = null;
+	var leftOption:String = 'gallery';
 	var rightOption:String = null;
 
 	var camFollow:FlxObject;
@@ -280,17 +280,6 @@ class MainMenuState extends MusicBeatState
 							MusicBeatState.switchState(new StoryMenuState());
 						case 'freeplay':
 							MusicBeatState.switchState(new FreeplayState());
-
-						#if MODS_ALLOWED
-						case 'mods':
-							MusicBeatState.switchState(new ModsMenuState());
-						#end
-
-						#if ACHIEVEMENTS_ALLOWED
-						case 'achievements':
-							MusicBeatState.switchState(new AchievementsMenuState());
-						#end
-
 						case 'credits':
 							MusicBeatState.switchState(new CreditsState());
 						case 'options':
@@ -302,8 +291,10 @@ class MainMenuState extends MusicBeatState
 								PlayState.SONG.splashSkin = null;
 								PlayState.stageUI = 'normal';
 							}
-						case 'donate':
-							CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+						case 'gallery':
+							MusicBeatState.switchState(new GalleryState());
+						case 'discord':
+							CoolUtil.browserLoad('https://discord.gg/PFHAu2mDK5');
 							selectedSomethin = false;
 							item.visible = true;
 						default:
