@@ -1,87 +1,87 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "idle",
-			"loop": false,
-			"name": "tk-bf idle"
+			"fps": 12,
+			"name": "tk-bf idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "tk-bf singLEFT0"
+			"fps": 12,
+			"name": "tk-bf singLEFT0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "tk-bf singDOWN0"
+			"fps": 12,
+			"name": "tk-bf singDOWN0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singUP",
-			"loop": false,
-			"name": "tk-bf singUP0"
+			"fps": 12,
+			"name": "tk-bf singUP0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singLEFTmiss",
-			"loop": false,
-			"name": "tk-bf singLEFTmiss"
+			"fps": 12,
+			"name": "tk-bf singLEFTmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singDOWNmiss",
-			"loop": false,
-			"name": "tk-bf singDOWNmiss"
+			"fps": 12,
+			"name": "tk-bf singDOWNmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singUPmiss",
-			"loop": false,
-			"name": "tk-bf singUPmiss"
+			"fps": 12,
+			"name": "tk-bf singUPmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
 			"anim": "singRIGHTmiss",
-			"loop": false,
-			"name": "tk-bf singRIGHTmiss"
+			"fps": 12,
+			"name": "tk-bf singRIGHTmiss",
+			"indices": []
 		},
 		{
-			"offsets": [0, 0],
-			"indices": [],
-			"fps": 12,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "tk-bf singRIGHT0"
+			"offsets": [0, 0],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "tk-bf singRIGHT0",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/tk-bf",
-	"position": [-380, -10],
+	"position": [-380, -80],
 	"healthicon": "bf",
 	"flip_x": true,
 	"healthbar_colors": [61, 199, 250],
-	"camera_position": [-330, 340],
+	"camera_position": [-170, 210],
 	"sing_duration": 4,
-	"scale": 0.5,
+	"scale": 0.7,
 	"_editor_isPlayer": true
 }

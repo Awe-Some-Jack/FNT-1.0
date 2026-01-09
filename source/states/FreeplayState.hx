@@ -554,6 +554,8 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/brothers-in-arms"));
 				case "zanta":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/zanta"));
+				case "triple kill":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/triple"));
 				case "glitch friend":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/glitched"));
 				case "ballooned":
