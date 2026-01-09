@@ -4,6 +4,8 @@ local lockX = 0
 local lockY = 0
 local lockon = false
 
+local utoched = false
+
 function onCreate()
     precacheImage("bg/reactor/red/1")
     precacheImage("bg/reactor/red/2")
@@ -66,6 +68,15 @@ function onCreate()
         scaleObject("pink", 1.6, 1.6)
         addLuaSprite("pink")
     end
+
+    if isStoryMode then
+        makeAnimatedLuaSprite('glitch', "bg/reactor/gliched", -400, 250)
+	    scaleObject("glitch", 0.15, 0.2)
+        updateHitbox("glitch")
+        setProperty("glitch.visible", false)
+	    addAnimationByPrefix('glitch','anim','gliched' ,24 ,true)
+        addLuaSprite("glitch")
+    end
 end
 
 function onStartCountdown()
@@ -89,12 +100,43 @@ function onUpdate(elapsed)
     end
 end
 
+function onUpdatePost(elapsed)
+    if mouseClicked("left") and mouseOverlaps("glitch") then
+        utoched = true
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+    end
+
+    if utoched then
+        openCustomSubstate("Forevnet", true)
+    end
+end
+
 function onEvent(event, value1, value2, strumTime)
     if event == "Highlight Character" then
         if value1 == "1" then
             cameraFlash("hud", "000000", 0.4)
         end
     end
+end
+
+function onCustomSubstateCreate(name)
+    if name == "Forevnet" then
+        playSound("Flash3")
+        cameraShake("game", 0.03, 0.6)
+        cameraFade("other", "ffffff", 0.35, false)
+        runTimer("Fadeout", 1)
+        runTimer("letsgo", 3)
+    end
+end
+
+function mouseOverlaps(tag)
+    addHaxeLibrary('Reflect')
+    return runHaxeCode([[
+        var obj = game.getLuaObject(']]..tag..[[');
+        if (obj == null) obj = Reflect.getProperty(game, ']]..tag..[[');
+        if (obj == null) return false;
+        return obj.getScreenBounds(null, obj.cameras[0]).containsPoint(FlxG.mouse.getScreenPosition(obj.cameras[0]));
+    ]])
 end
 
 function onSectionHit()
@@ -134,6 +176,11 @@ function onSectionHit()
 
     if curSection == 98 then
         triggerEvent("Camera Follow Pos", "", "")
+    end
+
+    if curSection == 119 then
+        removeLuaSprite("glitch", true)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
     end
 end
 
@@ -189,8 +236,24 @@ function onStepHit()
         setProperty("AGF.visible", true)
     end
 
+    if curStep == 1844 then
+        setProperty("glitch.visible", true)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", true)
+    end
 
     if curStep == 1980 then
         cameraFade("hud", "000000", 1, false)
+    end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "Fadeout" then
+        setProperty("camGame.visible", false)
+        setProperty("camHUD.visible", false)
+        cameraFade("other", "ffffff", 0.7, false, true)
+    end
+
+    if tag == "letsgo" then
+        loadSong("glitch-friend")
     end
 end

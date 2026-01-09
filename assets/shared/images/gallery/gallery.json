@@ -100,7 +100,7 @@
     {
         "path": "tk sp,agf",
         "description": "Drawn by Dia",
-        "title": "Evil Space Puppy & Evil AGF",
+        "title": "Space Puppy.exe & AGF.exe",
         "link": "",
         "color": "FF0000"
     },
@@ -170,7 +170,7 @@
     {
         "path": "dcpink_human",
         "description": "Drawn by Seoji",
-        "title": "Human Loyal Blue",
+        "title": "Human Dc Pink",
         "link": "",
         "color": "FF58AE"
     },
@@ -198,7 +198,7 @@
     {
         "path": "Absoute_cinema_bleu",
         "description": "Drawn by Dardex",
-        "title": "ABSOUTE CINEMA",
+        "title": "ABSOLUTE CINEMA",
         "link": "",
         "color": "55E2E9"
     },
@@ -208,5 +208,75 @@
         "title": "Fluffy",
         "link": "",
         "color": "CD7CEB"
+    },
+    {
+        "path": "human_design",
+        "description": "Drawn by solli",
+        "title": "a Human Design",
+        "link": "",
+        "color": "FFFFFF"
+    },
+    {
+        "path": "evil",
+        "description": "Drawn by Dia",
+        "title": "Evil guys",
+        "link": "",
+        "color": "FF0000"
+    },
+    {
+        "path": "drawing_sp",
+        "description": "Drawn by Dardex",
+        "title": "Space Puppy Drawing",
+        "link": "",
+        "color": "CD7CEB"
+    },
+    {
+        "path": "so",
+        "description": "Drawn by ENT",
+        "title": "So... You Want For This..?",
+        "link": "",
+        "color": "CD7CEB"
+    },
+    {
+        "path": "yoo",
+        "description": "Drawn by Ahmed Wale Hamdy",
+        "title": "Guys! It's Space Puppy!",
+        "link": "",
+        "color": "CD7CEB"
+    },
+    {
+        "path": "snas",
+        "description": "Drawn by Dia",
+        "title": "Maybe He is like...",
+        "link": "",
+        "color": "1C3129"
+    },
+    {
+        "path": "unused",
+        "description": "Drawn by DevinXD",
+        "title": "Reactor Alarm Art",
+        "link": "",
+        "color": "CD7CEB"
+    },
+    {
+        "path": "summation",
+        "description": "Drawn by Dia",
+        "title": "roughly summarized",
+        "link": "",
+        "color": "FFFFFF"
+    },
+    {
+        "path": "summation2",
+        "description": "Drawn by Dia",
+        "title": "roughly summarized 2",
+        "link": "",
+        "color": "FFFFFF"
+    },
+    {
+        "path": "ahh",
+        "description": "Drawn by Dardex",
+        "title": "Hey",
+        "link": "",
+        "color": "FFD000"
     }
 ]

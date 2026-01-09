@@ -1,102 +1,110 @@
 {
 	"animations": [
 		{
-			"offsets": [452, 242],
 			"loop": false,
-			"fps": 12,
+			"offsets": [452, 242],
 			"anim": "idle",
-			"indices": [],
-			"name": "BOYFRIEND_s idle"
+			"fps": 12,
+			"name": "boyfriend idle",
+			"indices": []
 		},
 		{
-			"offsets": [450, 242],
 			"loop": false,
-			"fps": 12,
+			"offsets": [450, 242],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "BOYFRIEND_s singLEFT0"
+			"fps": 12,
+			"name": "boyfriend singLEFT0",
+			"indices": []
 		},
 		{
-			"offsets": [450, 242],
 			"loop": false,
-			"fps": 12,
+			"offsets": [450, 242],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "BOYFRIEND_s singDOWN0"
+			"fps": 12,
+			"name": "boyfriend singDOWN0",
+			"indices": []
 		},
 		{
-			"offsets": [452, 242],
 			"loop": false,
-			"fps": 12,
+			"offsets": [447, 245],
 			"anim": "singUP",
-			"indices": [],
-			"name": "BOYFRIEND_s singUP0"
-		},
-		{
-			"offsets": [450, 242],
-			"loop": false,
 			"fps": 12,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BOYFRIEND_s singRIGHT0"
+			"name": "boyfriend singUP0",
+			"indices": []
 		},
 		{
-			"offsets": [450, 242],
 			"loop": false,
-			"fps": 12,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BOYFRIEND_s singLEFTmiss"
-		},
-		{
-			"offsets": [449, 242],
-			"loop": false,
-			"fps": 12,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "BOYFRIEND_s singDOWNmiss"
-		},
-		{
 			"offsets": [452, 242],
-			"loop": false,
+			"anim": "singRIGHT",
 			"fps": 12,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "BOYFRIEND_s singUPmiss"
+			"name": "boyfriend singRIGHT0",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [450, 242],
-			"loop": false,
+			"anim": "singLEFTmiss",
 			"fps": 12,
+			"name": "boyfriend singLEFTmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [450, 242],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "boyfriend singDOWNmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [447, 245],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "boyfriend singUPmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [452, 242],
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BOYFRIEND_s singRIGHTmiss"
+			"fps": 12,
+			"name": "boyfriend singRIGHTmiss",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [451, 242],
-			"indices": [],
-			"fps": 24,
 			"anim": "dodge1",
-			"loop": false,
-			"name": "dodge1"
+			"fps": 24,
+			"name": "boyfriend dodge1",
+			"indices": []
 		},
 		{
-			"offsets": [451, 242],
-			"indices": [],
-			"fps": 24,
-			"anim": "dodge2",
 			"loop": false,
-			"name": "dodge2"
+			"offsets": [451, 242],
+			"anim": "dodge2",
+			"fps": 24,
+			"name": "boyfriend dodge2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [462, 242],
+			"anim": "hey",
+			"fps": 12,
+			"name": "boyfriend hey",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/BOYFRIEND_s",
+	"image": "characters/bf",
 	"position": [-470, 120],
 	"healthicon": "bf",
 	"flip_x": true,
 	"healthbar_colors": [61, 199, 250],
-	"camera_position": [30, 70],
+	"camera_position": [10, 90],
 	"sing_duration": 4,
 	"scale": 0.6,
 	"_editor_isPlayer": true
