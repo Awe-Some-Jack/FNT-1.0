@@ -81,6 +81,10 @@ function onUpdate(elapsed)
     if getProperty('Spacebar.alpha') == 1 and keyboardJustPressed("SPACE") then
         udodged = true
     end
+
+    if botPlay then
+        udodged = true
+    end
 end
 
 function onUpdatePost()

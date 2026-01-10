@@ -101,7 +101,7 @@ function onUpdate(elapsed)
 end
 
 function onUpdatePost(elapsed)
-    if mouseClicked("left") and mouseOverlaps("glitch") then
+    if mouseClicked("left") and mouseOverlaps("glitch") and getProperty("glitch.visible") then
         utoched = true
         setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
     end

@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"offsets": [452, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "boyfriend_r idle"
+		},
+		{
+			"offsets": [450, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "boyfriend_r singLEFT0"
+		},
+		{
+			"offsets": [450, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "boyfriend_r singDOWN0"
+		},
+		{
+			"offsets": [447, 245],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUP",
+			"loop": false,
+			"name": "boyfriend_r singUP0"
+		},
+		{
+			"offsets": [452, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "boyfriend_r singRIGHT0"
+		},
+		{
+			"offsets": [450, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "boyfriend_r singLEFTmiss"
+		},
+		{
+			"offsets": [450, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "boyfriend_r singDOWNmiss"
+		},
+		{
+			"offsets": [447, 245],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "boyfriend_r singUPmiss"
+		},
+		{
+			"offsets": [452, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "boyfriend_r singRIGHTmiss"
+		},
+		{
+			"offsets": [462, 242],
+			"indices": [],
+			"fps": 12,
+			"anim": "hey",
+			"loop": false,
+			"name": "boyfriend_r hey"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/boyfriend_r",
+	"position": [-470, 120],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [61, 199, 250],
+	"camera_position": [10, 90],
+	"sing_duration": 4,
+	"scale": 0.6,
+	"_editor_isPlayer": true
+}
