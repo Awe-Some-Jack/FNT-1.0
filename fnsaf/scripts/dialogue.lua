@@ -481,12 +481,12 @@ function Dinnit()
     boxChar = 'Space Puppy'
     curIcon = curChar
     curSound = 'red'
-    charImg = 'SP_talk'
+    charImg = 'pup_alarm_dialogue'
 
     if curChar == 'sp' then
         curIcon = 'puppy'
-        scaleObject("portraitLeft", 0.6, 0.6)
-        charImg = 'SP_talk'
+        boxChar = 'Space Puppy'
+        charImg = 'pup_alarm_dialogue'
     elseif curChar == 'agf' then
         curIcon = 'agf'
         boxChar = 'AGF'

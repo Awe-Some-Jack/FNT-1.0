@@ -1,5 +1,9 @@
-neutral,talk0,false,280,320
-happy,talk_happy,false,280,320
-angry,talk_angry,false,280,320
-think,talk_sus,false,280,320
-panic,talk_what,false,287,320
+neutral,normal,false,50,30
+sad,sad,false,50,30
+good,good,false,50,30
+think,hmm,false,50,30
+angry,what,false,50,50
+impo,impostor,false,50,30
+oh,uh1,false,50,30
+umm,um,false,50,30
+worried,worried,false,50,30
