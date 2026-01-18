@@ -78,6 +78,15 @@ class MainMenuState extends MusicBeatState
 		fg.updateHitbox();
 		add(fg);
 
+		var logo:FlxSprite = new FlxSprite(0,0);
+		logo.frames = Paths.getSparrowAtlas('logoBumpin');
+		logo.animation.addByIndices("idle", "logo bumpin", [14], "", 24, false);
+		logo.antialiasing = ClientPrefs.data.antialiasing;
+		logo.scrollFactor.set();
+		logo.setGraphicSize(Std.int(fg.width * 0.3));
+		logo.updateHitbox();
+		add(logo);
+
 		for (option in optionShit)
 			createMenuItem(option);
 

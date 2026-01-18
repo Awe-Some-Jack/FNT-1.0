@@ -9,7 +9,7 @@
 			"name": "IDLE"
 		},
 		{
-			"offsets": [16, -13],
+			"offsets": [14, -11],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
@@ -17,7 +17,7 @@
 			"name": "LEFT0"
 		},
 		{
-			"offsets": [8, -13],
+			"offsets": [7, -10],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
@@ -25,7 +25,7 @@
 			"name": "DOWN0"
 		},
 		{
-			"offsets": [-9, -13],
+			"offsets": [-7, -11],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
@@ -33,7 +33,7 @@
 			"name": "UP0"
 		},
 		{
-			"offsets": [-9, 23],
+			"offsets": [-6, 20],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
@@ -41,7 +41,7 @@
 			"name": "RIGHT0"
 		},
 		{
-			"offsets": [37, -250],
+			"offsets": [31, -208],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFTmiss",
@@ -49,7 +49,7 @@
 			"name": "LEFT MISS"
 		},
 		{
-			"offsets": [-78, -300],
+			"offsets": [-64, -250],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWNmiss",
@@ -57,7 +57,7 @@
 			"name": "DOWN MISS"
 		},
 		{
-			"offsets": [-156, -241],
+			"offsets": [-131, -203],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUPmiss",
@@ -65,7 +65,7 @@
 			"name": "UP MISS"
 		},
 		{
-			"offsets": [-275, -106],
+			"offsets": [-228, -87],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHTmiss",
@@ -76,12 +76,12 @@
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/CREAM",
-	"position": [-240, 0],
+	"position": [-260, 40],
 	"healthicon": "cream",
 	"flip_x": true,
 	"healthbar_colors": [255, 255, 255],
-	"camera_position": [-80, 300],
+	"camera_position": [-130, 360],
 	"sing_duration": 4,
-	"scale": 0.6,
+	"scale": 0.5,
 	"_editor_isPlayer": true
 }

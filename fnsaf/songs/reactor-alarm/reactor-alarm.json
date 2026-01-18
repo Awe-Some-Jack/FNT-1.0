@@ -1693,7 +1693,8 @@
 				["Bumpin Zoom", "0.9", "0.9"],
 				["Camera Twist", "0", "0"],
 				["Tween Cam Zoom", "1.1", ""],
-				["Camera Follow Pos", "", ""]
+				["Camera Follow Pos", "", ""],
+				["Change Character", "Dad", "puppy2"]
 			]
 		],
 		[
@@ -1760,6 +1761,12 @@
 			128727.272727273,
 			[
 				["Bumpin Zoom", "0.9", "0.9"]
+			]
+		],
+		[
+			129090.909090909,
+			[
+				["Play Animation", "hey", "BF"]
 			]
 		],
 		[
@@ -1831,14 +1838,16 @@
 			[
 				["Cinematics", "0", ""],
 				["Camera Follow Pos", "700", "550"],
-				["Tween Cam Zoom", "0.6", ""]
+				["Tween Cam Zoom", "0.6", ""],
+				["Play Animation", "singLEFTmiss", "BF"]
 			]
 		],
 		[
 			133090.909090909,
 			[
 				["Tween Cam Zoom", "0.8", ""],
-				["Camera Follow Pos", "500", "700"]
+				["Camera Follow Pos", "500", "700"],
+				["Play Animation", "shocked", "Dad"]
 			]
 		],
 		[
@@ -1995,7 +2004,8 @@
 				["Bumpin Zoom", "0.9", "0.9"],
 				["Camera Twist", "0.4", "0.4"],
 				["Flash Cam", "0.5", "0.8"],
-				["Tween Cam Zoom", "0.8", ""]
+				["Tween Cam Zoom", "0.8", ""],
+				["Change Character", "Dad", "puppy"]
 			]
 		],
 		[
@@ -2644,8 +2654,8 @@
 				[4909.09090909091, 5, 0],
 				[5272.72727272727, 7, 0],
 				[5454.54545454545, 5, 0],
-				[5636.36363636364, 4, 0],
-				[5636.36363636364, 2, 0]
+				[5636.36363636364, 2, 0, "Hey!"],
+				[5636.36363636364, 4, 0]
 			],
 			"mustHitSection": false
 		},
@@ -4172,7 +4182,6 @@
 				[128545.454545455, 1, 0],
 				[128727.272727273, 2, 0],
 				[128909.090909091, 2, 0],
-				[129090.909090909, 3, 0],
 				[129272.727272727, 2, 0]
 			],
 			"gfSection": false,
