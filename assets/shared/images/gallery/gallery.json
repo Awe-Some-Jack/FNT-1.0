@@ -86,7 +86,7 @@
     {
         "path": "snp2",
         "description": "Drawn by Snowmelt",
-        "title": "Be thorough in your work.",
+        "title": "Be thorough in your work",
         "link": "",
         "color": "8977AD"
     },
@@ -278,5 +278,26 @@
         "title": "Hey",
         "link": "",
         "color": "FFD000"
+    },
+    {
+        "path": "am",
+        "description": "Drawn by Amon crack",
+        "title": "brilliant light",
+        "link": "",
+        "color": "CD7CEB"
+    },
+    {
+        "path": "terrible",
+        "description": "Drawn by Dia",
+        "title": "Terrible atrocities",
+        "link": "",
+        "color": "1C3129"
+    },
+    {
+        "path": "sus",
+        "description": "Drawn by Captain",
+        "title": "Magician And Detective",
+        "link": "",
+        "color": "55E2E9"
     }
 ]
