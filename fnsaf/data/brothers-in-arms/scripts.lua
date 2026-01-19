@@ -142,7 +142,7 @@ function onStepHit()
         if udodged then
             characterPlayAnim("boyfriend", "dodge", false)
             setProperty('boyfriend.specialAnim', true)
-            doTweenX("BFX", "boyfriend", 260, 0.3, "cubeOut")
+            doTweenX("BFX", "boyfriend", 200, 0.3, "cubeOut")
         end
         triggerEvent("Play Animation", "anime", "gf")
         setProperty("boyfriend.cameraPosition", {-100, 0})

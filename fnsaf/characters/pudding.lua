@@ -1,55 +1,48 @@
 local bfOffsets = {
-    idle   = {x = 0,   y = 0},
-    singLEFT  = {x = 148, y = 5},
-    singDOWN  = {x = -39,  y = -45},
-    singUP    = {x = 0, y = -3},
-    singRIGHT = {x = -55,  y = -33},
-    dodge     = {x = 71,   y = 56}
+    idle      = {x = 0,   y = 0},
+    dodge     = {x = 43,  y = 35},
+    singLEFT  = {x = 120, y = -9},
+    singDOWN  = {x = 0, y = -42},
+    singUP    = {x = 3,   y = 5},
+    singRIGHT = {x = -80, y = -23}
 }
 
 function goodNoteHit(id, direction, noteType, isSustainNote)
     if getProperty("boyfriend.flipX") then
-        if direction == 0 then -- LEFT
+        if direction == 0 then
             characterPlayAnim("boyfriend", "singRIGHT", true)
-        elseif direction == 3 then -- RIGHT
+        elseif direction == 3 then
             characterPlayAnim("boyfriend", "singLEFT", true)
-        end
-    else
-        if direction == 0 then -- LEFT
-            characterPlayAnim("boyfriend", "singLEFT", true)
-        elseif direction == 3 then -- RIGHT
-            characterPlayAnim("boyfriend", "singRIGHT", true)
         end
     end
 end
 
-function onUpdatePost(elapsed)
+local originalOffset = {x = 0, y = 0}
+local lastFlipX = false
+
+function onUpdatePost()
+    local flipX = getProperty("boyfriend.flipX")
     local anim = getProperty("boyfriend.animation.curAnim.name")
-    if anim == nil then return end
+    if not anim then return end
 
-    local fixedAnim = anim
-    if getProperty("boyfriend.flipX") then
-        if string.find(anim, "singLEFT") then
-            fixedAnim = anim:gsub("LEFT", "RIGHT")
-        elseif string.find(anim, "singRIGHT") then
-            fixedAnim = anim:gsub("RIGHT", "LEFT")
-        end
+    -- flipX 켜질 때 원래 offset 저장
+    if flipX and not lastFlipX then
+        originalOffset.x = getProperty("boyfriend.offset.x")
+        originalOffset.y = getProperty("boyfriend.offset.y")
     end
 
-    if bfOffsets[fixedAnim] ~= nil then
-        setProperty("boyfriend.offset.x", bfOffsets[fixedAnim].x)
-        setProperty("boyfriend.offset.y", bfOffsets[fixedAnim].y)
-    end
-
-    if bfOffsets[anim] ~= nil then
+    if flipX and bfOffsets[anim] then
         local ox = bfOffsets[anim].x
         local oy = bfOffsets[anim].y
 
-        if getProperty("boyfriend.flipX") then
-            ox = -ox
-        end
-
-        setProperty("boyfriend.offset.x", ox)
+        setProperty("boyfriend.offset.x", -ox)
         setProperty("boyfriend.offset.y", oy)
+
+    elseif not flipX and lastFlipX then
+        -- flipX 해제 → 정확히 원복
+        setProperty("boyfriend.offset.x", originalOffset.x)
+        setProperty("boyfriend.offset.y", originalOffset.y)
     end
+
+    lastFlipX = flipX
 end
