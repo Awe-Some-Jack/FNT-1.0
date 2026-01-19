@@ -106,6 +106,7 @@ class TitleState extends MusicBeatState
 		#end
 	}
 
+	var airShip:FlxSprite;
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
@@ -122,10 +123,28 @@ class TitleState extends MusicBeatState
 		#if TITLE_SCREEN_EASTER_EGG easterEggData(); #end
 		Conductor.bpm = musicBPM;
 
+		airShip = new FlxSprite(500, 230);
+		airShip.frames = Paths.getSparrowAtlas('airship');
+		airShip.antialiasing = ClientPrefs.data.antialiasing;
+		airShip.setGraphicSize(Std.int(airShip.width * 0.35));
+		airShip.animation.addByPrefix('anim', 'airship', 24, true);
+		airShip.animation.addByPrefix('anim2', 'letsgo', 24, false);
+		airShip.animation.addByPrefix('anim3', 'boost look', 24, true);
+		airShip.animation.play('anim');
+		airShip.updateHitbox();
+
+		airShip.animation.finishCallback = function(name:String):Void {
+            if (name == "anim2") {
+                airShip.animation.play("anim3");
+				airShip.offset.set(841, 345);
+            }
+        }
+
+
 		logoBl = new FlxSprite(logoPosition.x, logoPosition.y);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.data.antialiasing;
-
+		logoBl.setGraphicSize(Std.int(logoBl.width * 0.8));
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
@@ -193,6 +212,7 @@ class TitleState extends MusicBeatState
 		ngSpr.antialiasing = ClientPrefs.data.antialiasing;
 
 		add(gfDance);
+		add(airShip);
 		add(logoBl); //FNF Logo
 		add(titleText); //"Press Enter to Begin" text
 		add(credGroup);
@@ -373,6 +393,10 @@ class TitleState extends MusicBeatState
 				titleText.alpha = 1;
 				
 				if(titleText != null) titleText.animation.play('press');
+
+				airShip.animation.play('anim2');
+				airShip.offset.set(841, 365);
+				FlxTween.tween(airShip, {x: 1800}, 1.4, {ease: FlxEase.cubeInOut});
 
 				FlxG.camera.flash(ClientPrefs.data.flashing ? FlxColor.WHITE : 0x4CFFFFFF, 1);
 				FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);

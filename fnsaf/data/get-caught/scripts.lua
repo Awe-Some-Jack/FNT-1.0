@@ -1,7 +1,7 @@
 local dir = "bg/electrical/"
 
 function onCreate()
-    setProperty("gf.alpha", 0)
+    setProperty("gf.x", 2000)
     setProperty("gf.color", getColorFromHex("000000"))
     setProperty('skipCountdown',true)
 
@@ -12,10 +12,12 @@ function onCreate()
     setProperty("Door.alpha", 0)
     addLuaSprite("Door", false)
 
-    makeAnimatedLuaSprite('memo',getBG("throw"), 1900, 300)
+    makeLuaSprite('memo', nil, 1900, 0)
     scaleObject("memo", 0.25, 0.25)
-	addAnimationByPrefix('memo','anim','throw' ,24 ,true)
-    addLuaSprite("memo", false)
+	loadMultipleFrames('memo', {'bg/electrical/throw', 'bg/electrical/FIRED_MEMOJI'})
+	addAnimationByPrefix('memo', 'anim', 'throw', 24, true)
+	addAnimationByPrefix('memo', 'anim2', 'FIRE', 24, true)
+	addLuaSprite('memo', false)
 
     makeAnimatedLuaSprite('Whatareyou',getBG("Get Caught WTF Run"), 1100, 450)
     scaleObject("Whatareyou", 1.2, 1.2)
@@ -106,14 +108,15 @@ function onStepHit()
     end
 
     if curStep == 1308 then
-        doTweenX("MomoComing", "memo", 500, 0.3)
+        doTweenX("MomoComing", "memo", 200, 0.3)
     end
+
     if curStep == 1315 then
         triggerEvent("Camera Follow Pos", "", "")
     end
 
     if curStep == 1340 then
-        setProperty("gf.alpha", 1)
+        doTweenX("Whoisthat", "gf", defaultGirlfriendX - 150, 0.5, "cubeOut")
         doTweenAlpha("iconHI", "P3", 1, 1)
     end
 
@@ -147,6 +150,13 @@ end
 
 function onTweenCompleted(tag)
     if tag == "MomoComing" then
+        playAnim("memo", "anim2", true)
+        doTweenX("memoisgone", "memo", 800, 0.35)
+        doTweenY("memoisgoneY", "memo", 280, 0.35)
+        doTweenAngle("memoisgoneangle", "memo", 100, 0.35)
+    end
+
+    if tag == "memoisgone" then
         removeLuaSprite("memo", true)
     end
 end
