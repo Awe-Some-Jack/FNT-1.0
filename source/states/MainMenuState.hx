@@ -20,6 +20,8 @@ class MainMenuState extends MusicBeatState
 	public static var mainMusic = true;
 	var allowMouse:Bool = false; //Turn this off to block mouse movement in menus
 
+	var imgIndex:Int = FlxG.random.int(0, 7);
+	var portrait:FlxSprite;
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var leftItem:FlxSprite;
 	var rightItem:FlxSprite;
@@ -77,6 +79,35 @@ class MainMenuState extends MusicBeatState
 		fg.setGraphicSize(Std.int(fg.width * 0.51));
 		fg.updateHitbox();
 		add(fg);
+
+		portrait = new FlxSprite(-1000, 160).loadGraphic(Paths.image('mainMenu/image' + imgIndex));
+		portrait.setGraphicSize(Std.int(portrait.width * 0.55));
+		portrait.updateHitbox();
+		portrait.antialiasing = ClientPrefs.data.antialiasing;
+		portrait.scrollFactor.set();
+		add(portrait);
+
+		switch (imgIndex)
+        {
+            case 0:
+                portrait.setPosition(-1000, 50);
+            case 1:
+                portrait.setPosition(-1000, 165);
+            case 2:
+                portrait.setPosition(-1000, 237);
+            case 3:
+                portrait.setPosition(-1000, 197);
+            case 4:
+                portrait.setPosition(-1000, 190);
+            case 5:
+                portrait.setPosition(-1000, 190);
+            case 6:
+                portrait.setPosition(-1000, 50);
+            case 7:
+                portrait.setPosition(-1000, 50);
+        }
+
+		FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});
 
 		var logo:FlxSprite = new FlxSprite(0,0);
 		logo.frames = Paths.getSparrowAtlas('logoBumpin');
