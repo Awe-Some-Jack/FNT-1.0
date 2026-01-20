@@ -26,3 +26,37 @@ function onSongStart()
     setProperty("camGame.alpha", 1)
     setProperty("camHUD.alpha", 1)
 end
+
+function onCustomSubstateCreate(name)
+    if name == "Forevnet" then
+        playSound("Flash3")
+        cameraShake("game", 0.03, 0.6)
+        cameraFade("other", "ffffff", 0.35, false)
+        runTimer("Fadeout", 1)
+        runTimer("letsgo", 3)
+    end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "Fadeout" then
+        setProperty("camGame.visible", false)
+        setProperty("camHUD.visible", false)
+        cameraFade("other", "ffffff", 0.7, false, true)
+    end
+
+    if tag == "letsgo" then
+        exitSong()
+    end
+end
+
+function onGameOverStart()
+    setPropertyFromClass('substates.GameOverSubstate', 'instance.boyfriend.visible', false)
+end
+
+function onEndSong()
+    if isStoryMode then
+        callMethodFromClass('backend.Highscore', 'saveScore', {'glitch-friend', score, difficulty, rating})
+        openCustomSubstate("Forevnet", true)
+    end
+    return Function_Stop
+end
