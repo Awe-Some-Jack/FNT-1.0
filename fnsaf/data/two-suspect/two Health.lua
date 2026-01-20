@@ -28,7 +28,7 @@ function onCreatePost()
     addToGroup('uiGroup', "LeftP1")
     setObjectCamera("LeftP1", "hud")
 
-    createInstance('LeftP2', 'objects.HealthIcon', {'agf'})
+    createInstance('LeftP2', 'objects.HealthIcon', {'agf-happy'})
     addToGroup('uiGroup', "LeftP2")
     setProperty("LeftP2.alpha", 0)
     setObjectOrder("LeftP2", getObjectOrder("p1BarLeft") + 1, "uiGroup")

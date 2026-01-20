@@ -4,3 +4,4 @@ value 1:
 sp exe = 1
 wally exe = 2
 agf exe = 3
+Triple Duet = 4

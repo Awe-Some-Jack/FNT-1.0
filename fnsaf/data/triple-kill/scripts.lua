@@ -51,7 +51,6 @@ function onSectionHit()
         doTweenY("HI2", "wallyexe-final", -710, 1, "cubeOut")
     end
 
-
     if curSection == 317 then
         doTweenY("HI3", "agfexe-final", -600, 1, "cubeOut")
     end
@@ -65,6 +64,8 @@ function onEvent(event, value1, value2, strumTime)
             singtype = 2
         elseif value1 == "3" then
             singtype = 3
+        elseif value1 == "4" then
+            singtype = 4
         end
     end
 end
@@ -80,6 +81,15 @@ function opponentNoteHit(index, noteData, noteType, isSustain)
             playAnim("wallyexe-final", getProperty("singAnimations["..noteData.."]"), true)
             setProperty("wallyexe-final.holdTimer", 0)
         elseif singtype == 3 then
+            playAnim("agfexe-final", getProperty("singAnimations["..noteData.."]"), true)
+            setProperty("agfexe-final.holdTimer", 0)
+        elseif singtype == 4 then
+            playAnim("spexe-final", getProperty("singAnimations["..noteData.."]"), true)
+            setProperty("spexe-final.holdTimer", 0)
+
+            playAnim("wallyexe-final", getProperty("singAnimations["..noteData.."]"), true)
+            setProperty("wallyexe-final.holdTimer", 0)
+            
             playAnim("agfexe-final", getProperty("singAnimations["..noteData.."]"), true)
             setProperty("agfexe-final.holdTimer", 0)
         end

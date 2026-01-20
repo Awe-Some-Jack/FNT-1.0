@@ -1,7 +1,7 @@
 local Sencond = true
 
 function onCreate()
-    callMethod('iconP2.changeIcon', {'agf'})
+    callMethod('iconP2.changeIcon', {'agf-happy'})
     setHealthBarColors("d7a33c", "")
 end
 
