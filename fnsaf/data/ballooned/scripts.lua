@@ -28,6 +28,8 @@ function onEndSong()
     if isStoryMode then
         callMethodFromClass('backend.Highscore', 'saveScore', {'ballooned', score, difficulty, rating})
         openCustomSubstate("Forevnet", true)
+    else
+        return Function_Continue
     end
     return Function_Stop
 end

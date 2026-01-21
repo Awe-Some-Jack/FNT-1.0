@@ -57,6 +57,8 @@ function onEndSong()
     if isStoryMode then
         callMethodFromClass('backend.Highscore', 'saveScore', {'glitch-friend', score, difficulty, rating})
         openCustomSubstate("Forevnet", true)
+    else
+        return Function_Continue
     end
     return Function_Stop
 end

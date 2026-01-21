@@ -4,30 +4,30 @@ local shadowColorGF = {1, 1, 1}
 local shadowColorDAD = {1, 1, 1}
 
 -- Adjustcolor values(Lighting)
-local hueBF = -10
-local saturationBF = -10
-local contrastBF = -10
-local brightnessBF = -10
+local hueBF = 10
+local saturationBF = 25
+local contrastBF = -35
+local brightnessBF = -100
 
 local hueGF = -46
 local saturationGF = -20
 local contrastGF = -25
 local brightnessGF = -46
 
-local hueDAD = -10
-local saturationDAD = -10
-local contrastDAD = -10
-local brightnessDAD = -10
+local hueDAD = 10
+local saturationDAD = 25
+local contrastDAD = -35
+local brightnessDAD = -100
 
 -- Shadow intensity 
-local distanceBF = 10
+local distanceBF = 30
 local distanceGF = 10
-local distanceDAD = 10
+local distanceDAD = 15
 
 -- Shadow angles (Position of the shadow)
-local shadowAngleBF = 85
+local shadowAngleBF = 100
 local shadowAngleGF = 75
-local shadowAngleDAD = 85
+local shadowAngleDAD = 70
 
 -- Abot System Characters(You need the Hx scripts in the characters folder)
 local gfAdjustFirstList = {'nene', 'nene-christmas'}
