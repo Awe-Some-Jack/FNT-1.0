@@ -13,5 +13,4 @@ function onEndSong()
         allowEnd2 = true
         return Function_Stop;
     end
-    return Function_Continue;
 end

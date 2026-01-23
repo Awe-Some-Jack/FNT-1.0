@@ -3,17 +3,17 @@ local singtype = 1
 function onCreate()
     setProperty('skipCountdown', true)
 
-    createInstance("agfexe-final", "objects.Character", { -175, 1600, "agf-exe-final", false })
+    createInstance("agfexe-final", "objects.Character", {-175, 1600, "agf-exe-final", false})
     setObjectOrder("agfexe-final", getObjectOrder("gfGroup") + 2)
     setProperty("agfexe-final.visible", false)
     addInstance("agfexe-final")
 
-    createInstance("wallyexe-final", "objects.Character", { 450, 1300, "wallyexe-final", false })
+    createInstance("wallyexe-final", "objects.Character", {450, 1300, "wallyexe-final", false})
     setObjectOrder("wallyexe-final", getObjectOrder("dadGroup") + 2)
     setProperty("wallyexe-final.visible", false)
     addInstance("wallyexe-final")
 
-    createInstance("spexe-final", "objects.Character", { -750, 1500, "puppy-evil", false })
+    createInstance("spexe-final", "objects.Character", {-750, 1500, "puppy-evil", false})
     setObjectOrder("spexe-final", getObjectOrder("dadGroup") + 1)
     setProperty("spexe-final.visible", false)
     addInstance("spexe-final")
@@ -88,22 +88,22 @@ end
 function opponentNoteHit(index, noteData, noteType, isSustain)
     if noteType == "Triple kill final for 3 play Note" then
         if singtype == 1 then
-            playAnim("spexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("spexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("spexe-final.holdTimer", 0)
         elseif singtype == 2 then
-            playAnim("wallyexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("wallyexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("wallyexe-final.holdTimer", 0)
         elseif singtype == 3 then
-            playAnim("agfexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("agfexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("agfexe-final.holdTimer", 0)
         elseif singtype == 4 then
-            playAnim("spexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("spexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("spexe-final.holdTimer", 0)
 
-            playAnim("wallyexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("wallyexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("wallyexe-final.holdTimer", 0)
 
-            playAnim("agfexe-final", getProperty("singAnimations[" .. noteData .. "]"), true)
+            playAnim("agfexe-final", getProperty("singAnimations[".. noteData .."]"), true)
             setProperty("agfexe-final.holdTimer", 0)
         end
     end
