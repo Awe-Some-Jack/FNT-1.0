@@ -187,8 +187,8 @@ function stageLoader(stageName, tags)
 end
 
 function onUpdate(elapsed)
-    setProperty("top3_alt2.x", getProperty("spexe-final.x") - 220)
-    setProperty("top3_alt2.y", getProperty("spexe-final.y") + 160)
+    setProperty("top3_alt2.x", getProperty("spexe-final.x") - 150)
+    setProperty("top3_alt2.y", getProperty("spexe-final.y") + 370)
 
     setProperty("top3_alt.x", getProperty("wallyexe-final.x") + 70)
     setProperty("top3_alt.y", getProperty("wallyexe-final.y") + 440)

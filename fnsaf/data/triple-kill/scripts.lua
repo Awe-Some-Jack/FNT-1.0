@@ -13,7 +13,7 @@ function onCreate()
     setProperty("wallyexe-final.visible", false)
     addInstance("wallyexe-final")
 
-    createInstance("spexe-final", "objects.Character", {-750, 1500, "puppy-evil", false})
+    createInstance("spexe-final", "objects.Character", {-790, 1500, "puppy-evil-final", false})
     setObjectOrder("spexe-final", getObjectOrder("dadGroup") + 1)
     setProperty("spexe-final.visible", false)
     addInstance("spexe-final")
@@ -52,7 +52,7 @@ function onSectionHit()
     end
 
     if curSection == 301 then
-        doTweenY("HI", "spexe-final", -450, 1, "cubeOut")
+        doTweenY("HI", "spexe-final", -645, 1, "cubeOut")
     end
 
     if curSection == 309 then
