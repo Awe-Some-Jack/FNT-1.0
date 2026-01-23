@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="here is mexican.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="yuayaya 인스턴스 10000" x="0" y="0" width="299" height="312" frameX="0" frameY="-24" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10001" x="0" y="0" width="299" height="312" frameX="0" frameY="-24" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10002" x="299" y="0" width="305" height="320" frameX="0" frameY="-16" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10003" x="299" y="0" width="305" height="320" frameX="0" frameY="-16" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10004" x="604" y="0" width="308" height="327" frameX="0" frameY="-9" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10005" x="604" y="0" width="308" height="327" frameX="0" frameY="-9" frameWidth="311" frameHeight="336"/>
+	<SubTexture name="yuayaya 인스턴스 10006" x="0" y="327" width="311" height="336"/>
+	<SubTexture name="yuayaya 인스턴스 10007" x="0" y="327" width="311" height="336"/>
+</TextureAtlas>

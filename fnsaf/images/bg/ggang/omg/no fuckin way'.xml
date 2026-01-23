@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="no fuckin way'.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="754 인스턴스 10000" x="0" y="0" width="475" height="570" frameX="0" frameY="-17" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10001" x="0" y="0" width="475" height="570" frameX="0" frameY="-17" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10002" x="475" y="0" width="462" height="580" frameX="-8" frameY="-7" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10003" x="475" y="0" width="462" height="580" frameX="-8" frameY="-7" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10004" x="937" y="0" width="443" height="587" frameX="-19" frameY="0" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10005" x="937" y="0" width="443" height="587" frameX="-19" frameY="0" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10006" x="1380" y="0" width="416" height="587" frameX="-36" frameY="0" frameWidth="475" frameHeight="587"/>
+	<SubTexture name="754 인스턴스 10007" x="1380" y="0" width="416" height="587" frameX="-36" frameY="0" frameWidth="475" frameHeight="587"/>
+</TextureAtlas>

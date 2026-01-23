@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ALLI.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="allian0000" x="0" y="0" width="245" height="291" frameX="0" frameY="-28" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0001" x="0" y="0" width="245" height="291" frameX="0" frameY="-28" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0002" x="245" y="0" width="238" height="304" frameX="-9" frameY="-15" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0003" x="245" y="0" width="238" height="304" frameX="-9" frameY="-15" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0004" x="483" y="0" width="216" height="305" frameX="-13" frameY="-14" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0005" x="483" y="0" width="216" height="305" frameX="-13" frameY="-14" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0006" x="699" y="0" width="224" height="319" frameX="-14" frameY="0" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0007" x="699" y="0" width="224" height="319" frameX="-14" frameY="0" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0008" x="699" y="0" width="224" height="319" frameX="-14" frameY="0" frameWidth="247" frameHeight="319"/>
+	<SubTexture name="allian0009" x="699" y="0" width="224" height="319" frameX="-14" frameY="0" frameWidth="247" frameHeight="319"/>
+</TextureAtlas>

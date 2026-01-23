@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="hell yeah.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="9090 인스턴스 10000" x="0" y="0" width="153" height="240" frameX="0" frameY="0" frameWidth="153" frameHeight="243"/>
+	<SubTexture name="9090 인스턴스 10001" x="0" y="0" width="153" height="240" frameX="0" frameY="0" frameWidth="153" frameHeight="243"/>
+	<SubTexture name="9090 인스턴스 10002" x="153" y="0" width="126" height="233" frameX="-13" frameY="-10" frameWidth="153" frameHeight="243"/>
+	<SubTexture name="9090 인스턴스 10003" x="153" y="0" width="126" height="233" frameX="-13" frameY="-10" frameWidth="153" frameHeight="243"/>
+</TextureAtlas>

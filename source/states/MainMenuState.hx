@@ -20,7 +20,7 @@ class MainMenuState extends MusicBeatState
 	public static var mainMusic = true;
 	var allowMouse:Bool = false; //Turn this off to block mouse movement in menus
 
-	var imgIndex:Int = FlxG.random.int(0, 7);
+	var imgIndex:Int = FlxG.random.int(0, 9);
 	var portrait:FlxSprite;
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var leftItem:FlxSprite;
@@ -105,6 +105,10 @@ class MainMenuState extends MusicBeatState
                 portrait.setPosition(-1000, 50);
             case 7:
                 portrait.setPosition(-1000, 50);
+			case 8:
+                portrait.setPosition(-1000, 163);
+			case 9:
+                portrait.setPosition(-1000, 165);
         }
 
 		FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});

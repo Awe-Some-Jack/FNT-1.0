@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="URPKE.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ourple0000" x="0" y="0" width="389" height="497"/>
+	<SubTexture name="ourple0001" x="0" y="0" width="389" height="497"/>
+	<SubTexture name="ourple0002" x="389" y="0" width="367" height="497" frameX="-11" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0003" x="389" y="0" width="367" height="497" frameX="-11" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0004" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0005" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0006" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0007" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0008" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+	<SubTexture name="ourple0009" x="0" y="497" width="356" height="497" frameX="-16" frameY="0" frameWidth="389" frameHeight="497"/>
+</TextureAtlas>

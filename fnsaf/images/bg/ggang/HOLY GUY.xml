@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="HOLY GUY.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="windowman0000" x="0" y="0" width="145" height="239" frameX="-3" frameY="-12" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0001" x="0" y="0" width="145" height="239" frameX="-3" frameY="-12" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0002" x="145" y="0" width="138" height="243" frameX="-7" frameY="-8" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0003" x="145" y="0" width="138" height="243" frameX="-7" frameY="-8" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0004" x="283" y="0" width="138" height="247" frameX="-3" frameY="-4" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0005" x="283" y="0" width="138" height="247" frameX="-3" frameY="-4" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0006" x="0" y="247" width="140" height="251" frameX="0" frameY="0" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0007" x="0" y="247" width="140" height="251" frameX="0" frameY="0" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0008" x="0" y="247" width="140" height="251" frameX="0" frameY="0" frameWidth="148" frameHeight="251"/>
+	<SubTexture name="windowman0009" x="0" y="247" width="140" height="251" frameX="0" frameY="0" frameWidth="148" frameHeight="251"/>
+</TextureAtlas>

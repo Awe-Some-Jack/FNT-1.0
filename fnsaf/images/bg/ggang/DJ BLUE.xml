@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DJ BLUE.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blued0000" x="0" y="0" width="664" height="430"/>
+	<SubTexture name="blued0001" x="0" y="0" width="664" height="430"/>
+	<SubTexture name="blued0002" x="664" y="0" width="652" height="430" frameX="-6" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0003" x="664" y="0" width="652" height="430" frameX="-6" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0004" x="1316" y="0" width="640" height="430" frameX="-12" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0005" x="1316" y="0" width="640" height="430" frameX="-12" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0006" x="0" y="430" width="635" height="430" frameX="-14" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0007" x="0" y="430" width="635" height="430" frameX="-14" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0008" x="0" y="430" width="635" height="430" frameX="-14" frameY="0" frameWidth="664" frameHeight="430"/>
+	<SubTexture name="blued0009" x="0" y="430" width="635" height="430" frameX="-14" frameY="0" frameWidth="664" frameHeight="430"/>
+</TextureAtlas>

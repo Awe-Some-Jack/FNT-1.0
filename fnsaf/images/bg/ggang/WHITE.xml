@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="WHITE.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="shiudodos0000" x="0" y="0" width="192" height="248" frameX="-3" frameY="-9" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0001" x="0" y="0" width="192" height="248" frameX="-3" frameY="-9" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0002" x="192" y="0" width="202" height="257"/>
+	<SubTexture name="shiudodos0003" x="192" y="0" width="202" height="257"/>
+	<SubTexture name="shiudodos0004" x="394" y="0" width="189" height="256" frameX="-11" frameY="-1" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0005" x="394" y="0" width="189" height="256" frameX="-11" frameY="-1" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0006" x="583" y="0" width="173" height="254" frameX="-27" frameY="-3" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0007" x="583" y="0" width="173" height="254" frameX="-27" frameY="-3" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0008" x="583" y="0" width="173" height="254" frameX="-27" frameY="-3" frameWidth="202" frameHeight="257"/>
+	<SubTexture name="shiudodos0009" x="583" y="0" width="173" height="254" frameX="-27" frameY="-3" frameWidth="202" frameHeight="257"/>
+</TextureAtlas>

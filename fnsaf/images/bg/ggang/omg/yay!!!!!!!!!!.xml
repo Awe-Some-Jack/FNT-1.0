@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="yay!!!!!!!!!!.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="876y785 인스턴스 10000" x="0" y="0" width="421" height="476" frameX="-71" frameY="-70" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10001" x="0" y="0" width="421" height="476" frameX="-71" frameY="-70" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10002" x="421" y="0" width="435" height="546" frameX="0" frameY="0" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10003" x="421" y="0" width="435" height="546" frameX="0" frameY="0" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10004" x="856" y="0" width="417" height="518" frameX="-71" frameY="-28" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10005" x="856" y="0" width="417" height="518" frameX="-71" frameY="-28" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10006" x="1273" y="0" width="577" height="508" frameX="-71" frameY="-38" frameWidth="648" frameHeight="546"/>
+	<SubTexture name="876y785 인스턴스 10007" x="1273" y="0" width="577" height="508" frameX="-71" frameY="-38" frameWidth="648" frameHeight="546"/>
+</TextureAtlas>

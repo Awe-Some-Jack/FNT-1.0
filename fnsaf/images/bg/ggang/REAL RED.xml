@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="REAL RED.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="red wisky0000" x="0" y="0" width="208" height="248" frameX="-1" frameY="-9" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0001" x="0" y="0" width="208" height="248" frameX="-1" frameY="-9" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0002" x="208" y="0" width="213" height="254" frameX="0" frameY="-3" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0003" x="208" y="0" width="213" height="254" frameX="0" frameY="-3" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0004" x="421" y="0" width="178" height="250" frameX="-27" frameY="-7" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0005" x="421" y="0" width="178" height="250" frameX="-27" frameY="-7" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0006" x="599" y="0" width="181" height="266" frameX="-24" frameY="0" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0007" x="599" y="0" width="181" height="266" frameX="-24" frameY="0" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0008" x="599" y="0" width="181" height="266" frameX="-24" frameY="0" frameWidth="213" frameHeight="266"/>
+	<SubTexture name="red wisky0009" x="599" y="0" width="181" height="266" frameX="-24" frameY="0" frameWidth="213" frameHeight="266"/>
+</TextureAtlas>

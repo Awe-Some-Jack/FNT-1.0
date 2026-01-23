@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BEAR AND GRIME.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="white beer0000" x="0" y="0" width="357" height="292" frameX="-10" frameY="-3" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0001" x="0" y="0" width="357" height="292" frameX="-10" frameY="-3" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0002" x="357" y="0" width="330" height="295" frameX="-33" frameY="0" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0003" x="357" y="0" width="330" height="295" frameX="-33" frameY="0" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0004" x="0" y="295" width="359" height="294" frameX="-3" frameY="-1" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0005" x="0" y="295" width="359" height="294" frameX="-3" frameY="-1" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0006" x="359" y="295" width="330" height="293" frameX="-30" frameY="-2" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0007" x="359" y="295" width="330" height="293" frameX="-30" frameY="-2" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0008" x="0" y="589" width="360" height="293" frameX="0" frameY="-2" frameWidth="367" frameHeight="295"/>
+	<SubTexture name="white beer0009" x="0" y="589" width="360" height="293" frameX="0" frameY="-2" frameWidth="367" frameHeight="295"/>
+</TextureAtlas>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="give him more beer.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="77867 인스턴스 10000" x="0" y="0" width="255" height="271" frameX="-2" frameY="-40" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10001" x="0" y="0" width="255" height="271" frameX="-2" frameY="-40" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10002" x="255" y="0" width="255" height="261" frameX="-2" frameY="-49" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10003" x="255" y="0" width="255" height="261" frameX="-2" frameY="-49" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10004" x="510" y="0" width="276" height="309" frameX="0" frameY="0" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10005" x="510" y="0" width="276" height="309" frameX="0" frameY="0" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10006" x="0" y="309" width="267" height="292" frameX="-9" frameY="-16" frameWidth="276" frameHeight="311"/>
+	<SubTexture name="77867 인스턴스 10007" x="0" y="309" width="267" height="292" frameX="-9" frameY="-16" frameWidth="276" frameHeight="311"/>
+</TextureAtlas>

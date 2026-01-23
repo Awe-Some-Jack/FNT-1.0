@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="PARTYGREYD.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dark grey0000" x="0" y="0" width="475" height="477"/>
+	<SubTexture name="dark grey0001" x="0" y="0" width="475" height="477"/>
+	<SubTexture name="dark grey0002" x="475" y="0" width="466" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0003" x="475" y="0" width="466" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0004" x="0" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0005" x="0" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0006" x="459" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0007" x="459" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0008" x="459" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+	<SubTexture name="dark grey0009" x="459" y="477" width="459" height="477" frameX="0" frameY="0" frameWidth="475" frameHeight="477"/>
+</TextureAtlas>

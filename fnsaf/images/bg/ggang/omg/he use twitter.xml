@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="he use twitter.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="098 인스턴스 10000" x="0" y="0" width="589" height="585"/>
+	<SubTexture name="098 인스턴스 10001" x="0" y="0" width="589" height="585"/>
+	<SubTexture name="098 인스턴스 10002" x="589" y="0" width="575" height="585" frameX="-7" frameY="0" frameWidth="589" frameHeight="585"/>
+	<SubTexture name="098 인스턴스 10003" x="589" y="0" width="575" height="585" frameX="-7" frameY="0" frameWidth="589" frameHeight="585"/>
+	<SubTexture name="098 인스턴스 10004" x="1164" y="0" width="557" height="585" frameX="-16" frameY="0" frameWidth="589" frameHeight="585"/>
+	<SubTexture name="098 인스턴스 10005" x="1164" y="0" width="557" height="585" frameX="-16" frameY="0" frameWidth="589" frameHeight="585"/>
+	<SubTexture name="098 인스턴스 10006" x="0" y="585" width="549" height="585" frameX="-20" frameY="0" frameWidth="589" frameHeight="585"/>
+	<SubTexture name="098 인스턴스 10007" x="0" y="585" width="549" height="585" frameX="-20" frameY="0" frameWidth="589" frameHeight="585"/>
+</TextureAtlas>

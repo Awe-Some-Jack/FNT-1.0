@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="jump.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="red yay 인스턴스 10000" x="0" y="0" width="194" height="282" frameX="-5" frameY="0" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10001" x="0" y="0" width="194" height="282" frameX="-5" frameY="0" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10002" x="194" y="0" width="199" height="298" frameX="0" frameY="-32" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10003" x="194" y="0" width="199" height="298" frameX="0" frameY="-32" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10004" x="393" y="0" width="206" height="255" frameX="-12" frameY="-99" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10005" x="393" y="0" width="206" height="255" frameX="-12" frameY="-99" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10006" x="599" y="0" width="192" height="268" frameX="-9" frameY="-87" frameWidth="218" frameHeight="355"/>
+	<SubTexture name="red yay 인스턴스 10007" x="599" y="0" width="192" height="268" frameX="-9" frameY="-87" frameWidth="218" frameHeight="355"/>
+</TextureAtlas>
