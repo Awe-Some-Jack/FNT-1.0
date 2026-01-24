@@ -584,7 +584,7 @@
 		[
 			106849.315068493,
 			[
-				["Change Character", "Dad", "blist"],
+				["Change Character", "Dad", "blist-black"],
 				["Flash Camera 2", "3", ""],
 				["Tween Cam Zoom", "0.3", "5"],
 				["CenterCameraEvent", "on", "300,50"],
@@ -1097,7 +1097,7 @@
 		[
 			251506.849315069,
 			[
-				["Change Character", "Dad", "blist"],
+				["Change Character", "Dad", "blist-black"],
 				["Flash Camera 2", "5", ""],
 				["Tween Cam Zoom", "0.3", "10"],
 				["CenterCameraEvent", "on", "300,50"],
@@ -1706,7 +1706,7 @@
 		[
 			419772.239643505,
 			[
-				["Change Character", "Dad", "blist"],
+				["Change Character", "Dad", "blist-black"],
 				["Flash Camera", "1", ""],
 				["CenterCameraEvent", "on", "300,-500"],
 				["Tween Cam Zoom", "0.35", ""],

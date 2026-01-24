@@ -36,7 +36,7 @@ characterArray = {'bf',
 				'puppy-evil',
                 'wally-exe',
 				'agf-exe',
-                'blist'}
+                'blist-black'}
 currentStage = ""
 
 function onCreatePost()
@@ -128,7 +128,7 @@ function stageLoader(stageName, tags)
 
         setCameraScroll(500, 500)
 
-        moveTheCharacter(150, 0, 160, -1500)
+        moveTheCharacter(150, 0, 250, -1500)
 
         replaceStageParts('darkbg3', imageArray[23], -2100, -1900, 1, 1, 1, 1, false)
         replaceStageParts('finalstar', imageArray[33], -1100, -1900, 1, 1, 1, 1, false)
@@ -155,7 +155,7 @@ function stageLoader(stageName, tags)
 
         setCameraScroll(500, 500)
 
-        moveTheCharacter(150, 0, 160, -1000)
+        moveTheCharacter(150, 0, 250, -960)
 
         replaceStageParts('darkbg', imageArray[20], -2100, -1900, 1, 1, 1, 1, false)
         replaceStageParts('top2', imageArray[21], 0, -350, 1, 1, 1, 1, false)
@@ -176,7 +176,7 @@ function stageLoader(stageName, tags)
 
         setCameraScroll(500, 500)
 
-        moveTheCharacter(150, 0, 160, -1000)
+        moveTheCharacter(150, 0, 250, -960)
 
         replaceStageParts('top', imageArray[11], 0, -350, 1, 1, 1, 1, false)
         replaceStageParts('topdown',imageArray[12], 60, 600, 1, 1, 1, 1, false)

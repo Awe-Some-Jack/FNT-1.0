@@ -33,6 +33,20 @@ function onBeatHit()
     end
 end
 
+local function rgbToHex(t)
+    return string.format('%02X%02X%02X', t[1], t[2], t[3])
+end
+
+function onUpdatePost(elapsed)
+    if dadName == "blist-black" then
+        setHealthBarColors("000000", "")
+        setProperty("iconP2.color", getColorFromHex("000000"))
+    else
+        setHealthBarColors(rgbToHex(getProperty('dad.healthColorArray')), "")
+        setProperty("iconP2.color", getColorFromHex("FFFFFF"))
+    end
+end
+
 function onSectionHit()
     if curSection == 269 then
         setProperty("agfexe-final.visible", true)
@@ -44,7 +58,6 @@ function onSectionHit()
 
         if shadersEnabled then
             setProperty("boyfriend.color", FlxColor("magenta"))
-            setProperty("dad.color", FlxColor("magenta"))
             setProperty("spexe-final.color", FlxColor("magenta"))
             setProperty("wallyexe-final.color", FlxColor("magenta"))
             setProperty("agfexe-final.color", FlxColor("magenta"))
