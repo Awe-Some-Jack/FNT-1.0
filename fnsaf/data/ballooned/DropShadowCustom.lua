@@ -123,13 +123,17 @@ end
 
 function onEvent(event, value1, value2, strumTime)
     if event == "badapplelol" then
-        if value1 == "a" then
-            removeSpriteShader("boyfriend")
-			removeSpriteShader("dad")
-		else
-			applyShaderIfVisible('boyfriend', hueBF, saturationBF, contrastBF, brightnessBF, shadowAngleBF, distanceBF, shadowColorBF)
-	        applyShaderIfVisible('dad', hueDAD, saturationDAD, contrastDAD, brightnessDAD, shadowAngleDAD, distanceDAD, shadowColorDAD)
-        end
+		if shadersEnabled then
+			if value1 == "a" then
+				removeSpriteShader("boyfriend")
+				removeSpriteShader("dad")
+			else
+				applyShaderIfVisible('boyfriend', hueBF, saturationBF, contrastBF, brightnessBF, shadowAngleBF,
+					distanceBF, shadowColorBF)
+				applyShaderIfVisible('dad', hueDAD, saturationDAD, contrastDAD, brightnessDAD, shadowAngleDAD,
+					distanceDAD, shadowColorDAD)
+			end
+		end
     end
 end
 

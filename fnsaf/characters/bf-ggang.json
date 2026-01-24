@@ -1,83 +1,83 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [67, -8],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [39, -48],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [-9, 36],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [-73, -10],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "right",
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [68, -8],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MISSleft",
 			"indices": []
 		},
 		{
-			"offsets": [68, -8],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFTmiss",
 			"loop": false,
-			"name": "MISSleft"
-		},
-		{
 			"offsets": [39, -48],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"loop": false,
-			"name": "MISSdown"
+			"fps": 24,
+			"name": "MISSdown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [-17, 39],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUPmiss",
-			"loop": false,
-			"name": "MISSup"
+			"fps": 24,
+			"name": "MISSup",
+			"indices": []
 		},
 		{
-			"offsets": [-74, -10],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHTmiss",
 			"loop": false,
-			"name": "MISSright"
+			"offsets": [-74, -10],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MISSright",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/BBBBBBBBBF_FULL",
 	"position": [-90, 190],
-	"healthicon": "face",
+	"healthicon": "bf-ggang",
 	"flip_x": true,
 	"healthbar_colors": [0, 200, 235],
 	"camera_position": [-60, 150],
