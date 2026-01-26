@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [680, 473],
+			"anim": "idle",
+			"fps": 12,
+			"name": "bf-nervous idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [679, 473],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "bf-nervous singRIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [682, 473],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "bf-nervous singDOWN0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [674, 475],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "bf-nervous singUP0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [678, 473],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "bf-nervous singLEFT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [682, 473],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "bf-nervous singDOWNmiss",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [674, 475],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "bf-nervous singUPmiss",
+			"indices": []
+		},
+		{
+			"offsets": [678, 473],
+			"indices": [],
+			"fps": 12,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "bf-nervous singLEFTmiss"
+		},
+		{
+			"offsets": [679, 473],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "bf-nervous singRIGHTmiss"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf-nervous",
+	"position": [-240, 350],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [63, 199, 250],
+	"camera_position": [240, -140],
+	"sing_duration": 4,
+	"scale": 0.6,
+	"_editor_isPlayer": true
+}
