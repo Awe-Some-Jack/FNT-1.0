@@ -22,7 +22,6 @@ function onSectionHit()
 end
 
 function onSongStart()
-    startVideo("glitcg_2", false, true)
     setProperty("camGame.alpha", 1)
     setProperty("camHUD.alpha", 1)
 end

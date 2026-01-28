@@ -7,9 +7,9 @@ P = 1; --which icon the extra icon will attach to, if P1 will be in bf side, if 
 iconWidth = 150; --width and height values for the icon
 iconHeight = 150;
 Xoffset = 70; --x and y offsets
-Yoffset = -30;
-Xscale = 1; --scaling for icons
-Yscale = 1;
+Yoffset = -20;
+Xscale = 0.8; --scaling for icons
+Yscale = 0.8;
 overIcon = true; -- if yes, icon will be in top of the player icon
 
 ---------------------------------------don't edit anything under this line unless you know what you're doing

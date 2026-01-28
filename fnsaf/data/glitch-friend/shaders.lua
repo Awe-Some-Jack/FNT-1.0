@@ -1,5 +1,6 @@
 function onCreatePost()
     if shadersEnabled then
+        initLuaShader("vignetteGlitch")
         makeLuaSprite("ShaderImage", nil)
         makeGraphic("ShaderImage", screenWidth, screenHeight)
         setSpriteShader("ShaderImage", "vignetteGlitch")

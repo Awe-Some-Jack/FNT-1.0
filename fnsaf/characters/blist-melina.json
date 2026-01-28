@@ -1,53 +1,53 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 12,
-			"name": "Idle",
-			"indices": []
+			"loop": false,
+			"name": "Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "Left",
-			"indices": []
+			"loop": false,
+			"name": "Left"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "Down",
-			"indices": []
+			"loop": false,
+			"name": "Down"
 		},
 		{
-			"loop": false,
 			"offsets": [2, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "Up",
-			"indices": []
+			"loop": false,
+			"name": "Up"
 		},
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"indices": [],
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "Right",
-			"indices": []
+			"loop": false,
+			"name": "Right"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Melina",
 	"position": [-500, 190],
-	"healthicon": "face",
+	"healthicon": "blist-melina",
 	"flip_x": false,
-	"healthbar_colors": [0, 195, 121],
+	"healthbar_colors": [0, 175, 61],
 	"camera_position": [50, 50],
 	"sing_duration": 4,
 	"scale": 1,

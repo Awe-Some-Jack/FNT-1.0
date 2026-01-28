@@ -1,34 +1,34 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [-22, 32],
-			"anim": "firstDeath",
-			"fps": 24,
-			"name": "cream sad0",
-			"indices": []
-		},
-		{
-			"loop": true,
-			"offsets": [-116, -105],
-			"anim": "deathLoop",
-			"fps": 24,
-			"name": "cream sad loop",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [-81, 154],
-			"anim": "deathConfirm",
 			"fps": 24,
-			"name": "cream alive",
-			"indices": []
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "cream sad0"
+		},
+		{
+			"offsets": [-116, -105],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "cream sad loop"
+		},
+		{
+			"offsets": [-81, 154],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "cream alive"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/cream_gameover",
-	"position": [-350, 200],
+	"position": [-310, 140],
 	"healthicon": "cream",
 	"flip_x": true,
 	"healthbar_colors": [255, 255, 255],
