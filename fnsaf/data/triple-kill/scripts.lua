@@ -3,6 +3,11 @@ local singtype = 1
 function onCreate()
     setProperty('skipCountdown', true)
 
+    addCharacterToList("bf-triplekill-center", "bf")
+    addCharacterToList("wally-exe", "dad")
+    addCharacterToList("agf-exe", "dad")
+    addCharacterToList("blist-black", "dad")
+
     createInstance("agfexe-final", "objects.Character", {-175, 1600, "agf-exe-final", false})
     setObjectOrder("agfexe-final", getObjectOrder("gfGroup") + 2)
     setProperty("agfexe-final.visible", false)
@@ -53,14 +58,17 @@ function onSectionHit()
         setProperty("wallyexe-final.visible", true)
         setProperty("spexe-final.visible", true)
 
-        removeSpriteShader("boyfriend")
-        removeSpriteShader("dad")
-
         if shadersEnabled then
             setProperty("boyfriend.color", FlxColor("magenta"))
             setProperty("spexe-final.color", FlxColor("magenta"))
             setProperty("wallyexe-final.color", FlxColor("magenta"))
             setProperty("agfexe-final.color", FlxColor("magenta"))
+
+            setShaderBool("dad", "useMask", false)
+            setShaderBool("boyfriend", "useMask", false)
+
+            removeSpriteShader("boyfriend")
+            removeSpriteShader("dad")
         end
     end
 

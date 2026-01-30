@@ -31,16 +31,10 @@ imageArray = {'bg/triple/reactor/wall',
             'bg/triple/Finale/top_alt',
             'bg/triple/Finale/top_alt_center',
             'bg/triple/Finale/final_star',}
-characterArray = {'bf',
-                'bf-triplekill-center',
-				'puppy-evil',
-                'wally-exe',
-				'agf-exe',
-                'blist-black'}
 currentStage = ""
 
 function onCreatePost()
-    thePrecacher(imageArray, characterArray)	
+    thePrecacher(imageArray)	
     stageLoader('crash-reactor')
    
 end
@@ -223,16 +217,10 @@ function replaceStageParts(key, file, posX, posY, scrollX, scrollY, scaleX, scal
 	end
 end
 
-function thePrecacher(images, characters) --loads all the sprites and characters so the game doesn't lag
+function thePrecacher(images) --loads all the sprites and characters so the game doesn't lag
 	for i = 1, #images do
 		precacheImage(images[i])
 		--debugPrint(images[i].. ' has been precached')
-	end
-	for i = 1, #characters do
-		addCharacterToList(characters[i])
-		--debugPrint(characters[i].. ' has been precached')
-		
-		
 	end
 end
 
