@@ -59,16 +59,16 @@ function onSectionHit()
         setProperty("spexe-final.visible", true)
 
         if shadersEnabled then
-            setProperty("boyfriend.color", FlxColor("magenta"))
-            setProperty("spexe-final.color", FlxColor("magenta"))
-            setProperty("wallyexe-final.color", FlxColor("magenta"))
-            setProperty("agfexe-final.color", FlxColor("magenta"))
+            removeSpriteShader("boyfriend")
+            removeSpriteShader("dad")
 
             setShaderBool("dad", "useMask", false)
             setShaderBool("boyfriend", "useMask", false)
 
-            removeSpriteShader("boyfriend")
-            removeSpriteShader("dad")
+            setProperty("boyfriend.color", FlxColor("magenta"))
+            setProperty("spexe-final.color", FlxColor("magenta"))
+            setProperty("wallyexe-final.color", FlxColor("magenta"))
+            setProperty("agfexe-final.color", FlxColor("magenta"))
         end
     end
 

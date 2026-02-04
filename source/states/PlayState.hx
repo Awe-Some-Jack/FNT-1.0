@@ -1057,7 +1057,7 @@ class PlayState extends MusicBeatState
 							note.copyAlpha = false;
 							note.alpha = note.multAlpha;
 							if(ClientPrefs.data.middleScroll && !note.mustPress)
-								note.alpha *= 0;
+								note.alpha *= 0.35;
 						}
 					});
 				}
