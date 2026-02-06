@@ -1693,7 +1693,8 @@
 				["Camera Twist", "0", "0"],
 				["Tween Cam Zoom", "1.1", ""],
 				["Camera Follow Pos", "", ""],
-				["Change Character", "Dad", "puppy2"]
+				["Change Character", "Dad", "puppy2"],
+				["Highlight Character", "1", ""]
 			]
 		],
 		[
@@ -1838,7 +1839,8 @@
 				["Cinematics", "0", ""],
 				["Camera Follow Pos", "700", "550"],
 				["Tween Cam Zoom", "0.6", ""],
-				["Play Animation", "singLEFTmiss", "BF"]
+				["Play Animation", "singLEFTmiss", "BF"],
+				["Highlight Character", "0", ""]
 			]
 		],
 		[
