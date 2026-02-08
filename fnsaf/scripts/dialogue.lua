@@ -127,7 +127,16 @@ function stringSplitAt(s, ...)
 end
 
 function startInit()
-    if checkFileExists('data/'..songPath..'/dialogue.txt') then
+    local dialoguePath = ''
+    local curLanguage = getPropertyFromClass('backend.ClientPrefs', 'data.language')
+    if checkFileExists('data/' .. songPath .. '/dialogue_' .. curLanguage .. '.txt') then
+        dialoguePath = callMethodFromClass('backend.Paths', 'txt', { songPath .. '/dialogue_' .. curLanguage })
+    else
+        dialoguePath = callMethodFromClass('backend.Paths', 'txt', { songPath .. '/dialogue' })
+    end
+    dialogueList = callMethodFromClass('backend.CoolUtil', 'coolTextFile', { dialoguePath })
+
+    if checkFileExists('data/' .. songPath .. '/dialogue.txt') then
         hasDialog = true
         dialogExists = true
         setProperty('camHUD.alpha', 0)
@@ -157,21 +166,40 @@ function initDialogue()
     curVoice = curVoice + 1
     doTweenAlpha('bgFadeIn', 'bgFade', 0.35, 0.8, 'circIn')
 
-    dialogue = stringSplit(stringTrim(string.gsub(getTextFromFile('data/'..songPath..'/dialogue.txt'), '\r', '')), '\n')
+    dialogue = stringSplit(stringTrim(string.gsub(getTextFromFile('data/' .. songPath .. '/dialogue.txt'), '\r', '')), '\n')
+    dialogueKO = stringSplit(stringTrim(string.gsub(getTextFromFile('data/'..songPath..'/dialogue_ko-KR.txt'), '\r', '')), '\n')
     local foundWhere = 0
     local foundWhere2 = 0
     local curLine = {}
-    for index, line in ipairs(dialogue) do
-        if index < #dialogue + 1 then
-            line = stringTrim(line)
-            line = string.sub(line, 2, line:len())
-            foundWhere = string.find(line, ':', 2)
-            foundWhere2 = string.find(line, ':', foundWhere + 1)
-            if string.sub(line, foundWhere2, foundWhere2) ~= ':' then foundWhere2 = false end
-            curLine = stringSplitAt(line, foundWhere, foundWhere2)
-            dialogue[index] = {char = curLine[1], feel = curLine[2], line = curLine[#curLine]}
-            if #curLine < 3 then
-                dialogue[index]['line'] = ''
+    local curLanguage = getPropertyFromClass('backend.ClientPrefs', 'data.language')
+    if checkFileExists('data/' .. songPath .. '/dialogue_' .. curLanguage .. '.txt') then
+        for index, line in ipairs(dialogueKO) do
+            if index < #dialogue + 1 then
+                line = stringTrim(line)
+                line = string.sub(line, 2, line:len())
+                foundWhere = string.find(line, ':', 2)
+                foundWhere2 = string.find(line, ':', foundWhere + 1)
+                if string.sub(line, foundWhere2, foundWhere2) ~= ':' then foundWhere2 = false end
+                curLine = stringSplitAt(line, foundWhere, foundWhere2)
+                dialogue[index] = { char = curLine[1], feel = curLine[2], line = curLine[#curLine] }
+                if #curLine < 3 then
+                    dialogue[index]['line'] = ''
+                end
+            end
+        end
+    else
+        for index, line in ipairs(dialogue) do
+            if index < #dialogue + 1 then
+                line = stringTrim(line)
+                line = string.sub(line, 2, line:len())
+                foundWhere = string.find(line, ':', 2)
+                foundWhere2 = string.find(line, ':', foundWhere + 1)
+                if string.sub(line, foundWhere2, foundWhere2) ~= ':' then foundWhere2 = false end
+                curLine = stringSplitAt(line, foundWhere, foundWhere2)
+                dialogue[index] = { char = curLine[1], feel = curLine[2], line = curLine[#curLine] }
+                if #curLine < 3 then
+                    dialogue[index]['line'] = ''
+                end
             end
         end
     end
@@ -246,7 +274,11 @@ function initDialogue()
 
     makeLuaText('OldDText', '', screenWidth * 0.54, 350, 650.05)
     setTextAlignment('OldDText', 'left')
-    setTextFont('OldDText', 'liber.ttf')
+    if checkFileExists('data/'..songPath..'/dialogue_'..curLanguage..'.txt') then
+        setTextFont('OldDText', 'malgun.ttf')
+    else
+        setTextFont('OldDText', 'liber.ttf')
+    end
     setTextSize('OldDText', 26)
     setTextColor('OldDText', '000000')
     setTextBorder('OldDText', 0)
@@ -256,7 +288,11 @@ function initDialogue()
 
     makeLuaText('swagDialogue', 'im such a cute uwu catboy owo', screenWidth * 0.54, 350, 529.95)
     setTextAlignment('swagDialogue', 'left')
-    setTextFont('swagDialogue', 'liber.ttf')
+    if checkFileExists('data/'..songPath..'/dialogue_'..curLanguage ..'.txt') then
+        setTextFont('swagDialogue', 'malgun.ttf')
+    else
+        setTextFont('swagDialogue', 'liber.ttf')
+    end
     setTextSize('swagDialogue', 26)
     setTextColor('swagDialogue', '000000')
     setTextBorder('swagDialogue', 0)
@@ -488,7 +524,7 @@ function Dinnit()
         boxChar = 'Space Puppy'
         charImg = 'pup_alarm_dialogue'
     elseif curChar == 'agf' then
-        curIcon = 'agf'
+        curIcon = 'agf-happy'
         boxChar = 'AGF'
         charImg = 'agf_dialogue'
         scaleObject("portraitLeft", 0.4, 0.4)

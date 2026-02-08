@@ -97,7 +97,7 @@ end
 function onUpdate(elapsed)
     if songName == "Two Suspect" then
         for i = 1, #CreditStuff do
-            setObjectOrder("spintro", getObjectOrder(CreditStuff[i]) - 30)
+            setObjectOrder("spintro", getObjectOrder(CreditStuff[i]) - 29)
         end
     end
 end
