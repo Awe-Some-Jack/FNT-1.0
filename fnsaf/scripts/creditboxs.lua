@@ -23,6 +23,34 @@ function onSongCheck()
         artist = { "Snowmelt" }
         composer = { "DevinXD" }
         charter = { "Snowmelt" }
+    elseif songName == "lore" then
+        artist = { "Logan" }
+        composer = { "Keunak" }
+        charter = { "Dia" }
+    elseif songName == "Brothers In Arms" then
+        artist = { "Logan" }
+        composer = { "Awe (Vocal Remix: raul)" }
+        charter = { "Dia" }
+    elseif songName == "zanta" then
+        artist = { "bbpanzu" }
+        composer = { "bbpanzu (Remix: Keunak)" }
+        charter = { "Dia" }
+    elseif songName == "triple-kill" then
+        artist = { "Sucheol, Amon crack" }
+        composer = { "hmm111" }
+        charter = { "Dia" }
+    elseif songName == "glitch-friend" then
+        artist = { "???" }
+        composer = { "Askliskal" }
+        charter = { "Dia" }
+    elseif songName == "ballooned" then
+        artist = { "GTM" }
+        composer = { "Aelo" }
+        charter = { "Dia" }
+    elseif songName == "GGang GGang" then
+        artist = { "Amon crack" }
+        composer = { "Mr Takoyaky" }
+        charter = { "Dia" }
     end
 end
 
