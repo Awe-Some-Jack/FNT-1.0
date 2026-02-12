@@ -560,6 +560,8 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/glitched"));
 				case "ballooned":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/ballooned"));
+				case "ggang ggang":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/ggang"));
                 default:
                     bg.loadGraphic(Paths.image("menuDesat"));
             }

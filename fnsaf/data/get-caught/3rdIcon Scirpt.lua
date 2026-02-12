@@ -27,7 +27,7 @@ function onCreatePost()
 	setProperty(iconTag .. '.flipX', (P == 1));
 	setObjectCamera(iconTag, 'hud');
 	addToGroup('uiGroup', iconTag, getObjectOrder('iconP1', 'uiGroup'))
-	setObjectOrder(iconTag, getObjectOrder(boundIconName) + (overIcon and 27));
+	setObjectOrder(iconTag, getObjectOrder(boundIconName) + (overIcon and 28));
 	scaleObject(iconTag, Xscale, Yscale);
 	addLuaSprite(iconTag, true);
 end

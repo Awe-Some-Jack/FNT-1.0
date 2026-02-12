@@ -78,7 +78,7 @@ function onCreate()
     setTextFont("titletext", "neodgm.ttf")
     addLuaText("titletext")
 
-    makeLuaText("ArtistText", "Artist", 0, 20, 230)
+    makeLuaText("ArtistText", "BG Artist", 0, 20, 230)
     setObjectCamera("ArtistText", "other")
     setTextSize("ArtistText", 20)
     setTextColor("ArtistText", "yellow")

@@ -1,82 +1,82 @@
 {
 	"animations": [
 		{
-			"offsets": [0, 0],
 			"loop": false,
-			"fps": 24,
+			"offsets": [29, 0],
 			"anim": "idle",
-			"indices": [],
-			"name": "IDLE"
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
 		},
 		{
-			"offsets": [14, -11],
 			"loop": false,
-			"fps": 24,
+			"offsets": [43, -11],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "LEFT0"
+			"fps": 24,
+			"name": "LEFT0",
+			"indices": []
 		},
 		{
-			"offsets": [7, -10],
 			"loop": false,
-			"fps": 24,
+			"offsets": [36, -11],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "DOWN0"
+			"fps": 24,
+			"name": "DOWN0",
+			"indices": []
 		},
 		{
-			"offsets": [-7, -11],
 			"loop": false,
-			"fps": 24,
+			"offsets": [23, -11],
 			"anim": "singUP",
-			"indices": [],
-			"name": "UP0"
+			"fps": 24,
+			"name": "UP0",
+			"indices": []
 		},
 		{
-			"offsets": [-6, 20],
 			"loop": false,
-			"fps": 24,
+			"offsets": [22, 19],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "RIGHT0"
+			"fps": 24,
+			"name": "RIGHT0",
+			"indices": []
 		},
 		{
-			"offsets": [31, -208],
 			"loop": false,
-			"fps": 24,
+			"offsets": [62, -208],
 			"anim": "singLEFTmiss",
-			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-			"name": "LEFT MISS"
+			"fps": 24,
+			"name": "LEFT MISS",
+			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 		},
 		{
-			"offsets": [-64, -250],
 			"loop": false,
-			"fps": 24,
+			"offsets": [-33, -251],
 			"anim": "singDOWNmiss",
-			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-			"name": "DOWN MISS"
+			"fps": 24,
+			"name": "DOWN MISS",
+			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 		},
 		{
-			"offsets": [-131, -203],
 			"loop": false,
-			"fps": 24,
+			"offsets": [-101, -200],
 			"anim": "singUPmiss",
-			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-			"name": "UP MISS"
+			"fps": 24,
+			"name": "UP MISS",
+			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 		},
 		{
-			"offsets": [-228, -87],
 			"loop": false,
-			"fps": 24,
+			"offsets": [-192, -87],
 			"anim": "singRIGHTmiss",
-			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
-			"name": "RIGHT MISS"
+			"fps": 24,
+			"name": "RIGHT MISS",
+			"indices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/CREAM",
-	"position": [-260, 40],
+	"position": [-230, 40],
 	"healthicon": "cream",
 	"flip_x": true,
 	"healthbar_colors": [255, 255, 255],
