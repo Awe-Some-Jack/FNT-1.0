@@ -275,11 +275,12 @@ function initDialogue()
     makeLuaText('OldDText', '', screenWidth * 0.54, 350, 650.05)
     setTextAlignment('OldDText', 'left')
     if checkFileExists('data/'..songPath..'/dialogue_'..curLanguage..'.txt') then
+        setTextSize('OldDText', 22)
         setTextFont('OldDText', 'malgun.ttf')
     else
+        setTextSize('OldDText', 26)
         setTextFont('OldDText', 'liber.ttf')
     end
-    setTextSize('OldDText', 26)
     setTextColor('OldDText', '000000')
     setTextBorder('OldDText', 0)
     setObjectCamera('OldDText', 'other')
@@ -289,11 +290,12 @@ function initDialogue()
     makeLuaText('swagDialogue', 'im such a cute uwu catboy owo', screenWidth * 0.54, 350, 529.95)
     setTextAlignment('swagDialogue', 'left')
     if checkFileExists('data/'..songPath..'/dialogue_'..curLanguage ..'.txt') then
+        setTextSize('swagDialogue', 22)
         setTextFont('swagDialogue', 'malgun.ttf')
     else
+        setTextSize('swagDialogue', 26)
         setTextFont('swagDialogue', 'liber.ttf')
     end
-    setTextSize('swagDialogue', 26)
     setTextColor('swagDialogue', '000000')
     setTextBorder('swagDialogue', 0)
     setObjectCamera('swagDialogue', 'other')

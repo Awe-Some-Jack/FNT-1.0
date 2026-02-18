@@ -9,7 +9,7 @@ function onCreate()
     addCharacterToList("blist-black", "dad")
 
     createInstance("agfexe-final", "objects.Character", {-175, 1600, "agf-exe-final", false})
-    setObjectOrder("agfexe-final", getObjectOrder("gfGroup") + 2)
+    setObjectOrder("agfexe-final", getObjectOrder("gfGroup") + 3)
     setProperty("agfexe-final.visible", false)
     addInstance("agfexe-final")
 
@@ -66,9 +66,6 @@ function onSectionHit()
             setShaderBool("boyfriend", "useMask", false)
 
             setProperty("boyfriend.color", FlxColor("magenta"))
-            setProperty("spexe-final.color", FlxColor("magenta"))
-            setProperty("wallyexe-final.color", FlxColor("magenta"))
-            setProperty("agfexe-final.color", FlxColor("magenta"))
         end
     end
 
