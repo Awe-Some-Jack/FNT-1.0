@@ -2,12 +2,12 @@
 <TextureAtlas imagePath="we hate that dj.png">
 	<!-- Created with Adobe Animate version 21.0.8.42666 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="blurd 인스턴스 10000" x="0" y="0" width="592" height="373" frameX="0" frameY="-7" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10001" x="0" y="0" width="592" height="373" frameX="0" frameY="-7" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10002" x="592" y="0" width="580" height="373" frameX="-6" frameY="-7" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10003" x="592" y="0" width="580" height="373" frameX="-6" frameY="-7" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10004" x="1172" y="0" width="572" height="380" frameX="-10" frameY="0" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10005" x="1172" y="0" width="572" height="380" frameX="-10" frameY="0" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10006" x="0" y="380" width="563" height="373" frameX="-15" frameY="-7" frameWidth="592" frameHeight="380"/>
-	<SubTexture name="blurd 인스턴스 10007" x="0" y="380" width="563" height="373" frameX="-15" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0000" x="0" y="0" width="592" height="373" frameX="0" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0001" x="0" y="0" width="592" height="373" frameX="0" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0002" x="592" y="0" width="580" height="373" frameX="-6" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0003" x="592" y="0" width="580" height="373" frameX="-6" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0004" x="1172" y="0" width="572" height="380" frameX="-10" frameY="0" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0005" x="1172" y="0" width="572" height="380" frameX="-10" frameY="0" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0006" x="0" y="380" width="563" height="373" frameX="-15" frameY="-7" frameWidth="592" frameHeight="380"/>
+	<SubTexture name="blurd0007" x="0" y="380" width="563" height="373" frameX="-15" frameY="-7" frameWidth="592" frameHeight="380"/>
 </TextureAtlas>
