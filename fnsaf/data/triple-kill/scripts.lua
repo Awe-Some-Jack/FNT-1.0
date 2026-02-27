@@ -13,7 +13,7 @@ function onCreate()
     setProperty("agfexe-final.visible", false)
     addInstance("agfexe-final")
 
-    createInstance("wallyexe-final", "objects.Character", {450, 1300, "wallyexe-final", false})
+    createInstance("wallyexe-final", "objects.Character", {500, 1300, "wallyexe-final", false})
     setObjectOrder("wallyexe-final", getObjectOrder("dadGroup") + 2)
     setProperty("wallyexe-final.visible", false)
     addInstance("wallyexe-final")

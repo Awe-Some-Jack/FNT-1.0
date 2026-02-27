@@ -1,27 +1,416 @@
 {
 	"events": [
 		[
-			6000,
+			0,
 			[
-				["Song Title Card", "ACCIDENT", ""]
+				["Tween Cam Zoom", "0.85", ""]
 			]
 		],
 		[
-			8250,
+			3000,
 			[
-				["", "", ""]
+				["Play Animation", "turn1", "BF"],
+				["Alt Idle Animation", "BF", "-alt"]
+			]
+		],
+		[
+			6000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			7500,
+			[
+				["Play Animation", "turn2", "BF"],
+				["Alt Idle Animation", "BF", ""]
+			]
+		],
+		[
+			8906.25,
+			[
+				["Play Animation", "intro", "Dad"]
 			]
 		],
 		[
 			9000,
 			[
-				["Cinematics", "1", ""]
+				["Cinematics", "1", ""],
+				["Tween Cam Zoom", "0.9", ""],
+				["Play Animation", "boom", "BF"],
+				["Set Property", "boyfriend.skipDance", "true"]
+			]
+		],
+		[
+			10875,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			11250,
+			[
+				["Play Animation", "mic-on", "BF"]
+			]
+		],
+		[
+			11625,
+			[
+				["Play Animation", "back-idle", "BF"]
 			]
 		],
 		[
 			12000,
 			[
-				["Cinematics", "0", ""]
+				["Cinematics", "0", ""],
+				["Tween Cam Zoom", "0.85", ""],
+				["Change Character", "BF", "bf"],
+				["Set Property", "boyfriend.skipDance", "false"]
+			]
+		],
+		[
+			15000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			18000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			21000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			22500,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			23250,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			24000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			25500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			27000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			28500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			30000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			36000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			37500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			39000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			42000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			43500,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			45000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			46500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			48000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			60000,
+			[
+				["Tween Cam Zoom", "0.95", "0.01"]
+			]
+		],
+		[
+			60562.5,
+			[
+				["Tween Cam Zoom", "0.9", "0.01"]
+			]
+		],
+		[
+			61125,
+			[
+				["Tween Cam Zoom", "1", "0.01"]
+			]
+		],
+		[
+			61687.5,
+			[
+				["Tween Cam Zoom", "1.05", "0.01"]
+			]
+		],
+		[
+			62250,
+			[
+				["Tween Cam Zoom", "1", "0.01"]
+			]
+		],
+		[
+			62625,
+			[
+				["Tween Cam Zoom", "1.1", "0.01"]
+			]
+		],
+		[
+			63000,
+			[
+				["Tween Cam Zoom", "0.85", ""],
+				["Change Scroll Speed", "1.1", ""]
+			]
+		],
+		[
+			64125,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			64500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			65625,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			66000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			67500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			69000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			70500,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			73500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			75000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			78000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			81000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			85500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			87000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			93000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			99000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			100500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			100875,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			102000,
+			[
+				["Tween Cam Zoom", "1.05", ""]
+			]
+		],
+		[
+			103500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			106500,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			108000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			109500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			109875,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			111000,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Change Scroll Speed", "1", ""]
+			]
+		],
+		[
+			117000,
+			[
+				["Play Animation", "what", "Dad"],
+				["Alt Idle Animation", "Dad", "-alt"]
+			]
+		],
+		[
+			118500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			120000,
+			[
+				["Change Scroll Speed", "1.15", ""]
+			]
+		],
+		[
+			121875,
+			[
+				["Tween Cam Zoom", "0.87", "0.01"]
+			]
+		],
+		[
+			122250,
+			[
+				["Tween Cam Zoom", "0.9", "0.01"]
+			]
+		],
+		[
+			122625,
+			[
+				["Tween Cam Zoom", "0.95", "0.01"]
+			]
+		],
+		[
+			123000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			126000,
+			[
+				["Play Animation", "report", "Dad"]
 			]
 		]
 	],

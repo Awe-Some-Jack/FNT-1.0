@@ -2,86 +2,78 @@
 	"animations": [
 		{
 			"loop": false,
-			"offsets": [0, 0],
+			"offsets": [680, 473],
+			"anim": "turn1",
+			"fps": 12,
+			"name": "bf-accident turn1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [680, 473],
+			"anim": "turn2",
+			"fps": 12,
+			"name": "bf-accident turn2",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [680, 473],
+			"anim": "boom",
+			"fps": 12,
+			"name": "bf-accident boom",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [680, 473],
+			"anim": "blink",
+			"fps": 12,
+			"name": "bf-accident blink",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [680, 473],
+			"anim": "mic-on",
+			"fps": 12,
+			"name": "bf-accident mic-on",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [680, 473],
+			"anim": "back-idle",
+			"fps": 12,
+			"name": "bf-accident back-idle",
+			"indices": []
+		},
+		{
+			"offsets": [680, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "Idle",
-			"indices": []
+			"indices": [],
+			"name": "bf-accident idle1"
 		},
 		{
+			"offsets": [680, 473],
 			"loop": false,
-			"offsets": [8, -4],
-			"anim": "singLEFT",
 			"fps": 12,
-			"name": "Left0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singDOWN",
-			"fps": 12,
-			"name": "Down0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singUP",
-			"fps": 12,
-			"name": "Up0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "Right0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [8, -4],
-			"anim": "singLEFTmiss",
-			"fps": 12,
-			"name": "LeftMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singDOWNmiss",
-			"fps": 12,
-			"name": "DownMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singUPmiss",
-			"fps": 12,
-			"name": "UpMiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [0, 0],
-			"anim": "singRIGHTmiss",
-			"fps": 12,
-			"name": "RightMiss",
-			"indices": []
+			"anim": "idle-alt",
+			"indices": [],
+			"name": "bf-accident idle2"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/Boy",
-	"position": [-200, 100],
+	"image": "characters/bf-accident",
+	"position": [-243, 351],
 	"healthicon": "bf",
 	"flip_x": true,
-	"healthbar_colors": [61, 199, 250],
-	"camera_position": [150, -150],
+	"healthbar_colors": [63, 199, 250],
+	"camera_position": [240, -140],
 	"sing_duration": 4,
-	"scale": 1,
+	"scale": 0.6,
 	"_editor_isPlayer": true
 }

@@ -1,9 +1,9 @@
 luaDebugMode = true
 
 local tag = 'BFExtra' -- name tag of character
-local x = 590 -- x position
-local y = 370 -- y position
-local character = 'bf-accident' -- name of json file
+local x = 300 -- x position
+local y = 310 -- y position
+local character = 'bf' -- name of json file
 local isPlayer = false -- flips the character and the notetypes will only work when the player hits the note
 local order = -1 -- basically the layer that the character will be on, use this if you need it to appear above or below something (-1 is default and it will add it normally)
 
@@ -39,14 +39,17 @@ end
 function onUpdatePost()
     if isPlayer then
         if not botPlay then
-            for i = 0, getProperty('keysArray.length')-1 do
-                if keyPressed(getProperty('keysArray['..i..']')) then return end
+            for i = 0, getProperty('keysArray.length') - 1 do
+                if keyPressed(getProperty('keysArray[' .. i .. ']')) then return end
             end
         end
-        if getProperty(tag..'.holdTimer') > stepCrochet * (0.0011 / getPropertyFromClass('flixel.FlxG', 'sound.music.pitch')) * getProperty(tag..'.singDuration') and stringStartsWith(getProperty(tag..'.animation.name'), 'sing') and not stringEndsWith(getProperty(tag..'.animation.name'), 'miss') then
-            callMethod(tag..'.dance')
+        if getProperty(tag .. '.holdTimer') > stepCrochet * (0.0011 / getPropertyFromClass('flixel.FlxG', 'sound.music.pitch')) * getProperty(tag .. '.singDuration') and stringStartsWith(getProperty(tag .. '.animation.name'), 'sing') and not stringEndsWith(getProperty(tag .. '.animation.name'), 'miss') then
+            callMethod(tag .. '.dance')
         end
     end
+    
+    setProperty(tag..".scale.x", 0.8)
+    setProperty(tag..".scale.y", 0.8)
 end
 
 function onBeatHit()

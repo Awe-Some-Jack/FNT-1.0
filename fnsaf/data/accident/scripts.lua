@@ -7,10 +7,6 @@ function getBG(file)
 end
 
 function onCreate()
-    makeAnimatedLuaSprite('cutscene',getBG("BF-CS"), defaultBoyfriendX - 680, defaultBoyfriendY - 40)
-	addAnimationByPrefix('cutscene','anim','Animation' ,12 ,false)
-    addLuaSprite("cutscene", true)
-
     makeLuaText("Subtitle", "sample", 800, 0, 530)
     screenCenter("Subtitle", "x")
     setTextSize("Subtitle", 25)
@@ -62,15 +58,12 @@ function onCreate()
 end
 
 function onSongStart()
-    playAnim("cutscene", "anim", true)
-
     startTween('balloon_flying', "balloon", {y = 200}, 2.5, {ease = 'sineInOut', type = 'PINGPONG'})
 end
 
 function onStartCountdown()
     doTweenX("MovingBG", "back1", 8200, 105)
     setProperty("dad.visible", false)
-    setProperty("boyfriend.visible", false)
     cameraFade("game", "000000", 1.6, false, true)
     callMethod('iconP2.changeIcon', {'question'})
     setHealthBarColors("white", "")
@@ -120,14 +113,8 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 
 function onSectionHit()
-    if curSection == 4 then
-        doTweenX("Hi", "boyfriend", defaultBoyfriendX - 200, 3)
-    end
-
     if curSection == 8 then
         doTweenX("MovingBG", "back1", 8200, 105)
-        removeLuaSprite("cutscene", true)
-        setProperty("boyfriend.visible", true)
     end
 
     if curSection == 24 then

@@ -75,7 +75,7 @@ function onCreate()
 	setBlendMode("back2-1", "add")
 	setBlendMode("back3-1", "add")
 	setBlendMode("back4-2", "add")
-	setBlendMode("back5-1", "add")
+    setBlendMode("back5-1", "add")
 end
 
 
@@ -119,4 +119,9 @@ function onUpdate(elapsed)
 
 	setProperty("Door5.x", getProperty("back4.x") - 200)
 	setProperty("Door5.y", getProperty("back4.y"))
+
+	if boyfriendName == "bf-accident" or boyfriendName == "bf" then
+		setProperty("boyfriend.scale.x", 0.8)
+		setProperty("boyfriend.scale.y", 0.8)
+	end
 end

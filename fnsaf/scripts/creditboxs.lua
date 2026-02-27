@@ -36,7 +36,7 @@ function onSongCheck()
         composer = { "bbpanzu (Remix: Keunak)" }
         charter = { "Dia" }
     elseif songName == "triple-kill" then
-        artist = { "Sucheol, Amon crack" }
+        artist = { "Sucheol, Amon crack, Snowmelt" }
         composer = { "hmm111" }
         charter = { "Dia" }
     elseif songName == "glitch-friend" then
