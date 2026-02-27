@@ -133,7 +133,7 @@ local iconNo = 0
 function votingIcon(image, x, y)
     makeLuaSprite("VTicon"..iconNo, getImage(image), x, y)
     scaleObject("VTicon"..iconNo, 0.4, 0.4)
-    ystartTween("iconVote", "VTicon"..iconNo..".scale", {x = 0.7, y = 0.7}, 0.5, {ease = "backOut"})
+    startTween("iconVote", "VTicon"..iconNo..".scale", {x = 0.7, y = 0.7}, 0.5, {ease = "backOut"})
     addLuaSprite("VTicon"..iconNo, true)
     setObjectOrder("VTicon"..iconNo, getObjectOrder("gfGroup") + 1)
     iconNo = iconNo + 1
