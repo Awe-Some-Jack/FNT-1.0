@@ -1,11 +1,11 @@
 local utoched = false
 
 function onCreate()
-    makeAnimatedLuaSprite("star", "bg/cafeteria/yellowstar", 2000, 400)
-    addAnimationByPrefix("star", "anim", "star??", 24, true)
-    setObjectCamera("star", getObjectOrder("1") + 1)
-    scaleObject("star", 0.2, 0.2)
-    addLuaSprite("star")
+    makeAnimatedLuaSprite("ystar", "bg/cafeteria/yellowstar", 2000, 400)
+    addAnimationByPrefix("ystar", "anim", "star??", 24, true)
+    setObjectCamera("ystar", getObjectOrder("1") + 1)
+    scaleObject("ystar", 0.2, 0.2)
+    addLuaSprite("ystar")
 end
 
 function onSectionHit()
@@ -14,7 +14,7 @@ function onSectionHit()
     end
 
     if curSection == 61 then
-        doTweenX("Moving", "star", -500, 10.0)
+        doTweenX("Moving", "ystar", -500, 10.0)
         setPropertyFromClass("flixel.FlxG", "mouse.visible", true)
         votingIcon("AGF", 230, 250)
     end
@@ -70,7 +70,7 @@ function mouseOverlaps(tag)
 end
 
 function onUpdatePost(elapsed)
-    if mouseClicked("left") and mouseOverlaps("star") then
+    if mouseClicked("left") and mouseOverlaps("ystar") then
         utoched = true
         setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
     end
@@ -92,7 +92,7 @@ end
 
 function onTweenCompleted(tag)
     if tag == "Moving" then
-        removeLuaSprite("star", true)
+        removeLuaSprite("ystar", true)
         setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
     end
 end
@@ -133,7 +133,7 @@ local iconNo = 0
 function votingIcon(image, x, y)
     makeLuaSprite("VTicon"..iconNo, getImage(image), x, y)
     scaleObject("VTicon"..iconNo, 0.4, 0.4)
-    startTween("iconVote", "VTicon"..iconNo..".scale", {x = 0.7, y = 0.7}, 0.5, {ease = "backOut"})
+    ystartTween("iconVote", "VTicon"..iconNo..".scale", {x = 0.7, y = 0.7}, 0.5, {ease = "backOut"})
     addLuaSprite("VTicon"..iconNo, true)
     setObjectOrder("VTicon"..iconNo, getObjectOrder("gfGroup") + 1)
     iconNo = iconNo + 1
