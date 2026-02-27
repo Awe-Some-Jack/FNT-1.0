@@ -1,9 +1,21 @@
+local utoched = false
+
+function onCreate()
+    makeAnimatedLuaSprite("star", "bg/cafeteria/yellowstar", 2000, 400)
+    addAnimationByPrefix("star", "anim", "star??", 24, true)
+    setObjectCamera("star", getObjectOrder("1") + 1)
+    scaleObject("star", 0.2, 0.2)
+    addLuaSprite("star")
+end
+
 function onSectionHit()
     if curSection == 27 then
         cameraFade("hud", "000000", 0.9, false)
     end
 
     if curSection == 61 then
+        doTweenX("Moving", "star", -500, 10.0)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", true)
         votingIcon("AGF", 230, 250)
     end
 
@@ -47,23 +59,73 @@ function onSectionHit()
     end
 end
 
+function mouseOverlaps(tag)
+    addHaxeLibrary('Reflect')
+    return runHaxeCode([[
+        var obj = game.getLuaObject(']] .. tag .. [[');
+        if (obj == null) obj = Reflect.getProperty(game, ']] .. tag .. [[');
+        if (obj == null) return false;
+        return obj.getScreenBounds(null, obj.cameras[0]).containsPoint(FlxG.mouse.getScreenPosition(obj.cameras[0]));
+    ]])
+end
+
+function onUpdatePost(elapsed)
+    if mouseClicked("left") and mouseOverlaps("star") then
+        utoched = true
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+    end
+
+    if utoched then
+        openCustomSubstate("Forevnet", true)
+    end
+end
+
+function onCustomSubstateCreate(name)
+    if name == "Forevnet" then
+        playSound("Flash3")
+        cameraShake("game", 0.03, 0.6)
+        cameraFade("other", "ffffff", 0.35, false)
+        runTimer("Fadeout", 1)
+        runTimer("letsgo", 3)
+    end
+end
+
+function onTweenCompleted(tag)
+    if tag == "Moving" then
+        removeLuaSprite("star", true)
+        setPropertyFromClass("flixel.FlxG", "mouse.visible", false)
+    end
+end
+
 function onStepHit()
     if curStep == 443 then
         cameraFade("hud", "000000", 0.4, false, true)
         setProperty("uiGroup.visible", false)
 
-        for i=0,7 do
-            noteTweenAlpha(i+16, i, 0.5, 0.001)
+        for i = 0, 7 do
+            noteTweenAlpha(i + 16, i, 0.5, 0.001)
         end
     end
 
     if curStep == 561 then
-        cameraFlash("hud", "ffffff", 0.3 , false)
+        cameraFlash("hud", "ffffff", 0.3, false)
         setProperty("uiGroup.visible", true)
-        
-        for i=0,7 do
-            noteTweenAlpha(i+16, i, 1, 0.001)
+
+        for i = 0, 7 do
+            noteTweenAlpha(i + 16, i, 1, 0.001)
         end
+    end
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "Fadeout" then
+        setProperty("camGame.visible", false)
+        setProperty("camHUD.visible", false)
+        cameraFade("other", "ffffff", 0.7, false, true)
+    end
+
+    if tag == "letsgo" then
+        loadSong("ggang-ggang")
     end
 end
 

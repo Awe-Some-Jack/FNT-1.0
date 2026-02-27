@@ -11,8 +11,13 @@ class SplashState extends MusicBeatState
         ClientPrefs.loadPrefs();
 
         FlxG.mouse.visible = false;
-        
-		if(FlxG.save.data.flashing == null && !FlashingState.leftState)
+        if(FlxG.save.data.language == null && !LangState.leftState2)
+		{
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
+			MusicBeatState.switchState(new LangState());
+		}
+		else if(FlxG.save.data.flashing == null && !FlashingState.leftState)
 		{
 			FlxTransitionableState.skipNextTransIn = true;
 			FlxTransitionableState.skipNextTransOut = true;

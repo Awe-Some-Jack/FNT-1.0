@@ -24,6 +24,7 @@ class MainMenuState extends MusicBeatState
 	var portrait:FlxSprite;
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	var leftItem:FlxSprite;
+	var leftItem2:FlxSprite;
 	var rightItem:FlxSprite;
 
 	//Centered/Text options
@@ -35,7 +36,10 @@ class MainMenuState extends MusicBeatState
 	];
 
 	var leftOption:String = 'gallery';
+	var leftOption2:String = 'discord';
 	var rightOption:String = null;
+
+	var leftIndex:Int = 0;
 
 	var camFollow:FlxObject;
 
@@ -71,9 +75,6 @@ class MainMenuState extends MusicBeatState
 		camFollow = new FlxObject();
 		add(camFollow);
 
-		menuItems = new FlxTypedGroup<FlxSprite>();
-		add(menuItems);
-
 		var fg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("mainMenu/fg"));
 		fg.scrollFactor.set();
 		fg.setGraphicSize(Std.int(fg.width * 0.51));
@@ -86,6 +87,9 @@ class MainMenuState extends MusicBeatState
 		portrait.antialiasing = ClientPrefs.data.antialiasing;
 		portrait.scrollFactor.set();
 		add(portrait);
+
+		menuItems = new FlxTypedGroup<FlxSprite>();
+		add(menuItems);
 
 		switch (imgIndex)
         {
@@ -127,6 +131,8 @@ class MainMenuState extends MusicBeatState
 
 		if (leftOption != null)
 			leftItem = createMenuItem(leftOption);
+		if (leftOption2 != null)
+			leftItem2 = createMenuItem(leftOption2);
 		if (rightOption != null)
 			rightItem = createMenuItem(rightOption);
 
@@ -271,12 +277,27 @@ class MainMenuState extends MusicBeatState
 					}
 
 				case LEFT:
-					if(controls.UI_RIGHT_P)
-					{
-						curColumn = CENTER;
-						changeItem();
-					}
-
+                    if(controls.UI_RIGHT_P)
+                    {
+                        if(leftIndex > 0)
+                        {
+                            leftIndex--;
+                            changeItem();
+                        }
+                        else
+                        {
+                            curColumn = CENTER;
+                            changeItem();
+                         }
+                    }
+                    else if(controls.UI_LEFT_P)
+                    {
+                        if(leftIndex < 1) // leftOption2까지 있다면
+                        {
+                            leftIndex++;
+                            changeItem();
+                        }
+                    }
 				case RIGHT:
 					if(controls.UI_LEFT_P)
 					{
@@ -308,8 +329,20 @@ class MainMenuState extends MusicBeatState
 						item = menuItems.members[curSelected];
 
 					case LEFT:
-						option = leftOption;
-						item = leftItem;
+						if(leftIndex == 0)
+                        {
+                            option = leftOption;
+                            item = leftItem;
+                        }
+                        else if(leftIndex == 1)
+                        {
+                            option = leftOption2;
+                            item = leftItem2;
+                        }
+						else
+                        {
+                            item = leftItem;
+                        }
 
 					case RIGHT:
 						option = rightOption;
@@ -384,7 +417,7 @@ class MainMenuState extends MusicBeatState
 			case CENTER:
 				selectedItem = menuItems.members[curSelected];
 			case LEFT:
-				selectedItem = leftItem;
+                selectedItem = (leftIndex == 0) ? leftItem : leftItem2;
 			case RIGHT:
 				selectedItem = rightItem;
 		}

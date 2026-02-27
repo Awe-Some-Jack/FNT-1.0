@@ -34,6 +34,8 @@ function disableBeat()
         setProperty('camHUD.height',screenHeight)
         setProperty('camGame.width',screenWidth)
         setProperty('camHUD.width',screenWidth)
+        setProperty("camHUD.x", 0)
+        setProperty("camHUD.y", 0)
         enable = false
         intencity = 0.6
         intencity2 = 0.8
