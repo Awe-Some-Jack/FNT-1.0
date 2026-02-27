@@ -208,8 +208,10 @@ function goodNoteHit(id, direction, noteType, isSustainNote)
 end
 
 function noteMiss(index, noteData, noteType, isSustain)
-    if noteType == 'GF Sing' or gfSection and useCustom then
-        LeftHealth = LeftHealth + 11
+    if noteType == 'GF Sing' or gfSection then
+        if useCustom then
+            LeftHealth = LeftHealth + 11
+        end
     elseif useCustom then
         RightHealth = RightHealth - 11
     end

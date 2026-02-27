@@ -59,7 +59,6 @@ class LangState extends MusicBeatState
 			FlxTransitionableState.skipNextTransOut = true;
 			if(isKR) {
 				ClientPrefs.data.language = 'ko-KR';
-				ClientPrefs.saveSettings();
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				FlxFlicker.flicker(krButton, 1, 0.1, false, true, function(flk:FlxFlicker) {
 					new FlxTimer().start(0.5, function (tmr:FlxTimer) {
