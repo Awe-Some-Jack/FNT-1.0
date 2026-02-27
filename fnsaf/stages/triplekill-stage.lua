@@ -184,8 +184,8 @@ function onUpdate(elapsed)
     setProperty("top3_alt2.x", getProperty("spexe-final.x") - 150)
     setProperty("top3_alt2.y", getProperty("spexe-final.y") + 370)
 
-    setProperty("top3_alt.x", getProperty("wallyexe-final.x") + 70)
-    setProperty("top3_alt.y", getProperty("wallyexe-final.y") + 440)
+    setProperty("top3_alt.x", getProperty("wallyexe-final.x") + 10)
+    setProperty("top3_alt.y", getProperty("wallyexe-final.y") + 410)
 
     setProperty("top3_center.x", getProperty("agfexe-final.x") + 80)
     setProperty("top3_center.y", getProperty("agfexe-final.y") + 580)
