@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="exit.png">
-<SubTexture name="exit 10000" x="0" y="334" width="454" height="274" frameX="-186" frameY="-294" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 10001" x="0" y="334" width="454" height="274" frameX="-186" frameY="-294" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 10002" x="454" y="334" width="456" height="272" frameX="-184" frameY="-295" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 10003" x="454" y="334" width="456" height="272" frameX="-184" frameY="-295" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 20000" x="600" y="0" width="510" height="323" frameX="-156" frameY="-264" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 20001" x="600" y="0" width="510" height="323" frameX="-156" frameY="-264" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 20002" x="0" y="0" width="600" height="334" frameX="-137" frameY="-267" frameWidth="800" frameHeight="800" />
-<SubTexture name="exit 20003" x="0" y="0" width="600" height="334" frameX="-137" frameY="-267" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit idle0000" x="0" y="334" width="454" height="274" frameX="-186" frameY="-294" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit idle0001" x="0" y="334" width="454" height="274" frameX="-186" frameY="-294" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit idle0002" x="454" y="334" width="456" height="272" frameX="-184" frameY="-295" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit idle0003" x="454" y="334" width="456" height="272" frameX="-184" frameY="-295" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit selcet0000" x="600" y="0" width="510" height="323" frameX="-156" frameY="-264" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit selcet0001" x="600" y="0" width="510" height="323" frameX="-156" frameY="-264" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit selcet0002" x="0" y="0" width="600" height="334" frameX="-137" frameY="-267" frameWidth="800" frameHeight="800" />
+<SubTexture name="exit selcet0003" x="0" y="0" width="600" height="334" frameX="-137" frameY="-267" frameWidth="800" frameHeight="800" />
 </TextureAtlas>

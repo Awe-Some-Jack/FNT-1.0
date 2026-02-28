@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="setting.png">
-<SubTexture name="setting 10000" x="0" y="290" width="244" height="232" frameX="-275" frameY="-310" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 10001" x="0" y="290" width="244" height="232" frameX="-275" frameY="-310" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 10002" x="244" y="290" width="239" height="227" frameX="-278" frameY="-314" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 10003" x="244" y="290" width="239" height="227" frameX="-278" frameY="-314" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 20000" x="0" y="0" width="307" height="290" frameX="-243" frameY="-277" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 20001" x="0" y="0" width="307" height="290" frameX="-243" frameY="-277" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 20002" x="307" y="0" width="304" height="288" frameX="-245" frameY="-278" frameWidth="800" frameHeight="800" />
-<SubTexture name="setting 20003" x="307" y="0" width="304" height="288" frameX="-245" frameY="-278" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting idle0000" x="0" y="290" width="244" height="232" frameX="-275" frameY="-310" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting idle0001" x="0" y="290" width="244" height="232" frameX="-275" frameY="-310" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting idle0002" x="244" y="290" width="239" height="227" frameX="-278" frameY="-314" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting idle0003" x="244" y="290" width="239" height="227" frameX="-278" frameY="-314" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting selcet0000" x="0" y="0" width="307" height="290" frameX="-243" frameY="-277" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting selcet0001" x="0" y="0" width="307" height="290" frameX="-243" frameY="-277" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting selcet0002" x="307" y="0" width="304" height="288" frameX="-245" frameY="-278" frameWidth="800" frameHeight="800" />
+<SubTexture name="setting selcet20003" x="307" y="0" width="304" height="288" frameX="-245" frameY="-278" frameWidth="800" frameHeight="800" />
 </TextureAtlas>

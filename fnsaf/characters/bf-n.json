@@ -1,76 +1,92 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [680, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "idle",
-			"fps": 12,
-			"name": "bf-nervous idle",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous idle"
 		},
 		{
-			"loop": false,
 			"offsets": [679, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 12,
-			"name": "bf-nervous singRIGHT0",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous singRIGHT0"
 		},
 		{
-			"loop": false,
 			"offsets": [682, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 12,
-			"name": "bf-nervous singDOWN0",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous singDOWN0"
 		},
 		{
-			"loop": false,
 			"offsets": [674, 475],
+			"loop": false,
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 12,
-			"name": "bf-nervous singUP0",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous singUP0"
 		},
 		{
-			"loop": false,
 			"offsets": [678, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 12,
-			"name": "bf-nervous singLEFT0",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous singLEFT0"
 		},
 		{
-			"loop": false,
 			"offsets": [682, 473],
+			"loop": false,
+			"fps": 12,
 			"anim": "singDOWNmiss",
-			"fps": 12,
-			"name": "bf-nervous singDOWNmiss",
-			"indices": []
+			"indices": [],
+			"name": "bf-nervous singDOWNmiss"
 		},
 		{
-			"loop": false,
 			"offsets": [674, 475],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 12,
-			"name": "bf-nervous singUPmiss",
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "bf-nervous singUPmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [678, 473],
+			"anim": "singLEFTmiss",
+			"fps": 12,
+			"name": "bf-nervous singLEFTmiss",
 			"indices": []
 		},
 		{
-			"offsets": [678, 473],
-			"indices": [],
-			"fps": 12,
-			"anim": "singLEFTmiss",
 			"loop": false,
-			"name": "bf-nervous singLEFTmiss"
+			"offsets": [679, 473],
+			"anim": "singRIGHTmiss",
+			"fps": 12,
+			"name": "bf-nervous singRIGHTmiss",
+			"indices": []
 		},
 		{
-			"offsets": [679, 473],
+			"offsets": [680, 473],
 			"indices": [],
-			"fps": 12,
-			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"anim": "dodge1",
 			"loop": false,
-			"name": "bf-nervous singRIGHTmiss"
+			"name": "bf-nervous dodge1"
+		},
+		{
+			"offsets": [680, 473],
+			"indices": [],
+			"fps": 24,
+			"anim": "dodge2",
+			"loop": false,
+			"name": "bf-nervous dodge2"
 		}
 	],
 	"vocals_file": "",

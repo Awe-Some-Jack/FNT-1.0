@@ -42,6 +42,12 @@
 			]
 		],
 		[
+			9375,
+			[
+				["Play Animation", "blink", "BF"]
+			]
+		],
+		[
 			10875,
 			[
 				["Tween Cam Zoom", "0.95", ""]

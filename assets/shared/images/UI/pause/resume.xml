@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="resume.png">
-<SubTexture name="resume 10000" x="0" y="269" width="432" height="224" frameX="-168" frameY="-311" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 10001" x="0" y="269" width="432" height="224" frameX="-168" frameY="-311" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 10002" x="432" y="269" width="435" height="216" frameX="-167" frameY="-311" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 10003" x="432" y="269" width="435" height="216" frameX="-167" frameY="-311" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 20000" x="0" y="0" width="505" height="269" frameX="-132" frameY="-283" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 20001" x="0" y="0" width="505" height="269" frameX="-132" frameY="-283" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 20002" x="505" y="0" width="501" height="262" frameX="-135" frameY="-288" frameWidth="800" frameHeight="800" />
-<SubTexture name="resume 20003" x="505" y="0" width="501" height="262" frameX="-135" frameY="-288" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume idle0000" x="0" y="269" width="432" height="224" frameX="-168" frameY="-311" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume idle0001" x="0" y="269" width="432" height="224" frameX="-168" frameY="-311" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume idle0002" x="432" y="269" width="435" height="216" frameX="-167" frameY="-311" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume idle0003" x="432" y="269" width="435" height="216" frameX="-167" frameY="-311" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume selcet0000" x="0" y="0" width="505" height="269" frameX="-132" frameY="-283" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume selcet0001" x="0" y="0" width="505" height="269" frameX="-132" frameY="-283" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume selcet0002" x="505" y="0" width="501" height="262" frameX="-135" frameY="-288" frameWidth="800" frameHeight="800" />
+<SubTexture name="resume selcet0003" x="505" y="0" width="501" height="262" frameX="-135" frameY="-288" frameWidth="800" frameHeight="800" />
 </TextureAtlas>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="mr.mumble.png">
+<SubTexture name="mr.mumble neutral0000" x="0" y="2431" width="768" height="452" frameX="-282" frameY="-333" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble neutral0001" x="0" y="1969" width="771" height="462" frameX="-281" frameY="-333" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble neutral0002" x="1361" y="1485" width="771" height="474" frameX="-281" frameY="-327" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble neutral0003" x="591" y="1485" width="770" height="476" frameX="-282" frameY="-326" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble neutral0004" x="771" y="1969" width="770" height="462" frameX="-282" frameY="-329" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble neutral0005" x="2755" y="0" width="767" height="456" frameX="-283" frameY="-331" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0000" x="521" y="0" width="526" height="497" frameX="-378" frameY="-317" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0001" x="0" y="994" width="531" height="491" frameX="-378" frameY="-316" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0002" x="0" y="499" width="527" height="495" frameX="-378" frameY="-311" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0003" x="0" y="0" width="521" height="499" frameX="-378" frameY="-309" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0004" x="527" y="499" width="520" height="495" frameX="-378" frameY="-314" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble worry0005" x="1047" y="0" width="527" height="495" frameX="-378" frameY="-318" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0000" x="0" y="1485" width="591" height="484" frameX="-276" frameY="-295" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0001" x="2164" y="0" width="591" height="474" frameX="-280" frameY="-295" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0002" x="2164" y="474" width="591" height="470" frameX="-279" frameY="-296" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0003" x="1574" y="485" width="590" height="479" frameX="-277" frameY="-286" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0004" x="1574" y="0" width="590" height="485" frameX="-276" frameY="-283" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble talk0005" x="531" y="994" width="587" height="488" frameX="-278" frameY="-283" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0000" x="2755" y="456" width="412" height="451" frameX="-437" frameY="-306" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0001" x="2755" y="456" width="412" height="451" frameX="-437" frameY="-306" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0002" x="2164" y="944" width="401" height="462" frameX="-439" frameY="-302" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0003" x="2164" y="944" width="401" height="462" frameX="-439" frameY="-302" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0004" x="2755" y="907" width="414" height="449" frameX="-427" frameY="-310" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble mum0005" x="2755" y="907" width="414" height="449" frameX="-427" frameY="-310" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0000" x="2755" y="1743" width="487" height="386" frameX="-502" frameY="-382" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0001" x="2755" y="1743" width="487" height="386" frameX="-502" frameY="-382" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0002" x="2755" y="1743" width="487" height="386" frameX="-502" frameY="-382" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0003" x="2755" y="1356" width="491" height="387" frameX="-497" frameY="-385" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0004" x="2755" y="1356" width="491" height="387" frameX="-497" frameY="-385" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble good-luck0005" x="2755" y="1356" width="491" height="387" frameX="-497" frameY="-385" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble 670000" x="1541" y="1969" width="767" height="461" frameX="-283" frameY="-326" frameWidth="1300" frameHeight="1000" />
+<SubTexture name="mr.mumble 670001" x="768" y="2431" width="792" height="449" frameX="-280" frameY="-331" frameWidth="1300" frameHeight="1000" />
+</TextureAtlas>

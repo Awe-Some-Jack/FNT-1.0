@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="speech-bubble.png">
+<SubTexture name="speech-bubble 10000" x="0" y="803" width="1264" height="789" frameX="-655" frameY="-22" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10001" x="0" y="803" width="1264" height="789" frameX="-655" frameY="-22" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10002" x="0" y="803" width="1264" height="789" frameX="-655" frameY="-22" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10003" x="0" y="0" width="1243" height="803" frameX="-678" frameY="-12" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10004" x="0" y="0" width="1243" height="803" frameX="-678" frameY="-12" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10005" x="0" y="0" width="1243" height="803" frameX="-678" frameY="-12" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10006" x="1243" y="0" width="1224" height="797" frameX="-685" frameY="-21" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10007" x="1243" y="0" width="1224" height="797" frameX="-685" frameY="-21" frameWidth="1920" frameHeight="1080" />
+<SubTexture name="speech-bubble 10008" x="1243" y="0" width="1224" height="797" frameX="-685" frameY="-21" frameWidth="1920" frameHeight="1080" />
+</TextureAtlas>
