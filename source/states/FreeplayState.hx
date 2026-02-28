@@ -149,12 +149,21 @@ class FreeplayState extends MusicBeatState
 		}
 
 		for (i in 0...songs.length)
-		{
-			var songText:FlxSkewedSprite = new FlxSkewedSprite(0,0,Paths.image('UI/freeplay/' + Paths.formatToSongPath(songs[i].songName)));
-			grpSongs.add(songText);
+        {
+            var songName = Paths.formatToSongPath(songs[i].songName);
 
-			Mods.currentModDirectory = songs[i].folder;
-		}
+            var imagePath:String;
+
+            if(isSongUnlocked(songName))
+                imagePath = 'UI/freeplay/' + songName;
+            else
+                imagePath = 'UI/freeplay/locked/' + songName;
+
+            var songText:FlxSkewedSprite = new FlxSkewedSprite(0, 0, Paths.image(imagePath));
+
+            grpSongs.add(songText);
+            Mods.currentModDirectory = songs[i].folder;
+        }
 		WeekData.setDirectoryFromWeek();
 
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
@@ -232,6 +241,14 @@ class FreeplayState extends MusicBeatState
 		var leWeek:WeekData = WeekData.weeksLoaded.get(name);
 		return (!leWeek.startUnlocked && leWeek.weekBefore.length > 0 && (!StoryMenuState.weekCompleted.exists(leWeek.weekBefore) || !StoryMenuState.weekCompleted.get(leWeek.weekBefore)));
 	}
+
+	function isSongUnlocked(songName:String):Bool
+    {
+        if(FlxG.save.data == null) return false;
+
+        var value = Reflect.field(FlxG.save.data, Paths.formatToSongPath(songName) + "_clear");
+        return value == true;
+    }
 
 	var instPlaying:Int = -1;
 	public static var vocals:FlxSound = null;
@@ -358,22 +375,38 @@ class FreeplayState extends MusicBeatState
 		}
 		if (instPlaying != curSelected)
 		{
-				destroyFreeplayVocals();
-	
-				FlxG.sound.music.volume = 0;
-	
-				Mods.currentModDirectory = songs[curSelected].folder;
-	
-				var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
-	
-				PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
-	
-				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0);
-	
+			var currentSong = songs[curSelected].songName;
+			
+			var songName = Paths.formatToSongPath(songs[curSelected].songName);
+            var glitchPath = 'glitch-Inst/' + songName;
+			
+			destroyFreeplayVocals();
+			FlxG.sound.music.volume = 0;
+			Mods.currentModDirectory = songs[curSelected].folder;
+			var poop:String = Highscore.formatSong(songs[curSelected].songName.toLowerCase(), curDifficulty);
+			PlayState.SONG = Song.loadFromJson(poop, songs[curSelected].songName.toLowerCase());
+            if(!isSongUnlocked(currentSong))
+            {
+				FlxG.sound.playMusic(Paths.music(glitchPath), 0);
 				instPlaying = curSelected;
+            }
+			else
+			{
+				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song), 0);
+				instPlaying = curSelected;
+			}
 		}
 		else if (controls.ACCEPT && !player.playingMusic)
 		{
+			var currentSong = songs[curSelected].songName;
+
+            if(!isSongUnlocked(currentSong))
+            {
+                FlxG.sound.play(Paths.sound('swipe_card_failed'));
+                FlxG.camera.shake(0.01, 0.15);
+                return;
+            }
+
 			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
@@ -531,6 +564,15 @@ class FreeplayState extends MusicBeatState
 
 	function changeBG()
 	{
+		var currentSong = songs[curSelected].songName;
+
+        // 🔒 잠겨있으면 아예 실행 안 함
+        if(!isSongUnlocked(currentSong))
+        {
+			if (bgTween != null) bgTween.cancel();
+            bgTween = FlxTween.tween(bg, {alpha: 0}, 0.3, {ease: FlxEase.quadOut,});
+            return;
+        }
 			if (bgTween != null) bgTween.cancel();
             bgTween = FlxTween.tween(bg, {alpha: 0}, 0.3, {
             ease: FlxEase.quadOut,

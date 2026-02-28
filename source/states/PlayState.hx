@@ -2472,6 +2472,20 @@ class PlayState extends MusicBeatState
 		deathCounter = 0;
 		seenCutscene = false;
 
+		if(isStoryMode && !practiceMode && !cpuControlled)
+        {
+            var songName = Paths.formatToSongPath(SONG.song);
+            Reflect.setField(FlxG.save.data, songName + "_clear", true);
+			if(songName == "get-caught")
+            {
+                Reflect.setField(FlxG.save.data, "lore_clear", true);
+				Reflect.setField(FlxG.save.data, "zanta_clear", true);
+				Reflect.setField(FlxG.save.data, "brothers-in-arms_clear", true);
+				Reflect.setField(FlxG.save.data, "triple-kill_clear", true);
+            }
+            FlxG.save.flush();
+        }
+
 		#if ACHIEVEMENTS_ALLOWED
 		var weekNoMiss:String = WeekData.getWeekFileName() + '_nomiss';
 		checkForAchievement([weekNoMiss, 'ur_bad', 'ur_good', 'hype', 'two_keys', 'toastie' #if BASE_GAME_FILES, 'debugger' #end]);

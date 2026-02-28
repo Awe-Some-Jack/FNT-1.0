@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="restart.png">
+<SubTexture name="restart 10000" x="0" y="308" width="260" height="244" frameX="-282" frameY="-296" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 10001" x="0" y="308" width="260" height="244" frameX="-282" frameY="-296" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 10002" x="260" y="308" width="259" height="241" frameX="-283" frameY="-298" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 10003" x="260" y="308" width="259" height="241" frameX="-283" frameY="-298" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 20000" x="320" y="0" width="323" height="305" frameX="-241" frameY="-261" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 20001" x="320" y="0" width="323" height="305" frameX="-241" frameY="-261" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 20002" x="0" y="0" width="320" height="308" frameX="-242" frameY="-261" frameWidth="800" frameHeight="800" />
+<SubTexture name="restart 20003" x="0" y="0" width="320" height="308" frameX="-242" frameY="-261" frameWidth="800" frameHeight="800" />
+</TextureAtlas>
