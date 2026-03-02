@@ -26,24 +26,30 @@ function onUpdate(elapsed)
 end
 
 function onStartCountdown()
-    setProperty("camGame.filters", {})
-    setProperty("camHUD.filters", {})
+    if shadersEnabled then
+        setProperty("camGame.filters", {})
+        setProperty("camHUD.filters", {})
+    end
 end
 
 function onSectionHit()
     if curSection == 189 then
         cameraFlash("other", "000000", 1, false)
-        runHaxeCode([[
-        game.camGame.setFilters([new ShaderFilter(game.getLuaObject("desaturate").shader)]);
-        game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("desaturate").shader)]);
-        ]])
+        if shadersEnabled then
+            runHaxeCode([[
+            game.camGame.setFilters([new ShaderFilter(game.getLuaObject("desaturate").shader)]);
+            game.camHUD.setFilters([new ShaderFilter(game.getLuaObject("desaturate").shader)]);
+            ]])
+        end
     end
 
     if curSection == 197 then
         cameraFlash("other", "FFFFFF", 1, false)
-        removeSpriteShader("desaturate")
-        setProperty("camGame.filters", {})
-        setProperty("camHUD.filters", {})
+        if shadersEnabled then
+            removeSpriteShader("desaturate")
+            setProperty("camGame.filters", {})
+            setProperty("camHUD.filters", {})
+        end
     end
 end
 

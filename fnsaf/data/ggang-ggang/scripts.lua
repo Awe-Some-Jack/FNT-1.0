@@ -16,16 +16,16 @@ function onTimerCompleted(tag, loops, loopsLeft)
     end
 
     if tag == "letsgo" then
-        exitSong()
+        if isStoryMode then
+            loadSong("two-suspect")
+        else
+            exitSong()
+        end
     end
 end
 
 function onEndSong()
-    if isStoryMode then
-        callMethodFromClass('backend.Highscore', 'saveScore', {songName, score, difficulty, rating})
-        openCustomSubstate("Forevnet", true)
-    else
-        return Function_Continue
-    end
+    callMethodFromClass('backend.Highscore', 'saveScore', {songName, score, difficulty, rating})
+    openCustomSubstate("Forevnet", true)
     return Function_Stop
 end

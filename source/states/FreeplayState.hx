@@ -244,10 +244,12 @@ class FreeplayState extends MusicBeatState
 
 	function isSongUnlocked(songName:String):Bool
     {
-        if(FlxG.save.data == null) return false;
+        var path = Paths.formatToSongPath(songName);
 
-        var value = Reflect.field(FlxG.save.data, Paths.formatToSongPath(songName) + "_clear");
-        return value == true;
+        var unlocked = Reflect.field(FlxG.save.data, path + "_unlocked");
+        var played   = Reflect.field(FlxG.save.data, path + "_played");
+
+        return unlocked == true || played == true;
     }
 
 	var instPlaying:Int = -1;

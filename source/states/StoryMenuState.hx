@@ -86,10 +86,20 @@ class StoryMenuState extends MusicBeatState
 
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
-		weekimage1 = new FlxSprite(0,0).loadGraphic(Paths.image("UI/story/alright1"));
-		weekimage1.screenCenter();
-		weekimage1.antialiasing = ClientPrefs.data.antialiasing;
-		add(weekimage1);
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		{
+			weekimage1 = new FlxSprite(0,0).loadGraphic(Paths.image("UI/story/alright1"));
+		    weekimage1.screenCenter();
+		    weekimage1.antialiasing = ClientPrefs.data.antialiasing;
+		    add(weekimage1);
+		}
+		else
+		{
+			weekimage1 = new FlxSprite(0,0).loadGraphic(Paths.image("UI/story/what1"));
+		    weekimage1.screenCenter();
+		    weekimage1.antialiasing = ClientPrefs.data.antialiasing;
+		    add(weekimage1);
+		}
 
 		playbutt = new FlxSprite(684, 489).loadGraphic(Paths.image("UI/story/button2"));
 		playbutt.scale.set(0.75 ,0.68);
@@ -198,12 +208,24 @@ class StoryMenuState extends MusicBeatState
 		FlxG.sound.music.stop();
 		FlxG.sound.play(Paths.sound('select'));
 
-		WeekData.reloadWeekFiles(true);
-        PlayState.SONG = Song.loadFromJson('new crewmate', 'new crewmate');
-        PlayState.storyPlaylist = ['new crewmate', 'accident', 'two suspect', 'reactor alarm', 'get caught'];
-        Difficulty.list = ['Normal'];
-        PlayState.storyDifficulty = 0;
-        PlayState.storyWeek = WeekData.weeksList.indexOf('week1');
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		{
+			WeekData.reloadWeekFiles(true);
+            PlayState.SONG = Song.loadFromJson('new crewmate', 'new crewmate');
+            PlayState.storyPlaylist = ['new crewmate', 'accident', 'two suspect', 'reactor alarm', 'get caught'];
+            Difficulty.list = ['Normal'];
+            PlayState.storyDifficulty = 0;
+            PlayState.storyWeek = WeekData.weeksList.indexOf('week1');
+		}
+		else
+		{
+			WeekData.reloadWeekFiles(true);
+            PlayState.SONG = Song.loadFromJson('futurology dilemma', 'futurology dilemma');
+            PlayState.storyPlaylist = ['futurology dilemma'];
+            Difficulty.list = ['Normal'];
+            PlayState.storyDifficulty = 0;
+            PlayState.storyWeek = WeekData.weeksList.indexOf('comehere');
+		}
 
 		var directory = StageData.forceNextDirectory;
 		LoadingState.loadNextDirectory();

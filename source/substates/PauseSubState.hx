@@ -19,12 +19,16 @@ class PauseSubState extends MusicBeatSubstate
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var items:FlxTypedGroup<FlxSprite>;
+	var mumble:FlxSprite;
 
 	var shit:Array<String> = ['resume', 'restart', 'setting', 'exit'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
 
 	var descTxt:FlxTypeText;
+
+	var introTween:FlxTween;
+    var bubbleTween:FlxTween;
 
 	var pauseMusic:FlxSound;
 	var curTime:Float = Math.max(0, Conductor.songPosition);
@@ -58,30 +62,38 @@ class PauseSubState extends MusicBeatSubstate
 		bg.scrollFactor.set();
 		add(bg);
 
-		var mumble:FlxSprite = new FlxSprite(1160,243);
+		mumble = new FlxSprite(670,600);
 		mumble.frames = Paths.getSparrowAtlas('UI/pause/mr.mumble');
 		mumble.animation.addByPrefix('anim1', "mr.mumble neutral", 16);
 		mumble.animation.addByPrefix('anim2', "mr.mumble worry", 16);
 		mumble.animation.addByPrefix('anim3', "mr.mumble talk", 16);
 		mumble.animation.addByPrefix('anim4', "mr.mumble mum", 16);
-		mumble.animation.play('anim' + FlxG.random.int(1,4));
+		mumble.animation.addByPrefix('anim5', "mr.mumble good-luck", 16);
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		{
+			mumble.animation.play('anim' + FlxG.random.int(1,4));
+		}
+		else
+		{
+			mumble.animation.play('anim5');
+		}
 		mumble.setGraphicSize(Std.int(mumble.width * 0.6));
 		mumble.updateHitbox();
 		mumble.antialiasing = ClientPrefs.data.antialiasing;
 		add(mumble);
 
-		var bubble:FlxSprite = new FlxSprite(30,30);
+		var bubble:FlxSprite = new FlxSprite(-20,0);
 		bubble.frames = Paths.getSparrowAtlas('UI/pause/speech-bubble');
 		bubble.animation.addByPrefix('anim', "speech-bubble 1", 24);
 		bubble.animation.play('anim');
-		bubble.setGraphicSize(Std.int(bubble.width * 0.6));
+		bubble.setGraphicSize(Std.int(bubble.width * 0.65));
 		bubble.alpha = 0;
 		bubble.updateHitbox();
 		bubble.antialiasing = ClientPrefs.data.antialiasing;
 		add(bubble);
 
-		descTxt = new FlxTypeText(400, 120, Std.int(FlxG.width * 0.5), '', 15);
-		descTxt.setFormat(Paths.font("Hakgyoansim Nadeuri TTF B.ttf"), 40, FlxColor.WHITE , 'right');
+		descTxt = new FlxTypeText(586, 77, Std.int(FlxG.width * 0.4), '', 15);
+		descTxt.setFormat(Paths.font("Hakgyoansim Nadeuri TTF B.ttf"), 33, FlxColor.WHITE , 'right');
 		descTxt.color = 0xFF000000;
 		descTxt.sounds = [FlxG.sound.load(Paths.sound('Among_texting'), 0.6)];
 		descTxt.updateHitbox();
@@ -96,7 +108,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		var menuSide:FlxSprite = new FlxSprite(-120,0).loadGraphic(Paths.image('UI/pause/menu'));
 		menuSide.updateHitbox();
-		menuSide.setGraphicSize(Std.int(menuSide.width * 0.7));
+		menuSide.setGraphicSize(Std.int(menuSide.width * 0.65));
 		menuSide.screenCenter(Y);
 		menuSide.antialiasing = ClientPrefs.data.antialiasing;
 		add(menuSide);
@@ -120,13 +132,13 @@ class PauseSubState extends MusicBeatSubstate
 	
 			switch(i) {
 				case 0:
-					button.setPosition(40, -83);
+					button.setPosition(47, -75);
 				case 1:
 					button.setPosition(30, 64);
 				case 2:
-					button.setPosition(225, 155);
+					button.setPosition(215, 150);
 				case 3:
-					button.setPosition(-30, 230);
+					button.setPosition(-28, 217);
 			}
 			changeItem();
 	
@@ -134,11 +146,14 @@ class PauseSubState extends MusicBeatSubstate
 
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(bar, {alpha: 1}, 0.4);
-		FlxTween.tween(mumble, {x: 670}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3, onComplete: (_) -> {
-            FlxTween.tween(bubble, {alpha: 1}, 0.4, {ease: FlxEase.quartInOut, onComplete: (_) -> {
-				startTexting();
-			}});
-	    }});
+		introTween = FlxTween.tween(mumble, {y: 243}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3, onComplete: (_) -> {
+                bubbleTween = FlxTween.tween(bubble, {alpha: 1}, 0.4, {ease: FlxEase.quartInOut,onComplete: (_) -> {
+                    if(!exists) return;
+                    startTexting();
+                }
+            });
+        }
+        });
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
@@ -148,7 +163,18 @@ class PauseSubState extends MusicBeatSubstate
 	function startTexting()
 	{
 		var songName:String = Paths.formatToSongPath(PlayState.SONG.song);
-        var desc:String = Paths.getTextFromFile('data/' + songName + '/desc.txt');
+		var lang:String = ClientPrefs.data.language;
+		var desc:String = null;
+
+		if(lang == "ko-KR")
+        {
+            desc = Paths.getTextFromFile('data/' + songName + '/desc_kr.txt');
+        }
+
+        if(desc == null)
+        {
+            desc = Paths.getTextFromFile('data/' + songName + '/desc.txt');
+        }
 
         if(desc == null || desc.trim() == '')
         {
@@ -163,7 +189,7 @@ class PauseSubState extends MusicBeatSubstate
 
 
         descTxt.resetText(desc);
-        descTxt.start(0.04, true);
+        descTxt.start(0.03, true);
 	}
 	
 	function getPauseSong()
@@ -184,6 +210,11 @@ class PauseSubState extends MusicBeatSubstate
 			pauseMusic.volume += 0.01 * elapsed;
 
 		super.update(elapsed);
+
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true)
+		{
+			mumble.animation.play('anim5');
+		}
 
 		if(controls.BACK)
 		{
@@ -269,6 +300,8 @@ class PauseSubState extends MusicBeatSubstate
 	override function destroy()
 	{
 		pauseMusic.destroy();
+		if(introTween != null) introTween.cancel();
+        if(bubbleTween != null) bubbleTween.cancel();
 		super.destroy();
 	}
 

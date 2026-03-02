@@ -40,6 +40,7 @@ class MainMenuState extends MusicBeatState
 	var rightOption:String = null;
 
 	var leftIndex:Int = 0;
+	var leftSelcted:Bool = false;
 
 	var camFollow:FlxObject;
 
@@ -81,18 +82,17 @@ class MainMenuState extends MusicBeatState
 		fg.updateHitbox();
 		add(fg);
 
-		portrait = new FlxSprite(-1000, 160).loadGraphic(Paths.image('mainMenu/image' + imgIndex));
-		portrait.setGraphicSize(Std.int(portrait.width * 0.55));
-		portrait.updateHitbox();
-		portrait.antialiasing = ClientPrefs.data.antialiasing;
-		portrait.scrollFactor.set();
-		add(portrait);
-
-		menuItems = new FlxTypedGroup<FlxSprite>();
-		add(menuItems);
-
-		switch (imgIndex)
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
         {
+            portrait = new FlxSprite(-1000, 160).loadGraphic(Paths.image('mainMenu/image' + imgIndex));
+		    portrait.setGraphicSize(Std.int(portrait.width * 0.55));
+		    portrait.updateHitbox();
+		    portrait.antialiasing = ClientPrefs.data.antialiasing;
+		    portrait.scrollFactor.set();
+		    add(portrait);
+
+			switch (imgIndex)
+            {
             case 0:
                 portrait.setPosition(-1000, 50);
             case 1:
@@ -113,9 +113,12 @@ class MainMenuState extends MusicBeatState
                 portrait.setPosition(-1000, 163);
 			case 9:
                 portrait.setPosition(-1000, 165);
+            }
+			FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});
         }
 
-		FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});
+		menuItems = new FlxTypedGroup<FlxSprite>();
+		add(menuItems);
 
 		var logo:FlxSprite = new FlxSprite(0,0);
 		logo.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -268,6 +271,7 @@ class MainMenuState extends MusicBeatState
 					if(controls.UI_LEFT_P && leftOption != null)
 					{
 						curColumn = LEFT;
+						leftSelcted= true;
 						changeItem();
 					}
 					else if(controls.UI_RIGHT_P && rightOption != null)
@@ -287,6 +291,7 @@ class MainMenuState extends MusicBeatState
                         else
                         {
                             curColumn = CENTER;
+							leftSelcted = false;
                             changeItem();
                          }
                     }
@@ -316,77 +321,21 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT || (FlxG.mouse.justPressed && allowMouse))
 			{
-				FlxG.sound.play(Paths.sound('confirmMenu'));
-				selectedSomethin = true;
-				FlxG.mouse.visible = false;
-
-				var item:FlxSprite;
-				var option:String;
-				switch(curColumn)
-				{
-					case CENTER:
-						option = optionShit[curSelected];
-						item = menuItems.members[curSelected];
-
-					case LEFT:
-						if(leftIndex == 0)
-                        {
-                            option = leftOption;
-                            item = leftItem;
-                        }
-                        else if(leftIndex == 1)
-                        {
-                            option = leftOption2;
-                            item = leftItem2;
-                        }
-						else
-                        {
-                            item = leftItem;
-                        }
-
-					case RIGHT:
-						option = rightOption;
-						item = rightItem;
-				}
-
-				FlxFlicker.flicker(item, 1, 0.06, false, false, function(flick:FlxFlicker)
-				{
-					switch (option)
+				if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true)
+                {
+					if (curSelected > 0 || leftSelcted)
 					{
-						case 'story_mode':
-							MusicBeatState.switchState(new StoryMenuState());
-						case 'freeplay':
-							MusicBeatState.switchState(new FreeplayState());
-						case 'credits':
-							MusicBeatState.switchState(new CreditsState());
-						case 'options':
-							MusicBeatState.switchState(new OptionsState());
-							OptionsState.onPlayState = false;
-							if (PlayState.SONG != null)
-							{
-								PlayState.SONG.arrowSkin = null;
-								PlayState.SONG.splashSkin = null;
-								PlayState.stageUI = 'normal';
-							}
-						case 'gallery':
-							MusicBeatState.switchState(new GalleryState());
-						case 'discord':
-							CoolUtil.browserLoad('https://discord.gg/PFHAu2mDK5');
-							selectedSomethin = false;
-							item.visible = true;
-						default:
-							trace('Menu Item ${option} doesn\'t do anything');
-							selectedSomethin = false;
-							item.visible = true;
+						FlxG.sound.play(Paths.sound('swipe_card_failed'));
+                        FlxG.camera.shake(0.01, 0.15);
 					}
-				});
-				
-				for (memb in menuItems)
+					else
+					{
+						selectedMenu();
+					}
+                }
+				else
 				{
-					if(memb == item)
-						continue;
-
-					FlxTween.tween(memb, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
+					selectedMenu();
 				}
 			}
 			#if desktop
@@ -400,6 +349,82 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+	}
+
+	function selectedMenu()
+	{
+		FlxG.sound.play(Paths.sound('confirmMenu'));
+		selectedSomethin = true;
+		FlxG.mouse.visible = false;
+
+		var item:FlxSprite;
+		var option:String;
+		switch(curColumn)
+		{
+			case CENTER:
+				option = optionShit[curSelected];
+				item = menuItems.members[curSelected];
+
+			case LEFT:
+				if(leftIndex == 0)
+                {
+                    option = leftOption;
+                    item = leftItem;
+                }
+                else if(leftIndex == 1)
+                {
+                    option = leftOption2;
+                    item = leftItem2;
+                }
+				else
+                {
+                    item = leftItem;
+                }
+
+			case RIGHT:
+				option = rightOption;
+				item = rightItem;
+		}
+		
+		FlxFlicker.flicker(item, 1, 0.06, false, false, function(flick:FlxFlicker)
+		{
+			switch (option)
+			{
+				case 'story_mode':
+					MusicBeatState.switchState(new StoryMenuState());
+				case 'freeplay':
+					MusicBeatState.switchState(new FreeplayState());
+				case 'credits':
+					MusicBeatState.switchState(new CreditsState());
+				case 'options':
+					MusicBeatState.switchState(new OptionsState());
+					OptionsState.onPlayState = false;
+					if (PlayState.SONG != null)
+					{
+						PlayState.SONG.arrowSkin = null;
+						PlayState.SONG.splashSkin = null;
+						PlayState.stageUI = 'normal';
+					}
+				case 'gallery':
+					MusicBeatState.switchState(new GalleryState());
+				case 'discord':
+					CoolUtil.browserLoad('https://discord.gg/PFHAu2mDK5');
+					selectedSomethin = false;
+					item.visible = true;
+				default:
+					trace('Menu Item ${option} doesn\'t do anything');
+					selectedSomethin = false;
+					item.visible = true;
+			}
+		});
+				
+		for (memb in menuItems)
+		{
+			if(memb == item)
+				continue;
+
+			FlxTween.tween(memb, {alpha: 0}, 0.4, {ease: FlxEase.quadOut});
+		}
 	}
 
 	function changeItem(change:Int = 0)

@@ -2472,16 +2472,42 @@ class PlayState extends MusicBeatState
 		deathCounter = 0;
 		seenCutscene = false;
 
-		if(isStoryMode && !practiceMode && !cpuControlled)
+		FlxG.save.data.clearCount ??= 0;
+
+		if(!practiceMode && !cpuControlled)
         {
             var songName = Paths.formatToSongPath(SONG.song);
-            Reflect.setField(FlxG.save.data, songName + "_clear", true);
+            var playedField = songName + "_played";
+            var alreadyPlayed:Bool = Reflect.field(FlxG.save.data, playedField) == true;
+
+            if (!alreadyPlayed)
+            {
+                Reflect.setField(FlxG.save.data, playedField, true);
+                FlxG.save.data.clearCount ??= 0;
+                FlxG.save.data.clearCount++;
+
+                trace("Count UP: " + FlxG.save.data.clearCount);
+            }
+            else
+            {
+                trace("No count (already cleared)");
+            }
+
+			if (FlxG.save.data.clearCount == 12)
+            {
+				FlxG.save.data.blistunlocked = true;
+                FlxG.save.flush();
+
+                FlxG.switchState(new NotTrueState());
+            }
+
+            Reflect.setField(FlxG.save.data, songName + "_played", true);
 			if(songName == "get-caught")
             {
-                Reflect.setField(FlxG.save.data, "lore_clear", true);
-				Reflect.setField(FlxG.save.data, "zanta_clear", true);
-				Reflect.setField(FlxG.save.data, "brothers-in-arms_clear", true);
-				Reflect.setField(FlxG.save.data, "triple-kill_clear", true);
+                Reflect.setField(FlxG.save.data, "lore_unlocked", true);
+                Reflect.setField(FlxG.save.data, "zanta_unlocked", true);
+                Reflect.setField(FlxG.save.data, "brothers-in-arms_unlocked", true);
+                Reflect.setField(FlxG.save.data, "triple-kill_unlocked", true);
             }
             FlxG.save.flush();
         }

@@ -16,12 +16,10 @@ function onCreate()
     setObjectCamera("Subtitle", "other")
     addLuaText("Subtitle")
 
-    if isStoryMode then
-        makeLuaSprite("balloon", getBG("balloons/red"), -500, 100)
-        scaleObject("balloon", 0.7, 0.7)
-        updateHitbox("balloon")
-        addLuaSprite("balloon")
-    end
+    makeLuaSprite("balloon", getBG("balloons/red"), -500, 100)
+    scaleObject("balloon", 0.7, 0.7)
+    updateHitbox("balloon")
+    addLuaSprite("balloon")
 
     makeLuaSprite("Deadbody", getBG("deadbody"), 0, 330)
     scaleObject("Deadbody", 0.37, 0)

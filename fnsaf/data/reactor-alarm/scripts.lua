@@ -69,14 +69,12 @@ function onCreate()
         addLuaSprite("pink")
     end
 
-    if isStoryMode then
-        makeAnimatedLuaSprite('glitch', "bg/reactor/gliched", -400, 250)
-	    scaleObject("glitch", 0.15, 0.2)
-        updateHitbox("glitch")
-        setProperty("glitch.visible", false)
-	    addAnimationByPrefix('glitch','anim','gliched' ,24 ,true)
-        addLuaSprite("glitch")
-    end
+    makeAnimatedLuaSprite('glitch', "bg/reactor/gliched", -400, 250)
+	scaleObject("glitch", 0.15, 0.2)
+    updateHitbox("glitch")
+    setProperty("glitch.visible", false)
+	addAnimationByPrefix('glitch','anim','gliched' ,24 ,true)
+    addLuaSprite("glitch")
 end
 
 function onStartCountdown()
