@@ -1,0 +1,63 @@
+{
+	"animations": [
+		{
+			"offsets": [-373, -212],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [-470, -281],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [-449, -81],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [-679, -192],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [-157, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "shoot",
+			"indices": [],
+			"name": "gunshot"
+		},
+		{
+			"loop": true,
+			"offsets": [-519, -158],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/shadow_agry_agf",
+	"position": [-290, 320],
+	"healthicon": "blist-agf",
+	"flip_x": false,
+	"healthbar_colors": [212, 157, 60],
+	"camera_position": [460, 220],
+	"sing_duration": 4,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

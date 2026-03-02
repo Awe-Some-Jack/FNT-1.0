@@ -1,62 +1,62 @@
 {
 	"animations": [
 		{
-			"offsets": [0, 0],
-			"indices": [],
-			"fps": 24,
-			"anim": "idle",
-			"loop": false,
-			"name": "idle"
-		},
-		{
 			"offsets": [-46, -3],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "left"
 		},
 		{
 			"offsets": [-31, -3],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "down"
 		},
 		{
 			"offsets": [-16, 56],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "up"
 		},
 		{
 			"offsets": [-273, 0],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "right"
 		},
 		{
 			"offsets": [-157, 0],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "shoot",
-			"loop": false,
+			"indices": [],
 			"name": "gunshot"
+		},
+		{
+			"loop": true,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/angy_agf",
 	"position": [-290, 320],
-	"healthicon": "face",
+	"healthicon": "blist-agf",
 	"flip_x": false,
-	"healthbar_colors": [161, 161, 161],
-	"camera_position": [110, 0],
+	"healthbar_colors": [212, 157, 60],
+	"camera_position": [120, 30],
 	"sing_duration": 4,
 	"scale": 1,
 	"_editor_isPlayer": false

@@ -1,11 +1,14 @@
 package substates;
 
+import openfl.utils.Assets;
+
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
 
 import flixel.util.FlxStringUtil;
 import substates.StickerSubState;
+import flixel.addons.text.FlxTypeText;
 
 import states.StoryMenuState;
 import states.FreeplayState;
@@ -20,6 +23,8 @@ class PauseSubState extends MusicBeatSubstate
 	var shit:Array<String> = ['resume', 'restart', 'setting', 'exit'];
 	var difficultyChoices = [];
 	var curSelected:Int = 0;
+
+	var descTxt:FlxTypeText;
 
 	var pauseMusic:FlxSound;
 	var curTime:Float = Math.max(0, Conductor.songPosition);
@@ -75,6 +80,13 @@ class PauseSubState extends MusicBeatSubstate
 		bubble.antialiasing = ClientPrefs.data.antialiasing;
 		add(bubble);
 
+		descTxt = new FlxTypeText(400, 120, Std.int(FlxG.width * 0.5), '', 15);
+		descTxt.setFormat(Paths.font("Hakgyoansim Nadeuri TTF B.ttf"), 40, FlxColor.WHITE , 'right');
+		descTxt.color = 0xFF000000;
+		descTxt.sounds = [FlxG.sound.load(Paths.sound('Among_texting'), 0.6)];
+		descTxt.updateHitbox();
+		add(descTxt);
+
 		var bar:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('UI/pause/bar'));
 		bar.alpha = 0;
 		bar.updateHitbox();
@@ -123,12 +135,35 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(bar, {alpha: 1}, 0.4);
 		FlxTween.tween(mumble, {x: 670}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3, onComplete: (_) -> {
-            FlxTween.tween(bubble, {alpha: 1}, 0.4, {ease: FlxEase.quartInOut});
+            FlxTween.tween(bubble, {alpha: 1}, 0.4, {ease: FlxEase.quartInOut, onComplete: (_) -> {
+				startTexting();
+			}});
 	    }});
 
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
 		super.create();
+	}
+
+	function startTexting()
+	{
+		var songName:String = Paths.formatToSongPath(PlayState.SONG.song);
+        var desc:String = Paths.getTextFromFile('data/' + songName + '/desc.txt');
+
+        if(desc == null || desc.trim() == '')
+        {
+            desc = "No Description.";
+        }
+        else
+        {
+            desc = desc.replace("\r", "");
+            while(desc.indexOf("\n\n") != -1)
+                desc = desc.replace("\n\n", "\n");
+        }
+
+
+        descTxt.resetText(desc);
+        descTxt.start(0.04, true);
 	}
 	
 	function getPauseSong()

@@ -2,7 +2,7 @@ luaDebugMode = true
 
 local tag = 'BFExtra' -- name tag of character
 local x = 300 -- x position
-local y = 310 -- y position
+local y = 290 -- y position
 local character = 'bf' -- name of json file
 local isPlayer = false -- flips the character and the notetypes will only work when the player hits the note
 local order = -1 -- basically the layer that the character will be on, use this if you need it to appear above or below something (-1 is default and it will add it normally)

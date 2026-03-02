@@ -51,6 +51,10 @@ function onSongCheck()
         artist = { "Amon crack" }
         composer = { "Mr Takoyaky" }
         charter = { "Dia" }
+    elseif songName == "Futurology Dilemma" then
+        artist = { "Sucheol, Amon crack" }
+        composer = { "Mr Takoyaky, Askliskal, hmm111" }
+        charter = { "Dia" }
     end
 end
 

@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"offsets": [0, 0],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "blist-outside idle"
+		},
+		{
+			"offsets": [-1, 9],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "blist-outside singLEFT0"
+		},
+		{
+			"offsets": [2, -3],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "blist-outside singDOWN0"
+		},
+		{
+			"offsets": [-1, 5],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "blist-outside singUP0"
+		},
+		{
+			"offsets": [-11, -3],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "blist-outside singRIGHT0"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/blist-outside",
+	"position": [-780, -390],
+	"healthicon": "blist",
+	"flip_x": false,
+	"healthbar_colors": [14, 123, 63],
+	"camera_position": [260, 380],
+	"sing_duration": 4,
+	"scale": 0.65,
+	"_editor_isPlayer": false
+}

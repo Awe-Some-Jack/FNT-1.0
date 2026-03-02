@@ -1,0 +1,39 @@
+{
+	"animations": [
+		{
+			"offsets": [97, 35],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "firstDeath"
+		},
+		{
+			"offsets": [100, 13],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [102, 211],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "deathConfirm"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/gang_ggang_BF_Death",
+	"position": [-120, 400],
+	"healthicon": "bf-ggang",
+	"flip_x": true,
+	"healthbar_colors": [63, 199, 250],
+	"camera_position": [-140, -110],
+	"sing_duration": 6.1,
+	"scale": 0.6,
+	"_editor_isPlayer": true
+}

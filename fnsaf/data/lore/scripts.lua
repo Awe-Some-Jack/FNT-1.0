@@ -8,8 +8,8 @@ function onCreate()
     setProperty("boyfriend.flipX", false)
     setProperty('dad.color', getColorFromHex('000000'))
 
-    setProperty("boyfriend.x", defaultOpponentX)
-    setProperty("boyfriend.y", defaultOpponentY + 420)
+    setProperty("boyfriend.x", defaultOpponentX - 620)
+    setProperty("boyfriend.y", defaultOpponentY - 70)
 
     setProperty("dad.x", -1500)
     setProperty("dad.y", -20)
@@ -85,7 +85,7 @@ end
 function onStepHit()
     if curStep == 1148 then
         doTweenX("ItsBlack", "dad", -430, 0.5, "cubeOut")
-        doTweenX("umm", "boyfriend", 1100, 0.5, "cubeOut")
+        doTweenX("umm", "boyfriend", 600, 0.5, "cubeOut")
         changedefault()
     end
 

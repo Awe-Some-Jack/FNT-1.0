@@ -1,53 +1,53 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [0, 0],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "IDLE"
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [82, 113],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "LEFT"
+			"fps": 24,
+			"name": "LEFT",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [0, -24],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "DOWN"
+			"fps": 24,
+			"name": "DOWN",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [81, 386],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "UP"
+			"fps": 24,
+			"name": "UP",
+			"indices": []
 		},
 		{
-			"offsets": [71, -26],
-			"indices": [],
-			"fps": 24,
-			"anim": "singRIGHT",
 			"loop": false,
-			"name": "RIGHT"
+			"offsets": [71, -26],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "RIGHT",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/space_puppy_exe",
 	"position": [-120, 370],
-	"healthicon": "face",
+	"healthicon": "killerpuppy",
 	"flip_x": false,
-	"healthbar_colors": [60, 0, 121],
+	"healthbar_colors": [68, 14, 167],
 	"camera_position": [-70, 70],
 	"sing_duration": 4,
 	"scale": 1,

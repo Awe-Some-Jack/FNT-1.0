@@ -29,7 +29,8 @@
 		[
 			8906.25,
 			[
-				["Play Animation", "intro", "Dad"]
+				["Play Animation", "appear", "Dad"],
+				["Set Property", "dad.skipDance", "true"]
 			]
 		],
 		[
@@ -54,6 +55,12 @@
 			]
 		],
 		[
+			10968.75,
+			[
+				["Play Animation", "help", "Dad"]
+			]
+		],
+		[
 			11250,
 			[
 				["Play Animation", "mic-on", "BF"]
@@ -66,12 +73,19 @@
 			]
 		],
 		[
+			11812.5,
+			[
+				["Play Animation", "back", "Dad"]
+			]
+		],
+		[
 			12000,
 			[
 				["Cinematics", "0", ""],
 				["Tween Cam Zoom", "0.85", ""],
 				["Change Character", "BF", "bf"],
-				["Set Property", "boyfriend.skipDance", "false"]
+				["Set Property", "boyfriend.skipDance", "false"],
+				["Set Property", "dad.skipDance", "false"]
 			]
 		],
 		[
@@ -392,19 +406,22 @@
 		[
 			121875,
 			[
-				["Tween Cam Zoom", "0.87", "0.01"]
+				["Tween Cam Zoom", "0.87", "0.01"],
+				["Play Animation", "blink", "Dad"]
 			]
 		],
 		[
 			122250,
 			[
-				["Tween Cam Zoom", "0.9", "0.01"]
+				["Tween Cam Zoom", "0.9", "0.01"],
+				["Play Animation", "blink", "Dad"]
 			]
 		],
 		[
 			122625,
 			[
-				["Tween Cam Zoom", "0.95", "0.01"]
+				["Tween Cam Zoom", "0.95", "0.01"],
+				["Play Animation", "blink", "Dad"]
 			]
 		],
 		[

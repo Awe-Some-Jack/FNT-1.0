@@ -10,7 +10,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [45, 1],
+			"offsets": [55, -1],
 			"anim": "singLEFT",
 			"fps": 24,
 			"name": "Left",
@@ -18,7 +18,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [21, 0],
+			"offsets": [27, -1],
 			"anim": "singDOWN",
 			"fps": 24,
 			"name": "Down",
@@ -34,7 +34,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [79, 15],
+			"offsets": [85, 17],
 			"anim": "singLEFTmiss",
 			"fps": 24,
 			"name": "Lmiss",
@@ -42,7 +42,7 @@
 		},
 		{
 			"loop": false,
-			"offsets": [21, 7],
+			"offsets": [22, 7],
 			"anim": "singDOWNmiss",
 			"fps": 24,
 			"name": "Dmiss",
@@ -50,38 +50,38 @@
 		},
 		{
 			"loop": false,
-			"offsets": [-27, 54],
+			"offsets": [-30, 57],
 			"anim": "singUPmiss",
 			"fps": 24,
 			"name": "Umiss",
 			"indices": []
 		},
 		{
-			"offsets": [-36, -19],
-			"indices": [],
+			"offsets": [-47, -29],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"loop": false,
+			"indices": [],
 			"name": "Rmiss"
 		},
 		{
-			"offsets": [-36, -17],
-			"indices": [],
+			"offsets": [-48, -25],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "Right"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/fnsaf_bf",
-	"position": [-100, 220],
+	"position": [-100, 170],
 	"healthicon": "bf",
 	"flip_x": true,
 	"healthbar_colors": [61, 199, 250],
-	"camera_position": [20, 60],
+	"camera_position": [140, -60],
 	"sing_duration": 4,
-	"scale": 0.8,
+	"scale": 1,
 	"_editor_isPlayer": true
 }
