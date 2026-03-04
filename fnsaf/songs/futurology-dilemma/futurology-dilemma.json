@@ -1,5 +1,2307 @@
 {
 	"player1": "bf-n",
+	"gfVersion": "gf",
+	"events": [
+		[
+			21300,
+			[
+				["Highlight Character", "1", ""]
+			]
+		],
+		[
+			21600,
+			[
+				["CenterCameraEvent", "on", "930,650"]
+			]
+		],
+		[
+			31125,
+			[
+				["Bumpin Beat", "1.5", "2"]
+			]
+		],
+		[
+			31200,
+			[
+				["CenterCameraEvent", "on", "150,700"],
+				["Set Camera Speed", "0.3", ""],
+				["Screen Shake", "0.1,0.01", "0.1,0.01"]
+			]
+		],
+		[
+			36000,
+			[
+				["Cinematics", "1", ""],
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			37500,
+			[
+				["Tween Cam Zoom", "1.25", ""]
+			]
+		],
+		[
+			38100,
+			[
+				["Tween Cam Zoom", "1.35", ""]
+			]
+		],
+		[
+			38325,
+			[
+				["Bumpin Beat", "1.3", "1"]
+			]
+		],
+		[
+			38400,
+			[
+				["CenterCameraEvent", "on", "550,550"],
+				["Set Camera Speed", "1", ""],
+				["Tween Cam Zoom", "0.6", ""],
+				["Cinematics", "0", ""]
+			]
+		],
+		[
+			39450,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			39525,
+			[
+				["Bumpin Beat", "1.5", "4"]
+			]
+		],
+		[
+			40200,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			40500,
+			[
+				["Tween Cam Zoom", "1.7", "0.6"]
+			]
+		],
+		[
+			40650,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			40725,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"],
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			40800,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "off", ""],
+				["Change Character", "dad", "blistpre"],
+				["Tween Cam Zoom", "0.8", ""],
+				["Highlight Character", "0", ""]
+			]
+		],
+		[
+			45600,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			46050,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			46800,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			48000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			49200,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			55200,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			55650,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			56400,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			57600,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			58200,
+			[
+				["Set Camera Speed", "0.1", ""],
+				["Tween Cam Zoom", "2", "10"],
+				["Camera Follow Pos", "200", "550"]
+			]
+		],
+		[
+			58500,
+			[
+				["Tween Cam Zoom", "1.7", "0.8"]
+			]
+		],
+		[
+			58650,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			58725,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			58800,
+			[
+				["Video Player", "blist_aura, camHUD, 0", "false, true"]
+			]
+		],
+		[
+			58800,
+			[
+				["Video Player", "blist_aura, camHUD, 0", "false, true"]
+			]
+		],
+		[
+			59400,
+			[
+				["Screen Shake", "0.9,0.008", "0.9,0.008"]
+			]
+		],
+		[
+			59775,
+			[
+				["Set Camera Speed", "1", ""]
+			]
+		],
+		[
+			60000,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["Change Character", "dad", "blist2"]
+			]
+		],
+		[
+			62400,
+			[
+				["Tween Cam Zoom", "0.7", ""],
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			64800,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			67200,
+			[
+				["Tween Cam Zoom", "0.7", ""],
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			69300,
+			[
+				["Tween Cam Zoom", "1.7", "0.7"]
+			]
+		],
+		[
+			69450,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			69525,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			69600,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			79125,
+			[
+				["Bumpin Beat", "1", "4"]
+			]
+		],
+		[
+			79500,
+			[
+				["Bumpin Zoom", "1", "1"]
+			]
+		],
+		[
+			79650,
+			[
+				["Bumpin Zoom", "1", "1"]
+			]
+		],
+		[
+			79950,
+			[
+				["Bumpin Zoom", "1", "1"]
+			]
+		],
+		[
+			80100,
+			[
+				["Bumpin Zoom", "1", "1"]
+			]
+		],
+		[
+			81525,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			81600,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Change Character", "bf", "bf-side-dark"],
+				["Change Character", "dad", "blist-puppy"]
+			]
+		],
+		[
+			84000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			86400,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			89925,
+			[
+				["Bumpin Beat", "2", "6"]
+			]
+		],
+		[
+			90000,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["Cinematics", "1", ""]
+			]
+		],
+		[
+			90900,
+			[
+				["Tween Cam Zoom", "1.4", "0.8"]
+			]
+		],
+		[
+			91050,
+			[
+				["Tween Cam Zoom", "1.4", "0.3"]
+			]
+		],
+		[
+			91125,
+			[
+				["Tween Cam Zoom", "1.4", "0.1"],
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			91200,
+			[
+				["Tween Cam Zoom", "0.7", ""],
+				["CenterCameraEvent", "on", "150,400"],
+				["Cinematics", "0", ""]
+			]
+		],
+		[
+			95400,
+			[
+				["Tween Cam Zoom", "1.15", ""]
+			]
+		],
+		[
+			95700,
+			[
+				["Tween Cam Zoom", "1.3", ""]
+			]
+		],
+		[
+			96000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			102450,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			103200,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			106800,
+			[
+				["Camera Follow Pos", "550", "550"]
+			]
+		],
+		[
+			120000,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			121500,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			123600,
+			[
+				["Tween Cam Zoom", "0.7", ""],
+				["CenterCameraEvent", "on", "150,400"]
+			]
+		],
+		[
+			124800,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			126000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			129000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			129600,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			130800,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			132000,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			133200,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			134325,
+			[
+				["Tween Cam Zoom", "1.2", ""]
+			]
+		],
+		[
+			134400,
+			[
+				["Tween Cam Zoom", "0.7", ""],
+				["CenterCameraEvent", "on", "150,400"]
+			]
+		],
+		[
+			136350,
+			[
+				["Tween Cam Zoom", "0.75", ""],
+				["CenterCameraEvent", "on", "200,400"]
+			]
+		],
+		[
+			136800,
+			[
+				["CenterCameraEvent", "on", "250,400"],
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			138600,
+			[
+				["Tween Cam Zoom", "1.7", "1.5"]
+			]
+		],
+		[
+			138900,
+			[
+				["Tween Cam Zoom", "1.7", "0.6"]
+			]
+		],
+		[
+			139050,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			139125,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			139200,
+			[
+				["Change Character", "Dad", "darkblist"],
+				["Change Character", "BF", "darkbf"],
+				["Video Player", "disguis_2, camOther", "false, true"]
+			]
+		],
+		[
+			139500,
+			[
+				["Tween Cam Zoom", "1.3", ""]
+			]
+		],
+		[
+			139800,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			140100,
+			[
+				["Middlescroll", "1", ""]
+			]
+		],
+		[
+			141600,
+			[
+				["Tween Cam Zoom", "0.5", ""],
+				["Camera Follow Pos", "550", "250"]
+			]
+		],
+		[
+			146400,
+			[
+				["Tween Cam Zoom", "0.65", ""]
+			]
+		],
+		[
+			148200,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			148800,
+			[
+				["Tween Cam Zoom", "0.4", ""]
+			]
+		],
+		[
+			149400,
+			[
+				["Tween Cam Zoom", "0.5", "2"]
+			]
+		],
+		[
+			156000,
+			[
+				["Tween Cam Zoom", "0.45", ""]
+			]
+		],
+		[
+			158400,
+			[
+				["Tween Cam Zoom", "0.6", ""]
+			]
+		],
+		[
+			159600,
+			[
+				["Tween Cam Zoom", "0.4", ""],
+				["Screen Shake", "1,0.005", "1,0.005"]
+			]
+		],
+		[
+			160800,
+			[
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			161625,
+			[
+				["Set Camera Speed", "2", ""]
+			]
+		],
+		[
+			164400,
+			[
+				["Tween Cam Zoom", "0.4", ""]
+			]
+		],
+		[
+			165600,
+			[
+				["Tween Cam Zoom", "0.55", ""]
+			]
+		],
+		[
+			170400,
+			[
+				["Tween Cam Zoom", "0.7", ""]
+			]
+		],
+		[
+			170700,
+			[
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			174000,
+			[
+				["Tween Cam Zoom", "0.6", ""]
+			]
+		],
+		[
+			174675,
+			[
+				["Tween Cam Zoom", "0.7", ""]
+			]
+		],
+		[
+			175200,
+			[
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			178800,
+			[
+				["Tween Cam Zoom", "0.35", ""]
+			]
+		],
+		[
+			179400,
+			[
+				["Tween Cam Zoom", "1.7", "1.5"]
+			]
+		],
+		[
+			179700,
+			[
+				["Tween Cam Zoom", "1.7", "0.8"]
+			]
+		],
+		[
+			179850,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			179925,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			180000,
+			[
+				["Screen Shake", "0.7,0.007", "0.7,0.007"]
+			]
+		],
+		[
+			180975,
+			[
+				["Tween Cam Zoom", "1.5", ""]
+			]
+		],
+		[
+			181050,
+			[
+				["Highlight Character", "1", ""]
+			]
+		],
+		[
+			181125,
+			[
+				["Middlescroll", "0", ""]
+			]
+		],
+		[
+			181200,
+			[
+				["Change Character", "bf", "bf-n2"],
+				["Flash Cam", "0.5", "0.3"],
+				["Change Character", "Dad", "agf-mad-shadow"],
+				["CenterCameraEvent", "on", "300, 550"],
+				["Tween Cam Zoom", "0.7", ""]
+			]
+		],
+		[
+			185700,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			186300,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			188400,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			190800,
+			[
+				["CenterCameraEvent", "on", "700,550"],
+				["Tween Cam Zoom", "0.6", ""]
+			]
+		],
+		[
+			195600,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			198000,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			198450,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			199200,
+			[
+				["Tween Cam Zoom", "0.95", ""],
+				["Cinematics", "1", ""]
+			]
+		],
+		[
+			199500,
+			[
+				["Set Camera Speed", "20", ""],
+				["Tween Cam Zoom", "1.7", "0.9"]
+			]
+		],
+		[
+			199650,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			199725,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			199800,
+			[
+				["Change Character", "Dad", "agf-mad"],
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "450,600"],
+				["Screen Shake", "0.5,0.006", "0.5,0.006"],
+				["Highlight Character", "0", ""]
+			]
+		],
+		[
+			200100,
+			[
+				["Tween Cam Zoom", "1.15", ""]
+			]
+		],
+		[
+			200400,
+			[
+				["Flash Camera 2", "1", ""]
+			]
+		],
+		[
+			200550,
+			[
+				["Set Camera Speed", "1.5", ""]
+			]
+		],
+		[
+			200700,
+			[
+				["Flash Camera", "1", ""],
+				["Tween Cam Zoom", "0.7", ""],
+				["Cinematics", "0", ""]
+			]
+		],
+		[
+			202800,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			204000,
+			[
+				["Tween Cam Zoom", "0.7", ""]
+			]
+		],
+		[
+			205200,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			205500,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			207600,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			209550,
+			[
+				["Set Camera Speed", "20", ""]
+			]
+		],
+		[
+			209700,
+			[
+				["Tween Cam Zoom", "1.7", "0.8"]
+			]
+		],
+		[
+			209850,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			209925,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"]
+			]
+		],
+		[
+			210000,
+			[
+				["Tween Cam Zoom", "1", ""],
+				["Screen Shake", "0.5,0.006", "0.5,0.006"],
+				["CenterCameraEvent", "on", "350, 600"]
+			]
+		],
+		[
+			210150,
+			[
+				["Set Camera Speed", "1", ""]
+			]
+		],
+		[
+			210300,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			210750,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			214350,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			214800,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			217200,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			218400,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			219000,
+			[
+				["Tween Cam Zoom", "1.1", ""],
+				["coverScreen", "1,game", "0.5"]
+			]
+		],
+		[
+			219300,
+			[
+				["Flash Camera 2", "", ""]
+			]
+		],
+		[
+			219525,
+			[
+				["Bumpin Beat", "1.5", "4"]
+			]
+		],
+		[
+			219600,
+			[
+				["Flash Camera 2", "10", ""],
+				["coverScreen", "false", "1.5"],
+				["Cinematics", "1", ""]
+			]
+		],
+		[
+			220500,
+			[
+				["Flash Camera", "0.5", ""],
+				["Tween Cam Zoom", "0.7", ""]
+			]
+		],
+		[
+			220800,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			226800,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			227925,
+			[
+				["Bumpin Beat", "1.5", "1834218"]
+			]
+		],
+		[
+			228000,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			228600,
+			[
+				["Tween Cam Zoom", "1.5", "1.5"]
+			]
+		],
+		[
+			228900,
+			[
+				["Flash Camera 2", "", ""],
+				["Tween Cam Zoom", "1.5", "0.9"]
+			]
+		],
+		[
+			229050,
+			[
+				["Tween Cam Zoom", "1.5", "0.3"]
+			]
+		],
+		[
+			229125,
+			[
+				["Tween Cam Zoom", "1.5", "0.1"],
+				["Bumpin Beat", "1.35", "1"]
+			]
+		],
+		[
+			229200,
+			[
+				["CenterCameraEvent", "on", "700,550"],
+				["Tween Cam Zoom", "0.7", ""],
+				["Shadow_enabled", "dad", "true"],
+				["Shadow_enabled", "bf", "true"],
+				["Cinematics", "0", ""],
+				["Set Camera Speed", "0.7", ""]
+			]
+		],
+		[
+			235350,
+			[
+				["Set Camera Speed", "1", ""]
+			]
+		],
+		[
+			238500,
+			[
+				["Screen Shake", "0.5,0.007", "0.5,0.006"],
+				["coverScreen", "1,game", "0.00001"]
+			]
+		],
+		[
+			238800,
+			[
+				["Flash Camera", "1", ""],
+				["CenterCameraEvent", "off", ""],
+				["coverScreen", "false", ""],
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			240600,
+			[
+				["Flash Camera 2", "", ""],
+				["Tween Cam Zoom", "0.65", ""]
+			]
+		],
+		[
+			241200,
+			[
+				["Flash Camera", "0.3", ""],
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			243000,
+			[
+				["Flash Camera 2", "", ""]
+			]
+		],
+		[
+			243600,
+			[
+				["Flash Camera", "0.3", ""]
+			]
+		],
+		[
+			245400,
+			[
+				["Flash Camera 2", "", ""],
+				["Tween Cam Zoom", "0.65", ""]
+			]
+		],
+		[
+			246000,
+			[
+				["Flash Camera", "0.3", ""],
+				["Tween Cam Zoom", "0.5", ""]
+			]
+		],
+		[
+			247800,
+			[
+				["Tween Cam Zoom", "1.7", "1"]
+			]
+		],
+		[
+			248100,
+			[
+				["Tween Cam Zoom", "1.7", "0.7"]
+			]
+		],
+		[
+			248250,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			248325,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"],
+				["Shadow_enabled", "dad", "false"],
+				["Shadow_enabled", "bf", "false"]
+			]
+		],
+		[
+			248400,
+			[
+				["Flash Camera 2", "10", ""]
+			]
+		],
+		[
+			250800,
+			[
+				["Change Character", "Dad", "blist-back"],
+				["Change Character", "BF", "bf-n"]
+			]
+		],
+		[
+			260400,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			265200,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			267600,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			268725,
+			[
+				["Bumpin Beat", "1.5", "2"]
+			]
+		],
+		[
+			269925,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			270000,
+			[
+				["Tween Cam Zoom", "0.85", ""],
+				["Change Character", "dad", "blist"]
+			]
+		],
+		[
+			271200,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			271500,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			272400,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			272700,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			273600,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			274800,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			276000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			276300,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			277200,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			277500,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			278400,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			279600,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			282000,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			283200,
+			[
+				["Tween Cam Zoom", "1.2", ""]
+			]
+		],
+		[
+			284400,
+			[
+				["Tween Cam Zoom", "0.6", ""],
+				["CenterCameraEvent", "on", "450, 550"]
+			]
+		],
+		[
+			285000,
+			[
+				["Tween Cam Zoom", "0.85", ""],
+				["Play Animation", "laugh", "dad"]
+			]
+		],
+		[
+			285600,
+			[
+				["", "", ""]
+			]
+		],
+		[
+			287700,
+			[
+				["Tween Cam Zoom", "1.5", "0.9"]
+			]
+		],
+		[
+			287850,
+			[
+				["Tween Cam Zoom", "1.5", "0.3"]
+			]
+		],
+		[
+			287925,
+			[
+				["Tween Cam Zoom", "1.5", "0.1"]
+			]
+		],
+		[
+			288000,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "off", ""],
+				["Cinematics", "1", ""]
+			]
+		],
+		[
+			289200,
+			[
+				["Screen Shake", "0.6,0.004", "0.6,0.004"],
+				["Tween Cam Zoom", "1.2", ""]
+			]
+		],
+		[
+			289425,
+			[
+				["Set Camera Speed", "0.6", ""]
+			]
+		],
+		[
+			289800,
+			[
+				["Screen Shake", "0.6,0.02", "0.6,0.02"],
+				["Tween Cam Zoom", "1.1", ""],
+				["Change Scroll Speed", "0.05", "0.1"],
+				["Highlight Character", "1", ""]
+			]
+		],
+		[
+			289850,
+			[
+				["Change Scroll Speed", "1", "0.1"]
+			]
+		],
+		[
+			289900,
+			[
+				["Change Scroll Speed", "0.05", "0.1"]
+			]
+		],
+		[
+			289950,
+			[
+				["Change Scroll Speed", "1", "0.1"]
+			]
+		],
+		[
+			290000,
+			[
+				["Change Scroll Speed", "0.05", "0.1"]
+			]
+		],
+		[
+			290050,
+			[
+				["Change Scroll Speed", "1", "0.1"]
+			]
+		],
+		[
+			290100,
+			[
+				["coverScreen", "1,game", "0.1"]
+			]
+		],
+		[
+			290150,
+			[
+				["Change Scroll Speed", "1", "1.5"]
+			]
+		],
+		[
+			290325,
+			[
+				["Cinematics", "0", ""]
+			]
+		],
+		[
+			290400,
+			[
+				["Change Character", "Dad", "blist-melina"],
+				["Change Character", "BF", "bf-n3"],
+				["CenterCameraEvent", "on", "150, 450"],
+				["coverScreen", "false", "0.001"],
+				["Highlight Character", "0", ""],
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			294750,
+			[
+				["Set Camera Speed", "0.8", ""]
+			]
+		],
+		[
+			300000,
+			[
+				["Tween Cam Zoom", "0.75", ""]
+			]
+		],
+		[
+			309600,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			312000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			314400,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			315000,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			316800,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			319200,
+			[
+				["Tween Cam Zoom", "0.75", ""],
+				["CenterCameraEvent", "on", "150,450"]
+			]
+		],
+		[
+			324000,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			325800,
+			[
+				["Tween Cam Zoom", "0.82", "0.01"]
+			]
+		],
+		[
+			326100,
+			[
+				["Tween Cam Zoom", "0.85", "0.01"]
+			]
+		],
+		[
+			326400,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			328500,
+			[
+				["Flash Camera 2", "", ""]
+			]
+		],
+		[
+			328800,
+			[
+				["Flash Camera", "1", ""],
+				["CenterCameraEvent", "off", ""],
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			329700,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			330900,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			332100,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			332400,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			334500,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			335700,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			336900,
+			[
+				["Tween Cam Zoom", "1.05", ""]
+			]
+		],
+		[
+			337200,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			349200,
+			[
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			349275,
+			[
+				["Change Character", "Dad", "blist2"],
+				["Change Character", "BF", "bf-n"]
+			]
+		],
+		[
+			352950,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			354000,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			356400,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			358800,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			361200,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			361650,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			362550,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			363600,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["Set Camera Speed", "0.3", ""],
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			368400,
+			[
+				["CenterCameraEvent", "off", ""],
+				["Set Camera Speed", "1", ""],
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			368400,
+			[
+				["Change Character", "Dad", "blist"]
+			]
+		],
+		[
+			369600,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			370800,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			375600,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			378000,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			381600,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			382350,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			382800,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			387150,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			387600,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			392400,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "550,550"],
+				["Set Camera Speed", "0.3", ""]
+			]
+		],
+		[
+			397200,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			400725,
+			[
+				["Bumpin Beat", "1.5", "2"]
+			]
+		],
+		[
+			400800,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			401100,
+			[
+				["Set Camera Speed", "1", ""]
+			]
+		],
+		[
+			401400,
+			[
+				["Tween Cam Zoom", "1.2", ""]
+			]
+		],
+		[
+			401700,
+			[
+				["Tween Cam Zoom", "1.7", "0.8"]
+			]
+		],
+		[
+			401850,
+			[
+				["Tween Cam Zoom", "1.7", "0.3"]
+			]
+		],
+		[
+			401925,
+			[
+				["Tween Cam Zoom", "1.7", "0.1"],
+				["Bumpin Beat", "2", "1212"]
+			]
+		],
+		[
+			402000,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "550, 550"],
+				["Shadow_enabled", "bf", "true"]
+			]
+		],
+		[
+			403200,
+			[
+				["coverScreen", "1,game", "5"]
+			]
+		],
+		[
+			404325,
+			[
+				["Bumpin Beat", "0.1", "1212"]
+			]
+		],
+		[
+			404400,
+			[
+				["Shadow_enabled", "bf", "false"]
+			]
+		],
+		[
+			406800,
+			[
+				["Flash Camera 2", "", ""],
+				["Flash Camera 2", "", ""]
+			]
+		],
+		[
+			408150,
+			[
+				["Set Camera Speed", "1", ""]
+			]
+		],
+		[
+			409050,
+			[
+				["Flash Camera 2", "10", ""]
+			]
+		],
+		[
+			479978.571428572,
+			[
+				["Change Character", "Dad", "blist2"],
+				["Bumpin Zoom", "1.3", "1.3"],
+				["Tween Cam Zoom", "0.8", ""],
+				["Shadow_enabled", "dad", "true"],
+				["Shadow_enabled", "bf", "true"],
+				["coverScreen", "false", "0.1"],
+				["Flash Cam", "0.5", "0.3"]
+			]
+		],
+		[
+			480821.268057786,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			481158.346709471,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			482169.582664527,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			482675.200642056,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			483517.897271269,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			483854.975922955,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			484866.211878011,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			485371.829855539,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			486214.526484752,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			486551.605136438,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			487562.841091494,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			487984.189406101,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			488068.459069022,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			489332.504012842,
+			[
+				["Bumpin Beat", "0.6", "0.5"]
+			]
+		],
+		[
+			489416.773675764,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			490680.818619584,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			490765.088282505,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["CenterCameraEvent", "off", ""],
+				["Shadow_enabled", "dad", "false"],
+				["Shadow_enabled", "bf", "false"]
+			]
+		],
+		[
+			498854.975922955,
+			[
+				["CenterCameraEvent", "on", "550,550"],
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			500203.290529696,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			500877.447833067,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			501551.605136438,
+			[
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			512253.852327449,
+			[
+				["Bumpin Beat", "1.5", "12312321"]
+			]
+		],
+		[
+			512338.121990371,
+			[
+				["Flash Cam", "0.5", "0.3"],
+				["Highlight Character", "1", ""]
+			]
+		],
+		[
+			517731.380417337,
+			[
+				["Tween Cam Zoom", "0.95", ""]
+			]
+		],
+		[
+			520428.00963082,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			521776.324237562,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			522281.94221509,
+			[
+				["Bumpin Zoom", "1.3", "1.3"]
+			]
+		],
+		[
+			522619.020866775,
+			[
+				["Flash Camera 2", "", ""],
+				["Cinematics", "0", ""],
+				["Highlight Character", "0", ""]
+			]
+		],
+		[
+			522787.560192618,
+			[
+				["Tween Cam Zoom", "1.5", "0.6"]
+			]
+		],
+		[
+			522956.099518461,
+			[
+				["Tween Cam Zoom", "1.5", "0.3"]
+			]
+		],
+		[
+			523040.369181382,
+			[
+				["Bumpin Beat", "1", "1"],
+				["Tween Cam Zoom", "1.5", "0.1"]
+			]
+		],
+		[
+			523124.638844303,
+			[
+				["Flash Camera", "1", ""],
+				["CenterCameraEvent", "on", "550,550"],
+				["Tween Cam Zoom", "0.8", ""],
+				["Shadow_enabled", "dad", "true"],
+				["Shadow_enabled", "bf", "true"]
+			]
+		],
+		[
+			528433.627608348,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			531214.526484753,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			533826.886035315,
+			[
+				["Bumpin Beat", "1.5", "123213"]
+			]
+		],
+		[
+			533911.155698236,
+			[
+				["Flash Camera 2", "", ""],
+				["CenterCameraEvent", "off", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			543349.357945427,
+			[
+				["Change Character", "BF", "bf-mirahq-shaded"]
+			]
+		],
+		[
+			544192.05457464,
+			[
+				["Flash Camera 2", "0.01", ""],
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			544613.402889247,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			544697.672552168,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Flash Camera", "1", ""]
+			]
+		],
+		[
+			547731.380417337,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			548321.268057786,
+			[
+				["Tween Cam Zoom", "1.2", ""]
+			]
+		],
+		[
+			548405.537720707,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			552787.560192617,
+			[
+				["Tween Cam Zoom", "1.1", ""]
+			]
+		],
+		[
+			553124.638844303,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			553798.796147674,
+			[
+				["Tween Cam Zoom", "1.2", ""],
+				["Bumpin Beat", "1.5", "123213"]
+			]
+		],
+		[
+			553883.065810595,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			555399.919743179,
+			[
+				["Bumpin Beat", "1.3", "2"]
+			]
+		],
+		[
+			555484.189406101,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "550,550"],
+				["Shadow_enabled", "dad", "false"],
+				["Shadow_enabled", "bf", "false"]
+			]
+		],
+		[
+			556158.346709471,
+			[
+				["Bumpin Zoom", "1.3", ""]
+			]
+		],
+		[
+			557338.12199037,
+			[
+				["Bumpin Zoom", "1.3", ""]
+			]
+		],
+		[
+			558180.818619584,
+			[
+				["Bumpin Zoom", "1.3", ""]
+			]
+		],
+		[
+			558686.436597112,
+			[
+				["Bumpin Zoom", "1.3", ""]
+			]
+		],
+		[
+			559697.672552168,
+			[
+				["CenterCameraEvent", "on", "250, 550"]
+			]
+		],
+		[
+			560877.447833067,
+			[
+				["Tween Cam Zoom", "0.85", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			563574.07704655,
+			[
+				["Tween Cam Zoom", "0.9", ""]
+			]
+		],
+		[
+			564922.391653292,
+			[
+				["Tween Cam Zoom", "0.85", ""]
+			]
+		],
+		[
+			565596.548956662,
+			[
+				["Tween Cam Zoom", "0.8", ""]
+			]
+		],
+		[
+			566186.436597112,
+			[
+				["Bumpin Beat", "1", "1"]
+			]
+		],
+		[
+			566270.706260033,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["CenterCameraEvent", "off", ""]
+			]
+		],
+		[
+			576972.953451044,
+			[
+				["Bumpin Beat", "1.3", "2"]
+			]
+		],
+		[
+			577057.223113966,
+			[
+				["Flash Camera 2", "10", ""]
+			]
+		],
+		[
+			579079.695024078,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			579753.852327449,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Shadow_enabled", "bf", "true"]
+			]
+		],
+		[
+			581776.324237561,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			582450.481540932,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Shadow_enabled", "bf", "false"]
+			]
+		],
+		[
+			584472.953451044,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			585147.110754415,
+			[
+				["Tween Cam Zoom", "0.9", ""],
+				["Shadow_enabled", "bf", "true"]
+			]
+		],
+		[
+			587169.582664527,
+			[
+				["Tween Cam Zoom", "1", ""]
+			]
+		],
+		[
+			587759.470304977,
+			[
+				["Bumpin Beat", "1.3", "1"]
+			]
+		],
+		[
+			587843.739967898,
+			[
+				["Tween Cam Zoom", "0.8", ""],
+				["CenterCameraEvent", "on", "550,550"]
+			]
+		],
+		[
+			593152.728731943,
+			[
+				["Bumpin Beat", "1.5", "1"]
+			]
+		],
+		[
+			595596.548956662,
+			[
+				["Bumpin Zoom", "0.5", "0.5"]
+			]
+		],
+		[
+			595680.818619583,
+			[
+				["Bumpin Zoom", "0.5", "0.5"]
+			]
+		],
+		[
+			595765.088282504,
+			[
+				["Bumpin Zoom", "0.5", "0.5"]
+			]
+		],
+		[
+			595849.357945426,
+			[
+				["Bumpin Zoom", "0.5", "0.5"],
+				["Bumpin Beat", "1.5", "12312312"]
+			]
+		],
+		[
+			598545.987158909,
+			[
+				["Bumpin Beat", "0.1", "12312312321"]
+			]
+		],
+		[
+			602001.043338684,
+			[
+				["Flash Camera 2", "10", ""]
+			]
+		],
+		[
+			607701.043338684,
+			[
+				["Screen Shake", "0.1,0.005", "0.1,0.005"]
+			]
+		],
+		[
+			609201.043338684,
+			[
+				["Screen Shake", "2,0.008", "0.1,0.008"]
+			]
+		],
+		[
+			610251.043338684,
+			[
+				["Screen Shake", "0.1,0.005", "0.1,0.005"]
+			]
+		],
+		[
+			610395.14446228,
+			[
+				["Screen Shake", "0.1,0.005", "0.1,0.005"]
+			]
+		],
+		[
+			610551.043338684,
+			[
+				["Screen Shake", "0.1,0.005", "0.1,0.005"]
+			]
+		],
+		[
+			611001.043338684,
+			[
+				["Screen Shake", "0.1,0.005", "0.1,0.005"]
+			]
+		],
+		[
+			615201.043338684,
+			[
+				["Change Character", "Dad", "blist-final"],
+				["Tween Cam Zoom", "1.2", ""],
+				["Bumpin Beat", "1.5", "2"]
+			]
+		],
+		[
+			625481.942215088,
+			[
+				["Bumpin Zoom", "1.5", ""]
+			]
+		],
+		[
+			625650.481540931,
+			[
+				["Bumpin Zoom", "1.5", ""]
+			]
+		],
+		[
+			625819.020866774,
+			[
+				["Bumpin Zoom", "1.5", ""]
+			]
+		]
+	],
 	"player2": "blistpre-back",
 	"notes": [
 		{
@@ -111,7 +2413,7 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
-				[21900, 0, 0],
+				[21900, 2, 0],
 				[22200, 1, 0],
 				[22350, 3, 0],
 				[22500, 0, 0],
@@ -147,8 +2449,9 @@
 			"sectionNotes": [
 				[25350, 2, 0],
 				[25650, 1, 0],
-				[25800, 3, 300],
+				[25800, 3, 150],
 				[25950, 2, 0],
+				[26025, 1, 0],
 				[26100, 0, 300]
 			],
 			"mustHitSection": true
@@ -232,8 +2535,10 @@
 			"sectionNotes": [
 				[36000, 6, 0],
 				[36150, 7, 0],
+				[36150, 5, 0],
 				[36450, 6, 0],
 				[36600, 4, 0],
+				[36600, 7, 0],
 				[36900, 5, 600]
 			],
 			"mustHitSection": false
@@ -252,6 +2557,8 @@
 			"sectionNotes": [
 				[38400, 3, 300],
 				[38400, 7, 300],
+				[38400, 0, 0],
+				[38400, 4, 0],
 				[38550, 1, 0],
 				[38550, 5, 0],
 				[38700, 0, 0],
@@ -282,9 +2589,10 @@
 				[40950, 5, 0],
 				[41100, 6, 0],
 				[41250, 5, 0],
-				[41400, 7, 0],
-				[41550, 4, 0],
-				[41700, 6, 0],
+				[41400, 6, 0],
+				[41400, 4, 0],
+				[41550, 7, 0],
+				[41700, 4, 0],
 				[41850, 5, 300]
 			],
 			"mustHitSection": false
@@ -296,8 +2604,9 @@
 				[42300, 6, 0],
 				[42450, 5, 0],
 				[42600, 7, 0],
+				[42600, 4, 0],
 				[42750, 5, 0],
-				[42900, 4, 0],
+				[42900, 6, 0],
 				[43050, 5, 300]
 			],
 			"mustHitSection": false
@@ -330,9 +2639,11 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
-				[45600, 5, 0],
+				[45600, 7, 0],
+				[45600, 5, 150],
 				[45900, 4, 0],
 				[46050, 5, 0],
+				[46050, 6, 150],
 				[46350, 7, 0],
 				[46500, 4, 0],
 				[46650, 6, 0]
@@ -386,6 +2697,7 @@
 			"sectionNotes": [
 				[50400, 5, 0],
 				[50400, 7, 1200],
+				[50400, 0, 0],
 				[50550, 1, 0],
 				[50700, 3, 0],
 				[50850, 2, 0],
@@ -504,6 +2816,8 @@
 			"sectionBeats": 2,
 			"sectionNotes": [
 				[60000, 6, 0],
+				[60000, 7, 0],
+				[60000, 4, 0],
 				[60300, 0, 0],
 				[60450, 0, 0]
 			],
@@ -513,12 +2827,12 @@
 			"sectionBeats": 2,
 			"sectionNotes": [
 				[60600, 7, 0],
-				[60600, 2, 37.5],
+				[60600, 3, 225],
 				[60750, 6, 0],
 				[60825, 4, 0],
-				[60825, 0, 0],
-				[61050, 3, 0],
-				[61050, 5, 0]
+				[60825, 2, 0],
+				[61050, 5, 0],
+				[61050, 0, 0]
 			],
 			"mustHitSection": false
 		},
@@ -814,7 +3128,6 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
-				[81900, 2, 0],
 				[82050, 3, 0],
 				[82200, 0, 300],
 				[82350, 2, 0],
@@ -884,8 +3197,8 @@
 			"sectionNotes": [
 				[86700, 6, 0],
 				[86850, 5, 0],
-				[87000, 7, 0],
-				[87225, 4, 0],
+				[87000, 7, 225],
+				[87225, 6, 150],
 				[87450, 5, 0]
 			],
 			"gfSection": false,
@@ -940,7 +3253,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": true,
+			"mustHitSection": false,
 			"changeBPM": false,
 			"bpm": 128
 		},
@@ -1486,7 +3799,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 188
 		},
@@ -1557,7 +3870,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 188
 		},
@@ -1576,7 +3889,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 188
 		},
@@ -2341,7 +4654,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": true,
+			"mustHitSection": false,
 			"changeBPM": false,
 			"bpm": 180
 		},
@@ -2595,8 +4908,8 @@
 				[196950, 2, 150],
 				[197100, 3, 150],
 				[197250, 0, 150],
-				[197400, 2, 150],
-				[197550, 1, 0],
+				[197400, 2, 0],
+				[197550, 3, 0],
 				[197850, 1, 0]
 			],
 			"gfSection": false,
@@ -2693,12 +5006,17 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[204000, 6, 0],
+				[204000, 7, 0],
 				[204150, 6, 0],
 				[204300, 4, 0],
+				[204300, 5, 0],
 				[204450, 6, 0],
 				[204600, 5, 0],
-				[204750, 7, 0],
+				[204600, 4, 0],
+				[204750, 6, 0],
 				[204900, 5, 0],
+				[204900, 7, 0],
+				[205050, 6, 0],
 				[205050, 4, 0]
 			],
 			"gfSection": false,
@@ -2710,7 +5028,7 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
-				[205200, 6, 300],
+				[205200, 7, 300],
 				[205500, 2, 0],
 				[205650, 3, 0],
 				[205800, 1, 0],
@@ -2759,13 +5077,14 @@
 			"bpm": 180
 		},
 		{
-			"sectionBeats": 4,
+			"sectionBeats": 5,
 			"sectionNotes": [
 				[208800, 2, 0],
 				[208950, 2, 0],
 				[209100, 1, 0],
 				[209250, 0, 0],
-				[209550, 3, 450]
+				[209550, 3, 450],
+				[210000, 2, 0, "Dodge Note"]
 			],
 			"gfSection": false,
 			"altAnim": false,
@@ -2774,9 +5093,8 @@
 			"bpm": 180
 		},
 		{
-			"sectionBeats": 4,
+			"sectionBeats": 3,
 			"sectionNotes": [
-				[210000, 2, 0, "Dodge Note"],
 				[210300, 6, 0],
 				[210450, 5, 0],
 				[210600, 7, 0],
@@ -2951,8 +5269,10 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[223200, 4, 375],
-				[223800, 6, 300],
-				[224100, 5, 300]
+				[223200, 5, 0],
+				[223800, 6, 225],
+				[224100, 5, 300],
+				[224100, 4, 300]
 			],
 			"gfSection": false,
 			"altAnim": false,
@@ -2963,7 +5283,8 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
-				[224400, 7, 600],
+				[224400, 6, 300],
+				[224400, 7, 300],
 				[224550, 0, 0],
 				[224700, 2, 0],
 				[224850, 3, 0],
@@ -3013,7 +5334,8 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[228000, 0, 450],
-				[228600, 2, 450],
+				[228600, 3, 0],
+				[228600, 2, 600],
 				[228900, 4, 0],
 				[229050, 5, 0]
 			],
@@ -3028,6 +5350,7 @@
 			"sectionNotes": [
 				[229200, 6, 0],
 				[229200, 1, 300],
+				[229200, 0, 300],
 				[229350, 5, 0],
 				[229500, 7, 0],
 				[229500, 2, 300],
@@ -3646,7 +5969,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": true,
+			"mustHitSection": false,
 			"changeBPM": false,
 			"bpm": 180
 		},
@@ -3699,6 +6022,7 @@
 			"sectionNotes": [
 				[272400, 7, 0],
 				[272700, 6, 450],
+				[272700, 5, 0],
 				[273150, 4, 300],
 				[273450, 5, 0]
 			],
@@ -3878,6 +6202,7 @@
 			"sectionNotes": [
 				[284400, 3, 0],
 				[284400, 6, 0],
+				[284550, 1, 0],
 				[284700, 2, 300],
 				[285000, 0, 0],
 				[285150, 3, 0],
@@ -3894,7 +6219,8 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[285600, 3, 0],
-				[285750, 0, 0],
+				[285675, 1, 0],
+				[285750, 2, 0],
 				[285900, 1, 0],
 				[286050, 3, 0],
 				[286125, 2, 0],
@@ -3923,7 +6249,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 180
 		},
@@ -4143,10 +6469,10 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[304800, 1, 300],
-				[305100, 2, 0],
-				[305175, 3, 0],
+				[305100, 3, 0],
+				[305175, 0, 0],
 				[305250, 2, 0],
-				[305325, 3, 0],
+				[305325, 0, 0],
 				[305400, 1, 300],
 				[305700, 3, 0],
 				[305850, 0, 300]
@@ -4266,7 +6592,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 180
 		},
@@ -5046,6 +7372,7 @@
 		{
 			"sectionBeats": 4,
 			"sectionNotes": [
+				[372000, 7, 450],
 				[372450, 6, 0],
 				[372600, 4, 0],
 				[372750, 7, 0],
@@ -5911,8 +8238,8 @@
 				[483349.357945426, 2, 0],
 				[483517.897271269, 4, 0],
 				[483517.897271269, 5, 0],
-				[483517.897271269, 0, 0],
-				[483517.897271269, 1, 0]
+				[483517.897271269, 1, 0],
+				[483517.897271269, 0, 0]
 			],
 			"gfSection": false,
 			"altAnim": false,
@@ -5923,10 +8250,10 @@
 		{
 			"sectionBeats": 4.5,
 			"sectionNotes": [
+				[483854.975922955, 3, 168.539325842697],
+				[483854.975922955, 7, 168.539325842697],
 				[483854.975922955, 6, 0],
-				[483854.975922955, 7, 0],
 				[483854.975922955, 2, 0],
-				[483854.975922955, 3, 0],
 				[484360.593900483, 5, 0],
 				[484360.593900483, 1, 0],
 				[484529.133226325, 5, 0],
@@ -6047,7 +8374,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6068,7 +8395,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6091,7 +8418,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6191,7 +8518,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6213,7 +8540,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6234,7 +8561,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6254,7 +8581,7 @@
 			],
 			"gfSection": false,
 			"altAnim": false,
-			"mustHitSection": false,
+			"mustHitSection": true,
 			"changeBPM": false,
 			"bpm": 200
 		},
@@ -6423,10 +8750,10 @@
 			"sectionBeats": 4,
 			"sectionNotes": [
 				[520259.470304977, 0, 0],
-				[520428.00963082, 2, 0],
-				[520680.818619584, 1, 0],
-				[520933.627608348, 3, 0],
-				[521186.436597112, 1, 0],
+				[520428.00963082, 2, 252.808988764045],
+				[520680.818619584, 1, 252.808988764045],
+				[520933.627608348, 3, 252.808988764045],
+				[521186.436597112, 1, 252.808988764045],
 				[521439.245585876, 2, 0]
 			],
 			"gfSection": false,
@@ -7261,10 +9588,10 @@
 				[587843.739967898, 3, 0],
 				[587843.739967898, 4, 2359.55056179775],
 				[588012.279293741, 2, 0],
-				[588180.818619583, 3, 0],
-				[588265.088282505, 1, 0],
-				[588349.357945426, 0, 0],
+				[588180.818619583, 2, 0],
+				[588265.088282505, 0, 0],
 				[588349.357945426, 2, 337.078651685393],
+				[588349.357945426, 3, 0],
 				[588686.436597111, 0, 0],
 				[588770.706260033, 1, 0],
 				[588854.975922954, 3, 337.078651685393],
@@ -7282,17 +9609,16 @@
 				[589192.054574639, 1, 0],
 				[589276.324237561, 2, 0],
 				[589360.593900482, 0, 0],
-				[589529.133226325, 3, 0],
-				[589613.402889246, 2, 0],
-				[589697.672552168, 0, 0],
-				[589697.672552168, 1, 337.078651685393],
-				[590034.751203853, 3, 0],
-				[590034.751203853, 2, 0],
+				[589529.133226325, 0, 0],
+				[589613.402889246, 1, 0],
+				[589697.672552168, 3, 337.078651685393],
+				[589697.672552168, 2, 0],
+				[590034.751203853, 2, 168.539325842697],
+				[590203.290529696, 1, 168.539325842697],
 				[590203.290529696, 6, 0],
-				[590203.290529696, 1, 0],
 				[590371.829855538, 5, 0],
-				[590371.829855538, 0, 0],
-				[590371.829855538, 3, 0]
+				[590371.829855538, 3, 0],
+				[590371.829855538, 0, 168.539325842697]
 			],
 			"gfSection": false,
 			"altAnim": false,
@@ -8810,135 +11136,15 @@
 			"bpm": 178
 		}
 	],
-	"gfVersion": "gf",
-	"events": [
-		[
-			0,
-			[
-				["Video Player", "blist_intro, camOther", "false, true"]
-			]
-		],
-		[
-			40800,
-			[
-				["Change Character", "Dad", "blistpre"]
-			]
-		],
-		[
-			58800,
-			[
-				["Video Player", "blist_aura, camHUD, 0", "false, true"]
-			]
-		],
-		[
-			60000,
-			[
-				["Change Character", "Dad", "blist2"]
-			]
-		],
-		[
-			81600,
-			[
-				["Change Character", "BF", "bf-side-dark"],
-				["Change Character", "Dad", "blist-puppy"]
-			]
-		],
-		[
-			90000,
-			[
-				["Change Character", "Dad", "puppy-exe"]
-			]
-		],
-		[
-			139200,
-			[
-				["Change Character", "Dad", "darkblist"],
-				["Change Character", "BF", "darkbf"],
-				["Video Player", "disguis_2, camOther", "false, true"]
-			]
-		],
-		[
-			181200,
-			[
-				["Change Character", "Dad", "agf-mad-shadow"],
-				["Change Character", "BF", "bf-n2"]
-			]
-		],
-		[
-			199800,
-			[
-				["Change Character", "Dad", "agf-mad"]
-			]
-		],
-		[
-			229200,
-			[
-				["Shadow_enabled", "bf", "true"],
-				["Shadow_enabled", "dad", "true"]
-			]
-		],
-		[
-			238800,
-			[
-				["Shadow_enabled", "dad", "false"],
-				["Shadow_enabled", "bf", "false"]
-			]
-		],
-		[
-			250800,
-			[
-				["Change Character", "Dad", "blist-back"],
-				["Change Character", "BF", "bf-n"]
-			]
-		],
-		[
-			270000,
-			[
-				["Change Character", "Dad", "blist"]
-			]
-		],
-		[
-			290400,
-			[
-				["Change Character", "Dad", "blist-melina"],
-				["Change Character", "BF", "bf-n3"]
-			]
-		],
-		[
-			349200,
-			[
-				["Change Character", "Dad", "blist2"],
-				["Change Character", "BF", "bf-n"]
-			]
-		],
-		[
-			368400,
-			[
-				["Change Character", "Dad", "blist"]
-			]
-		],
-		[
-			479978.571428572,
-			[
-				["Change Character", "Dad", "blist2"]
-			]
-		],
-		[
-			615201.043338684,
-			[
-				["Change Character", "Dad", "blist-final"]
-			]
-		]
-	],
-	"player3": "gfr",
 	"allowBFskin": true,
+	"player3": "gfr",
 	"offset": -46,
 	"song": "Futurology Dilemma",
 	"allowGFskin": true,
-	"validScore": true,
 	"needsVoices": true,
 	"stage": "mirahq",
+	"validScore": true,
+	"bpm": 200,
 	"format": "psych_v1_convert",
-	"speed": 3.1,
-	"bpm": 200
+	"speed": 3.1
 }

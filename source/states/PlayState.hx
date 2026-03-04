@@ -269,6 +269,8 @@ class PlayState extends MusicBeatState
 	public var songName:String;
 
 	// Callbacks for stages
+	public var stageData:StageFile;
+
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
 
@@ -349,45 +351,13 @@ class PlayState extends MusicBeatState
 
 		curStage = SONG.stage;
 
-		var stageData:StageFile = StageData.getStageFile(curStage);
-		defaultCamZoom = stageData.defaultZoom;
-
-		stageUI = "normal";
-		if (stageData.stageUI != null && stageData.stageUI.trim().length > 0)
-			stageUI = stageData.stageUI;
-		else if (stageData.isPixelStage == true) //Backward compatibility
-			stageUI = "pixel";
-
-		BF_X = stageData.boyfriend[0];
-		BF_Y = stageData.boyfriend[1];
-		GF_X = stageData.girlfriend[0];
-		GF_Y = stageData.girlfriend[1];
-		DAD_X = stageData.opponent[0];
-		DAD_Y = stageData.opponent[1];
-
-		if(stageData.camera_speed != null)
-			cameraSpeed = stageData.camera_speed;
-
-		boyfriendCameraOffset = stageData.camera_boyfriend;
-		if(boyfriendCameraOffset == null) //Fucks sake should have done it since the start :rolling_eyes:
-			boyfriendCameraOffset = [0, 0];
-
-		opponentCameraOffset = stageData.camera_opponent;
-		if(opponentCameraOffset == null)
-			opponentCameraOffset = [0, 0];
-
-		girlfriendCameraOffset = stageData.camera_girlfriend;
-		if(girlfriendCameraOffset == null)
-			girlfriendCameraOffset = [0, 0];
+		stageData = StageData.getStageFile(curStage);
+		setStageDetails(stageData);
 
 		boyfriendGroup = new FlxSpriteGroup(BF_X, BF_Y);
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
-		switch (curStage)
-		{
-			case 'stage': new StageWeek1(); 			//Week 1
-		}
 		if(isPixelStage) introSoundsSuffix = '-pixel';
 
 		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
@@ -396,13 +366,13 @@ class PlayState extends MusicBeatState
 		add(luaDebugGroup);
 		#end
 
-		if (!stageData.hide_girlfriend)
-		{
+		//if (!stageData.hide_girlfriend)
+		//{
 			if(SONG.gfVersion == null || SONG.gfVersion.length < 1) SONG.gfVersion = 'gf'; //Fix for the Chart Editor
 			gf = new Character(0, 0, SONG.gfVersion);
 			startCharacterPos(gf);
 			gfGroup.add(gf);
-		}
+		//}
 
 		dad = new Character(0, 0, SONG.player2);
 		startCharacterPos(dad, true);
@@ -411,17 +381,19 @@ class PlayState extends MusicBeatState
 		boyfriend = new Character(0, 0, SONG.player1, true);
 		startCharacterPos(boyfriend);
 		boyfriendGroup.add(boyfriend);
+
+		addStage(true);
 		
 		if(stageData.objects != null && stageData.objects.length > 0)
 		{
 			var list:Map<String, FlxSprite> = StageData.addObjectsToState(stageData.objects, !stageData.hide_girlfriend ? gfGroup : null, dadGroup, boyfriendGroup, this);
 			for (key => spr in list)
-				if(!StageData.reservedNames.contains(key))
+				if (!StageData.reservedNames.contains(key))
 					variables.set(key, spr);
 		}
 		else
 		{
-			add(gfGroup);
+			if (!stageData.hide_girlfriend) add(gfGroup);
 			add(dadGroup);
 			add(boyfriendGroup);
 		}
@@ -458,8 +430,10 @@ class PlayState extends MusicBeatState
 		
 		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
 		// STAGE SCRIPTS
+		/*
 		#if LUA_ALLOWED startLuasNamed('stages/' + curStage + '.lua'); #end
 		#if HSCRIPT_ALLOWED startHScriptsNamed('stages/' + curStage + '.hx'); #end
+        */
 
 		// CHARACTER SCRIPTS
 		if(gf != null) startCharacterScripts(gf.curCharacter);
@@ -757,6 +731,29 @@ class PlayState extends MusicBeatState
 					startCharacterScripts(newGf.curCharacter);
 				}
 		}
+	}
+
+	public var stagesToLoad:Array<String> = [];
+
+	function preloadStage(daStage:String):Void
+	{
+		var ogStage:String = curStage;
+
+		if (daStage == "phillystreets" || daStage == "phillyblazin"){
+			trace("bullshit that I'm gonna add weekend 1 stages to preload!");
+		}else{
+			removeStage();
+			curStage = daStage;
+			stageData = StageData.getStageFile(curStage); 
+			addStage(true);
+		}
+		
+		// back to current stage
+
+		removeStage();
+		curStage = ogStage;
+		stageData = StageData.getStageFile(curStage); 
+		addStage(true);
 	}
 
 	function startCharacterScripts(name:String)
@@ -1505,6 +1502,9 @@ class PlayState extends MusicBeatState
 
 			case 'Play Sound':
 				Paths.sound(event.value1); //Precache sound
+
+			case "Change Stage":
+				preloadStage(event.value1); // stage preloading
 		}
 		stagesFunc(function(stage:BaseStage) stage.eventPushedUnique(event));
 	}
@@ -2228,6 +2228,15 @@ class PlayState extends MusicBeatState
 					}
 				}
 
+			case 'Change Stage':
+				removeStage(); // Remove current stage
+			
+				curStage = value1; // Set new stage name
+				stageData = StageData.getStageFile(curStage); 
+
+				addStage();
+				setOnScripts('curStage', curStage);
+
 
 			case 'Change Character':
 				var charType:Int = 0;
@@ -2508,6 +2517,12 @@ class PlayState extends MusicBeatState
                 Reflect.setField(FlxG.save.data, "zanta_unlocked", true);
                 Reflect.setField(FlxG.save.data, "brothers-in-arms_unlocked", true);
                 Reflect.setField(FlxG.save.data, "triple-kill_unlocked", true);
+            }
+
+			if(songName == "futurology-dilemma")
+            {
+                FlxG.save.data.allclear = true;
+                FlxG.save.flush();
             }
             FlxG.save.flush();
         }
@@ -3290,7 +3305,7 @@ class PlayState extends MusicBeatState
 	}
 
 	#if LUA_ALLOWED
-	public function startLuasNamed(luaFile:String)
+	public function startLuasNamed(luaFile:String, ?type:String = "")
 	{
 		#if MODS_ALLOWED
 		var luaToLoad:String = Paths.modFolders(luaFile);
@@ -3306,15 +3321,42 @@ class PlayState extends MusicBeatState
 			for (script in luaArray)
 				if(script.scriptName == luaToLoad) return false;
 
-			new FunkinLua(luaToLoad);
+			new FunkinLua(luaToLoad, type);
 			return true;
 		}
 		return false;
 	}
+
+	public function stopLuasNamed(luaFile:String, ?type:String = "")
+	{
+		#if MODS_ALLOWED
+		var luaToLoad:String = Paths.modFolders(luaFile);
+		if(!FileSystem.exists(luaToLoad))
+		luaToLoad = Paths.getSharedPath(luaFile);
+
+        if(FileSystem.exists(luaToLoad))
+		#elseif sys
+		var luaToLoad:String = Paths.getSharedPath(luaFile);
+		if(OpenFlAssets.exists(luaToLoad))
+		#end
+		{
+		    for (script in luaArray) {
+			    if (script.scriptName == luaToLoad) {
+				    // Because the shaders weren't getting destroyed properly. Might change this to like onRemove
+				    script.call("onDestroy", []);
+				
+				    luaArray.remove(script);
+				    return true;
+			    }
+		    }
+
+	    }
+	    return false;
+	}
 	#end
 
 	#if HSCRIPT_ALLOWED
-	public function startHScriptsNamed(scriptFile:String)
+	public function startHScriptsNamed(scriptFile:String, ?scriptType:String = "")
 	{
 		#if MODS_ALLOWED
 		var scriptToLoad:String = Paths.modFolders(scriptFile);
@@ -3328,18 +3370,41 @@ class PlayState extends MusicBeatState
 		{
 			if (Iris.instances.exists(scriptToLoad)) return false;
 
-			initHScript(scriptToLoad);
+			initHScript(scriptToLoad, scriptType);
 			return true;
 		}
 		return false;
 	}
 
-	public function initHScript(file:String)
+	public function stopHScriptsNamed(scriptFile:String, ?scriptType:String = "")
+	{
+		#if MODS_ALLOWED
+		var scriptToLoad:String = Paths.modFolders(scriptFile);
+		if(!FileSystem.exists(scriptToLoad))
+			scriptToLoad = Paths.getSharedPath(scriptFile);
+		#else
+		var scriptToLoad:String = Paths.getSharedPath(scriptFile);
+		#end
+
+		if(FileSystem.exists(scriptToLoad))
+		{
+			if (Iris.instances.exists(scriptToLoad)){
+				var script:HScript = cast (Iris.instances.get(scriptToLoad), HScript);
+				if(script.exists('onDestroy')) script.call('onDestroy');
+				script.destroy();
+				hscriptArray.remove(script);
+				return true;
+			};
+		}
+		return false;
+	}
+
+	public function initHScript(file:String, ?scriptType:String = "")
 	{
 		var newScript:HScript = null;
 		try
 		{
-			newScript = new HScript(null, file);
+			newScript = new HScript(null, file, scriptType);
 			if (newScript.exists('onCreate')) newScript.call('onCreate');
 			trace('initialized hscript interp successfully: $file');
 			hscriptArray.push(newScript);
@@ -3646,5 +3711,138 @@ class PlayState extends MusicBeatState
 		FlxG.log.warn('This platform doesn\'t support Runtime Shaders!');
 		#end
 		return false;
+	}
+
+	public function setStageDetails(stageData:StageFile){
+		defaultCamZoom = stageData.defaultZoom;
+
+		var dir:String = stageData.directory;
+		if (dir != null) {
+			Paths.setCurrentLevel(dir);
+			trace('Setting asset folder to ' + dir);
+		}
+
+		stageUI = "normal";
+		if (stageData.stageUI != null && stageData.stageUI.trim().length > 0)
+			stageUI = stageData.stageUI;
+		else if (stageData.isPixelStage == true) //Backward compatibility
+			stageUI = "pixel";
+
+		BF_X = stageData.boyfriend[0];
+		BF_Y = stageData.boyfriend[1];
+		GF_X = stageData.girlfriend[0];
+		GF_Y = stageData.girlfriend[1];
+		DAD_X = stageData.opponent[0];
+		DAD_Y = stageData.opponent[1];
+
+		if(stageData.camera_speed != null)
+			cameraSpeed = stageData.camera_speed;
+
+		boyfriendCameraOffset = stageData.camera_boyfriend;
+		if(boyfriendCameraOffset == null) //Fucks sake should have done it since the start :rolling_eyes:
+			boyfriendCameraOffset = [0, 0];
+
+		opponentCameraOffset = stageData.camera_opponent;
+		if(opponentCameraOffset == null)
+			opponentCameraOffset = [0, 0];
+
+		girlfriendCameraOffset = stageData.camera_girlfriend;
+		if(girlfriendCameraOffset == null)
+			girlfriendCameraOffset = [0, 0];
+
+		return stageData;
+	}
+
+	public function removeObjects(stageData:StageFile){
+		// if you comment out the else part, the stage loads fine but character layers and positions are messed up.
+		if(stageData.objects != null && stageData.objects.length > 0)
+		{
+			var list:Map<String, FlxSprite> = StageData.removeObjectsFromState(stageData.objects, !stageData.hide_girlfriend ? gfGroup : null, dadGroup, boyfriendGroup, this);
+			for (key => spr in list)
+				if(!StageData.reservedNames.contains(key))
+					variables.remove(key);
+		}else{
+			if (gf != null) remove(gfGroup);
+			remove(dadGroup); 
+			remove(boyfriendGroup);
+		}
+	}
+
+	public function addObjects(stageData:StageFile){
+		if(stageData.objects != null && stageData.objects.length > 0)
+		{
+			var list:Map<String, FlxSprite> = StageData.addObjectsToState(stageData.objects, !stageData.hide_girlfriend ? gfGroup : null, dadGroup, boyfriendGroup, this);
+			for (key => spr in list)
+				if (!StageData.reservedNames.contains(key))
+					variables.set(key, spr);
+		}
+		else
+		{
+			add(gfGroup);
+			add(dadGroup);
+			add(boyfriendGroup);
+		}
+	}
+
+	public var hardCodedStage:BaseStage;
+	public var addedStages:Array<String> = [];
+
+	public function removeStage(){
+		removeObjects(stageData);
+
+		if (hardCodedStage != null) {
+			hardCodedStage.destroy();
+			hardCodedStage = null;
+		}
+
+		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
+			// STAGE SCRIPTS
+			#if LUA_ALLOWED stopLuasNamed('stages/' + curStage + '.lua', "stage"); #end
+			#if HSCRIPT_ALLOWED stopHScriptsNamed('stages/' + curStage + '.hx', "stage"); #end
+		#end
+
+		var stageVars:Map<String, FlxSprite> = MusicBeatState.getVariables().get("stageVariables");
+	
+		if (stageVars != null) {
+			for (key in stageVars.keys()) {
+				var sprite:FlxSprite = stageVars.get(key);
+				if (sprite != null) {
+					remove(sprite);
+					variables.remove(key);
+				}
+			}
+			stageVars.clear();
+		}
+	}	
+
+	public function addStage(?isCreate:Bool=false) {
+		if(!isCreate) setStageDetails(stageData); // for some reason they don't add the chars position on them.
+		switch (curStage.toLowerCase())
+		{
+			case 'stage': hardCodedStage = new StageWeek1(); 			//Week 1
+		}
+
+		addObjects(stageData);
+
+		boyfriendGroup.x = BF_X;
+		boyfriendGroup.y = BF_Y;
+		dadGroup.x = DAD_X;
+		dadGroup.y = DAD_Y;
+
+		if(!stageData.hide_girlfriend){
+			gfGroup.x = GF_X;
+			gfGroup.y = GF_Y;
+		}
+
+		#if (LUA_ALLOWED || HSCRIPT_ALLOWED)
+			// STAGE SCRIPTS
+			#if LUA_ALLOWED startLuasNamed('stages/' + curStage + '.lua', "stage"); #end
+			#if HSCRIPT_ALLOWED startHScriptsNamed('stages/' + curStage + '.hx', "stage"); #end
+		#end
+
+		if(!isCreate) {
+			stagesFunc(function(stage:BaseStage) stage.createPost());
+			callOnScripts('onCreatePost');
+		}
 	}
 }

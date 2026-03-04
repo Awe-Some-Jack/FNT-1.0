@@ -19,6 +19,11 @@ function goodNoteHit(membersIndex, noteData, noteType, isSustainNote)
 			setProperty('gf.specialAnim',true)
 		end
 		setProperty('boyfriend.specialAnim',true)
+
+		if dadName == "agf-mad" or dadName == "agf-mad-shadow" then
+            playAnim("dad", "shoot", true)
+			setProperty('dad.specialAnim', true)
+		end
 	end
 end
 

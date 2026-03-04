@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [452, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "boyfriend idle"
+		},
+		{
+			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "boyfriend singLEFT0"
+		},
+		{
+			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "boyfriend singDOWN0"
+		},
+		{
+			"offsets": [447, 245],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "boyfriend singUP0"
+		},
+		{
+			"offsets": [452, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "boyfriend singRIGHT0"
+		},
+		{
+			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "boyfriend singLEFTmiss"
+		},
+		{
+			"offsets": [450, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "boyfriend singDOWNmiss"
+		},
+		{
+			"offsets": [447, 245],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "boyfriend singUPmiss"
+		},
+		{
+			"offsets": [452, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "boyfriend singRIGHTmiss"
+		},
+		{
+			"offsets": [451, 242],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge1",
+			"indices": [],
+			"name": "boyfriend dodge1"
+		},
+		{
+			"offsets": [451, 242],
+			"loop": false,
+			"fps": 24,
+			"anim": "dodge2",
+			"indices": [],
+			"name": "boyfriend dodge2"
+		},
+		{
+			"offsets": [462, 242],
+			"loop": false,
+			"fps": 12,
+			"anim": "hey",
+			"indices": [],
+			"name": "boyfriend hey"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf (1)",
+	"position": [-470, 120],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [61, 199, 250],
+	"camera_position": [10, 90],
+	"sing_duration": 4,
+	"scale": 0.6,
+	"_editor_isPlayer": true
+}

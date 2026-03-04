@@ -34,6 +34,7 @@ class PauseSubState extends MusicBeatSubstate
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 
 	public static var songName:String = null;
+	var checkSong:String = Paths.formatToSongPath(PlayState.SONG.song);
 
 	override function create()
 	{
@@ -69,7 +70,7 @@ class PauseSubState extends MusicBeatSubstate
 		mumble.animation.addByPrefix('anim3', "mr.mumble talk", 16);
 		mumble.animation.addByPrefix('anim4', "mr.mumble mum", 16);
 		mumble.animation.addByPrefix('anim5', "mr.mumble good-luck", 16);
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		if (checkSong != "futurology-dilemma")
 		{
 			mumble.animation.play('anim' + FlxG.random.int(1,4));
 		}

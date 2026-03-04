@@ -40,7 +40,7 @@ function onSongCheck()
         composer = { "hmm111" }
         charter = { "Dia" }
     elseif songName == "glitch-friend" then
-        artist = { "???" }
+        artist = { "Glitched lobbie Team" }
         composer = { "Askliskal" }
         charter = { "Dia" }
     elseif songName == "ballooned" then
@@ -49,7 +49,7 @@ function onSongCheck()
         charter = { "Dia" }
     elseif songName == "GGang GGang" then
         artist = { "Amon crack" }
-        composer = { "Mr Takoyaky" }
+        composer = { "Mr Takoyaky", "Askliskal" }
         charter = { "Dia" }
     elseif songName == "Futurology Dilemma" then
         artist = { "Sucheol, Amon crack" }
@@ -141,5 +141,17 @@ function onTimerCompleted(tag, loops, loopsLeft)
         for i = 1, #CreditStuff do
             doTweenX(CreditStuff[i] .. 'tween', CreditStuff[i], getProperty(CreditStuff[i] .. '.x') - 600, 2, 'cubeinout')
         end
+        runTimer("fuckUp", 2)
+    end
+
+    if tag == "fuckUp" then
+        removeLuaSprite("blackbox", true)
+        removeLuaText("titletext", true)
+        removeLuaText("ArtistText", true)
+        removeLuaText("ComposerText", true)
+        removeLuaText("CharterText", true)
+        removeLuaText("credittext", true)
+        removeLuaText("credittext2", true)
+        removeLuaText("credittext3", true)
     end
 end

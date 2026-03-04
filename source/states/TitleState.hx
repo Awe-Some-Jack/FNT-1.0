@@ -80,6 +80,9 @@ class TitleState extends MusicBeatState
 		if (FlxG.save.data.blistunlocked == null)
             FlxG.save.data.blistunlocked = false;
 
+		if (FlxG.save.data.allclear == null)
+            FlxG.save.data.allclear = false;
+
         FlxG.save.flush();
 
 		if(!initialized)

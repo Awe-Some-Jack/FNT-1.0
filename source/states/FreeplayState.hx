@@ -126,6 +126,10 @@ class FreeplayState extends MusicBeatState
 		}
 		Mods.loadTopMod();
 
+		if(FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == true) {
+			addSong("futurology-dilemma", 0, 'face', FlxColor.fromRGB(26, 186, 26));
+		}
+
 		bg = new FlxSprite(0, 0);
 		bg.antialiasing = ClientPrefs.data.antialiasing;
 		bg.alpha = 0;

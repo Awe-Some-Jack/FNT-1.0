@@ -82,17 +82,15 @@ class MainMenuState extends MusicBeatState
 		fg.updateHitbox();
 		add(fg);
 
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
-        {
-            portrait = new FlxSprite(-1000, 160).loadGraphic(Paths.image('mainMenu/image' + imgIndex));
-		    portrait.setGraphicSize(Std.int(portrait.width * 0.55));
-		    portrait.updateHitbox();
-		    portrait.antialiasing = ClientPrefs.data.antialiasing;
-		    portrait.scrollFactor.set();
-		    add(portrait);
+        portrait = new FlxSprite(-1000, 160).loadGraphic(Paths.image('mainMenu/image' + imgIndex));
+		portrait.setGraphicSize(Std.int(portrait.width * 0.55));
+		portrait.updateHitbox();
+		portrait.antialiasing = ClientPrefs.data.antialiasing;
+		portrait.scrollFactor.set();
+		add(portrait);
 
-			switch (imgIndex)
-            {
+		switch (imgIndex)
+        {
             case 0:
                 portrait.setPosition(-1000, 50);
             case 1:
@@ -113,9 +111,8 @@ class MainMenuState extends MusicBeatState
                 portrait.setPosition(-1000, 163);
 			case 9:
                 portrait.setPosition(-1000, 165);
-            }
-			FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});
         }
+			FlxTween.tween(portrait, {x: 0}, 1.3, {ease: FlxEase.backOut});
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
@@ -188,6 +185,11 @@ class MainMenuState extends MusicBeatState
 	{
 		if (FlxG.sound.music.volume < 0.8)
 			FlxG.sound.music.volume = Math.min(FlxG.sound.music.volume + 0.5 * elapsed, 0.8);
+
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
+        {
+			portrait.kill();
+		}
 
 		if (!selectedSomethin)
 		{
@@ -321,7 +323,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT || (FlxG.mouse.justPressed && allowMouse))
 			{
-				if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true)
+				if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
                 {
 					if (curSelected > 0 || leftSelcted)
 					{

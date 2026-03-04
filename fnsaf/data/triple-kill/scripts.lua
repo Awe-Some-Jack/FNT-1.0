@@ -42,6 +42,12 @@ local function rgbToHex(t)
     return string.format('%02X%02X%02X', t[1], t[2], t[3])
 end
 
+function onEvent(event, value1, value2, strumTime)
+    if event == "Change Stage" then
+        setCameraScroll(500, 500)
+    end
+end
+
 function onUpdatePost(elapsed)
     if dadName == "blist-black" then
         setHealthBarColors("000000", "")
@@ -61,9 +67,6 @@ function onSectionHit()
         if shadersEnabled then
             removeSpriteShader("boyfriend")
             removeSpriteShader("dad")
-
-            setShaderBool("dad", "useMask", false)
-            setShaderBool("boyfriend", "useMask", false)
 
             setProperty("boyfriend.color", FlxColor("magenta"))
         end

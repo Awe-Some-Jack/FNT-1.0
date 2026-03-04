@@ -1,6 +1,7 @@
 local lockon = false
 local xx = 0
 local yy = 0
+local pause = true
 
 function onCreate()
     setProperty('skipCountdown', true)
@@ -25,6 +26,19 @@ function onCreate()
     setProperty("agfeye.alpha", 0)
     scaleObject("agfeye", 1.5, 1.5)
     addLuaSprite("agfeye")
+
+    makeLuaSprite("fakemenu", "bg/mirahq/fakeMain", 0, 0)
+    setObjectCamera("fakemenu", "other")
+    screenCenter("fakemenu", "xy")
+    setProperty("fakemenu.alpha", 0)
+    addLuaSprite("fakemenu")
+
+    makeAnimatedLuaSprite("Crash", "bg/mirahq/crack", 0, 0)
+    addAnimationByPrefix("Crash", "anim", "crack crack", 35, false)
+    screenCenter("Crash", "xy")
+    setProperty("Crash.visible", false)
+    setObjectCamera("Crash", "other")
+    addLuaSprite("Crash", true)
 
     makeLuaSprite("vigi", "bg/mirahq/vignette", 0, 0)
     setObjectCamera("vigi", "hud")
@@ -54,10 +68,27 @@ function onResume()
 end
 
 function onUpdate(elapsed)
+    if pause then
+        setProperty('canPause', true)
+    else
+        setProperty('canPause', false)
+    end
+
     if lockon then
         setCameraScroll(xx, yy)
     end
 end
+
+function onUpdatePost(elapsed)
+    if inGameOver then
+        stopSound(nil)
+    end
+end
+
+function onSongStart()
+    setProperty('songLength', 601500)
+end
+
 function onStepHit()
     if curStep == 1850 then
         cameraFade("hud", "000000", 0.3, false, false)
@@ -78,6 +109,18 @@ function onStepHit()
 
     if curStep == 3879 then
         cameraFade("game", "000000", 0.5, false, true)
+    end
+
+    if curStep == 7572 then
+        doTweenAlpha("fakeHi", "fakemenu", 1, 1)
+    end
+
+    if curStep == 7620 then
+        runHaxeCode('FlxTween.tween(game, {songLength: FlxG.sound.music.length}, 0.7, {ease: FlxEase.circInOut})')
+        playAnim("Crash", "anim", true)
+        setProperty("Crash.visible", true)
+
+        cameraShake("other", 0.025, 0.03)
     end
 end
 
@@ -108,9 +151,6 @@ function onSectionHit()
     end
 
     if curSection == 120 then
-        lockon = true
-        xx = 200
-        yy = 300
         triggerEvent("Tween Cam Zoom", "0.5", "0.001")
     end
 
@@ -125,7 +165,6 @@ function onSectionHit()
     end
 
     if curSection == 157 then
-        lockon = false
         triggerEvent("Tween Cam Zoom", "0.7", "0.001")
         cameraFade("game", "000000", 0.001, false, true)
         cameraFlash("hud", "FFFFFF", 0.3, false)
@@ -145,7 +184,6 @@ function onSectionHit()
         setProperty("dad.visible", false)
         xx = 1100
         yy = 600
-        triggerEvent("Tween Cam Zoom", "0.9", "0.001")
     end
 
     if curSection == 215 then
@@ -171,11 +209,49 @@ function onSectionHit()
         cameraFade("game", "000000", 0.5, false, true)
     end
 
+    if curSection == 475 then
+        cameraFade("hud", "000000", 0.001, false, false)
+        cameraFlash("other", "FFFFFF", 0.5, false)
+    end
+
+    if curSection == 478 then
+        pause = false
+    end
+
     if curSection == 482 then
         lockon = true
         xx = 800
         yy = 500
+        removeLuaSprite("fakemenu", true)
+        removeLuaSprite("Crash", true)
         triggerEvent("Tween Cam Zoom", "0.4", "0.001")
+        cameraFade("hud", "000000", 0.001, false, true)
+        cameraFlash("hud", "FFFFFF", 1, false)
         setProperty("boyfriend.visible", false)
     end
+end
+
+function onGameOver()
+    -- You died! Called every single frame your health is lower (or equal to) zero
+    -- return Function_Stop if you want to stop the player from going into the game over screen
+    return Function_Stop;
+end
+
+function onGameOverStart()
+    setPropertyFromClass("flixel.FlxG", 'keys.enabled', false)
+    setPropertyFromClass("flixel.FlxG", "fullscreen", true)
+    setProperty("camGame.visible", false)
+    setProperty("camHUD.visible", false)
+    createInstance('Gameovervideo', 'hxvlc.flixel.FlxVideoSprite')
+    callMethod('Gameovervideo.load', { callMethodFromClass('backend.Paths', 'modsVideo', { 'blist_gameover' }) })
+    runHaxeCode([[
+        getVar("Gameovervideo").bitmap.onEndReached.add(()->{
+            remove(getVar("Gameovervideo"));
+            removeVar("Gameovervideo");
+            Sys.exit(0);
+        });
+    ]])
+    setProperty('Gameovervideo.camera', instanceArg('camOther'), false, true)
+    addInstance('Gameovervideo')
+    callMethod('Gameovervideo.play')
 end

@@ -86,14 +86,14 @@ class StoryMenuState extends MusicBeatState
 
 		if(curWeek >= WeekData.weeksList.length) curWeek = 0;
 
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false || FlxG.save.data.allclear == true)
 		{
 			weekimage1 = new FlxSprite(0,0).loadGraphic(Paths.image("UI/story/alright1"));
 		    weekimage1.screenCenter();
 		    weekimage1.antialiasing = ClientPrefs.data.antialiasing;
 		    add(weekimage1);
 		}
-		else
+		else if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
 		{
 			weekimage1 = new FlxSprite(0,0).loadGraphic(Paths.image("UI/story/what1"));
 		    weekimage1.screenCenter();
@@ -208,7 +208,7 @@ class StoryMenuState extends MusicBeatState
 		FlxG.sound.music.stop();
 		FlxG.sound.play(Paths.sound('select'));
 
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false)
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false || FlxG.save.data.allclear == true)
 		{
 			WeekData.reloadWeekFiles(true);
             PlayState.SONG = Song.loadFromJson('new crewmate', 'new crewmate');
@@ -217,14 +217,13 @@ class StoryMenuState extends MusicBeatState
             PlayState.storyDifficulty = 0;
             PlayState.storyWeek = WeekData.weeksList.indexOf('week1');
 		}
-		else
+		else if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
 		{
 			WeekData.reloadWeekFiles(true);
             PlayState.SONG = Song.loadFromJson('futurology dilemma', 'futurology dilemma');
             PlayState.storyPlaylist = ['futurology dilemma'];
             Difficulty.list = ['Normal'];
             PlayState.storyDifficulty = 0;
-            PlayState.storyWeek = WeekData.weeksList.indexOf('comehere');
 		}
 
 		var directory = StageData.forceNextDirectory;
