@@ -274,7 +274,7 @@
 		{
 			"sectionNotes": [
 				[40200, 1, 600],
-				[40200, 5, 600]
+				[40200, 5, 600, "No Animation"]
 			],
 			"sectionBeats": 4,
 			"mustHitSection": false
@@ -8916,7 +8916,8 @@
 		[
 			40200,
 			[
-				["Tween Cam Zoom", "0.9", ""]
+				["Tween Cam Zoom", "0.9", ""],
+				["Change Character", "Dad", "blistpre"]
 			]
 		],
 		[
@@ -8943,7 +8944,6 @@
 			[
 				["Tween Cam Zoom", "0.8", ""],
 				["CenterCameraEvent", "off", ""],
-				["Change Character", "dad", "blistpre"],
 				["Tween Cam Zoom", "0.8", ""],
 				["Highlight Character", "0", ""]
 			]
@@ -10573,15 +10573,15 @@
 			]
 		],
 		[
-			409050,
+			408975,
 			[
-				["Flash Camera 2", "10", ""]
+				["Video Player", "blist_flashback, camOther, 0", "false, true"]
 			]
 		],
 		[
-			412478.571428571,
+			409050,
 			[
-				["Video Player", "blist_flashback, camOther, 0", "false, true"]
+				["Flash Camera 2", "10", ""]
 			]
 		],
 		[

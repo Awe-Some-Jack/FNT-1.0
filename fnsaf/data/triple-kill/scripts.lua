@@ -63,13 +63,6 @@ function onSectionHit()
         setProperty("agfexe-final.visible", true)
         setProperty("wallyexe-final.visible", true)
         setProperty("spexe-final.visible", true)
-
-        if shadersEnabled then
-            removeSpriteShader("boyfriend")
-            removeSpriteShader("dad")
-
-            setProperty("boyfriend.color", FlxColor("magenta"))
-        end
     end
 
     if curSection == 301 then

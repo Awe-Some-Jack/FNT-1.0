@@ -26,13 +26,13 @@ function onCreate()
         makeLuaSprite('green-object2', 'bg/mirahq/greenhouse/object2', -370, -195)
         scaleObject('green-object2', 1.1, 1.1)
 
-        makeLuaSprite('green-object3', 'bg/mirahq/greenhouse/object3', -860, -200)
+        makeLuaSprite('green-object3', 'bg/mirahq/greenhouse/object3', -860, 350)
         scaleObject('green-object3', 1.1, 1.1)
 
         makeLuaSprite('green-object4', 'bg/mirahq/greenhouse/object4', -860, -200)
         scaleObject('green-object4', 1.1, 1.1)
 
-        makeLuaSprite('green-object5', 'bg/mirahq/greenhouse/object5', -860, -200)
+        makeLuaSprite('green-object5', 'bg/mirahq/greenhouse/object5', -860, 400)
         scaleObject('green-object5', 1.1, 1.1)
 
         makeLuaSprite('green-light', 'bg/mirahq/greenhouse/light', -860, -200)

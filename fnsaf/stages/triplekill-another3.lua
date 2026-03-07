@@ -55,3 +55,59 @@ function onUpdate(elapsed)
     starspin = starspin + 0.5
     setProperty("finalstar.angle", starspin)
 end
+
+function onUpdatePost(elapsed)
+    removeSpriteShader('boyfriend')
+    removeSpriteShader('dad')
+
+    setShaderBool('boyfriend', 'useMask', false)
+    setShaderBool('dad', 'useMask', false)
+
+    runHaxeCode([[
+        game.boyfriend.shader = null;
+        game.dad.shader = null;
+    ]])
+
+    setProperty("boyfriend.color", FlxColor("magenta"))
+end
+
+function removeCharShader(char)
+    removeSpriteShader(char)
+    setShaderBool(char, 'useMask', false)
+
+    runHaxeCode([[
+        var obj = switch("]] .. char .. [[") {
+            case "boyfriend": game.boyfriend;
+            case "dad": game.dad;
+            case "gf": game.gf;
+        };
+
+        if(obj != null)
+        {
+            obj.shader = null;
+            obj.animation.callback = null;
+        }
+    ]])
+end
+
+function removeAllShaders()
+    removeCharShader('boyfriend')
+    removeCharShader('dad')
+    removeCharShader('gf')
+end
+
+function onCreatePost()
+    removeAllShaders()
+end
+
+function onEvent(event)
+    if event == 'Change Character' then
+        runTimer('shaderFix', 0.01)
+    end
+end
+
+function onTimerCompleted(tag)
+    if tag == 'shaderFix' then
+        removeAllShaders()
+    end
+end
