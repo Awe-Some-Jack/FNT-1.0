@@ -610,8 +610,8 @@ class FreeplayState extends MusicBeatState
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/ballooned"));
 				case "ggang ggang":
                     bg.loadGraphic(Paths.image("UI/freeplay/fpbg/ggang"));
-                default:
-                    bg.loadGraphic(Paths.image("menuDesat"));
+				case "futurology-dilemma":
+                    bg.loadGraphic(Paths.image("UI/freeplay/fpbg/futurology-dilemma"));
             }
             bgTween = FlxTween.tween(bg, {alpha: 0.5}, 0.3, {ease: FlxEase.quadIn});
             }

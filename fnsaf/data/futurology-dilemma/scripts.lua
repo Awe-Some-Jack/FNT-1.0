@@ -3,23 +3,16 @@ local xx = 0
 local yy = 0
 local pause = true
 
+local ffi = require("ffi")
+
+ffi.cdef [[
+    int MessageBoxW(void* hWnd, const wchar_t* lpText, const wchar_t* lpCaption, unsigned int uType);
+]]
+
 function onCreate()
     setProperty('skipCountdown', true)
 
-    addCharacterToList("blistpre", "dad")
-    addCharacterToList("blist", "dad")
-    addCharacterToList("blist2", "dad")
-    addCharacterToList("blist-puppy", "dad")
-    addCharacterToList("puppy-exe", "dad")
-    addCharacterToList("darkblist", "dad")
-    addCharacterToList("agf-mad", "dad")
-    addCharacterToList("blist-melina", "dad")
-    addCharacterToList("blist-final", "dad")
-
-    addCharacterToList("bf-n2", "boyfriend")
-    addCharacterToList("bf-n3", "boyfriend")
-    addCharacterToList("bf-side-dark", "boyfriend")
-    addCharacterToList("darkbf", "boyfriend")
+    setPropertyFromClass('GameOverSubstate', 'deathSoundName', 'None')
 
     makeLuaSprite("agfeye", "bg/mirahq/agfpart/agfmad-eye", 510, 500)
     setObjectCamera("agfeye", "other")
@@ -33,8 +26,14 @@ function onCreate()
     setProperty("fakemenu.alpha", 0)
     addLuaSprite("fakemenu")
 
+    makeLuaSprite("visor", "bg/mirahq/blist visor", 0, 0)
+    setObjectCamera("visor", "other")
+    screenCenter("visor", "xy")
+    setProperty("visor.visible", false)
+    addLuaSprite("visor")
+
     makeAnimatedLuaSprite("Crash", "bg/mirahq/crack", 0, 0)
-    addAnimationByPrefix("Crash", "anim", "crack crack", 35, false)
+    addAnimationByPrefix("Crash", "anim", "crack crack", 37, false)
     screenCenter("Crash", "xy")
     setProperty("Crash.visible", false)
     setObjectCamera("Crash", "other")
@@ -86,6 +85,7 @@ function onUpdatePost(elapsed)
 end
 
 function onSongStart()
+    setPropertyFromClass("flixel.FlxG", "fullscreen", false)
     setProperty('songLength', 601500)
 end
 
@@ -121,6 +121,17 @@ function onStepHit()
         setProperty("Crash.visible", true)
 
         cameraShake("other", 0.025, 0.03)
+    end
+
+    if curStep == 7640 then
+        setPropertyFromClass("flixel.FlxG", "fullscreen", true)
+        cameraFlash("other", "FFFFFF", 0.3, false)
+        removeLuaSprite("fakemenu", true)
+
+        setProperty("visor.visible", true)
+        startTween("visorTween", "visor.scale", {x = 1.3, y = 1.2 }, 1, {ease = "backOut"})
+
+        cameraShake("other", 0.3, 0.1)
     end
 end
 
@@ -216,25 +227,37 @@ function onSectionHit()
 
     if curSection == 478 then
         pause = false
+        setProperty("camGame.visible", false)
     end
 
     if curSection == 482 then
         lockon = true
         xx = 800
         yy = 500
-        removeLuaSprite("fakemenu", true)
+        setProperty("camGame.visible", true)
+        removeLuaSprite("visor", true)
         removeLuaSprite("Crash", true)
         triggerEvent("Tween Cam Zoom", "0.4", "0.001")
         cameraFade("hud", "000000", 0.001, false, true)
         cameraFlash("hud", "FFFFFF", 1, false)
         setProperty("boyfriend.visible", false)
     end
+
+    if curSection == 559 then
+        cameraFade("hud", "000000", 10, false, false)
+    end
 end
 
-function onGameOver()
-    -- You died! Called every single frame your health is lower (or equal to) zero
-    -- return Function_Stop if you want to stop the player from going into the game over screen
-    return Function_Stop;
+-- dont touch this part
+function sendFakeMessageBox(desc)
+    local wideDesc = ffi.new("wchar_t[?]", #desc + 1)
+    for i = 1, #desc do
+        wideDesc[i - 1] = string.byte(desc, i)
+    end
+    wideDesc[#desc] = 0 -- the null killer >:)
+
+    local res = ffi.C.MessageBoxW(nil, wideDesc, nil, 0)
+    return res
 end
 
 function onGameOverStart()
@@ -254,4 +277,28 @@ function onGameOverStart()
     setProperty('Gameovervideo.camera', instanceArg('camOther'), false, true)
     addInstance('Gameovervideo')
     callMethod('Gameovervideo.play')
+end
+
+function onEndSong()
+    if not botPlay then
+        cameraFade("other", "FFFFFF", 0.5, false, false)
+        runTimer("back", 1)
+        playSound("RMVXACE_Magic2")
+    else
+        sendFakeMessageBox("YOU ARE NOT FUNNY")
+        os.exit()
+    end
+    return Function_Stop
+end
+
+function onTimerCompleted(tag, loops, loopsLeft)
+    if tag == "back" then
+        cameraFade("other", "FFFFFF", 1, false, true)
+        runTimer("bye", 2)
+    end
+
+    if tag == "bye" then
+        sendFakeMessageBox("I WILL BE BACK")
+        os.exit()
+    end
 end

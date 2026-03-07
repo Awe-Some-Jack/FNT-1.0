@@ -58,7 +58,14 @@ class StoryMenuState extends MusicBeatState
 			openSubState(stickerSubState);
 			Paths.clearStoredWithoutStickers();
 			stickerSubState.degenStickers();
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
+            {
+				FlxG.sound.playMusic(Paths.music('freakyMenu_low'));
+			}
+			else
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}
 		}
 		else
 		Paths.clearStoredMemory();
@@ -118,7 +125,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.font = Paths.font("vcr.ttf");
 		txtTracklist.color = 0xFFe55777;
 		add(txtTracklist);
-		add(scoreText);
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false || FlxG.save.data.allclear == true) add(scoreText);
 
 		super.create();
 	}
@@ -208,7 +215,15 @@ class StoryMenuState extends MusicBeatState
 		FlxG.sound.music.stop();
 		FlxG.sound.play(Paths.sound('select'));
 
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == false || FlxG.save.data.allclear == true)
+		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
+		{
+			WeekData.reloadWeekFiles(true);
+            PlayState.SONG = Song.loadFromJson('futurology dilemma', 'futurology dilemma');
+            PlayState.storyPlaylist = ['futurology dilemma'];
+            Difficulty.list = ['Normal'];
+            PlayState.storyDifficulty = 0;
+		}
+		else
 		{
 			WeekData.reloadWeekFiles(true);
             PlayState.SONG = Song.loadFromJson('new crewmate', 'new crewmate');
@@ -216,14 +231,6 @@ class StoryMenuState extends MusicBeatState
             Difficulty.list = ['Normal'];
             PlayState.storyDifficulty = 0;
             PlayState.storyWeek = WeekData.weeksList.indexOf('week1');
-		}
-		else if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
-		{
-			WeekData.reloadWeekFiles(true);
-            PlayState.SONG = Song.loadFromJson('futurology dilemma', 'futurology dilemma');
-            PlayState.storyPlaylist = ['futurology dilemma'];
-            Difficulty.list = ['Normal'];
-            PlayState.storyDifficulty = 0;
 		}
 
 		var directory = StageData.forceNextDirectory;

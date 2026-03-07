@@ -61,7 +61,14 @@ class MainMenuState extends MusicBeatState
 
 		if (!FlxG.sound.music.playing || !mainMusic)
 		{
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
+            {
+				FlxG.sound.playMusic(Paths.music('freakyMenu_low'));
+			}
+			else
+			{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}
 			mainMusic = true;
 		}
 
@@ -325,7 +332,7 @@ class MainMenuState extends MusicBeatState
 			{
 				if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true && FlxG.save.data.allclear == false)
                 {
-					if (curSelected > 0 || leftSelcted)
+					if (curSelected > 0 && curSelected < 3 || leftSelcted)
 					{
 						FlxG.sound.play(Paths.sound('swipe_card_failed'));
                         FlxG.camera.shake(0.01, 0.15);

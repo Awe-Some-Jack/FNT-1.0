@@ -212,11 +212,6 @@ class PauseSubState extends MusicBeatSubstate
 
 		super.update(elapsed);
 
-		if (FlxG.save.data != null && FlxG.save.data.blistunlocked == true)
-		{
-			mumble.animation.play('anim5');
-		}
-
 		if(controls.BACK)
 		{
 			close();

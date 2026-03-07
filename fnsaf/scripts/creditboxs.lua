@@ -16,7 +16,7 @@ function onSongCheck()
         composer = { "SDL" }
         charter = { "Dia" }
     elseif songName == "Reactor Alarm" then
-        artist = { "sucheol" }
+        artist = { "SP" }
         composer = { "DevinXD" }
         charter = { "Dia, Reiad, Snowmelt" }
     elseif songName == "Get Caught" then
@@ -36,7 +36,7 @@ function onSongCheck()
         composer = { "bbpanzu (Remix: Keunak)" }
         charter = { "Dia" }
     elseif songName == "triple-kill" then
-        artist = { "Sucheol, Amon crack, Snowmelt" }
+        artist = { "SP, Amon crack, Snowmelt" }
         composer = { "hmm111" }
         charter = { "Dia" }
     elseif songName == "glitch-friend" then
@@ -52,7 +52,7 @@ function onSongCheck()
         composer = { "Mr Takoyaky", "Askliskal" }
         charter = { "Dia" }
     elseif songName == "Futurology Dilemma" then
-        artist = { "Sucheol, Amon crack" }
+        artist = { "SP, Amon crack" }
         composer = { "Mr Takoyaky, Askliskal, hmm111" }
         charter = { "Dia" }
     end
