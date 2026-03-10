@@ -45,7 +45,7 @@ function onSongCheck()
         charter = { "Dia" }
     elseif songName == "ballooned" then
         artist = { "GTM" }
-        composer = { "Aelo" }
+        composer = { "Aleo" }
         charter = { "Dia" }
     elseif songName == "GGang GGang" then
         artist = { "Amon crack" }

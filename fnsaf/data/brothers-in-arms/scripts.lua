@@ -69,7 +69,7 @@ function onUpdate(elapsed)
         end
     end
 
-    if getProperty('Spacebar.alpha') == 1 and keyboardJustPressed("SPACE") then
+    if getProperty('Spacebar.alpha') >= 0.5 and keyboardJustPressed("SPACE") then
         udodged = true
     end
 
