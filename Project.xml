@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friends & Troubler" file="Friends & Troubler" packageName="com.awesomejack.friendsandtroubler" package="com.awesomejack.friendsandtroubler" main="Main" version="1.0.2" company="awesomejack" />
+	<app title="Friends & Troubler" file="Friends & Troubler" packageName="com.awesomejack.friendsandtroubler" package="com.awesomejack.friendsandtroubler" main="Main" version="1.0.3" company="awesomejack" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
