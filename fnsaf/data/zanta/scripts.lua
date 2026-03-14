@@ -5,6 +5,7 @@ yy = 0
 icons = "agf-zanta"
 
 function onCreate()
+    setObjectOrder("gfGroup", getObjectOrder("banana") + 1)
     setObjectOrder("gfGroup", getObjectOrder("boyfriendGroup") + 1)
 
     makeLuaText("Subtitle", "sample", 800, 0, 530)
