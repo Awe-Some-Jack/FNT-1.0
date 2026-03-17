@@ -23,7 +23,7 @@ class CreditsState extends MusicBeatState
             { title: "Programmers", names: ["bpforest", "AweSomeJack"] },
             { title: "Composers", names: ["DevinXD(EX)", "Saf.one", "Aleo", "SDL(EX)", "hmm111", "Mr Takoyaky", "Askliskal", "Keunak"] },
             { title: "Artists", names: ["logan", "snowmelt", "rage_87", "SP", "nyangko", "Lemona", "white", "Ahmed Wael Hamdy", "Duolc(EX)", "Antiverse amon crack", "Noobb", "Jamong", "Captain", "Pglz", "Dardex"] },
-            { title: "Animator", names: ["yuseong0405", "UNS_online", "neondash", "Fallpillpe", "Retro(EX)", "Antiverse amon crack", "Nanda Pratama", "HAL(EX)", "AGF1674"] },
+            { title: "Animator", names: ["yuseong0405", "UNS_online", "neondash", "Retro(EX)", "Antiverse amon crack", "Nanda Pratama", "HAL(EX)", "AGF1674"] },
             { title: "Charters", names: ["dia", "Reiad(EX)", "snowmelt"] },
             { title: "Voice Actor", names: ["holy_jesus - Space Puppy", "Moon Shark - Wally", "Troll - AGF", "cash - Cream", "mime - Blist"] },
             { title: "Special Thanks", names: ["raul - Brothers in arms Vocal Remaster FLP", "Jio - Glitched Lobbies Collab", "GTM - Bean Edition Collab"] }

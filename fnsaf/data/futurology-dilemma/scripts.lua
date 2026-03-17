@@ -48,6 +48,7 @@ function onCreatePost()
     createInstance('video', 'hxvlc.flixel.FlxVideoSprite', {0, 0})
     callMethod('video.load', { callMethodFromClass('backend.Paths', 'modsVideo', { 'flashurgameplaying' }) })
     setScrollFactor("video", 0, 0)
+    setObjectOrder("video", getObjectOrder("dadGroup") - 1)
     setGraphicSize("video", 2, 2)
     runHaxeCode([[
             getVar("video").bitmap.onEndReached.add(()->{

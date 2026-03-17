@@ -111,7 +111,7 @@ function onStepHit()
     if curStep == 1960 then
         setTextString("Subtitle", "Are You Dumb HEAD???\n너 진짜 빡대가리야???")
         xx = 700
-        icons = "cream"
+        icons = "cream-zanta"
         setProperty("Subtitle.alpha", 1)
     end
 

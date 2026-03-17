@@ -6,7 +6,7 @@ function onSongCheck()
     if songName == "New Crewmate" then
         artist = { "Snowmelt", "Logan" }
         composer = { "DevinXD" }
-        charter = { "Dia" }
+        charter = { "Dia, Snowmelt" }
     elseif songName == "Accident" then
         artist = { "Logan" }
         composer = { "SDL" }
@@ -54,7 +54,7 @@ function onSongCheck()
     elseif songName == "Futurology Dilemma" then
         artist = { "SP, Amon crack" }
         composer = { "Mr Takoyaky, Askliskal, hmm111" }
-        charter = { "Dia" }
+        charter = { "Dia, Snowmelt" }
     end
 end
 

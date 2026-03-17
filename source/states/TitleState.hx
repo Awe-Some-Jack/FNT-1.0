@@ -72,8 +72,6 @@ class TitleState extends MusicBeatState
 
 		FlxSprite.defaultAntialiasing = ClientPrefs.data.antialiasing;
 
-		FlxG.save.bind("Withforblist");
-
         if (FlxG.save.data.clearCount == null)
             FlxG.save.data.clearCount = 0;
 
