@@ -90,6 +90,11 @@ class PlayState extends MusicBeatState
 		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 
+	private var _lastDecStep:Float = -1;
+    private var _lastDecBeat:Float = -1;
+
+	private var plrInputNotes:Array<Note> = [];
+
 	//event variables
 	private var isCameraOnForcedPos:Bool = false;
 
@@ -954,7 +959,11 @@ class PlayState extends MusicBeatState
 			default: ['${uiPrefix}UI/intro3${uiPostfix}', '${uiPrefix}UI/intro2${uiPostfix}', '${uiPrefix}UI/intro1${uiPostfix}', '${uiPrefix}UI/introo${uiPostfix}'];
 }
 		introAssets.set(stageUI, introImagesArray);
-		var introAlts:Array<String> = introAssets.get(stageUI);
+		var introAlts:Array<String> = switch(stageUI) {
+            case "pixel": ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel'];
+            case "normal": ["intro3", "intro2", "intro1", "introGo"];
+            default: ['${uiPrefix}UI/intro3${uiPostfix}', '${uiPrefix}UI/intro2${uiPostfix}', '${uiPrefix}UI/intro1${uiPostfix}', '${uiPrefix}UI/introo${uiPostfix}'];
+        }
 		for (asset in introAlts) Paths.image(asset);
 
 		Paths.sound('intro3' + introSoundsSuffix);
@@ -1020,7 +1029,11 @@ class PlayState extends MusicBeatState
 				}
 				introAssets.set(stageUI, introImagesArray);
 
-				var introAlts:Array<String> = introAssets.get(stageUI);
+				var introAlts:Array<String> = switch(stageUI) {
+                    case "pixel": ['pixelUI/ready-pixel', 'pixelUI/set-pixel', 'pixelUI/date-pixel'];
+                    case "normal": ["intro3", "intro2", "intro1", "introGo"];
+                    default: ['${uiPrefix}UI/intro3${uiPostfix}', '${uiPrefix}UI/intro2${uiPostfix}', '${uiPrefix}UI/intro1${uiPostfix}', '${uiPrefix}UI/introo${uiPostfix}'];
+                }
 				var antialias:Bool = (ClientPrefs.data.antialiasing && !isPixelStage);
 				var tick:Countdown = THREE;
 
@@ -1700,8 +1713,15 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		setOnScripts('curDecStep', curDecStep);
-		setOnScripts('curDecBeat', curDecBeat);
+        if (curDecStep != _lastDecStep) {
+            setOnScripts('curDecStep', curDecStep);
+            _lastDecStep = curDecStep;
+        }
+		
+        if (curDecBeat != _lastDecBeat) {
+            setOnScripts('curDecBeat', curDecBeat);
+            _lastDecBeat = curDecBeat;
+        }
 
 		if(botplayTxt != null && botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
@@ -2731,10 +2751,11 @@ class PlayState extends MusicBeatState
 		if(Conductor.songPosition >= 0) Conductor.songPosition = FlxG.sound.music.time + Conductor.offset;
 
 		// obtain notes that the player can hit
-		var plrInputNotes:Array<Note> = notes.members.filter(function(n:Note):Bool {
-			var canHit:Bool = n != null && !strumsBlocked[n.noteData] && n.canBeHit && n.mustPress && !n.tooLate && !n.wasGoodHit && !n.blockHit;
-			return canHit && !n.isSustainNote && n.noteData == key;
-		});
+		plrInputNotes.resize(0); // 배열 재사용 (할당 없음)
+        for (n in notes.members) {
+            if (n != null && !strumsBlocked[n.noteData] && n.canBeHit && n.mustPress && !n.tooLate && !n.wasGoodHit && !n.blockHit && !n.isSustainNote && n.noteData == key)
+            plrInputNotes.push(n);
+        }
 		plrInputNotes.sort(sortHitNotes);
 
 		if (plrInputNotes.length != 0) { // slightly faster than doing `> 0` lol
