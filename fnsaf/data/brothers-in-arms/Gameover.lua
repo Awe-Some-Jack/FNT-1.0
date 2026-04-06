@@ -108,7 +108,7 @@ function onGameOverStart()
     addLuaSprite("retry")
     addLuaSprite("run")
 
-    runTimer("Showme", 2.4)
+    runTimer("Showme", 2.0)
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)

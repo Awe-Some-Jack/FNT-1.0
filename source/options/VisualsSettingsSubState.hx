@@ -110,15 +110,10 @@ class VisualsSettingsSubState extends BaseOptionsMenu
 			BOOL);
 		addOption(option);
 
-		var option:Option = new Option('Health Bar Opacity',
-			'How much transparent should the health bar and icons be.',
-			'healthBarAlpha',
-			PERCENT);
-		option.scrollSpeed = 1.6;
-		option.minValue = 0.0;
-		option.maxValue = 1;
-		option.changeValue = 0.1;
-		option.decimals = 1;
+		var option:Option = new Option('Max Health Fade Out',
+			"If unchecked, it will fade out when your health reaches its maximum.",
+			'maxhealthfade',
+			BOOL);
 		addOption(option);
 		
 		#if !mobile

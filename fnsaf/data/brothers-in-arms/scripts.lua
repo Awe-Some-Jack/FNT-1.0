@@ -3,6 +3,8 @@ local isgf = false
 local udodged = false
 
 local Danger = false
+local sphealth = 1
+local lastheal = 23
 
 cameraevnet = {928, 992, 1280, 1632}
 nocameraevnet = {960, 1248, 1376}
@@ -35,9 +37,10 @@ end
 dodgeStuff = {'dodge', 'Spacebar'}
 
 function onCreatePost()
-    makeLuaSprite("Dangerhealth", "", getProperty("healthBar.x") + 496, getProperty("healthBar.y") + 3)
+    makeLuaSprite("Dangerhealth", "", getProperty("healthBar.x") + 497, getProperty("healthBar.y") + 3)
     makeGraphic("Dangerhealth", 100, 14, "3202b4")
     setObjectCamera("Dangerhealth", "hud")
+    setProperty('Dangerhealth.origin.x', 100)
     addToGroup('uiGroup', 'Dangerhealth', getObjectOrder('healthBar', 'uiGroup')+1)
     setProperty("Dangerhealth.alpha", 0)
     addLuaSprite("Dangerhealth")
@@ -52,7 +55,7 @@ function onUpdate(elapsed)
 
     health = getProperty('health')
     if Danger then
-        if getProperty('healthBar.percent') < 20 then
+        if getProperty('healthBar.percent') < lastheal then
  	   	    setProperty('health', health- 500);
 		end
     end
@@ -240,11 +243,20 @@ function changedefault()
     noteTweenX("opponent4", 3, defaultOpponentStrumX3, 1, "cubeOut")
 end
 
+function goodNoteHit(index, noteData, noteType, isSustain)
+    if Danger then
+        sphealth = sphealth - 0.015
+        lastheal = lastheal - 0.050
+        setProperty('Dangerhealth.scale.x', sphealth);
+    end
+    debugPrint(lastheal)
+end
+
 function opponentNoteHit(id, direction, noteType, isSustainNote)
     if noteType == "GF Sing" or gfSection then
-        health = getProperty('health')
-        if getProperty('health') > 0.1 then
-            setProperty('health', health- 0.015);
-        end
+        sphealth = sphealth + 0.015
+        lastheal = lastheal + 0.050
+        setProperty('Dangerhealth.scale.x', sphealth);
     end
+    debugPrint(lastheal)
 end

@@ -516,20 +516,17 @@ class PlayState extends MusicBeatState
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
-		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.data.hideHud;
-		iconP1.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(iconP1);
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.visible = !ClientPrefs.data.hideHud;
-		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(iconP2);
 
 		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
@@ -1726,6 +1723,19 @@ class PlayState extends MusicBeatState
 		if(botplayTxt != null && botplayTxt.visible) {
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
+		}
+
+		if(ClientPrefs.data.maxhealthfade && health >= 2){
+			new FlxTimer().start(1, function(_){
+                FlxTween.tween(healthBar, {alpha: 0}, 0.3);
+				FlxTween.tween(iconP1, {alpha: 0}, 0.3);
+				FlxTween.tween(iconP2, {alpha: 0}, 0.3);
+            });
+		}
+        else if(ClientPrefs.data.maxhealthfade && health != 2){
+            FlxTween.tween(healthBar, {alpha: 1}, 0.3);
+			FlxTween.tween(iconP1, {alpha: 1}, 0.3);
+			FlxTween.tween(iconP2, {alpha: 1}, 0.3);
 		}
 
 		if (controls.PAUSE && startedCountdown && canPause)

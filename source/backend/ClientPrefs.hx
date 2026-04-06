@@ -40,11 +40,11 @@ import states.TitleState;
 	public var timeBarType:String = 'Time Left';
 	public var scoreZoom:Bool = true;
 	public var noReset:Bool = false;
-	public var healthBarAlpha:Float = 1;
 	public var hitsoundVolume:Float = 0;
 	public var pauseMusic:String = 'FNSAF Pause';
 	public var checkForUpdates:Bool = true;
 	public var watermark:Bool = true;
+	public var maxhealthfade:Bool = true;
 	public var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
 		'scrolltype' => 'multiplicative', 
