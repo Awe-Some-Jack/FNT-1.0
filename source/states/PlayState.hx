@@ -1725,14 +1725,16 @@ class PlayState extends MusicBeatState
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 
+		var healthfade:FlxTimer = new FlxTimer();
 		if(ClientPrefs.data.maxhealthfade && health >= 2){
-			new FlxTimer().start(1, function(_){
+			healthfade.start(1, function(_){
                 FlxTween.tween(healthBar, {alpha: 0}, 0.3);
 				FlxTween.tween(iconP1, {alpha: 0}, 0.3);
 				FlxTween.tween(iconP2, {alpha: 0}, 0.3);
             });
 		}
         else if(ClientPrefs.data.maxhealthfade && health != 2){
+			healthfade.cancel();
             FlxTween.tween(healthBar, {alpha: 1}, 0.3);
 			FlxTween.tween(iconP1, {alpha: 1}, 0.3);
 			FlxTween.tween(iconP2, {alpha: 1}, 0.3);
