@@ -48,9 +48,13 @@ end
 
 function onUpdate(elapsed)
     if isgf and not forevent then
-        changestrum()
+        if not middlescroll then
+            changestrum()
+        end
     elseif not isgf and not forevent then
-        changedefault()
+        if not middlescroll then
+            changedefault()
+        end
     end
 
     health = getProperty('health')
@@ -249,7 +253,7 @@ function goodNoteHit(index, noteData, noteType, isSustain)
         lastheal = lastheal - 0.050
         setProperty('Dangerhealth.scale.x', sphealth);
     end
-    debugPrint(lastheal)
+    --debugPrint(lastheal)
 end
 
 function opponentNoteHit(id, direction, noteType, isSustainNote)
@@ -258,5 +262,5 @@ function opponentNoteHit(id, direction, noteType, isSustainNote)
         lastheal = lastheal + 0.050
         setProperty('Dangerhealth.scale.x', sphealth);
     end
-    debugPrint(lastheal)
+    --debugPrint(lastheal)
 end
