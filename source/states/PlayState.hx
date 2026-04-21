@@ -552,9 +552,7 @@ class PlayState extends MusicBeatState
 		modWatermark.visible = ClientPrefs.data.watermark;
 		uiGroup.add(modWatermark);
 
-		uiGroup.cameras = [camHUD];
-		noteGroup.cameras = [camHUD];
-		comboGroup.cameras = [camHUD];
+		uiGroup.cameras = noteGroup.cameras = comboGroup.cameras = [camHUD];
 
 		startingSong = true;
 

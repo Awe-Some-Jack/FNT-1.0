@@ -1,86 +1,86 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [0, 0],
+			"indices": [],
+			"fps": 12,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"loop": false,
+			"name": "Idle"
 		},
 		{
-			"loop": false,
-			"offsets": [55, -1],
+			"offsets": [1, -1],
+			"indices": [],
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Left",
-			"indices": []
+			"loop": false,
+			"name": "Left0"
 		},
 		{
-			"loop": false,
-			"offsets": [27, -1],
+			"offsets": [1, 7],
+			"indices": [],
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Down",
-			"indices": []
+			"loop": false,
+			"name": "Down0"
 		},
 		{
-			"loop": false,
-			"offsets": [-34, 42],
+			"offsets": [-5, 2],
+			"indices": [],
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "Up",
-			"indices": []
+			"loop": false,
+			"name": "Up0"
 		},
 		{
-			"loop": false,
-			"offsets": [85, 17],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "Lmiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [22, 7],
-			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "Dmiss",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [-30, 57],
-			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "Umiss",
-			"indices": []
-		},
-		{
-			"offsets": [-47, -29],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
+			"offsets": [2, 0],
 			"indices": [],
-			"name": "Rmiss"
-		},
-		{
-			"offsets": [-48, -25],
-			"loop": false,
-			"fps": 24,
+			"fps": 12,
 			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Right0"
+		},
+		{
+			"offsets": [1, -1],
 			"indices": [],
-			"name": "Right"
+			"fps": 12,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "Left_Miss"
+		},
+		{
+			"offsets": [1, 7],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "Down_Miss"
+		},
+		{
+			"offsets": [-5, 2],
+			"indices": [],
+			"fps": 12,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "Up_Miss"
+		},
+		{
+			"offsets": [2, 0],
+			"indices": [],
+			"fps": 12,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "Right_Miss"
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
-	"image": "characters/fnsaf_bf",
-	"position": [-100, 170],
+	"image": "characters/BoyF",
+	"position": [-460, -230],
 	"healthicon": "bf",
 	"flip_x": true,
 	"healthbar_colors": [61, 199, 250],
-	"camera_position": [140, -60],
+	"camera_position": [120, 100],
 	"sing_duration": 4,
 	"scale": 1,
 	"_editor_isPlayer": true

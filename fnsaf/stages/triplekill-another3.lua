@@ -52,7 +52,7 @@ function onUpdate(elapsed)
     setProperty("top3_center.x", getProperty("agfexe-final.x") + 80)
     setProperty("top3_center.y", getProperty("agfexe-final.y") + 580)
 
-    starspin = starspin + 0.3
+    starspin = starspin + (200 * elapsed)
     setProperty("finalstar.angle", starspin)
 end
 

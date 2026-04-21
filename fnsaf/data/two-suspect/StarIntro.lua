@@ -10,46 +10,46 @@ function onCreate()
     precacheImage("bg/cafeteria/agf")
 
     setProperty("camGame.alpha", 0)
-    setProperty("camHUD.alpha", 0)
+    setProperty("uiGroup.visible", false)
 
     makeLuaSprite("BG1", "", 0, 0)
     makeGraphic("BG1", screenWidth, 380, "ffd400")
-    setObjectCamera("BG1", "other")
+    setObjectCamera("BG1", "hud")
     setProperty("BG1.alpha", 0)
     addLuaSprite("BG1")
 
     makeLuaSprite("BG2", "", 0, 370)
     makeGraphic("BG2", screenWidth, 350, "79edff")
-    setObjectCamera("BG2", "other")
+    setObjectCamera("BG2", "hud")
     setProperty("BG2.alpha", 0)
     addLuaSprite("BG2")
 
     makeLuaSprite("BG3", "")
     makeGraphic("BG3", screenWidth, screenHeight, "b04dfd")
-    setObjectCamera("BG3", "other")
+    setObjectCamera("BG3", "hud")
     setProperty("BG3.alpha", 0)
     addLuaSprite("BG3")
 
     makeLuaSprite("spintro", "bg/cafeteria/sp", -600, 350)
-    setObjectCamera("spintro", "other")
+    setObjectCamera("spintro", "hud")
     scaleObject("spintro", 0.65, 0.65)
     setProperty("spintro.alpha", 0)
     addLuaSprite("spintro")
 
     makeLuaSprite("bfintro", "bg/cafeteria/bf", 1500, 300)
-    setObjectCamera("bfintro", "other")
+    setObjectCamera("bfintro", "hud")
     scaleObject("bfintro", 0.65, 0.65)
     setProperty("bfintro.alpha", 0)
     addLuaSprite("bfintro")
 
     makeLuaSprite("agfintro", "bg/cafeteria/agf", 50, 0)
-    setObjectCamera("agfintro", "other")
+    setObjectCamera("agfintro", "hud")
     scaleObject("agfintro", 0.5, 0.5)
     setProperty("agfintro.alpha", 0)
     addLuaSprite("agfintro")
 
     makeLuaSprite("wallyintro", "bg/cafeteria/wally", 680, 380)
-    setObjectCamera("wallyintro", "other")
+    setObjectCamera("wallyintro", "hud")
     scaleObject("wallyintro", 0.5, 0.5)
     setProperty("wallyintro.alpha", 0)
     addLuaSprite("wallyintro")
@@ -71,6 +71,10 @@ function onCreate()
 end
 
 function onSongStart()
+    for i = 0, 7 do
+        noteTweenAlpha(i + 16, i, 0.5, 0.001)
+    end
+    
     setProperty("agfintro.alpha", 1)
     doTweenX("hiagf", "agfintro", 60, 5)
     doTweenX("hiwally", "wallyintro", 670, 5)
@@ -116,7 +120,11 @@ function onStepHit()
 
     if curStep == 15 then
         setProperty("camGame.alpha", 1)
-        setProperty("camHUD.alpha", 1)
+        setProperty("uiGroup.visible", true)
+
+        for i = 0, 7 do
+            noteTweenAlpha(i + 16, i, 1, 0.001)
+        end
 
         cameraFlash("other", "ffffff", 0.5)
         removeLuaSprite("bfintro", true)
