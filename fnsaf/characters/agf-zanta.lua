@@ -1,23 +1,21 @@
 local originy = 0
 function onCreate()
-
-	originy = getProperty('dad.y')
-
+    originy = getProperty('dad.y')
 end
-function opponentNoteHit(i,d,t,s)
-	if not getPropertyFromGroup('notes',i,'gfNote') then
-	setProperty('dad.y',originy+20)
-	doTweenY('wifjwiaf','dad',originy,0.08,'linear')
-	if getProperty('health') > 0.1 then
-		if guitarHeroSustains then
-			setProperty('health',getProperty('health')-0.01)
-		else
-            setProperty('health',getProperty('health')-0.03)
-		end
-	end
-	end
-	
 
+function opponentNoteHit(i, d, t, isSustain)
+	if not getPropertyFromGroup('notes',i,'gfNote') then
+	    setProperty('dad.y',originy+20)
+	    doTweenY('wifjwiaf','dad',originy,0.08,'linear')
+	end	
+end
+
+function opponentNoteHitPre(index, noteData, noteType, isSustain)
+	if getProperty('health') > 0.1 and not isSustain and guitarHeroSustains then
+        setProperty('health', getProperty('health') - 0.01)
+	elseif getProperty('health') > 0.1 and not guitarHeroSustains then
+		setProperty('health', getProperty('health') - 0.015)
+	end
 end
 
 
