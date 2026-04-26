@@ -533,7 +533,7 @@ function Dinnit()
     elseif curChar == 'cyan' then
         curIcon = 'wally'
         boxChar = 'Wally'
-        charImg = 'willy_dialogue'
+        charImg = 'BlueD'
     elseif curChar == 'gf' then
         curSound = 'gf'
         speaker = 'portraitMid'

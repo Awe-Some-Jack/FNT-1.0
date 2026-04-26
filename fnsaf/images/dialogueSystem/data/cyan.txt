@@ -1,5 +1,5 @@
-alright,accordingtomycalculations,false,50,80
-damn,givemesomepie,false,150,80
-think,hmm,false,50,100
-oh,uhh,false,50,80
-hey,you,false,50,100
+alright,Accordingtomycalculations,false,100,230
+damn,Givemesomepie,false,120,230
+think,Hm,false,100,230
+oh,Uhh,false,100,230
+hey,You,false,100,230

@@ -1,4 +1,5 @@
 local starspin = 0
+local shaderRemoved = false
 
 function onCreate()
     makeLuaSprite('bg', 'bg/triple/Finale/dark_bg2', -2100, -1900)
@@ -52,62 +53,22 @@ function onUpdate(elapsed)
     setProperty("top3_center.x", getProperty("agfexe-final.x") + 80)
     setProperty("top3_center.y", getProperty("agfexe-final.y") + 580)
 
-    starspin = starspin + (200 * elapsed)
+    starspin = starspin + (30 * elapsed)
     setProperty("finalstar.angle", starspin)
-end
 
-function onUpdatePost(elapsed)
-    removeSpriteShader('boyfriend')
-    removeSpriteShader('dad')
-
-    setShaderBool('boyfriend', 'useMask', false)
-    setShaderBool('dad', 'useMask', false)
-
-    runHaxeCode([[
-        game.boyfriend.shader = null;
-        game.dad.shader = null;
-    ]])
-
-    setProperty("boyfriend.color", FlxColor("magenta"))
-end
-
-function removeCharShader(char)
-    removeSpriteShader(char)
-    setShaderBool(char, 'useMask', false)
-
-    runHaxeCode([[
-        var obj = switch("]] .. char .. [[") {
-            case "boyfriend": game.boyfriend;
-            case "dad": game.dad;
-            case "gf": game.gf;
-        };
-
-        if(obj != null)
-        {
-            obj.shader = null;
-            obj.animation.callback = null;
-        }
-    ]])
-end
-
-function removeAllShaders()
-    removeCharShader('boyfriend')
-    removeCharShader('dad')
-    removeCharShader('gf')
-end
-
-function onCreatePost()
-    removeAllShaders()
-end
-
-function onEvent(event)
-    if event == 'Change Character' then
-        runTimer('shaderFix', 0.01)
+    if not shaderRemoved and shadersEnabled then
+        runHaxeCode([[
+            for (obj in [game.boyfriend, game.dad]) {
+                if (obj != null && obj.animation != null) {
+                    obj.animation.callback = null;
+                }
+                if (obj != null) obj.shader = null;
+            }
+        ]])
+        removeSpriteShader('boyfriend')
+        removeSpriteShader('dad')
+        shaderRemoved = true
     end
-end
 
-function onTimerCompleted(tag)
-    if tag == 'shaderFix' then
-        removeAllShaders()
-    end
+    setProperty("boyfriend.color", getColorFromHex('FF00FF'))
 end
